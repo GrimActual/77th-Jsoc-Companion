@@ -1,4 +1,4 @@
-EVERON ORBAT PLANNER 2.6.1 — 77TH JSOC
+EVERON ORBAT PLANNER 2.7.0 — 77TH JSOC
 
 START
 Windows release: extract the entire ZIP and run Everon ORBAT Planner.exe.
@@ -84,3 +84,7 @@ See THIRD-PARTY-NOTICES.md and vendor/milsymbol-LICENSE.txt for library attribut
 TEST
 Stop the server and run npm test. See TEST-RESULTS.md for validation coverage.
 
+
+MOD AO IMPORT
+Use Inject mod AOs with installed Invade & Annex - Reforged 1.0.66.
+See UPDATE-2.7.0.md for pairing, coordinate and live-status limitations.
