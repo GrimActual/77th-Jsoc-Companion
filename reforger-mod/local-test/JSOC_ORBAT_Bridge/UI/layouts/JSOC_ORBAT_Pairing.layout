@@ -1,0 +1,44 @@
+FrameWidgetClass {
+ Name "JSOCPairing"
+ Slot FrameWidgetSlot { Anchor 1 0 1 0 PositionX -620 OffsetLeft -620 PositionY 140 OffsetTop 140 SizeX 580 OffsetRight 40 SizeY 400 OffsetBottom -540 }
+ "Z Order" 20
+ {
+  TextWidgetClass : "{3132F64DB8B4CB44}UI/layouts/WidgetLibrary/TextWidgets/Text_Body.layout" {
+   Name "JSOCTitle"
+   Slot FrameWidgetSlot { Anchor 0 0 1 0 PositionX 16 OffsetLeft 16 PositionY 12 OffsetTop 12 SizeX 0 OffsetRight 16 SizeY 40 OffsetBottom -52 }
+   Text "ORBAT PLANNER - HOST PAIRING" "Font Size" 20
+  }
+  TextWidgetClass : "{3132F64DB8B4CB44}UI/layouts/WidgetLibrary/TextWidgets/Text_Body.layout" {
+   Name "JSOCHelp"
+   Slot FrameWidgetSlot { Anchor 0 0 1 0 PositionX 16 OffsetLeft 16 PositionY 55 OffsetTop 55 SizeX 0 OffsetRight 16 SizeY 55 OffsetBottom -110 }
+   Text "Shares only your controlled character. Resume to send updates.\nLocal PC: keep the endpoint below. GeForce NOW requires a relay." "Font Size" 14
+  }
+  EditBoxWidgetClass {
+   Name "JSOCEndpoint"
+   Slot FrameWidgetSlot { Anchor 0 0 1 0 PositionX 16 OffsetLeft 16 PositionY 115 OffsetTop 115 SizeX 0 OffsetRight 16 SizeY 38 OffsetBottom -153 }
+   FontProperties FontProperties { Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt" }
+   Text "http://127.0.0.1:8791/" "Font Size" 16
+  }
+  EditBoxWidgetClass {
+   Name "JSOCCode"
+   Slot FrameWidgetSlot { Anchor 0 0 1 0 PositionX 16 OffsetLeft 16 PositionY 165 OffsetTop 165 SizeX 0 OffsetRight 16 SizeY 38 OffsetBottom -203 }
+   FontProperties FontProperties { Font "{3E7733BAC8C831F6}UI/Fonts/RobotoCondensed/RobotoCondensed_Regular.fnt" }
+   "Use placeholder text" 1 "Placeholder text" "Paste temporary pairing code" "Font Size" 16
+  }
+  ButtonWidgetClass {
+   Name "JSOCConnect"
+   Slot FrameWidgetSlot { Anchor 0 0 1 0 PositionX 16 OffsetLeft 16 PositionY 220 OffsetTop 220 SizeX 0 OffsetRight 16 SizeY 40 OffsetBottom -260 }
+   { TextWidgetClass : "{3132F64DB8B4CB44}UI/layouts/WidgetLibrary/TextWidgets/Text_Body.layout" { Name "ConnectText" Slot ButtonWidgetSlot { HorizontalAlign 1 VerticalAlign 1 } Text "CONNECT" "Font Size" 18 "Ignore Cursor" 1 } }
+  }
+  ButtonWidgetClass {
+   Name "JSOCDisconnect"
+   Slot FrameWidgetSlot { Anchor 0 0 1 0 PositionX 16 OffsetLeft 16 PositionY 270 OffsetTop 270 SizeX 0 OffsetRight 16 SizeY 40 OffsetBottom -310 }
+   { TextWidgetClass : "{3132F64DB8B4CB44}UI/layouts/WidgetLibrary/TextWidgets/Text_Body.layout" { Name "DisconnectText" Slot ButtonWidgetSlot { HorizontalAlign 1 VerticalAlign 1 } Text "DISCONNECT" "Font Size" 18 "Ignore Cursor" 1 } }
+  }
+  TextWidgetClass : "{3132F64DB8B4CB44}UI/layouts/WidgetLibrary/TextWidgets/Text_Body.layout" {
+   Name "JSOCStatus"
+   Slot FrameWidgetSlot { Anchor 0 0 1 0 PositionX 16 OffsetLeft 16 PositionY 325 OffsetTop 325 SizeX 0 OffsetRight 16 SizeY 60 OffsetBottom -385 }
+   Text "Disconnected" "Font Size" 16
+  }
+ }
+}

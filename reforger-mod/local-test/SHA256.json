@@ -1,0 +1,6 @@
+{
+  "addon.gproj": "b62cc045d105623dcda1cf8129bd3903e8329259d234abf7bd2a736f44844d9b",
+  "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostBridge.c": "d104061b339364397fcbccae844deb7236fa7c9d9b9ea0d437de00fe5241485e",
+  "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_PairingMenu.c": "b3be30a6d035bc260b236bfc201b5debf54ad610aa015170bc747b4fc49521d2",
+  "UI/layouts/JSOC_ORBAT_Pairing.layout": "e5646d96c05a8e6792787a17c82293fa682836e186b3bf17008893511b135eee"
+}

@@ -1,0 +1,2 @@
+"use strict";
+window.PlannerLocalBridgeLayer={attach(map){const layer=L.layerGroup().addTo(map);let point=null;window.addEventListener('local-bridge-state',e=>{layer.clearLayers();point=e.detail.point;if(point){L.circleMarker([point.z,point.x],{radius:10,color:'#ff9d00',weight:3,fillOpacity:.65,interactive:false}).addTo(layer).bindTooltip('WORKBENCH TEST — uncalibrated',{permanent:true});}});window.addEventListener('local-bridge-fit',()=>{if(point)map.setView([point.z,point.x],3,{animate:false});});window.PlannerLocalBridgeView={count:()=>layer.getLayers().length};}};

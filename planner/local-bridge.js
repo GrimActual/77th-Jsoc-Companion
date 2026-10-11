@@ -1,0 +1,34 @@
+"use strict";
+const http=require('node:http'),crypto=require('node:crypto');
+function createReceiver(onState=()=>{},port=8791){
+ let server=null,timer=null,epoch=0,last=0,windowAt=0,requests=0;
+ let state={status:'off',token:'',point:null,received:0};
+ const publish=()=>onState({...state});
+ function stop(){epoch++;clearInterval(timer);timer=null;const old=server;server=null;if(old){old.close();old.closeAllConnections();}state={status:'off',token:'',point:null,received:0};publish();return {...state};}
+ async function start(){if(server)return {...state};const generation=++epoch;state={status:'starting',token:crypto.randomBytes(16).toString('hex'),point:null,received:0};last=0;windowAt=0;requests=0;
+ const srv=http.createServer((req,res)=>{
+  const reply=(code,body)=>{if(!res.writableEnded){res.writeHead(code,{'Content-Type':'application/json','Cache-Control':'no-store','Connection':'close'});res.end(JSON.stringify(body));}};
+  if(generation!==epoch)return reply(503,{error:'stopped'});
+  if(req.headers.origin || req.headers.host!==`127.0.0.1:${srv.address().port}`)return reply(403,{error:'forbidden'});
+  if(req.method!=='POST'||req.url!=='/marker')return reply(404,{error:'unknown endpoint'});
+  const now=Date.now();if(now-windowAt>1000){windowAt=now;requests=0;}if(++requests>10)return reply(429,{error:'rate limit'});
+  let bytes=0,parts=[];req.setTimeout(3000,()=>req.destroy());
+  req.on('data',b=>{bytes+=b.length;if(bytes>2048){reply(413,{error:'too large'});req.destroy();}else parts.push(b);});req.on('error',()=>{});
+  req.on('end',()=>{if(res.writableEnded||generation!==epoch)return;let m;try{m=JSON.parse(Buffer.concat(parts).toString('utf8'));}catch{return reply(400,{error:'invalid JSON'});}
+   if(!m||typeof m!=='object'||Array.isArray(m)||Object.keys(m).sort().join(',')!=='token,x,z'||!Number.isFinite(m.x)||!Number.isFinite(m.z)||Math.abs(m.x)>13500||Math.abs(m.z)>13500)return reply(400,{error:'invalid marker'});
+   if(typeof m.token!=='string'||!/^[a-f0-9]{32}$/.test(m.token)||!crypto.timingSafeEqual(Buffer.from(m.token),Buffer.from(state.token)))return reply(401,{error:'pairing failed'});
+   last=Date.now();state={...state,status:'connected',point:{x:m.x,z:m.z},received:state.received+1};publish();reply(200,{ok:true});
+  });
+ });server=srv;srv.requestTimeout=4000;srv.headersTimeout=4000;srv.maxHeadersCount=16;srv.maxConnections=8;
+ try{await new Promise((resolve,reject)=>{srv.once('error',reject);srv.listen(port,'127.0.0.1',resolve);});}catch(e){if(generation===epoch){stop();}throw Error(e.code==='EADDRINUSE'?'Port 8791 is already in use. Close the other local test receiver.':'Local receiver could not start.');}
+ if(generation!==epoch){srv.close();return {...state};}
+ srv.on('error',()=>{if(generation===epoch)stop();});state.status='waiting';publish();timer=setInterval(()=>{if(last&&Date.now()-last>7000&&state.status==='connected'){state.status='stale';state.point=null;publish();}},1000);timer.unref();return {...state};
+ }
+ return {start,stop,status:()=>({...state}),port:()=>server?.address()?.port};
+}
+function install({app,ipcMain,getWindow,indexURL}){
+ const receiver=createReceiver(state=>{const w=getWindow();if(w&&!w.isDestroyed())w.webContents.send('local-bridge-state',state);});
+ ipcMain.handle('local-bridge-command',async(event,action)=>{const w=getWindow();if(!w||event.sender!==w.webContents||event.senderFrame!==event.sender.mainFrame||event.senderFrame.url!==indexURL)throw Error('Unexpected sender');if(action==='start')return receiver.start();if(action==='stop')return receiver.stop();if(action==='status')return receiver.status();throw Error('Unknown command');});
+ app.on('before-quit',receiver.stop);return receiver;
+}
+module.exports={createReceiver,install};
