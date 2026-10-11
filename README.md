@@ -2,7 +2,7 @@
 
 Everon ORBAT Planner and the optional Arma Reforger bridge.
 
-Source snapshot: **2.2.1**. Planner code is in [`planner/`](planner/). Each version is preserved by a Git tag and a release with matching source archives.
+Source snapshot: **2.2.2**. Planner code is in [`planner/`](planner/). Each version is preserved by a Git tag and a release with matching source archives.
 
 ## Download
 
