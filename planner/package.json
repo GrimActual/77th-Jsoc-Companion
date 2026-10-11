@@ -1,8 +1,8 @@
 {
   "name": "everon-orbat-workshop-bridge",
-  "version": "2.9.0-local.1",
+  "version": "2.9.0-remote.1",
   "private": true,
-  "description": "Experimental local Workbench one-entity bridge and offline ORBAT planner",
+  "description": "Experimental single-host ORBAT bridge with HTTPS relay support",
   "main": "main.js",
   "scripts": {
     "start": "electron .",

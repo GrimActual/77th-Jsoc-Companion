@@ -27,8 +27,19 @@ function createReceiver(onState=()=>{},port=8791){
  return {start,stop,status:()=>({...state}),port:()=>server?.address()?.port};
 }
 function install({app,ipcMain,getWindow,indexURL}){
- const receiver=createReceiver(state=>{const w=getWindow();if(w&&!w.isDestroyed())w.webContents.send('local-bridge-state',state);});
- ipcMain.handle('local-bridge-command',async(event,action)=>{const w=getWindow();if(!w||event.sender!==w.webContents||event.senderFrame!==event.sender.mainFrame||event.senderFrame.url!==indexURL)throw Error('Unexpected sender');if(action==='start')return receiver.start();if(action==='stop')return receiver.stop();if(action==='status')return receiver.status();throw Error('Unknown command');});
- app.on('before-quit',receiver.stop);return receiver;
+ const publish=state=>{const w=getWindow();if(w&&!w.isDestroyed())w.webContents.send('local-bridge-state',state);};
+ const local=createReceiver(publish);
+ const remote=require('./remote-bridge').createRemote(publish);
+ let active=local;
+ function stop(){local.stop();remote.stop();active=local;return local.status();}
+ ipcMain.handle('local-bridge-command',async(event,action,options)=>{
+  const w=getWindow();if(!w||event.sender!==w.webContents||event.senderFrame!==event.sender.mainFrame||event.senderFrame.url!==indexURL)throw Error('Unexpected sender');
+  if(action==='start'){stop();active=local;return local.start();}
+  if(action==='remote-start'){if(typeof options?.endpoint!=='string'||options.endpoint.length>240)throw Error('Enter a relay address');stop();active=remote;return remote.start(options.endpoint);}
+  if(action==='stop')return stop();
+  if(action==='status')return active.status();
+  throw Error('Unknown command');
+ });
+ app.on('before-quit',stop);return {stop,status:()=>active.status()};
 }
 module.exports={createReceiver,install};
