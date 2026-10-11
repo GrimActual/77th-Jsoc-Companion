@@ -1,3 +1,5 @@
+V2.8.2: Searchable Sarge guide with Show me where navigation. See UPDATE-2.8.2.md.
+
 ## v2.8.1
 Scaling sliders, actual-mod side-mission planning templates, manual mission clock/event log, validated planner CSV and background mod reading. See UPDATE-2.8.1.md for scope and compatibility.
 

@@ -1,6 +1,8 @@
+V2.8.2: Searchable Sarge guide with Show me where navigation. See UPDATE-2.8.2.md.
+
 V2.8.1: See UPDATE-2.8.1.md. Scaling: Settings. Side missions: Draw. Clock and CSV: Brief.
 
-EVERON ORBAT PLANNER 2.8.1 — 77TH JSOC
+EVERON ORBAT PLANNER 2.8.2 — 77TH JSOC
 
 START
 Windows release: extract the entire ZIP and run Everon ORBAT Planner.exe.

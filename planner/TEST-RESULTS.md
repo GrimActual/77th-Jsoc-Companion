@@ -1,3 +1,7 @@
+# v2.8.2 help verification — 10 October 2026
+
+45 automated checks pass, including English/French/German topic coverage. Desktop checks passed: 23 topics, filtered search and no-results state, all new navigation destinations, accent-insensitive French search, Escape and typing guards, and unchanged plan snapshot. Desktop screenshot inspected. Packaged help test repeated before delivery; release builder checks ZIP CRCs and source SHA256 agreement.
+
 # v2.8.1 verification — 10 October 2026
 
 - PASS: 45 automated checks, including CSV assets/hierarchy/geometry/timer round-trip, malformed imports, scaling validation, prior editing/export/lifecycle/backend/translation coverage.

@@ -1,3 +1,5 @@
+V2.8.2: Searchable Sarge guide with Show me where navigation. See UPDATE-2.8.2.md.
+
 V2.8.1: See UPDATE-2.8.1.md. Scaling: Settings. Side missions: Draw. Clock and CSV: Brief.
 
 # Everon ORBAT Planner 2.6.1
