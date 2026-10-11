@@ -3,3 +3,5 @@
 @media(max-width:850px){body{height:auto;min-height:100dvh}header{flex-direction:column;align-items:stretch;padding:8px 12px;gap:4px}.brand{font-size:12px;letter-spacing:.06em}.jsoc-logo{width:45px;height:50px}.sub{font-size:9px}header .actions{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}header button{font-size:12px;padding:6px}main{display:block;overflow:visible}.map-shell{height:62dvh;min-height:370px}aside{border-left:0;border-top:1px solid var(--line);overflow:visible}.tabs{top:0;padding:7px 0}.map-toolbar button{font-size:11px;padding:5px 8px;min-height:32px}.draft-bar{bottom:130px}.map-hud{font-size:10px}.map-hud strong{font-size:12px}.section-heading h2{font-size:11px}}
 
 .selection-box{position:absolute;z-index:1000;pointer-events:none;border:2px solid #ebc66f;background:#ebc66f25}#selectionCount{align-self:center}#saveState{font-weight:700}
+
+dialog{color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:10px;width:min(480px,94vw);max-height:90vh;overflow:auto}dialog::backdrop{background:#0009}dialog h2{margin-top:0}

@@ -1,6 +1,6 @@
 {
   "name": "everon-orbat-workshop-bridge",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "private": true,
   "description": "Small CORS-safe metadata bridge with persistent Workshop JSON cache for Everon ORBAT Mapper",
   "main": "main.js",
