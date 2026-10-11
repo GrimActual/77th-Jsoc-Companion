@@ -59,18 +59,18 @@ function validate(d){
   const symbolMode=u.symbolMode??(d.schemaVersion===4?'nato':'asset');if(!['nato','asset','text'].includes(symbolMode))fail('Invalid symbol mode');
   const asset=u.assetCatalogItem??{};if(!asset||typeof asset!=='object'||Array.isArray(asset))fail('Invalid embedded asset');
   const pos=point(u.position??{lat:u.lat,lng:u.lng});
-  return {id:id(u.id,i+1),name:text(u.name,''),symbol:text(u.symbol,'I',100),side,type:text(u.type,'Infantry',100),unitType:unitType(u.unitType??u.type),symbolMode,icon,color:color(u.color),phaseId:phase(u.phaseId),parentId:u.parentId==null?null:id(u.parentId),asset:text(u.asset??asset.id,'none',200),assetName:text(u.assetName??asset.name??u.asset,'No asset assigned',500),assetCatalogItem:clone(asset),strength:text(u.strength,''),position:pos};
+  return {...(u.locked===true?{locked:true}:{}),id:id(u.id,i+1),name:text(u.name,''),symbol:text(u.symbol,'I',100),side,type:text(u.type,'Infantry',100),unitType:unitType(u.unitType??u.type),symbolMode,icon,color:color(u.color),phaseId:phase(u.phaseId),parentId:u.parentId==null?null:id(u.parentId),asset:text(u.asset??asset.id,'none',200),assetName:text(u.assetName??asset.name??u.asset,'No asset assigned',500),assetCatalogItem:clone(asset),strength:text(u.strength,''),position:pos};
  }),'marker');treeValid(units);
  let totalPoints=0;
  const points=(p,min,max=2000)=>{const arr=entries(p,'waypoints',max).map(point);if(arr.length<min)fail('Not enough waypoints');totalPoints+=arr.length;if(totalPoints>30000)fail('Plan exceeds 30,000 waypoints');return arr};
  const routes=distinct(entries(d.routes??[],'routes',3000).map((r,i)=>{
   const p=points(r.points??[r.start??{lat:r.lat1,lng:r.lng1},r.end??{lat:r.lat2,lng:r.lng2}],2);
   if(length(p)<0.01)fail('Route must have length');
-  return {id:id(r.id,i+1),name:text(r.name,'Route '+(i+1),200),phaseId:phase(r.phaseId),points:p,style:style(r.style??{pattern:'dashed'}),start:p[0],end:p[p.length-1]};
+  return {...(r.locked===true?{locked:true}:{}),id:id(r.id,i+1),name:text(r.name,'Route '+(i+1),200),phaseId:phase(r.phaseId),points:p,style:style(r.style??{pattern:'dashed'}),start:p[0],end:p[p.length-1]};
  }),'route');
  const areas=distinct(entries(d.areas??[],'areas',1000).map((a,i)=>{
   if(!['polygon','rectangle','circle'].includes(a.kind))fail('Invalid area type');
-  const base={id:id(a.id,i+1),name:text(a.name,'Area '+(i+1),200),phaseId:phase(a.phaseId),kind:a.kind,style:style(a.style)};
+  const base={...(a.locked===true?{locked:true}:{}),id:id(a.id,i+1),name:text(a.name,'Area '+(i+1),200),phaseId:phase(a.phaseId),kind:a.kind,style:style(a.style)};
   if(a.kind==='circle')return {...base,center:point(a.center),radius:number(a.radius,1,20000,'radius')};
   const p=points(a.points,a.kind==='rectangle'?2:3,a.kind==='rectangle'?2:1000);
   if(a.kind==='rectangle'){if(Math.abs((p[0].lat-p[1].lat)*(p[0].lng-p[1].lng))<0.01)fail('Rectangle must have width and height')}

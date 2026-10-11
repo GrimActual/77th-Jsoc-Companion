@@ -1,0 +1,331 @@
+Starting Saturday, 10 October 2026
+Our goal is to build a professional, reliable Arma Reforger mission-planning application, eventually capable of evolving into the Tactical Operations Center (TOC) & ORBAT Suite.
+🟢 PART 1 — TOMORROW'S DEVELOPMENT PRIORITIES
+These are our immediate priorities, generally organised from simplest to more difficult.
+⚙️ 1. Settings & Personalisation
+A dedicated settings window accessible through a gear icon in the top-right corner.
+Features:
+- Light and dark themes.
+- Interface scaling.
+- Language selection and multilingual support.
+- Regional date and time formats.
+- Metric and imperial measurements.
+- Accessibility settings.
+- Adjustable text sizes.
+- High-contrast mode.
+- Reduced animations.
+- Grid visibility.
+- Snap-to-grid.
+- Default canvas zoom.
+- Default export format and quality.
+- Keyboard shortcut preferences.
+- Restore default settings.
+💾 2. Saving & Data Protection
+Maintain our existing autosave functionality while improving user control.
+Features:
+- Clear save status: Saved, Unsaved, Saving and Failed.
+- Manual Save Backup button.
+- Timestamped JSON backup files.
+- Automatic validation when creating a manual backup.
+- Confirm backup files contain valid project information.
+- Prevent accidental overwriting of previous backups.
+No automatic backup scheduler or complicated automatic recovery system.
+🖱️ 3. Canvas Editing & Keyboard Shortcuts
+Make the ORBAT canvas faster and easier to work with.
+Features:
+- Click-and-drag selection box.
+- Ctrl + click multi-selection.
+- Move multiple selected units together.
+- Delete key activates existing Delete function.
+- Ctrl + A — Select all.
+- Ctrl + D — Duplicate.
+- Ctrl + C / V — Copy and paste.
+- Ctrl + Z / Y — Undo and redo.
+- Escape — Deselect/cancel.
+- Space + drag — Pan canvas.
+- Align objects horizontally and vertically.
+- Distribute objects evenly.
+- Lock objects to prevent accidental changes.
+- Fit entire ORBAT to screen.
+- Optional selection behaviour for partially enclosed objects.
+Keyboard shortcuts must not interfere with typing in text fields.
+🖥️ 4. Presentation & Export Improvements
+We're keeping our existing image/document exports and improving their capabilities.
+Features:
+- SVG export.
+- Full-canvas export.
+- Current-view export.
+- Selected-object export.
+- Export preview.
+- Full-screen briefing mode.
+- Hide editing sidebars.
+- Expand the map for Discord screen sharing.
+- Include or exclude grid and map backgrounds.
+- Custom unit patches and logos.
+- Community branding.
+- Operation titles and dates.
+- Adjustable image watermarks.
+- Custom fictional classification stamps.
+🗺️ 5. Everon Location Database
+Build a searchable database containing 20 important locations.
+Cities, Towns & Villages (16)
+1. Saint-Philippe
+2. Saint-Pierre
+3. Montignac
+4. Morton
+5. Levie
+6. Villeneuve
+7. Chotain
+8. Lamentin
+9. Provins
+10. Figari
+11. Camurac
+12. Regina
+13. Durras
+14. Tyrone
+15. Gravette
+16. Meaux
+Key Infrastructure (4)
+17. Saint-Philippe Airport
+18. Everon Power Plant
+19. Andres Beacon
+20. Everon Quarry
+Location Database Features
+- Verified Reforger coordinates.
+- Search locations by name.
+- Click to jump directly to locations.
+- Automatically centre the map.
+- Copy grid references.
+- Copy world coordinates.
+- Convert image coordinates to game coordinates.
+- Toggle location visibility.
+- Display location names and tooltips.
+- Create objectives at selected locations.
+- Include relevant location labels in exports.
+Important: Coordinates must be verified against the correct Everon map. We won't guess them.
+🟡 PART 2 — NEXT DEVELOPMENT PHASES
+These are the features we'll introduce once the immediate improvements are stable.
+📻 6. Radio & Callsign Management
+- Automatic callsign synchronisation.
+- One shared callsign across map symbols and ORBAT hierarchy.
+- Automatically generated radio frequency cards.
+- Command Net frequencies.
+- Platoon and Squad Net frequencies.
+- Air-to-Ground frequencies.
+- Duplicate frequency warnings.
+- Copy or export frequency cards.
+📋 7. Automatic Operation Order Generator
+Generate a structured SMEAC / NATO-style OPORD using existing project information.
+The five sections:
+1. Situation.
+2. Mission.
+3. Execution.
+4. Administration & Logistics.
+5. Command & Signal.
+Additional features:
+- Read existing unit assignments.
+- Include assigned callsigns.
+- Include radio frequencies.
+- Include mission objectives.
+- Include operational phases.
+- Include mission notes.
+- Copy to clipboard.
+- Discord-friendly Markdown formatting.
+- Export as a printable document.
+- Clearly identify missing information instead of inventing it.
+🎯 8. Mission Phases
+Organise operations into separate stages.
+Features:
+- Create and rename phases.
+- Phase-specific objectives.
+- Phase-specific map annotations.
+- Toggle markers by phase.
+- Phase-specific mission notes.
+- Navigate phases during briefings.
+- Next/previous phase presentation controls.
+- Preserve the underlying ORBAT while switching phases.
+🏗️ 9. Quick-Stamp Templates
+Reusable graphical layouts.
+Templates:
+- Forward Operating Base (FOB).
+- Forward Arming and Refuelling Point (FARP).
+- Landing Zone (LZ).
+- Checkpoint.
+- Rally Point.
+- Command Post.
+- Assembly Area.
+Additional features:
+- Place complete templates with one click.
+- Move and rotate templates.
+- Edit individual objects.
+- Save custom templates.
+- Reuse templates across projects.
+🚛 10. Logistics & Transport
+Transport Capacity Calculator
+- Assign vehicles to units.
+- Track available troop seats.
+- Compare passenger capacity with assigned personnel.
+- Identify insufficient transport space.
+- Support custom and modded vehicles.
+- Customisable vehicle capacity values.
+Supply Management
+- Configurable in-game supply values.
+- Supply crate quantities.
+- Supply truck capacities.
+- Medical supply quantities.
+- Mission-duration-based estimates.
+- Game-specific equipment and ammunition inventory estimates.
+- Export logistics summaries.
+🟠 PART 3 — ADVANCED MAP & GAME MASTER FEATURES
+These require more development and testing.
+📏 11. Map Measurement Tools
+- Point-to-point distance measurement.
+- Grid distance.
+- Compass bearings.
+- Drawn-route distance.
+- Custom distance rings.
+- Elevation profiles.
+- Terrain height comparisons.
+- Line-of-sight analysis.
+- Terrain obstruction detection.
+- Configurable observation-point height.
+Accurate elevation and LOS calculations will require verified terrain information.
+👁️ 12. GM & Player Visibility Layers
+Maintain one complete project while controlling what different audiences can see.
+Features:
+- Separate GM and Player views.
+- Friendly unit visibility.
+- Known enemy positions.
+- Hidden enemy positions.
+- Hidden objectives.
+- GM-only notes.
+- Player briefing notes.
+- Customisable layer visibility.
+- Full GM exports.
+- Redacted player briefing exports.
+- Preview player-visible information.
+Hidden information must be completely excluded from player exports, not merely visually hidden.
+🎮 13. Arma Reforger JSON Integration
+Allow plans to be exported in a format suitable for a compatible Reforger companion mod.
+Features:
+- Export map markers.
+- Export objectives.
+- Export compatible map annotations.
+- Export route and waypoint data.
+- Export unit callsigns.
+- Export verified game coordinates.
+- Create copyable JSON snippets.
+- Develop a documented interchange format.
+- Support compatible in-game import scripts.
+This will require testing against Reforger's actual scripting capabilities.
+🔴 PART 4 — FUTURE TOC EXPANSION
+These are the ambitious features from our separate Reforger Tactical Operations Center (TOC) proposal.
+They are not part of tomorrow's development work.
+🌐 14. Offline & Online Operating Modes
+Offline Mode
+- Full standalone functionality.
+- No mandatory internet connection.
+- No requirement to launch Reforger.
+- Built-in location database.
+- Local project management.
+- Briefing generation.
+- Logistics planning.
+- Image and document exports.
+Online Mode
+- Optional connection to Arma Reforger.
+- Companion mod integration.
+- Local communication bridge.
+- Connection status indicator.
+- Compatible game-state queries.
+- Synchronisation of supported mission information.
+- In-game map marker integration.
+- In-game objective integration.
+The proposed REST/localhost architecture will require technical verification.
+🤝 15. Multiplayer Collaboration
+Optional Host / Join Session functionality.
+Features:
+- Host planning sessions.
+- Join sessions through invitation codes.
+- WebRTC peer-to-peer communication.
+- Shared project viewing.
+- Real-time collaborative editing.
+- Viewer permissions.
+- Editor permissions.
+- Host controls.
+- Conflict protection.
+- Disconnection handling.
+- Offline editing remains available.
+🛰️ 16. Reforger Live Game Synchronisation
+Through a compatible companion mod, potentially support:
+- Querying supported in-game entities.
+- Reading game-world positions.
+- Accessing compatible vehicle information.
+- Updating supported map markers.
+- Sharing mission objective data.
+- Importing prepared planning information.
+- Synchronising selected project information.
+All capabilities will need validation against the Enfusion engine and game/server restrictions.
+🎯 17. Advanced Game-Specific Simulation
+Potential future tools:
+- Game-specific artillery range visualisation.
+- Mortar and artillery flight-time modelling.
+- Trajectory simulation.
+- Configurable dispersion-ring visualisation.
+- Advanced terrain analysis.
+These would be developed only after validating relevant game mechanics.
+🧩 18. Community Mod Compatibility
+An important addition for long-term flexibility.
+Features:
+- Custom asset data packs.
+- Modded vehicle databases.
+- Custom seating capacities.
+- Community-specific equipment.
+- Custom factions.
+- Custom radio configurations.
+- Additional map datasets.
+- Community-specific templates.
+This would allow different MilSim communities to use the same application with their own configurations.
+📊 MASTER PRIORITY SUMMARY
+Priority	Development Area	Difficulty	Target
+⭐⭐⭐⭐⭐	Settings & personalisation	Easy–Medium	Tomorrow
+⭐⭐⭐⭐⭐	Save status & manual backups	Easy–Medium	Tomorrow
+⭐⭐⭐⭐⭐	Keyboard controls	Easy–Medium	Tomorrow
+⭐⭐⭐⭐⭐	Multi-selection & group movement	Medium	Tomorrow
+⭐⭐⭐⭐⭐	Full-screen briefing	Easy	Tomorrow
+⭐⭐⭐⭐⭐	Everon location database	Medium	Begin tomorrow
+⭐⭐⭐⭐	Export improvements & branding	Easy–Medium	Next
+⭐⭐⭐⭐⭐	Callsign synchronisation	Medium	Next
+⭐⭐⭐⭐⭐	Frequency cards	Easy–Medium	Next
+⭐⭐⭐⭐⭐	OPORD generator	Medium	Next
+⭐⭐⭐⭐	Mission phases	Medium	Next
+⭐⭐⭐⭐	Quick-stamp templates	Medium	Next
+⭐⭐⭐⭐	Logistics calculators	Medium	Later
+⭐⭐⭐⭐	Distance & bearing tools	Medium	Later
+⭐⭐⭐⭐⭐	GM/player layers	Medium–Hard	Later
+⭐⭐⭐⭐⭐	Reforger JSON integration	Medium–Hard	Later
+⭐⭐⭐	Elevation & LOS	Hard	Future
+⭐⭐⭐⭐	WebRTC collaboration	Very Hard	Future
+⭐⭐⭐⭐⭐	Live Reforger integration	Very Hard	Future
+⭐⭐	Advanced ballistics modelling	Very Hard	Future
+⭐⭐⭐⭐	Community mod compatibility	Medium–Hard	Future
+
+
+Tomorrow's items are targets, not a promise that every feature can be completed in one session.
+🔒 Our non-negotiable development principles
+Throughout development, we'll stick to these rules:
+✅ Never unnecessarily rewrite working features.
+✅ Protect existing saved ORBAT projects.
+✅ Keep backups manual and user-controlled.
+✅ Keep the application fully functional offline.
+✅ Make advanced systems optional.
+✅ Test changes individually before moving forward.
+✅ Prioritise performance, reliability and usability over unnecessary complexity.
+✅ Maintain compatibility with older project files wherever possible.
+🫡 The bigger picture
+We're effectively planning three stages of the application's evolution:
+Stage 1 — Professional ORBAT Editor
+Fast, reliable, customisable and easy to use.
+Stage 2 — Complete MilSim Mission Planner
+Map intelligence, OPORD generation, logistics, briefing tools and Game Master controls.
+Stage 3 — Reforger Tactical Operations Center (TOC)
+Optional game integration, collaborative planning, community mod support and advanced simulation.

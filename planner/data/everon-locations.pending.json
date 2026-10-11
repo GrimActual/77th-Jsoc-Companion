@@ -1,0 +1,249 @@
+{
+  "schema": "everon-location-registry",
+  "version": 1,
+  "map": "Arma Reforger Everon",
+  "status": "NOT VERIFIED — research registry only, not a planner import",
+  "coordinateSystem": "world X/Z in meters; conversion to mapper coordinates requires verification",
+  "locations": [
+    {
+      "id": "everon-01",
+      "name": "Saint-Philippe",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-02",
+      "name": "Saint-Pierre",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-03",
+      "name": "Montignac",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-04",
+      "name": "Morton",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-05",
+      "name": "Levie",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-06",
+      "name": "Villeneuve",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-07",
+      "name": "Chotain",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-08",
+      "name": "Lamentin",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-09",
+      "name": "Provins",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-10",
+      "name": "Figari",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-11",
+      "name": "Camurac",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-12",
+      "name": "Regina",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-13",
+      "name": "Durras",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-14",
+      "name": "Tyrone",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-15",
+      "name": "Gravette",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-16",
+      "name": "Meaux",
+      "category": "settlement",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-17",
+      "name": "Saint-Philippe Airport",
+      "category": "infrastructure",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-18",
+      "name": "Everon Power Plant",
+      "category": "infrastructure",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-19",
+      "name": "Andres Beacon",
+      "category": "infrastructure",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "id": "everon-20",
+      "name": "Everon Quarry",
+      "category": "infrastructure",
+      "worldPosition": null,
+      "verification": {
+        "status": "pending",
+        "source": null,
+        "gameVersion": null,
+        "checkedAt": null
+      }
+    }
+  ]
+}

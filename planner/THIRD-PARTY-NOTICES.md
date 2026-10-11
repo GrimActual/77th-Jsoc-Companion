@@ -18,3 +18,6 @@ The app selects APP-6 rendering and uses the library's verified letter SIDCs for
 This app uses the existing Everon mapper's game-meter coordinate transform, with easting (X) first and northing (Z) second. It does not connect to a running game or claim global MGRS/UTM coordinates. In-game alignment has not been independently surveyed against terrain control points.
 
 **JSOC crest** — supplied by the user and included unchanged. Asset pictograms are locally defined SVG artwork from the previous planner build.
+
+Leaflet 1.9.4 (BSD-2-Clause), bundled with its license in vendor/leaflet/LICENSE. Source: https://github.com/Leaflet/Leaflet
+Offline base terrain: 16 existing-provider tiles from https://reforger.recoil.org/map-tiles/everon/ ; attribution retained: Reforger Maps / Bewilderbeest. Lower-detail fallback only.

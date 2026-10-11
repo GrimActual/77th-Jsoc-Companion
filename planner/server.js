@@ -86,6 +86,7 @@ const server = http.createServer(async (req, res) => {
     ['/asset-tools.js',['asset-tools.js','text/javascript; charset=utf-8']],
     ['/planner-core.js',['planner-core.js','text/javascript; charset=utf-8']],
     ['/planner.js',['planner.js','text/javascript; charset=utf-8']],
+    ['/editing.js',['editing.js','text/javascript; charset=utf-8']],
     ['/preferences.js',['preferences.js','text/javascript; charset=utf-8']],
     ['/settings.js',['settings.js','text/javascript; charset=utf-8']],
     ['/settings.css',['settings.css','text/css; charset=utf-8']],
@@ -95,6 +96,8 @@ const server = http.createServer(async (req, res) => {
     ['/vendor/milsymbol.js',['vendor/milsymbol.js','text/javascript; charset=utf-8']],
     ['/jsoc-logo.png',['jsoc-logo.png','image/png']]
   ]);
+  for(const file of ['leaflet.js','leaflet.css'])staticFiles.set('/vendor/leaflet/'+file,['vendor/leaflet/'+file,file.endsWith('.css')?'text/css':'text/javascript']);
+  for(let x=0;x<4;x++)for(let y=0;y<4;y++)staticFiles.set('/terrain/everon/'+x+'-'+y+'.jpg',['terrain/everon/'+x+'-'+y+'.jpg','image/jpeg']);
   if(staticFiles.has(url.pathname)){
     const [file,type]=staticFiles.get(url.pathname);
     let body;try{body=fs.readFileSync(path.join(__dirname,file))}catch{return send(res,404,{error:'File not found'})}
