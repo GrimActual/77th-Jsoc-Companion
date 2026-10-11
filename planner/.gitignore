@@ -4,3 +4,8 @@ dist/
 *.zip
 .env
 .env.*
+
+*.pfx
+*.p12
+*.key
+

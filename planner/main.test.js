@@ -4,7 +4,7 @@ async function desktop(){
  const app=new EventEmitter(),dialogs=[],windows=[];let rejectLoad;
  Object.assign(app,{requestSingleInstanceLock:()=>true,whenReady:()=>Promise.resolve(),getVersion:()=> 'test',getPath:()=> '/test-profile',quit:()=>app.emit('before-quit')});
  class Window extends EventEmitter{
-  constructor(){super();windows.push(this);this.webContents=new EventEmitter();this.webContents.setWindowOpenHandler=()=>{};}
+  constructor(){super();windows.push(this);this.webContents=new EventEmitter();this.webContents.setWindowOpenHandler=()=>{};this.webContents.send=()=>{};}
   setMenuBarVisibility(){}isDestroyed(){return false;}show(){}
   loadFile(){return new Promise((resolve,reject)=>{rejectLoad=reject;});}
  }

@@ -91,6 +91,8 @@ const server = http.createServer(async (req, res) => {
     ['/editing.js',['editing.js','text/javascript; charset=utf-8']],
     ['/preferences.js',['preferences.js','text/javascript; charset=utf-8']],
     ['/settings.js',['settings.js','text/javascript; charset=utf-8']],
+    ['/simulation-layer.js',['simulation-layer.js','text/javascript; charset=utf-8']],
+    ['/simulation-ui.js',['simulation-ui.js','text/javascript; charset=utf-8']],
     ['/settings.css',['settings.css','text/css; charset=utf-8']],
     ['/sarge-help.js',['sarge-help.js','text/javascript; charset=utf-8']],
     ['/presentation.js',['presentation.js','text/javascript; charset=utf-8']],

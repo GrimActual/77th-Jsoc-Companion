@@ -7,13 +7,17 @@ let mainWindow=null,quitting=false;
 const pendingTiles=new Set();
 const indexPath=path.join(__dirname,'index.html');
 const indexURL=pathToFileURL(indexPath).href;
+if(typeof app.setPath==='function'&&!process.argv?.some(a=>a.startsWith('--user-data-dir')))app.setPath('userData',path.join(app.getPath('appData'),'Everon-ORBAT-PhaseC-Simulation'));
+const simulation=require('./simulation-main').install({app,ipcMain,getWindow:()=>mainWindow,indexURL});
 function log(event){try{const file=path.join(app.getPath('userData'),'planner-lifecycle.log');fs.mkdirSync(path.dirname(file),{recursive:true});if(fs.existsSync(file)&&fs.statSync(file).size>250000)fs.renameSync(file,file+'.previous');fs.appendFileSync(file,new Date().toISOString()+' '+event+'\n')}catch{}}
 function external(url){try{const parsed=new URL(url);if(!['https:','http:'].includes(parsed.protocol))return;shell.openExternal(parsed.href).catch(()=>log('external-link-failed'))}catch{}}
 function showWindow(){if(quitting)return;if(!mainWindow||mainWindow.isDestroyed()){createWindow();return}if(mainWindow.isMinimized())mainWindow.restore();mainWindow.show();mainWindow.focus();}
 function createWindow(){
  if(quitting)return;
- const win=new BrowserWindow({width:1600,height:900,title:'77th JSOC · Everon ORBAT Planner',icon:path.join(__dirname,'jsoc-logo.png'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
+ const win=new BrowserWindow({width:1600,height:900,title:'77th JSOC · Phase C SIMULATION (experimental)',icon:path.join(__dirname,'jsoc-logo.png'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
  mainWindow=win;win.setMenuBarVisibility(false);
+ win.webContents.on('did-start-navigation',(_event,_url,_inPlace,isMainFrame)=>{if(isMainFrame)simulation.reset();});
+ win.webContents.on('render-process-gone',()=>simulation.reset());
  // Closing during the initial load aborts loadFile before the closed event fires.
  // Do not turn that normal shutdown into a blocking startup-error dialog.
  let closing=false;win.on('close',()=>{closing=true;});
