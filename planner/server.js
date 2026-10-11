@@ -85,6 +85,8 @@ const server = http.createServer(async (req, res) => {
     ['/asset-catalog.json',['asset-catalog.json','application/json; charset=utf-8']],
     ['/asset-tools.js',['asset-tools.js','text/javascript; charset=utf-8']],
     ['/planner-core.js',['planner-core.js','text/javascript; charset=utf-8']],
+    ['/mission-clock.js',['mission-clock.js','text/javascript; charset=utf-8']],
+    ['/plan-csv.js',['plan-csv.js','text/javascript; charset=utf-8']],
     ['/planner.js',['planner.js','text/javascript; charset=utf-8']],
     ['/editing.js',['editing.js','text/javascript; charset=utf-8']],
     ['/preferences.js',['preferences.js','text/javascript; charset=utf-8']],

@@ -1,3 +1,23 @@
+# v2.8.1 verification — 10 October 2026
+
+- PASS: 45 automated checks, including CSV assets/hierarchy/geometry/timer round-trip, malformed imports, scaling validation, prior editing/export/lifecycle/backend/translation coverage.
+- PASS: packaged EXE reads the actual installed 1.0.66 mod in a background worker; 29 AOs, inherited Chotain radius, duplicate prevention, one-step Undo/Redo, AO chooser and visibility preservation.
+- PASS: five actual-mod side-mission templates each placed as manual objectives, without injecting unwanted AOs or equipment assets.
+- PASS: map scale preferences preserve plan coordinates and styles; native interface slider applies 125%; settings remain within the viewport and closable at 200%.
+- PASS: mission clock start, event entry, pause, saved timing and reload persistence. Fixed clock actions switching to the selected unit's tab.
+- PASS: CSV file downloaded, reimported unchanged, and malformed CSV rejected without changing the current plan. Assets and geometry round-trip checked in automated tests.
+- PASS: packaged PNG/JPEG/PDF/SVG previews and downloads, with export symbol scale 150%, embedded branding, offline terrain, input escaping and unchanged project. SVG/PNG mean channel difference 0.065 in the comparison fixture.
+- PASS: packaged native window close, app quit and three consecutive launches with the same profile; preferences and existing French/German labels survive reopening.
+- PASS: browser server supplies both new modules with JavaScript content types.
+- PASS: release builder checks ZIP CRCs and verifies every distributed source file against its SHA256 in both archives.
+
+Visual checks inspected desktop screenshots. These are local fixture tests, not an assurance of zero bugs on every PC. No live game synchronization or geographic coordinate calibration was tested or claimed. XLSX, GeoJSON, KML/KMZ and MilX are not part of this release.
+
+Desktop harnesses and screenshots are retained under A:/Everon-ORBAT-Development/work (test-new281.cjs, test-ao281.cjs, test-branding281.cjs, test-reopen281.cjs). Mod research remains outside release archives.
+
+---
+Previous release records follow.
+
 # Validation — 9 October 2026
 
 **13 automated test groups passed, 0 failed.** Run npm test with Node.js 18+.

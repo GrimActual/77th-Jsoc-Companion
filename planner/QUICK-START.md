@@ -1,3 +1,5 @@
+V2.8.1: See UPDATE-2.8.1.md. Scaling: Settings. Side missions: Draw. Clock and CSV: Brief.
+
 # Everon ORBAT Planner 2.6.1
 
 Extract **the whole Windows ZIP** into a fresh folder and run **Everon ORBAT Planner.exe**. Keep all bundled files and folders together.

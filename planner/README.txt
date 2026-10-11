@@ -1,4 +1,6 @@
-EVERON ORBAT PLANNER 2.8.0 — 77TH JSOC
+V2.8.1: See UPDATE-2.8.1.md. Scaling: Settings. Side missions: Draw. Clock and CSV: Brief.
+
+EVERON ORBAT PLANNER 2.8.1 — 77TH JSOC
 
 START
 Windows release: extract the entire ZIP and run Everon ORBAT Planner.exe.

@@ -39,7 +39,7 @@ if(!primary){app.quit()}else{
   const candidates=[path.join(app.getPath('documents'),'My Games','ArmaReforger','addons',name),path.join(app.getPath('home'),'OneDrive','Documents','My Games','ArmaReforger','addons',name)];
   let folder=candidates.find(p=>fs.existsSync(path.join(p,'meta')));
   if(!folder){const result=await dialog.showOpenDialog(mainWindow,{title:'Select Invade & Annex - Reforged 1.0.66 addon folder',properties:['openDirectory']});if(result.canceled)return null;folder=result.filePaths[0];}
-  return require('./mod-ao').read(folder);
+  return require('./mod-ao').readAsync(folder);
  });
  ipcMain.handle('graphics-status',event=>{if(event.senderFrame!==event.sender.mainFrame||event.senderFrame.url!==indexURL)throw Error('Unexpected sender');const status=app.getGPUFeatureStatus();return {compositing:status.gpu_compositing||'unknown',rasterization:status.rasterization||'unknown'};});
  ipcMain.handle('offline-base-tile',(event,c)=>{if(event.senderFrame!==event.sender.mainFrame||event.senderFrame.url!==indexURL)throw Error('Unexpected sender');if(!c||!Number.isInteger(c.x)||!Number.isInteger(c.y)||c.x<0||c.x>3||c.y<0||c.y>3)throw Error('Invalid base tile');return 'data:image/jpeg;base64,'+fs.readFileSync(path.join(__dirname,'terrain','everon',c.x+'-'+c.y+'.jpg')).toString('base64')});

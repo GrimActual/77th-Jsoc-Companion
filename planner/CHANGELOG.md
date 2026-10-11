@@ -1,3 +1,6 @@
+## v2.8.1
+Scaling sliders, actual-mod side-mission planning templates, manual mission clock/event log, validated planner CSV and background mod reading. See UPDATE-2.8.1.md for scope and compatibility.
+
 # Version 2.0.0 — tactical planning expansion
 
 - Added green independent faction, faction-default colors, marker/drawing color pickers and HEX presets.

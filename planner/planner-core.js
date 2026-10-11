@@ -1,6 +1,7 @@
 /* Pure plan validation, local-grid geometry and military-symbol mapping. */
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.PlannerCore=api})(typeof globalThis==='object'?globalThis:this,function(){
 'use strict';
+const Clock=typeof module==='object'&&module.exports?require('./mission-clock'):globalThis.PlannerClock;
 const VERSION=4;
 const SIDES={blue:'Bluefor / Friendly',red:'Opfor / Hostile',green:'Independent / Guerrilla / FIA',neutral:'Civilian / Neutral'};
 const COLORS={blue:'#62B8FF',red:'#FF7777',green:'#59C76E',neutral:'#EBC66F'};
@@ -79,7 +80,7 @@ function validate(d){
  }),'area');
  const o=d.operation??{};if(typeof o!=='object'||Array.isArray(o))fail('Invalid operation');
  const v=d.view??{},layers=v.layers??{};
- return {schema:'everon-orbat-plan',schemaVersion:VERSION,app:'Everon ORBAT Mapper',operation:{name:text(o.name,'OPERATION EVERON',300),taskForce:text(o.taskForce,'JSOC',200),version:text(o.version,'01',50),briefing:text(o.briefing,'')},map:{name:'Everon',game:'Arma Reforger',coordinateSystem:'mapper-local',gridOrder:'easting-northing'},phases,orderOfBattle:units,routes,areas,view:{...(Array.isArray(v.hiddenAreas)?{hiddenAreas:v.hiddenAreas.filter(id=>areas.some(a=>String(a.id)===String(id))).map(String)}:{}),gridDigits:v.gridDigits===8?8:6,hiddenPhases:Array.isArray(v.hiddenPhases)?v.hiddenPhases.filter(x=>x==='shared'||phaseIds.has(x)):[],layers:{grid:layers.grid===true,units:layers.units!==false,routes:layers.routes!==false,areas:layers.areas!==false,labels:layers.labels!==false}}};
+ return {schema:'everon-orbat-plan',schemaVersion:VERSION,app:'Everon ORBAT Mapper',operation:{...(o.timing!=null?{timing:Clock.validate(o.timing)}:{}),name:text(o.name,'OPERATION EVERON',300),taskForce:text(o.taskForce,'JSOC',200),version:text(o.version,'01',50),briefing:text(o.briefing,'')},map:{name:'Everon',game:'Arma Reforger',coordinateSystem:'mapper-local',gridOrder:'easting-northing'},phases,orderOfBattle:units,routes,areas,view:{...(Array.isArray(v.hiddenAreas)?{hiddenAreas:v.hiddenAreas.filter(id=>areas.some(a=>String(a.id)===String(id))).map(String)}:{}),gridDigits:v.gridDigits===8?8:6,hiddenPhases:Array.isArray(v.hiddenPhases)?v.hiddenPhases.filter(x=>x==='shared'||phaseIds.has(x)):[],layers:{grid:layers.grid===true,units:layers.units!==false,routes:layers.routes!==false,areas:layers.areas!==false,labels:layers.labels!==false}}};
 }
 function empty(){return validate({schemaVersion:4,orderOfBattle:[],routes:[],areas:[]})}
 function visible(plan,item){return !(plan.areas.includes(item)&&(plan.view.hiddenAreas||[]).includes(String(item.id)))&&!plan.view.hiddenPhases.includes(item.phaseId??'shared')}

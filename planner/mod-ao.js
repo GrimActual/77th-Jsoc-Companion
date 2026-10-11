@@ -25,7 +25,10 @@ function read(folder){
  if(meta?.id!==MOD||version?.version!=='1.0.66'||!version.scenarios?.some(s=>s.gameId===MISSION))throw Error('Select Invade & Annex - Reforged 1.0.66 with the JSC_IA_Eden mission.');
  const pak=path.join(folder,'data.pak');if(fs.statSync(pak).size>100000000)throw Error('Mod archive too large');const resource=entries(fs.readFileSync(pak));
  if(!resource('Missions/JSC_IA_Eden.conf').includes('{D152FCAF0A00F67F}Worlds/JSC_IA_Everon.ent'))throw Error('Unexpected mission world');
- return {mod:MOD,version:'1.0.66',mission:MISSION,areas:parse(resource('Worlds/JSC_IA_Everon_Layers/AO.layer'),resource('Prefabs/JSC/JSC_MissionArea.et'))};
+ const sideMissions=['HVTElimination','ConvoyAmbush','IntelRetrieval','DownedPilotRescue','CacheDestruction'].map(key=>{const source=resource('scripts/Game/JSOC/SideMissions/JSC_SM_'+key+'.c'),name=source.match(/m_sName\s*=\s*"([^"]+)"/)?.[1],description=source.match(/m_sDescription\s*=\s*"([^"]+)"/)?.[1];if(!name||!description)throw Error('Unsupported side mission '+key);return {key,name,description};});
+ return {mod:MOD,version:'1.0.66',mission:MISSION,sideMissions,areas:parse(resource('Worlds/JSC_IA_Everon_Layers/AO.layer'),resource('Prefabs/JSC/JSC_MissionArea.et'))};
 }
-module.exports={read,parse,entries};
+function readAsync(folder){const {Worker}=require('node:worker_threads');return new Promise((resolve,reject)=>{const worker=new Worker(__filename,{workerData:{folder}});let settled=false;const timer=setTimeout(()=>{settled=true;worker.terminate();reject(Error('Mod read timed out'));},20000);worker.once('message',m=>{settled=true;clearTimeout(timer);m.error?reject(Error(m.error)):resolve(m.result);});worker.once('error',e=>{settled=true;clearTimeout(timer);reject(e);});worker.once('exit',code=>{if(!settled){clearTimeout(timer);reject(Error('Mod reader stopped: '+code));}});});}
+const {isMainThread,workerData,parentPort}=require('node:worker_threads');if(!isMainThread&&workerData?.folder){try{parentPort.postMessage({result:read(workerData.folder)});}catch(e){parentPort.postMessage({error:e.message});}}
+module.exports={read,readAsync,parse,entries};
 
