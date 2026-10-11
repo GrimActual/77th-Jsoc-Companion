@@ -84,13 +84,13 @@ function validate(d){
 function empty(){return validate({schemaVersion:4,orderOfBattle:[],routes:[],areas:[]})}
 function visible(plan,item){return !plan.view.hiddenPhases.includes(item.phaseId??'shared')}
 function freshId(items,prefix){const used=new Set(items.map(x=>String(x.id)));let n=1;while(used.has(prefix+n))n++;return prefix+n}
-function briefing(plan){
+function briefing(plan,{t=s=>s,distance:displayDistance=formatDistance}={}){
  const names=new Map(plan.orderOfBattle.map(u=>[String(u.id),u.name||u.type]));
- const phaseName=id=>plan.phases.find(p=>p.id===id)?.name||'All phases';
- const lines=['**'+(plan.operation.name||'OPERATION EVERON')+'** — '+plan.operation.taskForce+' | v'+plan.operation.version,'',plan.operation.briefing,'','**ORDER OF BATTLE (visible phases)**'];
- for(const u of plan.orderOfBattle.filter(u=>visible(plan,u)))lines.push('• **'+(u.name||u.type)+'** — '+SIDES[u.side]+' | '+TYPES[u.unitType]+' | grid '+grid(u.position,plan.view.gridDigits)+(u.asset!=='none'?' | '+u.assetName:'')+(u.parentId!=null?' | under '+names.get(String(u.parentId)):'')+' | '+phaseName(u.phaseId)+(u.strength?' | '+u.strength:''));
- lines.push('','**ROUTES**');for(const r of plan.routes.filter(r=>visible(plan,r)))lines.push('• '+r.name+' | '+r.points.map(p=>grid(p,plan.view.gridDigits)).join(' → ')+' | '+formatDistance(length(r.points))+' | '+phaseName(r.phaseId));
- lines.push('','**AREAS**');for(const a of plan.areas.filter(a=>visible(plan,a)))lines.push('• '+a.name+' | '+a.kind+' | '+phaseName(a.phaseId)+(a.kind==='circle'?' | center '+grid(a.center,plan.view.gridDigits)+' | radius '+formatDistance(a.radius):' | '+a.points.map(p=>grid(p,plan.view.gridDigits)).join(' → ')));
+ const phaseName=id=>plan.phases.find(p=>p.id===id)?.name||t('All phases');
+ const lines=['**'+(plan.operation.name||'OPERATION EVERON')+'** — '+plan.operation.taskForce+' | v'+plan.operation.version,'',plan.operation.briefing,'','**'+t('ORDER OF BATTLE (visible phases)')+'**'];
+ for(const u of plan.orderOfBattle.filter(u=>visible(plan,u)))lines.push('• **'+(u.name||u.type)+'** — '+t(SIDES[u.side])+' | '+t(TYPES[u.unitType])+' | '+t('grid')+' '+grid(u.position,plan.view.gridDigits)+(u.asset!=='none'?' | '+u.assetName:'')+(u.parentId!=null?' | '+t('under')+' '+names.get(String(u.parentId)):'')+' | '+phaseName(u.phaseId)+(u.strength?' | '+u.strength:''));
+ lines.push('','**'+t('ROUTES')+'**');for(const r of plan.routes.filter(r=>visible(plan,r)))lines.push('• '+r.name+' | '+r.points.map(p=>grid(p,plan.view.gridDigits)).join(' → ')+' | '+displayDistance(length(r.points))+' | '+phaseName(r.phaseId));
+ lines.push('','**'+t('AREAS')+'**');for(const a of plan.areas.filter(a=>visible(plan,a)))lines.push('• '+a.name+' | '+t(a.kind)+' | '+phaseName(a.phaseId)+(a.kind==='circle'?' | '+t('center')+' '+grid(a.center,plan.view.gridDigits)+' | '+t('radius')+' '+displayDistance(a.radius):' | '+a.points.map(p=>grid(p,plan.view.gridDigits)).join(' → ')));
  return lines.filter(x=>x!=null).join('\n');
 }
 return {VERSION,SIDES,COLORS,TYPES,SYMBOLS,ICONS,DEFAULT_PHASES,clone,color,point,style,unitType,sidc,markerColor,distance,bearing,length,formatDistance,grid,rectangle,simplePolygon,treeValid,canParent,validate,empty,visible,freshId,briefing};

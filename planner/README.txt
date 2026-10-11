@@ -1,4 +1,4 @@
-EVERON ORBAT PLANNER 2.6.0 — 77TH JSOC
+EVERON ORBAT PLANNER 2.6.1 — 77TH JSOC
 
 START
 Windows release: extract the entire ZIP and run Everon ORBAT Planner.exe.
@@ -10,8 +10,9 @@ Online terrain detail, Workshop and URL catalogs need internet access.
 PRESENTATION EXPORT
 PNG, JPEG, PDF and SVG are available with preview and current/full/selected scope.
 Expand Presentation branding to add a logo, title, date, watermark or exercise stamp.
-Branding lasts until the application closes; project JSON remains unchanged.
-See UPDATE-2.6.0.md for release notes and verification.
+Save community defaults remembers the community name, logo, watermark and stamp on this device.
+Operation titles and dates remain session-only; project JSON remains unchanged.
+See UPDATE-2.6.1.md for release notes and verification.
 
 Read QUICK-START.md for tool-by-tool instructions. feature-tour.json is an
 optional sample plan, never automatically loaded. asset-catalog.json is empty:

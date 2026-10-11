@@ -11,8 +11,8 @@
  // Single-page PDF containing one JPEG XObject. Byte offsets refer to the encoded stream.
  function pdf(jpeg,width,height){const {pageW,pageH,w,h}=M.pdfLayout(width,height);const cmd=`q ${w} 0 0 ${h} ${(pageW-w)/2} ${(pageH-h)/2} cm /Im0 Do Q\n`;const objects=[bytes('<< /Type /Catalog /Pages 2 0 R >>'),bytes('<< /Type /Pages /Kids [3 0 R] /Count 1 >>'),bytes(`<< /Type /Page /Parent 2 0 R /MediaBox [0 0 ${pageW} ${pageH}] /Resources << /XObject << /Im0 4 0 R >> >> /Contents 5 0 R >>`),join([bytes(`<< /Type /XObject /Subtype /Image /Width ${width} /Height ${height} /ColorSpace /DeviceRGB /BitsPerComponent 8 /Filter /DCTDecode /Length ${jpeg.length} >>\nstream\n`),jpeg,bytes('\nendstream')]),bytes(`<< /Length ${bytes(cmd).length} >>\nstream\n${cmd}endstream`)];const parts=[bytes('%PDF-1.4\n')],offsets=[0];let offset=parts[0].length;objects.forEach((obj,i)=>{offsets.push(offset);const p=join([bytes(`${i+1} 0 obj\n`),obj,bytes('\nendobj\n')]);parts.push(p);offset+=p.length});parts.push(bytes(`xref\n0 6\n0000000000 65535 f \n${offsets.slice(1).map(n=>String(n).padStart(10,'0')+' 00000 n \n').join('')}trailer\n<< /Size 6 /Root 1 0 R >>\nstartxref\n${offset}\n%%EOF\n`));return new Blob(parts,{type:'application/pdf'})}
  const blob=(canvas,type,quality)=>new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('Image encoding failed')),type,quality));
- function context(){return {plan:C.validate(EveronPlanner.snapshot()),view:EveronPlanner.viewport(),selected:EveronPlanner.selected(),locale:PlannerPreferences.get().locale,offlineTerrain:PlannerPreferences.get().offlineTerrain};}
- async function render(settings,source){const {plan}=source;const {units,routes,areas,bounds}=M.scene(plan,source.view,source.selected,settings.scope);
+ function context(){return {plan:C.validate(EveronPlanner.snapshot()),view:EveronPlanner.viewport(),selected:EveronPlanner.selected(),locale:PlannerPreferences.get().locale,language:PlannerPreferences.get().language,offlineTerrain:PlannerPreferences.get().offlineTerrain};}
+ async function render(settings,source){const {plan}=source,tr=value=>PlannerI18n.t(value,source.language);const {units,routes,areas,bounds}=M.scene(plan,source.view,source.selected,settings.scope);
  const width=settings.width,mapHeight=Math.round(width*(bounds.north-bounds.south)/(bounds.east-bounds.west));if(mapHeight>6000)throw Error('Current view is too tall. Widen the app window or choose full canvas.');const scale=width/(settings.format==='pdf'?1000:1600),header=settings.title?90*scale:0,footer=(settings.title?(settings.format==='pdf'?160:116):settings.background?26:0)*scale;const canvas=settings.format==='svg'?PlannerSVGCanvas():document.createElement('canvas');canvas.width=width;canvas.height=Math.ceil(header+mapHeight+footer);const ctx=canvas.getContext('2d');if(!['png','svg'].includes(settings.format)||settings.background){ctx.fillStyle='#fff';ctx.fillRect(0,0,width,canvas.height)}
  const meter=width/(bounds.east-bounds.west),xy=p=>[(p.lng-bounds.west)*meter,header+(bounds.north-p.lat)*meter];
  const text=(value,x,y,size=16,color='#17241e',max=width-40*scale)=>{ctx.font=`${size*scale}px Arial`;ctx.fillStyle=color;ctx.fillText(String(value),x,y,max)};
@@ -23,10 +23,10 @@
  areas.forEach(a=>draw(a,true));routes.forEach(r=>draw(r,false));
  for(const u of units){const [x,y]=xy(u.position);if(x<-80*scale||x>width+80*scale||y<header-80*scale||y>header+mapHeight+80*scale)continue;const color=C.markerColor(u);let w=44*scale,h=42*scale,anchor=[w/2,h/2];if(u.symbolMode==='nato'){const symbol=new ms.Symbol(C.sidc(u.unitType,u.side),{size:30*scale,fillColor:color,outlineWidth:2,outlineColor:'#FFFFFF',infoFields:false}),size=symbol.getSize(),a=symbol.getAnchor();w=size.width;h=size.height;anchor=[a.x,a.y];const img=await loadImage('data:image/svg+xml;charset=utf-8,'+encodeURIComponent(symbol.asSVG()));ctx.drawImage(img,x-anchor[0],y-anchor[1],w,h)}else{ctx.fillStyle=color;ctx.strokeStyle='#202e29';ctx.lineWidth=2*scale;ctx.fillRect(x-w/2,y-h/2,w,h);ctx.strokeRect(x-w/2,y-h/2,w,h);if(u.symbolMode==='text'||K.markerKind(u)==='symbol'){ctx.textAlign='center';text(u.symbol,x,y+5*scale,14,'#101714',w-4*scale);ctx.textAlign='left'}else{const svg=K.svg(K.markerKind(u)).replace('<svg ','<svg width="36" height="36" xmlns="http://www.w3.org/2000/svg" ').replaceAll('currentColor','#101714');const img=await loadImage('data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg));ctx.drawImage(img,x-17*scale,y-17*scale,34*scale,34*scale)}}if(plan.view.layers.labels){const label=u.name||u.type;ctx.font=`14px Arial`;const labelW=Math.min(ctx.measureText(label).width*scale+12*scale,220*scale);ctx.fillStyle='#fff';ctx.fillRect(x-labelW/2,y+h-anchor[1]+3*scale,labelW,21*scale);ctx.textAlign='center';text(label,x,y+h-anchor[1]+19*scale,14,'#17241e',labelW-8*scale);ctx.textAlign='left'}}
  if(settings.brand.watermark){ctx.save();ctx.globalAlpha=settings.brand.opacity;ctx.textAlign='center';text(settings.brand.watermark,width/2,header+mapHeight/2,56,'#ffffff',width-80*scale);text(settings.brand.watermark,width/2,header+mapHeight/2-2*scale,56,'#17241e',width-80*scale);ctx.restore();}
- if(settings.brand.stamp){ctx.save();const stampWidth=Math.min(width-24*scale,400*scale);ctx.fillStyle='#fff';ctx.globalAlpha=.9;ctx.fillRect((width-stampWidth)/2,header+12*scale,stampWidth,30*scale);ctx.globalAlpha=1;ctx.textAlign='center';text(settings.brand.stamp,width/2,header+33*scale,18,'#8a201c',stampWidth-12*scale);ctx.restore();}
+ if(settings.brand.stamp){ctx.save();const stampWidth=Math.min(width-24*scale,400*scale);ctx.fillStyle='#fff';ctx.globalAlpha=.9;ctx.fillRect((width-stampWidth)/2,header+12*scale,stampWidth,30*scale);ctx.globalAlpha=1;ctx.textAlign='center';text(tr(settings.brand.stamp),width/2,header+33*scale,18,'#8a201c',stampWidth-12*scale);ctx.restore();}
  ctx.restore();
- if(settings.title){ctx.fillStyle='#fff';ctx.fillRect(0,0,width,header);ctx.fillRect(0,header+mapHeight,width,footer);const left=settings.brand.logo?104*scale:24*scale;const titleWidth=width-left-24*scale;text(settings.brand.title||plan.operation.name||'EVERON ORBAT',left,37*scale,28,'#17241e',titleWidth);text(`${settings.brand.community||plan.operation.taskForce} · ${settings.scope==='selected'?'Selected objects':settings.scope==='full'?'Full Everon canvas':'Current view'} · ${settings.brand.date||source.date}`,left,66*scale,14,'#17241e',titleWidth);if(settings.brand.logo){const img=await loadImage(settings.brand.logo);const factor=Math.min(64*scale/img.width,64*scale/img.height);ctx.drawImage(img,24*scale+(64*scale-img.width*factor)/2,12*scale+(64*scale-img.height*factor)/2,img.width*factor,img.height*factor);}const bottom=header+mapHeight;const visiblePhases=[...(plan.view.hiddenPhases.includes('shared')?[]:['Shared']),...plan.phases.filter(p=>!plan.view.hiddenPhases.includes(p.id)).map(p=>p.name)];text('Phases: '+visiblePhases.join(' / '),24*scale,bottom+24*scale,13);const entries=[...new Map(units.map(u=>[u.side+C.markerColor(u),{color:C.markerColor(u),name:C.SIDES[u.side]}])).values()];entries.slice(0,8).forEach((item,i)=>{const columns=settings.format==='pdf'?2:4,col=i%columns,row=Math.floor(i/columns),x=24*scale+col*width/columns,y=bottom+(43+row*22)*scale;ctx.fillStyle=item.color;ctx.fillRect(x,y,12*scale,12*scale);ctx.strokeStyle='#52665a';ctx.lineWidth=scale;ctx.strokeRect(x,y,12*scale,12*scale);text(item.name,x+19*scale,y+11*scale,12,'#17241e',width/columns-50*scale)});text(`${units.length} units · ${routes.length} routes · ${areas.length} areas${entries.length>8?' · additional custom colors shown on map':''} · N ↑ · Everon local grid`,24*scale,bottom+(settings.format==='pdf'?144:100)*scale,12);}
- if(settings.background)text('Map tiles © Reforger Maps / Bewilderbeest',width-350*scale,canvas.height-7*scale,10,'#37483e',340*scale);
+ if(settings.title){ctx.fillStyle='#fff';ctx.fillRect(0,0,width,header);ctx.fillRect(0,header+mapHeight,width,footer);const left=settings.brand.logo?104*scale:24*scale;const titleWidth=width-left-24*scale;text(settings.brand.title||plan.operation.name||'EVERON ORBAT',left,37*scale,28,'#17241e',titleWidth);text(`${settings.brand.community||plan.operation.taskForce} · ${tr(settings.scope==='selected'?'Selected objects':settings.scope==='full'?'Full Everon canvas':'Current view')} · ${settings.brand.date||source.date}`,left,66*scale,14,'#17241e',titleWidth);if(settings.brand.logo){const img=await loadImage(settings.brand.logo);const factor=Math.min(64*scale/img.width,64*scale/img.height);ctx.drawImage(img,24*scale+(64*scale-img.width*factor)/2,12*scale+(64*scale-img.height*factor)/2,img.width*factor,img.height*factor);}const bottom=header+mapHeight;const visiblePhases=[...(plan.view.hiddenPhases.includes('shared')?[]:[tr('Shared')]),...plan.phases.filter(p=>!plan.view.hiddenPhases.includes(p.id)).map(p=>p.name)];text(tr('Phases')+': '+visiblePhases.join(' / '),24*scale,bottom+24*scale,13);const entries=[...new Map(units.map(u=>[u.side+C.markerColor(u),{color:C.markerColor(u),name:C.SIDES[u.side]}])).values()];entries.slice(0,8).forEach((item,i)=>{const columns=settings.format==='pdf'?2:4,col=i%columns,row=Math.floor(i/columns),x=24*scale+col*width/columns,y=bottom+(43+row*22)*scale;ctx.fillStyle=item.color;ctx.fillRect(x,y,12*scale,12*scale);ctx.strokeStyle='#52665a';ctx.lineWidth=scale;ctx.strokeRect(x,y,12*scale,12*scale);text(tr(item.name),x+19*scale,y+11*scale,12,'#17241e',width/columns-50*scale)});text(`${units.length} ${tr('units')} · ${routes.length} ${tr('routes')} · ${areas.length} ${tr('areas')}${entries.length>8?' · '+tr('additional custom colors shown on map'):''} · N ↑ · ${tr('Everon local grid')}`,24*scale,bottom+(settings.format==='pdf'?144:100)*scale,12);}
+ if(settings.background)text(tr('Map tiles')+' © Reforger Maps / Bewilderbeest',width-350*scale,canvas.height-7*scale,10,'#37483e',340*scale);
  return canvas;
  }
  function invalidate(message=false){
@@ -37,11 +37,11 @@
  dialog.addEventListener('close',()=>invalidate());
  $('presentationForm').addEventListener('change',()=>invalidate(true));
  $('presentationForm').addEventListener('input',()=>invalidate(true));
- // Branding is deliberately session-local: importing a project cannot replace another community's identity.
+ // Community defaults stay outside plan JSON. Titles and dates are never persisted.
  $('brandLogo').addEventListener('change',async()=>{
   const file=$('brandLogo').files[0],request=++logoRequest;brandLogo=null;invalidate(true);
-  if(!file){$('brandLogoStatus').textContent='No custom logo';return;}
-  logoLoading=true;const buttons=[$('presentationPreview'),$('presentationCreate')];buttons.forEach(b=>b.disabled=true);
+  if(!file){clearLogo();return;}
+  logoLoading=true;const buttons=[$('presentationPreview'),$('presentationCreate'),$('brandSave')];buttons.forEach(b=>b.disabled=true);
   try{
    if(!['image/png','image/jpeg'].includes(file.type)||file.size>2*1024*1024)throw Error('Choose a PNG or JPEG no larger than 2 MB.');
    const url=URL.createObjectURL(file);let img;try{img=await loadImage(url);}finally{URL.revokeObjectURL(url);}
@@ -51,7 +51,7 @@
   }catch(err){if(request===logoRequest){$('brandLogo').value='';$('brandLogoStatus').textContent=err.message;}}
   finally{if(request===logoRequest){logoLoading=false;buttons.forEach(b=>b.disabled=false);}}
  });
- function clearLogo(){logoRequest++;logoLoading=false;brandLogo=null;$('brandLogo').value='';$('brandLogoStatus').textContent='No custom logo';$('presentationPreview').disabled=false;$('presentationCreate').disabled=false;invalidate(true);}
+ function clearLogo(){logoRequest++;logoLoading=false;brandLogo=null;$('brandLogo').value='';$('brandLogoStatus').textContent='No custom logo';$('presentationPreview').disabled=false;$('presentationCreate').disabled=false;$('brandSave').disabled=false;invalidate(true);}
  $('brandLogoClear').onclick=clearLogo;
  $('brandReset').onclick=()=>{for(const id of ['brandTitle','brandCommunity','brandDate','brandWatermark','brandStamp'])$(id).value='';$('brandOpacity').value='0.2';clearLogo();};
  function readSettings(){return {format:$('presentationFormat').value,scope:$('presentationScope').value,background:$('presentationBackground').checked,grid:$('presentationGrid').checked,title:$('presentationTitle').checked,width:Number($('presentationResolution').value),quality:Number($('presentationQuality').value),brand:{title:$('brandTitle').value.trim(),community:$('brandCommunity').value.trim(),date:$('brandDate').value,logo:brandLogo,watermark:$('brandWatermark').value.trim(),opacity:Number($('brandOpacity').value),stamp:$('brandStamp').value}};}
@@ -86,6 +86,28 @@
   }catch(err){invalidate();$('presentationStatus').textContent='Export failed: '+err.message;}
   finally{busy=false;controls.forEach(el=>el.disabled=false);}
  }
+ $('brandSave').onclick=()=>{
+  if(busy||logoLoading)return;
+  try{PlannerBrandingProfile.save(localStorage,readSettings().brand);$('brandProfileStatus').textContent='Community defaults saved on this device. Operation title and date were not saved.';}
+  catch{$('brandProfileStatus').textContent='Could not save community defaults. Your current export still works; check available storage.';}
+ };
+ $('brandForget').onclick=()=>{
+  try{PlannerBrandingProfile.forget(localStorage);$('brandProfileStatus').textContent='Saved community defaults removed. Current export settings are unchanged.';}
+  catch{$('brandProfileStatus').textContent='Could not remove saved community defaults. Try again.';}
+ };
+ async function restoreCommunity(){
+  const controls=[...$('presentationBranding').querySelectorAll('input,select,button')],buttons=[$('presentationPreview'),$('presentationCreate')];
+  try{
+   const saved=PlannerBrandingProfile.load(localStorage);if(!saved)return;
+   logoLoading=true;controls.concat(buttons).forEach(el=>el.disabled=true);
+   if(saved.logo){const img=await loadImage(saved.logo);if(img.width>512||img.height>512||!img.width||!img.height)throw Error('Invalid saved logo');}
+   $('brandCommunity').value=saved.community;$('brandWatermark').value=saved.watermark;$('brandOpacity').value=String(saved.opacity);$('brandStamp').value=saved.stamp;brandLogo=saved.logo;
+   $('brandLogoStatus').textContent=brandLogo?'Logo ready':'No custom logo';$('brandProfileStatus').textContent='Saved community defaults loaded. Operation title and date use this session.';
+  }catch{$('brandProfileStatus').textContent='Saved community defaults could not be loaded. Current project is unchanged. Save new defaults or forget the saved defaults.';}
+  finally{logoLoading=false;controls.concat(buttons).forEach(el=>el.disabled=false);}
+ }
+ restoreCommunity();
+ window.addEventListener('planner-preferences-changed',()=>invalidate());
  $('presentationPreview').onclick=()=>run(false);
  $('presentationForm').onsubmit=e=>{e.preventDefault();run(true);};
 })();

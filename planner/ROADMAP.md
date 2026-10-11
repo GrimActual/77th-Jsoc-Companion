@@ -1,6 +1,6 @@
 # 77th JSOC — development roadmap, 10 October 2026
 
-## Current tested increment: v2.6.0
+## Current tested increment: v2.6.1
 
 Keep the existing planner and manual backups. This release covers the first priority batch, not the complete pasted roadmap.
 
@@ -17,9 +17,9 @@ v2.4.3 retains map objects through zoom, reuses unit markers during edits, reduc
 
 ## Still pending from immediate targets
 
-- Native-speaker translation review and localization of technical diagnostics and generated briefing/legend labels.
+- Native-speaker translation review and full localization of technical diagnostics remain pending. Generated brief/legend labels, selected brief distance units and form hints are covered in v2.6.1.
 - Keyboard customization delivered in v2.4.2 for canvas actions and movement, with validated alternatives, disable/reset and typing guards. Mouse gestures, Shift boost and dialog/fullscreen Escape stay fixed.
-- Individual unit patches and persistent branding profiles remain pending. SVG, export community logo/patch, watermark, operation date and fictional exercise stamps are delivered in v2.6.0. Preview and selected unit/route/area export are delivered in v2.5.0.
+- Individual unit patches and multiple named branding profiles remain pending. One opt-in community default (name/logo/watermark/stamp) is saved locally in v2.6.1, excluding operation title/date. SVG, export community logo/patch, watermark, operation date and fictional exercise stamps are delivered in v2.6.0. Preview and selected unit/route/area export are delivered in v2.5.0.
 - Verify all 20 locations against the correct Reforger Everon world, record version/source and coordinate conversion controls. Then implement search, jumps, coordinate copy, objective creation and export labels. Do not activate unverified targets.
 
 ## Next phases after this release is stable

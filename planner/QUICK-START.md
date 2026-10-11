@@ -1,6 +1,16 @@
-# Everon ORBAT Planner 2.0
+# Everon ORBAT Planner 2.6.1
 
-Extract **the whole ZIP** into a fresh folder. Keep the `vendor` folder and all app files together. With Node.js 18 or later installed, open a terminal in that folder and run `npm start`. Open **http://127.0.0.1:8787**. No `npm install` is needed.
+Extract **the whole Windows ZIP** into a fresh folder and run **Everon ORBAT Planner.exe**. Keep all bundled files and folders together.
+
+For source development, install Node.js 18 or later, run `npm ci`, then `npm start` for the desktop app. For the browser edition, run `npm run server` and open **http://127.0.0.1:8787**. The editor and bundled lower-detail terrain work offline; Workshop and online detail require internet.
+
+## Presentation exports and community defaults
+
+Open **Presentation export** for PNG, JPEG, SVG or an A4 PDF. Choose current view, full canvas or selected visible objects (units, routes and areas). Use **Preview** before **Create export**. PNG and SVG support a transparent background; terrain and logos remain raster images within an SVG. PDF is an image-based page.
+
+Expand **Presentation branding** for title, community name, operation date, logo, watermark and exercise stamp. Enable **Include title and legend** to show the title, community, date and logo. **Save community defaults** remembers the community name, logo, watermark, opacity and stamp on this device. It deliberately excludes the mission title and date. **Reset branding** clears the current session; **Forget saved defaults** removes stored defaults without changing the current export. JSON projects do not include these defaults.
+
+Generated brief labels and presentation legends follow the interface language in Settings. Your own names, phases and imported equipment names remain unchanged. Copied briefs use the selected distance units. Native-speaker review and full technical-error localization remain pending.
 
 ## Units and factions
 
@@ -44,10 +54,10 @@ Drag a roster entry onto its commander. Expand/collapse its children with the tr
 
 ## Save and test
 
-**Export plan** includes all items and phases, including hidden ones. **Import plan** validates before replacing your current plan; Undo restores the previous plan. Local browser saves are convenient, but keep JSON exports as backups.
+**Project JSON** includes all items and phases, including hidden ones. **Import plan** validates before replacing your current plan; Undo restores the previous plan. Local browser saves are convenient, but keep JSON exports as backups.
 
 Existing plans (versions 1–3) import into this build. New exports use **version 4** to preserve waypoint paths, areas, styles, phases and command relationships. Older builds cannot open version 4. The app also keeps a one-time browser backup under `everonOrbat-v3-backup` when migrating an older local save.
 
 An optional `feature-tour.json` illustrates the new tools. It contains generic game-planning markers and no equipment catalog. It is never loaded automatically.
 
-Stop the local server with **Ctrl+C**, then run **`npm test`** for the included validation and backend tests. Run `npm start` again afterward.
+Run **`npm test`** from the source folder for the included validation and regression checks. Stop the browser server with **Ctrl+C** when finished.

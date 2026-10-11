@@ -3,7 +3,7 @@
 (()=>{
  const dictionaries=window.PlannerTranslations;
  const language=()=>window.PlannerPreferences?.get().language||'en';
- function t(source){return dictionaries[language()]?.[source]??source;}
+ function t(source,requestedLanguage=language()){return dictionaries[requestedLanguage]?.[source]??source;}
  const records=new WeakMap();
  // These containers mix user content with UI. Their fixed labels are localized at source.
  const excluded='script,style,svg,textarea,input,[contenteditable],#map,#roster,#drawingList,#symbolPreview,#assetMeta,#asset,#parent,#unitPhase,#drawingPhase,#phases,#unitTitle,#drawingTitle';
@@ -36,8 +36,12 @@
    if(root.parentElement&&!root.parentElement.closest(excluded))translateSlot(root,'text',()=>root.data,v=>root.data=v);
    return;
   }
-  if(root.nodeType!==Node.ELEMENT_NODE||root.matches(excluded))return;
+  if(root.nodeType!==Node.ELEMENT_NODE)return;
+  const field=root.matches('input,textarea');
+  if(!field&&root.matches(excluded))return;
   for(const attr of ['aria-label','title','placeholder','alt'])if(root.hasAttribute(attr))translateSlot(root,attr,()=>root.getAttribute(attr),v=>root.setAttribute(attr,v));
+  // Translate instructions on fields, never typed values or textarea contents.
+  if(field)return;
   for(const child of root.childNodes)visit(child);
  }
  let observer;
