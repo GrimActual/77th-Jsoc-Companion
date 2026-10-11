@@ -1,10 +1,17 @@
-EVERON ORBAT PLANNER 2.0.0 — 77TH JSOC
+EVERON ORBAT PLANNER 2.6.0 — 77TH JSOC
 
 START
-Extract the whole ZIP, including vendor/. With Node.js 18+ installed, open a
-terminal in this folder and run npm start. Open http://127.0.0.1:8787.
-No npm install is needed. Keep the terminal open while using the website.
-The map still needs internet access for Leaflet and terrain tiles.
+Windows release: extract the entire ZIP and run Everon ORBAT Planner.exe.
+Source: install Node.js 18+, run npm ci, then npm start for the desktop app.
+For the browser edition, run npm run server and open http://127.0.0.1:8787.
+Leaflet and lower-detail Everon terrain are bundled for offline use.
+Online terrain detail, Workshop and URL catalogs need internet access.
+
+PRESENTATION EXPORT
+PNG, JPEG, PDF and SVG are available with preview and current/full/selected scope.
+Expand Presentation branding to add a logo, title, date, watermark or exercise stamp.
+Branding lasts until the application closes; project JSON remains unchanged.
+See UPDATE-2.6.0.md for release notes and verification.
 
 Read QUICK-START.md for tool-by-tool instructions. feature-tour.json is an
 optional sample plan, never automatically loaded. asset-catalog.json is empty:
@@ -75,3 +82,4 @@ See THIRD-PARTY-NOTICES.md and vendor/milsymbol-LICENSE.txt for library attribut
 
 TEST
 Stop the server and run npm test. See TEST-RESULTS.md for validation coverage.
+

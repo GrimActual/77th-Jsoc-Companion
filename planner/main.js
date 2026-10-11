@@ -14,6 +14,9 @@ function createWindow(){
  if(quitting)return;
  const win=new BrowserWindow({width:1600,height:900,title:'77th JSOC · Everon ORBAT Planner',icon:path.join(__dirname,'jsoc-logo.png'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
  mainWindow=win;win.setMenuBarVisibility(false);
+ // Closing during the initial load aborts loadFile before the closed event fires.
+ // Do not turn that normal shutdown into a blocking startup-error dialog.
+ let closing=false;win.on('close',()=>{closing=true;});
  win.once('ready-to-show',()=>{if(!win.isDestroyed())win.show()});
  // Workshop links belong in the system browser, never in hidden app windows.
  win.webContents.setWindowOpenHandler(({url})=>{external(url);return {action:'deny'}});
@@ -21,7 +24,7 @@ function createWindow(){
  win.webContents.on('render-process-gone',(_event,details)=>{log('renderer-exited '+details.reason);if(!quitting&&!win.isDestroyed()){win.show();dialog.showMessageBox(win,{type:'error',title:'Planner needs to reload',message:'The planner window stopped responding.',detail:'Reload to restore the last locally saved plan. Unapplied edits may not have been saved.',buttons:['Reload','Exit'],defaultId:0,cancelId:1}).then(({response})=>{if(quitting||win.isDestroyed())return;if(response===0)win.reload();else app.quit()})}});
  win.on('unresponsive',()=>log('window-unresponsive'));
  win.on('closed',()=>{if(mainWindow===win)mainWindow=null;log('main-window-closed');if(process.platform!=='darwin')app.quit()});
- win.loadFile(indexPath).then(()=>{log('window-loaded');if(!win.isDestroyed())win.show()}).catch(error=>{log('load-failed '+error.code);if(!quitting){dialog.showErrorBox('Planner could not open','The application files could not be loaded. Extract the entire ZIP into a folder before running the EXE.');app.quit()}});
+ win.loadFile(indexPath).then(()=>{log('window-loaded');if(!closing&&!win.isDestroyed())win.show()}).catch(error=>{if(closing||quitting||win.isDestroyed()){log('load-cancelled-on-close');return;}log('load-failed '+error.code);dialog.showErrorBox('Planner could not open','The application files could not be loaded. Extract the entire ZIP into a folder before running the EXE.');app.quit()});
 }
 const primary=app.requestSingleInstanceLock();
 if(!primary){app.quit()}else{
