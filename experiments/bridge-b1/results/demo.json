@@ -1,0 +1,19 @@
+{
+  "simulationOnly": true,
+  "virtualSeconds": 2000,
+  "units": 100,
+  "markers": 1,
+  "events": 50,
+  "revision": 1000,
+  "wallMilliseconds": 713,
+  "maxPending": 103,
+  "maxInflight": 1,
+  "maxWireBytes": 12106,
+  "traffic": {
+    "receivedBytes": 11793495,
+    "sentBytes": 221112,
+    "messages": 1001,
+    "rejected": 0,
+    "resyncs": 0
+  }
+}

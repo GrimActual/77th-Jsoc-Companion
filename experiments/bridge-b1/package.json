@@ -1,0 +1,1 @@
+{"name":"everon-bridge-b1-experiment","version":"0.1.0","private":true,"type":"commonjs","scripts":{"test":"node --test tests/*.test.js","demo":"node demo.js"},"engines":{"node":">=18"}}
