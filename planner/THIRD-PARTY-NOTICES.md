@@ -21,3 +21,5 @@ This app uses the existing Everon mapper's game-meter coordinate transform, with
 
 Leaflet 1.9.4 (BSD-2-Clause), bundled with its license in vendor/leaflet/LICENSE. Source: https://github.com/Leaflet/Leaflet
 Offline base terrain: 16 existing-provider tiles from https://reforger.recoil.org/map-tiles/everon/ ; attribution retained: Reforger Maps / Bewilderbeest. Lower-detail fallback only.
+
+cloudflared 2026.10.0 (unmodified portable Windows executable), Cloudflare, Apache-2.0. License: bridge-runtime/CLOUDFLARED-LICENSE.txt. Source: https://github.com/cloudflare/cloudflared/tree/2026.10.0

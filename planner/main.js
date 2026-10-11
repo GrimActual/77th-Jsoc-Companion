@@ -1,5 +1,5 @@
 'use strict';
-const {app,BrowserWindow,ipcMain,shell,dialog}=require('electron');
+const {app,BrowserWindow,ipcMain,shell,dialog,clipboard}=require('electron');
 const path=require('path');
 const fs=require('fs');
 const {pathToFileURL}=require('url');
@@ -7,15 +7,15 @@ let mainWindow=null,quitting=false;
 const pendingTiles=new Set();
 const indexPath=path.join(__dirname,'index.html');
 const indexURL=pathToFileURL(indexPath).href;
-if(typeof app.setPath==='function'&&!process.argv?.some(a=>a.startsWith('--user-data-dir')))app.setPath('userData',path.join(app.getPath('appData'),'Everon-ORBAT-Remote-Bridge-Test'));
-const localBridge=require('./local-bridge').install({app,ipcMain,getWindow:()=>mainWindow,indexURL});
+if(typeof app.setPath==='function'&&!process.argv?.some(a=>a.startsWith('--user-data-dir')))app.setPath('userData',path.join(app.getPath('appData'),'Everon-ORBAT-OneClick-Bridge'));
+const localBridge=require('./local-bridge').install({app,ipcMain,getWindow:()=>mainWindow,indexURL,clipboard});
 const simulation=require('./simulation-main').install({app,ipcMain,getWindow:()=>mainWindow,indexURL});
 function log(event){try{const file=path.join(app.getPath('userData'),'planner-lifecycle.log');fs.mkdirSync(path.dirname(file),{recursive:true});if(fs.existsSync(file)&&fs.statSync(file).size>250000)fs.renameSync(file,file+'.previous');fs.appendFileSync(file,new Date().toISOString()+' '+event+'\n')}catch{}}
 function external(url){try{const parsed=new URL(url);if(!['https:','http:'].includes(parsed.protocol))return;shell.openExternal(parsed.href).catch(()=>log('external-link-failed'))}catch{}}
 function showWindow(){if(quitting)return;if(!mainWindow||mainWindow.isDestroyed()){createWindow();return}if(mainWindow.isMinimized())mainWindow.restore();mainWindow.show();mainWindow.focus();}
 function createWindow(){
  if(quitting)return;
- const win=new BrowserWindow({width:1600,height:900,title:'77th JSOC · REMOTE BRIDGE TEST (experimental)',icon:path.join(__dirname,'jsoc-logo.png'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
+ const win=new BrowserWindow({width:1600,height:900,title:'77th JSOC · ONE-CLICK BRIDGE (experimental)',icon:path.join(__dirname,'jsoc-logo.png'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
  mainWindow=win;win.setMenuBarVisibility(false);
  win.webContents.on('did-start-navigation',(_event,_url,_inPlace,isMainFrame)=>{if(isMainFrame){simulation.reset();localBridge.stop();}});
  win.webContents.on('render-process-gone',()=>{simulation.reset();localBridge.stop();});
@@ -57,3 +57,4 @@ if(!primary){app.quit()}else{
  });
  app.whenReady().then(()=>{log('startup '+app.getVersion());createWindow()}).catch(error=>{log('startup-failed '+error.name);dialog.showErrorBox('Planner startup failed','The planner could not start. See planner-lifecycle.log in the application data folder.');app.quit()});
 }
+

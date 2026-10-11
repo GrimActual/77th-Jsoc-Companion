@@ -26,14 +26,18 @@ function createReceiver(onState=()=>{},port=8791){
  }
  return {start,stop,status:()=>({...state}),port:()=>server?.address()?.port};
 }
-function install({app,ipcMain,getWindow,indexURL}){
+function install({app,ipcMain,getWindow,indexURL,clipboard}){
  const publish=state=>{const w=getWindow();if(w&&!w.isDestroyed())w.webContents.send('local-bridge-state',state);};
  const local=createReceiver(publish);
  const remote=require('./remote-bridge').createRemote(publish);
+ const free=require('./free-bridge').createFreeBridge(publish);
+
  let active=local;
- function stop(){local.stop();remote.stop();active=local;return local.status();}
+ function stop(){local.stop();remote.stop();free.stop();active=local;return local.status();}
  ipcMain.handle('local-bridge-command',async(event,action,options)=>{
   const w=getWindow();if(!w||event.sender!==w.webContents||event.senderFrame!==event.sender.mainFrame||event.senderFrame.url!==indexURL)throw Error('Unexpected sender');
+  if(action==='free-start'){if(active===free&&!['off','error'].includes(free.status().status))return free.status();stop();active=free;return free.start();}
+  if(action==='copy-address'||action==='copy-code'){const s=active.status();const value=action==='copy-address'?(s.endpoint||(s.status!=='off'?'http://127.0.0.1:8791/':'')):s.token;if(!value)throw Error('Start a connection first.');clipboard.writeText(value);return s;}
   if(action==='start'){stop();active=local;return local.start();}
   if(action==='remote-start'){if(typeof options?.endpoint!=='string'||options.endpoint.length>240)throw Error('Enter a relay address');stop();active=remote;return remote.start(options.endpoint);}
   if(action==='stop')return stop();
@@ -43,3 +47,4 @@ function install({app,ipcMain,getWindow,indexURL}){
  app.on('before-quit',stop);return {stop,status:()=>active.status()};
 }
 module.exports={createReceiver,install};
+
