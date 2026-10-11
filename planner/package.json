@@ -1,6 +1,6 @@
 {
   "name": "everon-orbat-workshop-bridge",
-  "version": "2.9.0-rc.1",
+  "version": "2.9.0-rc.2",
   "private": true,
   "description": "Experimental single-host ORBAT bridge with HTTPS relay support",
   "main": "main.js",

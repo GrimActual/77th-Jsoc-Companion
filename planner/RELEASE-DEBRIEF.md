@@ -1,3 +1,21 @@
+# RC2: live bridge startup fix
+
+The one-click planner previously created and polled its own local relay through the public Cloudflare address. New-address DNS delays could make pairing wait around a minute. RC2 waits for cloudflared to report a registered tunnel, then creates the pairing session and reads positions over loopback on this PC. The game still uses the public HTTPS address. The public URL is preserved in the UI and clipboard; loopback addresses are not substituted into game instructions.
+
+Measured on 11 October 2026 in sequential real-tunnel tests:
+- RC1 pairing ready: 68.54 seconds.
+- RC2 pairing ready: 9.57 seconds; successful public marker request by 10.85 seconds.
+
+These are individual network-dependent samples, not a guaranteed time or controlled Cloudflare performance comparison. The local polling route removes unnecessary ongoing internet requests. The game still depends on external DNS and tunnel availability.
+
+Validation: 88 regression tests passed. Added coverage proves an address alone cannot enable pairing, tunnel registration is required, pairing uses the local relay and the UI retains the public URL. Packaged RC2 verified public HTTPS marker delivery, clipboard actions, unchanged plan, stop/restart and reload cleanup.
+
+Install by closing RC1 and extracting the whole RC2 ZIP into a new folder. Run its EXE. Existing one-click settings and autosave use the same profile; keep a JSON backup. Start a fresh connection and copy the new address and code into the existing game mod. No Workshop mod update is required. RC1 is preserved.
+
+The RC1 checks and known limits below still apply; this update changes bridge startup/transport, not map rendering.
+
+---
+
 # 2.9.0 RC1 — Release debrief
 
 ## Changes

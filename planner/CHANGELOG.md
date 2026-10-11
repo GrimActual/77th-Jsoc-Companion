@@ -1,3 +1,7 @@
+# 2.9.0-rc.2
+
+Fix slow live bridge pairing by using the local relay directly, after public tunnel registration. See RELEASE-DEBRIEF.md for timings and validation.
+
 # 2.9.0-rc.1
 
 See RELEASE-DEBRIEF.md for the validated release candidate changes.

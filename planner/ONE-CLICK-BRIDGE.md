@@ -1,4 +1,4 @@
-# 77th JSOC Everon ORBAT Planner — 2.9.0 RC1
+# 77th JSOC Everon ORBAT Planner — 2.9.0 RC2
 
 ## Install or upgrade
 1. In your previous planner, click Save Backup and check the downloaded JSON.
@@ -7,7 +7,7 @@
 4. This candidate uses the same local profile as the previous OneClick Bridge build. If your operation does not appear, use Import plan with your backup. Previous release folders have not been changed.
 
 ## Connect to Reforger / GeForce NOW
-1. PLANNER ON YOUR PC: gear → Live bridge → Start free connection. Wait for Ready; startup can take about two minutes.
+1. PLANNER ON YOUR PC: gear → Live bridge → Start free connection. Wait for Ready; startup depends on the tunnel service.
 2. GAME: enable the published JSOC ORBAT Bridge mod and host your scenario. Press Escape to open ORBAT PLANNER – HOST PAIRING.
 3. PLANNER: Copy address. GAME: paste it into the FIRST field (address).
 4. PLANNER: Copy pairing code. GAME: paste it into the SECOND field (code), then click CONNECT.

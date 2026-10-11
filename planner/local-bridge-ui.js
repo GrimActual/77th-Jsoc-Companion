@@ -21,7 +21,7 @@
 
  button.onclick=()=>{$('settingsFeedback').textContent='Connection controls apply immediately.';for(const el of content.children)el.hidden=el!==section;for(const b of nav.children)b.setAttribute('aria-current',String(b===button));};
  nav.addEventListener('click',e=>{if(e.target.closest('button')!==button)section.hidden=true;},true);$('settingsGear').addEventListener('click',()=>section.hidden=true);
- const messages={off:'Off — click Start free connection.',starting:'Starting connection… this can take about two minutes. Stop cancels startup.',pairing:'Preparing the public connection…',waiting:'Ready — paste the address and code into Reforger.',connected:'Connected — receiving your character’s position.',stale:'No recent position — resume the game and control a character.',reconnecting:'Connection interrupted — retrying. The stale marker is hidden.',error:'Connection stopped.'};
+ const messages={off:'Off — click Start free connection.',starting:'Starting the public tunnel… Stop cancels startup.',pairing:'Preparing the public connection…',waiting:'Ready — tunnel connected. Paste the address and code into Reforger. A new public address may take a moment to resolve in the game.',connected:'Connected — receiving your character’s position.',stale:'No recent position — resume the game and control a character.',reconnecting:'Connection interrupted — retrying. The stale marker is hidden.',error:'Connection stopped.'};
  function render(s){
   const idle=['off','error'].includes(s.status);
   badge.hidden=s.status==='off';
