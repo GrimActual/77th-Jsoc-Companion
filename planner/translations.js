@@ -416,7 +416,18 @@ window.PlannerTranslations={
     "GPU acceleration active.": "Accélération graphique active.",
     "Graphics acceleration is managed by your browser.": "L’accélération graphique est gérée par votre navigateur.",
     "Software rendering is active; graphics acceleration depends on the system and driver.": "Rendu logiciel actif ; l’accélération dépend du système et du pilote.",
-    "Graphics status unavailable.": "État graphique indisponible."
+    "Graphics status unavailable.": "État graphique indisponible.",
+    "Selected objects — fitted view": "Objets sélectionnés — vue ajustée",
+    "Preview": "Aperçu",
+    "Presentation preview": "Aperçu de la présentation",
+    "Preview out of date. Preview again or create a new export.": "Aperçu périmé. Actualisez-le ou créez un nouvel export.",
+    "Preview ready. Create export downloads this result. No file has been downloaded yet.": "Aperçu prêt. Créer l’export télécharge ce résultat. Aucun fichier n’a encore été téléchargé.",
+    "units": "unités",
+    "routes": "itinéraires",
+    "areas": "zones",
+    "A4 page preview": "Aperçu de la page A4",
+    "Exports committed changes and respects phase/layer visibility. Selected-object export includes selected units, routes and areas. PNG without terrain is transparent; JPEG/PDF use white. Bundled terrain works offline at lower detail. The live editor is unchanged.": "Exporte les modifications appliquées et respecte les phases/calques visibles. L’export des objets sélectionnés inclut unités, itinéraires et zones. Sans terrain, le PNG est transparent ; JPEG/PDF utilisent du blanc. Le terrain fourni fonctionne hors ligne avec moins de détails. L’éditeur reste inchangé.",
+    "Project JSON saves the editable plan. Presentation export creates PNG, JPEG or a single-page A4 PDF. Choose current view, full canvas, or selected visible objects. Selected-object export includes selected units, routes and areas. Use Preview to check the result before Create export. Set terrain, grid, title/legend, resolution and quality. PNG without terrain is transparent; JPEG/PDF use white. Bundled base terrain works offline at lower detail; online terrain adds detail. PDFs are image snapshots, not editable vectors.": "Projet JSON conserve le plan modifiable. Export de présentation crée un PNG, JPEG ou PDF A4 d’une page. Choisissez la vue actuelle, toute la carte ou les objets visibles sélectionnés. Ce mode inclut unités, itinéraires et zones. Utilisez Aperçu pour vérifier le résultat avant Créer l’export. Réglez terrain, grille, titre/légende, résolution et qualité. Sans terrain, le PNG est transparent ; JPEG/PDF utilisent du blanc. Le terrain fourni fonctionne hors ligne avec moins de détails ; le terrain en ligne ajoute de la précision. Les PDF sont des images, pas des vecteurs modifiables."
   },
   "de": {
     "Undo": "Rückgängig",
@@ -834,6 +845,17 @@ window.PlannerTranslations={
     "GPU acceleration active.": "GPU-Beschleunigung aktiv.",
     "Graphics acceleration is managed by your browser.": "Die Grafikbeschleunigung wird vom Browser verwaltet.",
     "Software rendering is active; graphics acceleration depends on the system and driver.": "Softwarerendering aktiv; Grafikbeschleunigung hängt von System und Treiber ab.",
-    "Graphics status unavailable.": "Grafikstatus nicht verfügbar."
+    "Graphics status unavailable.": "Grafikstatus nicht verfügbar.",
+    "Selected objects — fitted view": "Ausgewählte Objekte — angepasste Ansicht",
+    "Preview": "Vorschau",
+    "Presentation preview": "Präsentationsvorschau",
+    "Preview out of date. Preview again or create a new export.": "Vorschau veraltet. Erneut anzeigen oder neuen Export erstellen.",
+    "Preview ready. Create export downloads this result. No file has been downloaded yet.": "Vorschau bereit. Export erstellen lädt dieses Ergebnis herunter. Es wurde noch keine Datei heruntergeladen.",
+    "units": "Einheiten",
+    "routes": "Routen",
+    "areas": "Flächen",
+    "A4 page preview": "A4-Seitenvorschau",
+    "Exports committed changes and respects phase/layer visibility. Selected-object export includes selected units, routes and areas. PNG without terrain is transparent; JPEG/PDF use white. Bundled terrain works offline at lower detail. The live editor is unchanged.": "Exportiert übernommene Änderungen und berücksichtigt sichtbare Phasen/Ebenen. Der Export ausgewählter Objekte enthält Einheiten, Routen und Flächen. PNG ohne Gelände ist transparent; JPEG/PDF haben weißen Hintergrund. Mitgeliefertes Gelände funktioniert offline mit weniger Details. Der Editor bleibt unverändert.",
+    "Project JSON saves the editable plan. Presentation export creates PNG, JPEG or a single-page A4 PDF. Choose current view, full canvas, or selected visible objects. Selected-object export includes selected units, routes and areas. Use Preview to check the result before Create export. Set terrain, grid, title/legend, resolution and quality. PNG without terrain is transparent; JPEG/PDF use white. Bundled base terrain works offline at lower detail; online terrain adds detail. PDFs are image snapshots, not editable vectors.": "Projekt-JSON speichert den bearbeitbaren Plan. Präsentationsexport erstellt PNG, JPEG oder eine A4-PDF-Seite. Aktuelle Ansicht, gesamte Karte oder ausgewählte sichtbare Objekte wählen. Dieser Auszug enthält Einheiten, Routen und Flächen. Vor Export erstellen das Ergebnis mit Vorschau prüfen. Gelände, Gitter, Titel/Legende, Auflösung und Qualität einstellen. PNG ohne Gelände ist transparent; JPEG/PDF verwenden Weiß. Mitgeliefertes Gelände funktioniert offline mit weniger Details; Online-Gelände ergänzt Details. PDFs sind Bildaufnahmen, keine bearbeitbaren Vektoren."
   }
 };
