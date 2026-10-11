@@ -412,7 +412,11 @@ window.PlannerTranslations={
     "Hold to drag the map": "Maintenir pour déplacer la carte",
     "Default shortcuts selected. Save settings to apply.": "Raccourcis par défaut sélectionnés. Enregistrez les paramètres pour appliquer.",
     "Check shortcut settings: ": "Vérifiez les raccourcis : ",
-    "Help describes default keys. View your current bindings in Settings → Keyboard Shortcuts.": "L’aide décrit les touches par défaut. Consultez vos raccourcis dans Paramètres → Raccourcis clavier."
+    "Help describes default keys. View your current bindings in Settings → Keyboard Shortcuts.": "L’aide décrit les touches par défaut. Consultez vos raccourcis dans Paramètres → Raccourcis clavier.",
+    "GPU acceleration active.": "Accélération graphique active.",
+    "Graphics acceleration is managed by your browser.": "L’accélération graphique est gérée par votre navigateur.",
+    "Software rendering is active; graphics acceleration depends on the system and driver.": "Rendu logiciel actif ; l’accélération dépend du système et du pilote.",
+    "Graphics status unavailable.": "État graphique indisponible."
   },
   "de": {
     "Undo": "Rückgängig",
@@ -826,6 +830,10 @@ window.PlannerTranslations={
     "Hold to drag the map": "Zum Ziehen der Karte gedrückt halten",
     "Default shortcuts selected. Save settings to apply.": "Standardtasten ausgewählt. Zum Übernehmen Einstellungen speichern.",
     "Check shortcut settings: ": "Tastenkürzel prüfen: ",
-    "Help describes default keys. View your current bindings in Settings → Keyboard Shortcuts.": "Die Hilfe beschreibt Standardtasten. Ihre aktuellen Belegungen finden Sie unter Einstellungen → Tastenkürzel."
+    "Help describes default keys. View your current bindings in Settings → Keyboard Shortcuts.": "Die Hilfe beschreibt Standardtasten. Ihre aktuellen Belegungen finden Sie unter Einstellungen → Tastenkürzel.",
+    "GPU acceleration active.": "GPU-Beschleunigung aktiv.",
+    "Graphics acceleration is managed by your browser.": "Die Grafikbeschleunigung wird vom Browser verwaltet.",
+    "Software rendering is active; graphics acceleration depends on the system and driver.": "Softwarerendering aktiv; Grafikbeschleunigung hängt von System und Treiber ab.",
+    "Graphics status unavailable.": "Grafikstatus nicht verfügbar."
   }
 };

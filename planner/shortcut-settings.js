@@ -1,5 +1,6 @@
 'use strict';
 (()=>{
+ const graphics=document.createElement('p');graphics.id='graphicsStatus';graphics.setAttribute('role','status');document.querySelector('#settingsContent section').append(graphics);document.getElementById('settingsGear').addEventListener('click',async()=>{try{const result=await window.plannerDesktop?.graphicsStatus?.();graphics.textContent=!result?'Graphics acceleration is managed by your browser.':String(result.compositing).startsWith('enabled')?'GPU acceleration active.':'Software rendering is active; graphics acceleration depends on the system and driver.';}catch{graphics.textContent='Graphics status unavailable.';}});
  const S=window.PlannerShortcuts,host=document.getElementById('shortcutFields'),feedback=document.getElementById('shortcutFeedback');
  for(const [id,[label]]of Object.entries(S.definitions)){
   const row=document.createElement('div');const title=document.createElement('label');title.htmlFor='shortcut-'+id;title.textContent=label;

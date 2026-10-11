@@ -1,6 +1,6 @@
 # 77th JSOC — development roadmap, 10 October 2026
 
-## Current tested increment: v2.4.2
+## Current tested increment: v2.4.3
 
 Keep the existing planner and manual backups. This release covers the first priority batch, not the complete pasted roadmap.
 
@@ -10,6 +10,10 @@ Keep the existing planner and manual backups. This release covers the first prio
 - Editing: selected-unit group movement, session copy/paste, duplicate, alignment/distribution, locks, Space-drag pan, fit visible ORBAT. Group mutations use one undo step; locked objects reject mutation and deletion. Imports intentionally replace the whole plan and are not constrained by old object locks.
 - Briefing: expand map and request fullscreen; restore editor with Exit briefing/Escape. The saved operation is unchanged.
 - Locations: a research registry records the requested 20 names with null coordinates. Nothing is guessed. It is not exposed as verified navigation data or a project JSON file.
+
+## Performance pass before continuing
+
+v2.4.3 retains map objects through zoom, reuses unit markers during edits, reduces grid/cursor work, bounds terrain requests, and reports GPU compositing status. See UPDATE-2.4.3.md for measurements and limits.
 
 ## Still pending from immediate targets
 

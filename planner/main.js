@@ -30,6 +30,7 @@ if(!primary){app.quit()}else{
  app.on('before-quit',()=>{quitting=true;for(const controller of pendingTiles)controller.abort();log('before-quit')});
  app.on('will-quit',()=>log('will-quit'));
  app.on('window-all-closed',()=>{if(process.platform!=='darwin')app.quit()});
+ ipcMain.handle('graphics-status',event=>{if(event.senderFrame!==event.sender.mainFrame||event.senderFrame.url!==indexURL)throw Error('Unexpected sender');const status=app.getGPUFeatureStatus();return {compositing:status.gpu_compositing||'unknown',rasterization:status.rasterization||'unknown'};});
  ipcMain.handle('offline-base-tile',(event,c)=>{if(event.senderFrame!==event.sender.mainFrame||event.senderFrame.url!==indexURL)throw Error('Unexpected sender');if(!c||!Number.isInteger(c.x)||!Number.isInteger(c.y)||c.x<0||c.x>3||c.y<0||c.y>3)throw Error('Invalid base tile');return 'data:image/jpeg;base64,'+fs.readFileSync(path.join(__dirname,'terrain','everon',c.x+'-'+c.y+'.jpg')).toString('base64')});
  ipcMain.handle('presentation-tile',async(event,coord)=>{
   if(quitting)throw Error('Planner is closing');
