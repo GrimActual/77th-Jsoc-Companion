@@ -86,6 +86,7 @@ const server = http.createServer(async (req, res) => {
     ['/asset-tools.js',['asset-tools.js','text/javascript; charset=utf-8']],
     ['/planner-core.js',['planner-core.js','text/javascript; charset=utf-8']],
     ['/planner.js',['planner.js','text/javascript; charset=utf-8']],
+    ['/sarge-help.js',['sarge-help.js','text/javascript; charset=utf-8']],
     ['/presentation.js',['presentation.js','text/javascript; charset=utf-8']],
     ['/planner.css',['planner.css','text/css; charset=utf-8']],
     ['/vendor/milsymbol.js',['vendor/milsymbol.js','text/javascript; charset=utf-8']],
