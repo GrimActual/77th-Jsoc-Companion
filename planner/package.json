@@ -1,0 +1,24 @@
+{
+  "name": "everon-orbat-workshop-bridge",
+  "version": "2.1.0",
+  "private": true,
+  "description": "Small CORS-safe metadata bridge with persistent Workshop JSON cache for Everon ORBAT Mapper",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "server": "node server.js",
+    "test": "node --test core.test.js backend.test.js",
+    "package": "electron-packager . \"Everon ORBAT Planner\" --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "devDependencies": {
+    "electron": "^30.5.1",
+    "electron-packager": "^17.1.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}

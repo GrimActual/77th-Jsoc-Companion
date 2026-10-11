@@ -1,0 +1,292 @@
+{
+  "schema": "everon-orbat-plan",
+  "schemaVersion": 4,
+  "app": "Everon ORBAT Mapper",
+  "operation": {
+    "name": "FEATURE TOUR — OPTIONAL SAMPLE",
+    "taskForce": "77th JSOC",
+    "version": "01",
+    "briefing": "Optional demonstration of the planning tools. Import your own asset JSON to assign actual equipment. Toggle Phase I, II and III; drag tree entries; select routes and areas to edit them."
+  },
+  "map": {
+    "name": "Everon",
+    "game": "Arma Reforger",
+    "coordinateSystem": "mapper-local",
+    "gridOrder": "easting-northing"
+  },
+  "phases": [
+    {
+      "id": "phase-1",
+      "name": "Phase I: Infiltration"
+    },
+    {
+      "id": "phase-2",
+      "name": "Phase II: Assault"
+    },
+    {
+      "id": "phase-3",
+      "name": "Phase III: Exfiltration"
+    }
+  ],
+  "orderOfBattle": [
+    {
+      "id": "hq",
+      "name": "ACTUAL",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Headquarters",
+      "unitType": "headquarters",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": null,
+      "parentId": null,
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "",
+      "position": {
+        "lat": 9000,
+        "lng": 4000
+      }
+    },
+    {
+      "id": "alpha",
+      "name": "ALPHA 1",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Infantry",
+      "unitType": "infantry",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": "phase-1",
+      "parentId": "hq",
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "",
+      "position": {
+        "lat": 7500,
+        "lng": 5500
+      }
+    },
+    {
+      "id": "fia",
+      "name": "FIA 1",
+      "symbol": "I",
+      "side": "green",
+      "type": "Mechanized",
+      "unitType": "mechanized",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": "phase-2",
+      "parentId": "hq",
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "",
+      "position": {
+        "lat": 6500,
+        "lng": 6500
+      }
+    },
+    {
+      "id": "eagle",
+      "name": "EAGLE 1",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Rotary Wing",
+      "unitType": "rotary",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": "#B58CFF",
+      "phaseId": "phase-3",
+      "parentId": "hq",
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "",
+      "position": {
+        "lat": 4500,
+        "lng": 6000
+      }
+    },
+    {
+      "id": "medic",
+      "name": "AID STATION",
+      "symbol": "I",
+      "side": "neutral",
+      "type": "Medical",
+      "unitType": "medical",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": "#FFFFFF",
+      "phaseId": null,
+      "parentId": null,
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "",
+      "position": {
+        "lat": 8000,
+        "lng": 3500
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": "msr",
+      "name": "MSR GOLD",
+      "phaseId": "phase-1",
+      "points": [
+        {
+          "lat": 4000,
+          "lng": 2500
+        },
+        {
+          "lat": 5000,
+          "lng": 3500
+        },
+        {
+          "lat": 5200,
+          "lng": 4500
+        },
+        {
+          "lat": 6000,
+          "lng": 5500
+        }
+      ],
+      "style": {
+        "color": "#FF9933",
+        "width": 5,
+        "pattern": "dashed",
+        "opacity": 0.18
+      },
+      "start": {
+        "lat": 4000,
+        "lng": 2500
+      },
+      "end": {
+        "lat": 6000,
+        "lng": 5500
+      }
+    },
+    {
+      "id": "axis",
+      "name": "ASSAULT AXIS",
+      "phaseId": "phase-2",
+      "points": [
+        {
+          "lat": 6000,
+          "lng": 6500
+        },
+        {
+          "lat": 7400,
+          "lng": 7000
+        },
+        {
+          "lat": 8500,
+          "lng": 7000
+        }
+      ],
+      "style": {
+        "color": "#FF7777",
+        "width": 6,
+        "pattern": "arrow",
+        "opacity": 0.18
+      },
+      "start": {
+        "lat": 6000,
+        "lng": 6500
+      },
+      "end": {
+        "lat": 8500,
+        "lng": 7000
+      }
+    }
+  ],
+  "areas": [
+    {
+      "id": "ao",
+      "name": "AO FALCON",
+      "phaseId": "phase-2",
+      "kind": "polygon",
+      "style": {
+        "color": "#59C76E",
+        "width": 4,
+        "pattern": "solid",
+        "opacity": 0.2
+      },
+      "points": [
+        {
+          "lat": 9000,
+          "lng": 6000
+        },
+        {
+          "lat": 11000,
+          "lng": 6000
+        },
+        {
+          "lat": 11000,
+          "lng": 8000
+        },
+        {
+          "lat": 9200,
+          "lng": 8500
+        }
+      ]
+    },
+    {
+      "id": "box",
+      "name": "EXCLUSION",
+      "phaseId": null,
+      "kind": "rectangle",
+      "style": {
+        "color": "#B58CFF",
+        "width": 4,
+        "pattern": "solid",
+        "opacity": 0.15
+      },
+      "points": [
+        {
+          "lat": 9500,
+          "lng": 9000
+        },
+        {
+          "lat": 11000,
+          "lng": 11000
+        }
+      ]
+    },
+    {
+      "id": "radius",
+      "name": "DANGER CLOSE",
+      "phaseId": "phase-2",
+      "kind": "circle",
+      "style": {
+        "color": "#FF9933",
+        "width": 4,
+        "pattern": "solid",
+        "opacity": 0.2
+      },
+      "center": {
+        "lat": 6000,
+        "lng": 9500
+      },
+      "radius": 650
+    }
+  ],
+  "view": {
+    "gridDigits": 8,
+    "hiddenPhases": [],
+    "layers": {
+      "grid": true,
+      "units": true,
+      "routes": true,
+      "areas": true,
+      "labels": true
+    }
+  }
+}

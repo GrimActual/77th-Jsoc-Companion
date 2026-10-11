@@ -1,0 +1,7 @@
+{
+  "schema": "reforger-asset-catalog",
+  "schemaVersion": 1,
+  "name": "Your Reforger asset catalog",
+  "description": "Add only the assets you want available. No demonstration mods or claimed vanilla assets are bundled. See README.txt for supported fields.",
+  "assets": []
+}
