@@ -1,0 +1,1444 @@
+{
+  "schema": "everon-orbat-plan",
+  "schemaVersion": 4,
+  "app": "Everon ORBAT Mapper",
+  "operation": {
+    "name": "OPERATION SEA SERPENT",
+    "taskForce": "77th JSOC · TASK FORCE TRIDENT",
+    "version": "SHOWCASE 1.0",
+    "briefing": "ARMA REFORGER / EVERON — FICTIONAL GAME SCENARIO\n\nMISSION: Task Force Trident establishes a foothold, secures Meaux harbour (OBJ ANCHOR), and takes control of the northern airfield (OBJ CROWN). Recover the intelligence package and extract the designated role-play HVT.\n\nPHASE I — RECON & INSERT: RAVEN observes the northern sector; REAPER and the green FIA liaison establish observation points. EAGLE inserts the recon element at LZ VIPER. ALPHA assembles at FOB TRIDENT.\nPHASE II — HARBOUR: ALPHA 1/2 move along the blue planning corridor to OBJ ANCHOR. BRAVO holds the reserve. SAPPER checks the marked hazard area. DOC establishes the casualty collection point.\nPHASE III — AIRFIELD: BRAVO advances along AXIS CROWN after the scenario controller confirms the harbour objective. REAPER links up from the flank. Recover INTEL and escort HVT to the pickup point. HAMMER remains a scenario-controlled support reserve: its area is a staging boundary, not a ballistic range card.\nPHASE IV — EXTRACT: EAGLE follows the purple corridor to LZ HOME. Use the amber alternate route if the main route is unavailable. Account for all elements and return to FOB TRIDENT.\n\nBRIEFING CONTROLS: Brief → mission phases toggles each stage; shared markers are persistent command, objectives and scenario opposition. Units → command tree expands ACTUAL, ALPHA, BRAVO and aviation. Draw selects named routes/areas for editing. Presentation export → spread overlapping units is useful for an overview.\n\nLEGEND: Blue = friendly; red = fictional scenario opposition; green = independent FIA; purple = aviation/recon; orange = hazards/alternate route; white = civilian or landing landmark. Dashed = movement corridor; arrow = advance; dotted = alternate/recon.\n\nASSETS: Assigned catalog records use installed mod names and Workshop IDs: 77th JSOC Patches, RHS - Status Quo, Dax Humvees, Sikorsky H60 Project, RiptideMQ9, M270 MLRS, ZU-23, GM Editable Intel, ACE Medical Core. These are mod references, not verified spawned entities or exact prefabs. No naval fleet or carrier asset is claimed.\n\nMAP NOTE: Positions and waypoint corridors are illustrative planning placements on the Everon imagery. Check terrain, road bends and landing suitability in-game. Airfield and Meaux sectors follow the previous user-tested locations. This JSON creates a plan only; it does not spawn missions or send orders to Reforger. LIVE and Simulation remain separate overlays."
+  },
+  "map": {
+    "name": "Everon",
+    "game": "Arma Reforger",
+    "coordinateSystem": "mapper-local",
+    "gridOrder": "easting-northing"
+  },
+  "phases": [
+    {
+      "id": "p1",
+      "name": "I · RECON & INSERT"
+    },
+    {
+      "id": "p2",
+      "name": "II · SECURE HARBOUR"
+    },
+    {
+      "id": "p3",
+      "name": "III · AIRFIELD"
+    },
+    {
+      "id": "p4",
+      "name": "IV · EXTRACT"
+    }
+  ],
+  "orderOfBattle": [
+    {
+      "id": "actual",
+      "name": "ACTUAL",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Headquarters",
+      "unitType": "headquarters",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": null,
+      "parentId": null,
+      "asset": "61D12B4F580C54D6",
+      "assetName": "77th JSOC Patches",
+      "assetCatalogItem": {
+        "id": "61D12B4F580C54D6",
+        "name": "77th JSOC Patches",
+        "workshopId": "61D12B4F580C54D6",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/61D12B4F580C54D6",
+        "assetKind": "infantry",
+        "version": "1.0.30",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Command element · overall scenario control. Expand the roster to inspect the chain of command.",
+      "position": {
+        "lat": 8250,
+        "lng": 4800
+      }
+    },
+    {
+      "id": "alpha",
+      "name": "ALPHA",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Headquarters",
+      "unitType": "headquarters",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": "p2",
+      "parentId": "actual",
+      "asset": "595F2BF2F44836FB",
+      "assetName": "RHS - Status Quo",
+      "assetCatalogItem": {
+        "id": "595F2BF2F44836FB",
+        "name": "RHS - Status Quo",
+        "workshopId": "595F2BF2F44836FB",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/595F2BF2F44836FB",
+        "assetKind": "mixed",
+        "version": "0.16.5208",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "",
+      "position": {
+        "lat": 8650,
+        "lng": 4270
+      }
+    },
+    {
+      "id": "a1",
+      "name": "ALPHA 1",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Motorized",
+      "unitType": "motorized",
+      "symbolMode": "asset",
+      "icon": "lightVehicle",
+      "color": null,
+      "phaseId": "p2",
+      "parentId": "alpha",
+      "asset": "62DA2C805FEB90A1",
+      "assetName": "Dax Humvees",
+      "assetCatalogItem": {
+        "id": "62DA2C805FEB90A1",
+        "name": "Dax Humvees",
+        "workshopId": "62DA2C805FEB90A1",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/62DA2C805FEB90A1",
+        "assetKind": "lightVehicle",
+        "version": "1.3.23",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Harbour element · assigned Dax vehicle pack; loadout and crew determined in-game.",
+      "position": {
+        "lat": 9000,
+        "lng": 3990
+      }
+    },
+    {
+      "id": "a2",
+      "name": "ALPHA 2",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Infantry",
+      "unitType": "infantry",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": "p2",
+      "parentId": "alpha",
+      "asset": "595F2BF2F44836FB",
+      "assetName": "RHS - Status Quo",
+      "assetCatalogItem": {
+        "id": "595F2BF2F44836FB",
+        "name": "RHS - Status Quo",
+        "workshopId": "595F2BF2F44836FB",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/595F2BF2F44836FB",
+        "assetKind": "mixed",
+        "version": "0.16.5208",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "",
+      "position": {
+        "lat": 9150,
+        "lng": 4600
+      }
+    },
+    {
+      "id": "bravo",
+      "name": "BRAVO",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Headquarters",
+      "unitType": "headquarters",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": "p3",
+      "parentId": "actual",
+      "asset": "595F2BF2F44836FB",
+      "assetName": "RHS - Status Quo",
+      "assetCatalogItem": {
+        "id": "595F2BF2F44836FB",
+        "name": "RHS - Status Quo",
+        "workshopId": "595F2BF2F44836FB",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/595F2BF2F44836FB",
+        "assetKind": "mixed",
+        "version": "0.16.5208",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "",
+      "position": {
+        "lat": 9300,
+        "lng": 5320
+      }
+    },
+    {
+      "id": "b1",
+      "name": "BRAVO 1",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Infantry",
+      "unitType": "infantry",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": "p3",
+      "parentId": "bravo",
+      "asset": "595F2BF2F44836FB",
+      "assetName": "RHS - Status Quo",
+      "assetCatalogItem": {
+        "id": "595F2BF2F44836FB",
+        "name": "RHS - Status Quo",
+        "workshopId": "595F2BF2F44836FB",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/595F2BF2F44836FB",
+        "assetKind": "mixed",
+        "version": "0.16.5208",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "",
+      "position": {
+        "lat": 10200,
+        "lng": 5330
+      }
+    },
+    {
+      "id": "b2",
+      "name": "BRAVO 2",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Motorized",
+      "unitType": "motorized",
+      "symbolMode": "asset",
+      "icon": "lightVehicle",
+      "color": null,
+      "phaseId": "p3",
+      "parentId": "bravo",
+      "asset": "62DA2C805FEB90A1",
+      "assetName": "Dax Humvees",
+      "assetCatalogItem": {
+        "id": "62DA2C805FEB90A1",
+        "name": "Dax Humvees",
+        "workshopId": "62DA2C805FEB90A1",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/62DA2C805FEB90A1",
+        "assetKind": "lightVehicle",
+        "version": "1.3.23",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Reserve vehicle element.",
+      "position": {
+        "lat": 10550,
+        "lng": 5730
+      }
+    },
+    {
+      "id": "reaper",
+      "name": "REAPER",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Special Force",
+      "unitType": "special",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": "#B58CFF",
+      "phaseId": "p1",
+      "parentId": "actual",
+      "asset": "595F2BF2F44836FB",
+      "assetName": "RHS - Status Quo",
+      "assetCatalogItem": {
+        "id": "595F2BF2F44836FB",
+        "name": "RHS - Status Quo",
+        "workshopId": "595F2BF2F44836FB",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/595F2BF2F44836FB",
+        "assetKind": "mixed",
+        "version": "0.16.5208",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Recon team. Observation placement is illustrative.",
+      "position": {
+        "lat": 10870,
+        "lng": 4140
+      }
+    },
+    {
+      "id": "fia",
+      "name": "FIA LIAISON",
+      "symbol": "I",
+      "side": "green",
+      "type": "Infantry",
+      "unitType": "infantry",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": "p1",
+      "parentId": "actual",
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "Independent / guerrilla liaison — role-play marker, no equipment catalog assigned.",
+      "position": {
+        "lat": 10200,
+        "lng": 4250
+      }
+    },
+    {
+      "id": "fia2",
+      "name": "FIA GUIDE",
+      "symbol": "I",
+      "side": "green",
+      "type": "Recon",
+      "unitType": "recon",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": "p3",
+      "parentId": "fia",
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "",
+      "position": {
+        "lat": 11400,
+        "lng": 5750
+      }
+    },
+    {
+      "id": "air",
+      "name": "AIR CONTROL",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Headquarters",
+      "unitType": "headquarters",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": "#B58CFF",
+      "phaseId": null,
+      "parentId": "actual",
+      "asset": "61D12B4F580C54D6",
+      "assetName": "77th JSOC Patches",
+      "assetCatalogItem": {
+        "id": "61D12B4F580C54D6",
+        "name": "77th JSOC Patches",
+        "workshopId": "61D12B4F580C54D6",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/61D12B4F580C54D6",
+        "assetKind": "infantry",
+        "version": "1.0.30",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "",
+      "position": {
+        "lat": 8300,
+        "lng": 6200
+      }
+    },
+    {
+      "id": "eagle",
+      "name": "EAGLE 1",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Rotary Wing",
+      "unitType": "rotary",
+      "symbolMode": "asset",
+      "icon": "helicopter",
+      "color": "#B58CFF",
+      "phaseId": "p1",
+      "parentId": "air",
+      "asset": "60ED3CC6E7E40221",
+      "assetName": "Sikorsky H60 Project",
+      "assetCatalogItem": {
+        "id": "60ED3CC6E7E40221",
+        "name": "Sikorsky H60 Project",
+        "workshopId": "60ED3CC6E7E40221",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/60ED3CC6E7E40221",
+        "assetKind": "helicopter",
+        "version": "0.6.56",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Insertion aircraft · installed H-60 mod reference.",
+      "position": {
+        "lat": 9050,
+        "lng": 6380
+      }
+    },
+    {
+      "id": "eagle2",
+      "name": "EAGLE 2",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Rotary Wing",
+      "unitType": "rotary",
+      "symbolMode": "asset",
+      "icon": "helicopter",
+      "color": "#B58CFF",
+      "phaseId": "p4",
+      "parentId": "air",
+      "asset": "60ED3CC6E7E40221",
+      "assetName": "Sikorsky H60 Project",
+      "assetCatalogItem": {
+        "id": "60ED3CC6E7E40221",
+        "name": "Sikorsky H60 Project",
+        "workshopId": "60ED3CC6E7E40221",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/60ED3CC6E7E40221",
+        "assetKind": "helicopter",
+        "version": "0.6.56",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Extraction aircraft · show Phase IV to brief the return corridor.",
+      "position": {
+        "lat": 10000,
+        "lng": 6200
+      }
+    },
+    {
+      "id": "raven",
+      "name": "RAVEN",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Fixed Wing",
+      "unitType": "fixed",
+      "symbolMode": "asset",
+      "icon": "aircraft",
+      "color": "#B58CFF",
+      "phaseId": "p1",
+      "parentId": "air",
+      "asset": "6A06151E0B217C93",
+      "assetName": "RiptideMQ9",
+      "assetCatalogItem": {
+        "id": "6A06151E0B217C93",
+        "name": "RiptideMQ9",
+        "workshopId": "6A06151E0B217C93",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/6A06151E0B217C93",
+        "assetKind": "aircraft",
+        "version": "1.0.27",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Scenario ISR reference; no live sensor integration or automatic tracking.",
+      "position": {
+        "lat": 11450,
+        "lng": 6700
+      }
+    },
+    {
+      "id": "hammer",
+      "name": "HAMMER",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Artillery",
+      "unitType": "artillery",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": "p3",
+      "parentId": "actual",
+      "asset": "5DF42518F3C3210D",
+      "assetName": "M270 MLRS",
+      "assetCatalogItem": {
+        "id": "5DF42518F3C3210D",
+        "name": "M270 MLRS",
+        "workshopId": "5DF42518F3C3210D",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/5DF42518F3C3210D",
+        "assetKind": "symbol",
+        "version": "1.0.18",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Support staging marker only; no firing data or computed weapon ranges.",
+      "position": {
+        "lat": 7940,
+        "lng": 3850
+      }
+    },
+    {
+      "id": "sapper",
+      "name": "SAPPER",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Engineer",
+      "unitType": "engineer",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": "p2",
+      "parentId": "alpha",
+      "asset": "62DA2C805FEB90A1",
+      "assetName": "Dax Humvees",
+      "assetCatalogItem": {
+        "id": "62DA2C805FEB90A1",
+        "name": "Dax Humvees",
+        "workshopId": "62DA2C805FEB90A1",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/62DA2C805FEB90A1",
+        "assetKind": "lightVehicle",
+        "version": "1.3.23",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "",
+      "position": {
+        "lat": 9830,
+        "lng": 4620
+      }
+    },
+    {
+      "id": "doc",
+      "name": "DOC / CCP",
+      "symbol": "I",
+      "side": "blue",
+      "type": "Medical",
+      "unitType": "medical",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": "#FFFFFF",
+      "phaseId": null,
+      "parentId": "actual",
+      "asset": "60C4C12DAE90727B",
+      "assetName": "ACE Medical Core",
+      "assetCatalogItem": {
+        "id": "60C4C12DAE90727B",
+        "name": "ACE Medical Core",
+        "workshopId": "60C4C12DAE90727B",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/60C4C12DAE90727B",
+        "assetKind": "symbol",
+        "version": "1.4.3",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Medical collection and regroup point; ACE Medical Core is a system reference.",
+      "position": {
+        "lat": 8500,
+        "lng": 5180
+      }
+    },
+    {
+      "id": "crown",
+      "name": "OBJ CROWN",
+      "symbol": "+",
+      "side": "blue",
+      "type": "Other / Objective",
+      "unitType": "other",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": "#EBC66F",
+      "phaseId": null,
+      "parentId": null,
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "Primary objective: northern airfield.",
+      "position": {
+        "lat": 12280,
+        "lng": 4490
+      }
+    },
+    {
+      "id": "anchor",
+      "name": "OBJ ANCHOR",
+      "symbol": "+",
+      "side": "blue",
+      "type": "Other / Objective",
+      "unitType": "other",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": "#EBC66F",
+      "phaseId": null,
+      "parentId": null,
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "Secondary objective: Meaux harbour sector.",
+      "position": {
+        "lat": 9510,
+        "lng": 3720
+      }
+    },
+    {
+      "id": "lzv",
+      "name": "LZ VIPER",
+      "symbol": "+",
+      "side": "neutral",
+      "type": "Other / Objective",
+      "unitType": "other",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": "#FFFFFF",
+      "phaseId": "p1",
+      "parentId": null,
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "Illustrative recon pickup/insertion landmark. Verify landing suitability.",
+      "position": {
+        "lat": 10530,
+        "lng": 4390
+      }
+    },
+    {
+      "id": "lzh",
+      "name": "LZ HOME",
+      "symbol": "+",
+      "side": "neutral",
+      "type": "Other / Objective",
+      "unitType": "other",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": "#FFFFFF",
+      "phaseId": "p4",
+      "parentId": null,
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "Illustrative extraction landing area.",
+      "position": {
+        "lat": 8650,
+        "lng": 6150
+      }
+    },
+    {
+      "id": "intel",
+      "name": "INTEL PACKAGE",
+      "symbol": "+",
+      "side": "neutral",
+      "type": "Other / Objective",
+      "unitType": "other",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": "#EBC66F",
+      "phaseId": "p3",
+      "parentId": null,
+      "asset": "628B48364AFD286C",
+      "assetName": "GM Editable Intel",
+      "assetCatalogItem": {
+        "id": "628B48364AFD286C",
+        "name": "GM Editable Intel",
+        "workshopId": "628B48364AFD286C",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/628B48364AFD286C",
+        "assetKind": "other",
+        "version": "1.7.0",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Optional manual side objective; place editable intel prop in the game separately.",
+      "position": {
+        "lat": 12240,
+        "lng": 5080
+      }
+    },
+    {
+      "id": "hvt",
+      "name": "HVT — ROLE PLAY",
+      "symbol": "+",
+      "side": "neutral",
+      "type": "Other / Objective",
+      "unitType": "other",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": "#FFFFFF",
+      "phaseId": "p3",
+      "parentId": null,
+      "asset": "none",
+      "assetName": "No asset assigned",
+      "assetCatalogItem": {},
+      "strength": "Optional escort/capture role-play objective. No actual person represented.",
+      "position": {
+        "lat": 11660,
+        "lng": 5130
+      }
+    },
+    {
+      "id": "opfor",
+      "name": "OPFOR HQ",
+      "symbol": "I",
+      "side": "red",
+      "type": "Headquarters",
+      "unitType": "headquarters",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": null,
+      "parentId": null,
+      "asset": "595F2BF2F44836FB",
+      "assetName": "RHS - Status Quo",
+      "assetCatalogItem": {
+        "id": "595F2BF2F44836FB",
+        "name": "RHS - Status Quo",
+        "workshopId": "595F2BF2F44836FB",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/595F2BF2F44836FB",
+        "assetKind": "mixed",
+        "version": "0.16.5208",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Fictional opposing force for this showcase, not live intelligence.",
+      "position": {
+        "lat": 12120,
+        "lng": 5000
+      }
+    },
+    {
+      "id": "red1",
+      "name": "GUARD NORTH",
+      "symbol": "I",
+      "side": "red",
+      "type": "Infantry",
+      "unitType": "infantry",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": null,
+      "parentId": "opfor",
+      "asset": "595F2BF2F44836FB",
+      "assetName": "RHS - Status Quo",
+      "assetCatalogItem": {
+        "id": "595F2BF2F44836FB",
+        "name": "RHS - Status Quo",
+        "workshopId": "595F2BF2F44836FB",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/595F2BF2F44836FB",
+        "assetKind": "mixed",
+        "version": "0.16.5208",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "",
+      "position": {
+        "lat": 11980,
+        "lng": 4520
+      }
+    },
+    {
+      "id": "red2",
+      "name": "GUARD SOUTH",
+      "symbol": "I",
+      "side": "red",
+      "type": "Infantry",
+      "unitType": "infantry",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": null,
+      "parentId": "opfor",
+      "asset": "595F2BF2F44836FB",
+      "assetName": "RHS - Status Quo",
+      "assetCatalogItem": {
+        "id": "595F2BF2F44836FB",
+        "name": "RHS - Status Quo",
+        "workshopId": "595F2BF2F44836FB",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/595F2BF2F44836FB",
+        "assetKind": "mixed",
+        "version": "0.16.5208",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "",
+      "position": {
+        "lat": 11250,
+        "lng": 5100
+      }
+    },
+    {
+      "id": "red3",
+      "name": "AAA SITE",
+      "symbol": "I",
+      "side": "red",
+      "type": "Air Defense",
+      "unitType": "airDefense",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": null,
+      "parentId": "opfor",
+      "asset": "5C9AD9EF76F6B5EA",
+      "assetName": "ZU-23",
+      "assetCatalogItem": {
+        "id": "5C9AD9EF76F6B5EA",
+        "name": "ZU-23",
+        "workshopId": "5C9AD9EF76F6B5EA",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/5C9AD9EF76F6B5EA",
+        "assetKind": "symbol",
+        "version": "1.7.1",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Scenario air-defence marker · ZU-23 addon reference. No range/coverage assertion.",
+      "position": {
+        "lat": 11890,
+        "lng": 5280
+      }
+    },
+    {
+      "id": "red4",
+      "name": "PORT GUARD",
+      "symbol": "I",
+      "side": "red",
+      "type": "Infantry",
+      "unitType": "infantry",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": null,
+      "parentId": "opfor",
+      "asset": "595F2BF2F44836FB",
+      "assetName": "RHS - Status Quo",
+      "assetCatalogItem": {
+        "id": "595F2BF2F44836FB",
+        "name": "RHS - Status Quo",
+        "workshopId": "595F2BF2F44836FB",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/595F2BF2F44836FB",
+        "assetKind": "mixed",
+        "version": "0.16.5208",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "",
+      "position": {
+        "lat": 9600,
+        "lng": 4380
+      }
+    },
+    {
+      "id": "red5",
+      "name": "QRF",
+      "symbol": "I",
+      "side": "red",
+      "type": "Motorized",
+      "unitType": "motorized",
+      "symbolMode": "nato",
+      "icon": "auto",
+      "color": null,
+      "phaseId": null,
+      "parentId": "opfor",
+      "asset": "595F2BF2F44836FB",
+      "assetName": "RHS - Status Quo",
+      "assetCatalogItem": {
+        "id": "595F2BF2F44836FB",
+        "name": "RHS - Status Quo",
+        "workshopId": "595F2BF2F44836FB",
+        "workshopUrl": "https://reforger.armaplatform.com/workshop/595F2BF2F44836FB",
+        "assetKind": "mixed",
+        "version": "0.16.5208",
+        "notes": "Catalog reference verified from installed addon metadata. Planning assignment only; no specific prefab or live unit is asserted."
+      },
+      "strength": "Scenario reserve marker; exact vehicle unspecified.",
+      "position": {
+        "lat": 9710,
+        "lng": 5720
+      }
+    }
+  ],
+  "routes": [
+    {
+      "id": "insert",
+      "name": "AIR CORRIDOR VIPER",
+      "phaseId": "p1",
+      "points": [
+        {
+          "lat": 9050,
+          "lng": 6380
+        },
+        {
+          "lat": 9700,
+          "lng": 6500
+        },
+        {
+          "lat": 10800,
+          "lng": 6200
+        },
+        {
+          "lat": 11000,
+          "lng": 4800
+        },
+        {
+          "lat": 10530,
+          "lng": 4390
+        }
+      ],
+      "style": {
+        "color": "#B58CFF",
+        "width": 3,
+        "pattern": "dashed",
+        "opacity": 0.16
+      },
+      "start": {
+        "lat": 9050,
+        "lng": 6380
+      },
+      "end": {
+        "lat": 10530,
+        "lng": 4390
+      }
+    },
+    {
+      "id": "recon",
+      "name": "REAPER — RECON LINK",
+      "phaseId": "p1",
+      "points": [
+        {
+          "lat": 10530,
+          "lng": 4390
+        },
+        {
+          "lat": 10650,
+          "lng": 4200
+        },
+        {
+          "lat": 10870,
+          "lng": 4140
+        }
+      ],
+      "style": {
+        "color": "#59C76E",
+        "width": 3,
+        "pattern": "dotted",
+        "opacity": 0.16
+      },
+      "start": {
+        "lat": 10530,
+        "lng": 4390
+      },
+      "end": {
+        "lat": 10870,
+        "lng": 4140
+      }
+    },
+    {
+      "id": "port",
+      "name": "AXIS ANCHOR",
+      "phaseId": "p2",
+      "points": [
+        {
+          "lat": 8650,
+          "lng": 4270
+        },
+        {
+          "lat": 8800,
+          "lng": 4200
+        },
+        {
+          "lat": 9000,
+          "lng": 3990
+        },
+        {
+          "lat": 9250,
+          "lng": 4100
+        },
+        {
+          "lat": 9450,
+          "lng": 4300
+        }
+      ],
+      "style": {
+        "color": "#62B8FF",
+        "width": 5,
+        "pattern": "arrow",
+        "opacity": 0.16
+      },
+      "start": {
+        "lat": 8650,
+        "lng": 4270
+      },
+      "end": {
+        "lat": 9450,
+        "lng": 4300
+      }
+    },
+    {
+      "id": "port2",
+      "name": "ALPHA 2 — LINKUP",
+      "phaseId": "p2",
+      "points": [
+        {
+          "lat": 9150,
+          "lng": 4600
+        },
+        {
+          "lat": 9300,
+          "lng": 4750
+        },
+        {
+          "lat": 9500,
+          "lng": 4660
+        },
+        {
+          "lat": 9650,
+          "lng": 4500
+        }
+      ],
+      "style": {
+        "color": "#62B8FF",
+        "width": 3,
+        "pattern": "dashed",
+        "opacity": 0.16
+      },
+      "start": {
+        "lat": 9150,
+        "lng": 4600
+      },
+      "end": {
+        "lat": 9650,
+        "lng": 4500
+      }
+    },
+    {
+      "id": "crown",
+      "name": "AXIS CROWN",
+      "phaseId": "p3",
+      "points": [
+        {
+          "lat": 9300,
+          "lng": 5320
+        },
+        {
+          "lat": 9650,
+          "lng": 5150
+        },
+        {
+          "lat": 9900,
+          "lng": 5200
+        },
+        {
+          "lat": 10200,
+          "lng": 5330
+        },
+        {
+          "lat": 10700,
+          "lng": 5200
+        },
+        {
+          "lat": 11100,
+          "lng": 4930
+        },
+        {
+          "lat": 11580,
+          "lng": 4800
+        }
+      ],
+      "style": {
+        "color": "#62B8FF",
+        "width": 5,
+        "pattern": "arrow",
+        "opacity": 0.16
+      },
+      "start": {
+        "lat": 9300,
+        "lng": 5320
+      },
+      "end": {
+        "lat": 11580,
+        "lng": 4800
+      }
+    },
+    {
+      "id": "flank",
+      "name": "BRAVO 2 — EAST LINK",
+      "phaseId": "p3",
+      "points": [
+        {
+          "lat": 10550,
+          "lng": 5730
+        },
+        {
+          "lat": 10800,
+          "lng": 5900
+        },
+        {
+          "lat": 11100,
+          "lng": 5790
+        },
+        {
+          "lat": 11450,
+          "lng": 5570
+        },
+        {
+          "lat": 11800,
+          "lng": 5300
+        }
+      ],
+      "style": {
+        "color": "#62B8FF",
+        "width": 3,
+        "pattern": "dashed",
+        "opacity": 0.16
+      },
+      "start": {
+        "lat": 10550,
+        "lng": 5730
+      },
+      "end": {
+        "lat": 11800,
+        "lng": 5300
+      }
+    },
+    {
+      "id": "liaison",
+      "name": "FIA — GUIDE LINK",
+      "phaseId": "p3",
+      "points": [
+        {
+          "lat": 11400,
+          "lng": 5750
+        },
+        {
+          "lat": 11600,
+          "lng": 5610
+        },
+        {
+          "lat": 11780,
+          "lng": 5520
+        }
+      ],
+      "style": {
+        "color": "#59C76E",
+        "width": 3,
+        "pattern": "dotted",
+        "opacity": 0.16
+      },
+      "start": {
+        "lat": 11400,
+        "lng": 5750
+      },
+      "end": {
+        "lat": 11780,
+        "lng": 5520
+      }
+    },
+    {
+      "id": "extract",
+      "name": "AIR CORRIDOR HOME",
+      "phaseId": "p4",
+      "points": [
+        {
+          "lat": 11700,
+          "lng": 5000
+        },
+        {
+          "lat": 11400,
+          "lng": 6200
+        },
+        {
+          "lat": 10800,
+          "lng": 6750
+        },
+        {
+          "lat": 10000,
+          "lng": 6600
+        },
+        {
+          "lat": 9300,
+          "lng": 6450
+        },
+        {
+          "lat": 8650,
+          "lng": 6150
+        }
+      ],
+      "style": {
+        "color": "#B58CFF",
+        "width": 4,
+        "pattern": "arrow",
+        "opacity": 0.16
+      },
+      "start": {
+        "lat": 11700,
+        "lng": 5000
+      },
+      "end": {
+        "lat": 8650,
+        "lng": 6150
+      }
+    },
+    {
+      "id": "alt",
+      "name": "ALTERNATE GROUND RETURN",
+      "phaseId": "p4",
+      "points": [
+        {
+          "lat": 11400,
+          "lng": 4900
+        },
+        {
+          "lat": 10800,
+          "lng": 4800
+        },
+        {
+          "lat": 10350,
+          "lng": 4600
+        },
+        {
+          "lat": 9800,
+          "lng": 4950
+        },
+        {
+          "lat": 9200,
+          "lng": 5100
+        },
+        {
+          "lat": 8500,
+          "lng": 5180
+        }
+      ],
+      "style": {
+        "color": "#FF9933",
+        "width": 3,
+        "pattern": "dotted",
+        "opacity": 0.16
+      },
+      "start": {
+        "lat": 11400,
+        "lng": 4900
+      },
+      "end": {
+        "lat": 8500,
+        "lng": 5180
+      }
+    },
+    {
+      "id": "medroute",
+      "name": "CCP ACCESS",
+      "phaseId": null,
+      "points": [
+        {
+          "lat": 8250,
+          "lng": 4800
+        },
+        {
+          "lat": 8330,
+          "lng": 4930
+        },
+        {
+          "lat": 8500,
+          "lng": 5180
+        }
+      ],
+      "style": {
+        "color": "#FFFFFF",
+        "width": 2,
+        "pattern": "solid",
+        "opacity": 0.16
+      },
+      "start": {
+        "lat": 8250,
+        "lng": 4800
+      },
+      "end": {
+        "lat": 8500,
+        "lng": 5180
+      }
+    }
+  ],
+  "areas": [
+    {
+      "id": "ao-crown",
+      "name": "AO CROWN · PRIMARY",
+      "phaseId": null,
+      "kind": "polygon",
+      "style": {
+        "color": "#FF7777",
+        "width": 3,
+        "pattern": "solid",
+        "opacity": 0.1
+      },
+      "points": [
+        {
+          "lat": 11070,
+          "lng": 3930
+        },
+        {
+          "lat": 11070,
+          "lng": 5280
+        },
+        {
+          "lat": 11800,
+          "lng": 5570
+        },
+        {
+          "lat": 12510,
+          "lng": 5190
+        },
+        {
+          "lat": 12510,
+          "lng": 4100
+        },
+        {
+          "lat": 11900,
+          "lng": 3820
+        }
+      ]
+    },
+    {
+      "id": "ao-anchor",
+      "name": "AO ANCHOR · HARBOUR",
+      "phaseId": null,
+      "kind": "rectangle",
+      "style": {
+        "color": "#62B8FF",
+        "width": 3,
+        "pattern": "solid",
+        "opacity": 0.13
+      },
+      "points": [
+        {
+          "lat": 9210,
+          "lng": 3730
+        },
+        {
+          "lat": 10000,
+          "lng": 4760
+        }
+      ]
+    },
+    {
+      "id": "fob",
+      "name": "FOB TRIDENT",
+      "phaseId": null,
+      "kind": "rectangle",
+      "style": {
+        "color": "#62B8FF",
+        "width": 3,
+        "pattern": "solid",
+        "opacity": 0.1
+      },
+      "points": [
+        {
+          "lat": 8050,
+          "lng": 4550
+        },
+        {
+          "lat": 8840,
+          "lng": 5500
+        }
+      ]
+    },
+    {
+      "id": "lz-v",
+      "name": "LZ VIPER · PLANNING",
+      "phaseId": "p1",
+      "kind": "circle",
+      "style": {
+        "color": "#B58CFF",
+        "width": 3,
+        "pattern": "solid",
+        "opacity": 0.14
+      },
+      "center": {
+        "lat": 10530,
+        "lng": 4390
+      },
+      "radius": 180
+    },
+    {
+      "id": "lz-h",
+      "name": "LZ HOME · PLANNING",
+      "phaseId": "p4",
+      "kind": "circle",
+      "style": {
+        "color": "#B58CFF",
+        "width": 3,
+        "pattern": "solid",
+        "opacity": 0.14
+      },
+      "center": {
+        "lat": 8650,
+        "lng": 6150
+      },
+      "radius": 200
+    },
+    {
+      "id": "hazard",
+      "name": "HAZARD · SCENARIO CHECK",
+      "phaseId": "p2",
+      "kind": "rectangle",
+      "style": {
+        "color": "#FF9933",
+        "width": 3,
+        "pattern": "dashed",
+        "opacity": 0.23
+      },
+      "points": [
+        {
+          "lat": 9700,
+          "lng": 4750
+        },
+        {
+          "lat": 9960,
+          "lng": 4900
+        }
+      ]
+    },
+    {
+      "id": "civil",
+      "name": "CIVILIAN HOLD · NO FIRE",
+      "phaseId": null,
+      "kind": "circle",
+      "style": {
+        "color": "#FFFFFF",
+        "width": 3,
+        "pattern": "dotted",
+        "opacity": 0.1
+      },
+      "center": {
+        "lat": 8750,
+        "lng": 4710
+      },
+      "radius": 150
+    },
+    {
+      "id": "support",
+      "name": "HAMMER · STAGING ONLY",
+      "phaseId": "p3",
+      "kind": "rectangle",
+      "style": {
+        "color": "#EBC66F",
+        "width": 3,
+        "pattern": "solid",
+        "opacity": 0.12
+      },
+      "points": [
+        {
+          "lat": 7700,
+          "lng": 3630
+        },
+        {
+          "lat": 8170,
+          "lng": 4110
+        }
+      ]
+    },
+    {
+      "id": "isr",
+      "name": "RAVEN · OBSERVATION SECTOR",
+      "phaseId": "p1",
+      "kind": "polygon",
+      "style": {
+        "color": "#B58CFF",
+        "width": 3,
+        "pattern": "dotted",
+        "opacity": 0.06
+      },
+      "points": [
+        {
+          "lat": 10850,
+          "lng": 6260
+        },
+        {
+          "lat": 11100,
+          "lng": 7170
+        },
+        {
+          "lat": 12300,
+          "lng": 7010
+        },
+        {
+          "lat": 12120,
+          "lng": 6230
+        }
+      ]
+    }
+  ],
+  "view": {
+    "gridDigits": 6,
+    "hiddenPhases": [
+      "p4"
+    ],
+    "layers": {
+      "grid": true,
+      "units": true,
+      "routes": true,
+      "areas": true,
+      "labels": true
+    }
+  }
+}
