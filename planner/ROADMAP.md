@@ -1,6 +1,6 @@
 # 77th JSOC — development roadmap, 10 October 2026
 
-## Current tested increment: v2.4.1
+## Current tested increment: v2.4.2
 
 Keep the existing planner and manual backups. This release covers the first priority batch, not the complete pasted roadmap.
 
@@ -14,7 +14,7 @@ Keep the existing planner and manual backups. This release covers the first prio
 ## Still pending from immediate targets
 
 - Native-speaker translation review and localization of technical diagnostics and generated briefing/legend labels.
-- Full keyboard remapping (WASD enable/disable is available).
+- Keyboard customization delivered in v2.4.2 for canvas actions and movement, with validated alternatives, disable/reset and typing guards. Mouse gestures, Shift boost and dialog/fullscreen Escape stay fixed.
 - SVG, export preview, selected routes/areas in presentation exports, custom logos/patches, watermarks, operation dates and fictional classification stamps. Existing PNG/JPEG/PDF remain available.
 - Verify all 20 locations against the correct Reforger Everon world, record version/source and coordinate conversion controls. Then implement search, jumps, coordinate copy, objective creation and export labels. Do not activate unverified targets.
 

@@ -5,3 +5,5 @@ html[data-planner-theme=light]{color-scheme:light;--bg:#edf0e9;--panel:#f6f8f2;-
 html[data-browser-scale]:not([data-browser-scale='1']) aside input,html[data-browser-scale]:not([data-browser-scale='1']) aside button,html[data-browser-scale]:not([data-browser-scale='1']) aside select,html[data-browser-scale]:not([data-browser-scale='1']) #settingsDialog{font-size:calc(13px * var(--ui-scale))}
 
 html[data-planner-theme=light] .map-hud strong{color:#ecf2e5}html[data-planner-theme=light] #settingsGear{color:#e4eddc}html[data-planner-theme=light] .map-toolbar button{background:#f4f7ed;color:#172718}
+
+#shortcutFields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px}#shortcutFields label{white-space:normal}#shortcutFeedback{overflow-wrap:anywhere}@media(max-width:620px){#shortcutFields{grid-template-columns:1fr}}
