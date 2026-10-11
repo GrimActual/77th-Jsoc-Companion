@@ -79,10 +79,10 @@ function validate(d){
  }),'area');
  const o=d.operation??{};if(typeof o!=='object'||Array.isArray(o))fail('Invalid operation');
  const v=d.view??{},layers=v.layers??{};
- return {schema:'everon-orbat-plan',schemaVersion:VERSION,app:'Everon ORBAT Mapper',operation:{name:text(o.name,'OPERATION EVERON',300),taskForce:text(o.taskForce,'JSOC',200),version:text(o.version,'01',50),briefing:text(o.briefing,'')},map:{name:'Everon',game:'Arma Reforger',coordinateSystem:'mapper-local',gridOrder:'easting-northing'},phases,orderOfBattle:units,routes,areas,view:{gridDigits:v.gridDigits===8?8:6,hiddenPhases:Array.isArray(v.hiddenPhases)?v.hiddenPhases.filter(x=>x==='shared'||phaseIds.has(x)):[],layers:{grid:layers.grid===true,units:layers.units!==false,routes:layers.routes!==false,areas:layers.areas!==false,labels:layers.labels!==false}}};
+ return {schema:'everon-orbat-plan',schemaVersion:VERSION,app:'Everon ORBAT Mapper',operation:{name:text(o.name,'OPERATION EVERON',300),taskForce:text(o.taskForce,'JSOC',200),version:text(o.version,'01',50),briefing:text(o.briefing,'')},map:{name:'Everon',game:'Arma Reforger',coordinateSystem:'mapper-local',gridOrder:'easting-northing'},phases,orderOfBattle:units,routes,areas,view:{...(Array.isArray(v.hiddenAreas)?{hiddenAreas:v.hiddenAreas.filter(id=>areas.some(a=>String(a.id)===String(id))).map(String)}:{}),gridDigits:v.gridDigits===8?8:6,hiddenPhases:Array.isArray(v.hiddenPhases)?v.hiddenPhases.filter(x=>x==='shared'||phaseIds.has(x)):[],layers:{grid:layers.grid===true,units:layers.units!==false,routes:layers.routes!==false,areas:layers.areas!==false,labels:layers.labels!==false}}};
 }
 function empty(){return validate({schemaVersion:4,orderOfBattle:[],routes:[],areas:[]})}
-function visible(plan,item){return !plan.view.hiddenPhases.includes(item.phaseId??'shared')}
+function visible(plan,item){return !(plan.areas.includes(item)&&(plan.view.hiddenAreas||[]).includes(String(item.id)))&&!plan.view.hiddenPhases.includes(item.phaseId??'shared')}
 function freshId(items,prefix){const used=new Set(items.map(x=>String(x.id)));let n=1;while(used.has(prefix+n))n++;return prefix+n}
 function briefing(plan,{t=s=>s,distance:displayDistance=formatDistance}={}){
  const names=new Map(plan.orderOfBattle.map(u=>[String(u.id),u.name||u.type]));

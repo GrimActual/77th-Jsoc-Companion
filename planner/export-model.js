@@ -3,7 +3,7 @@
  'use strict';
  function scene(plan,view,selected,scope){
   if(!['current','full','selected'].includes(scope))throw Error('Unknown export scope.');
-  const visible=o=>!plan.view.hiddenPhases.includes(o.phaseId||'shared');
+  const visible=o=>!(plan.areas.includes(o)&&(plan.view.hiddenAreas||[]).includes(String(o.id)))&&!plan.view.hiddenPhases.includes(o.phaseId||'shared');
   const selectedKeys=new Set(selected.map(p=>p.kind+':'+String(p.id)));
   const keep=kind=>o=>visible(o)&&(scope!=='selected'||selectedKeys.has(kind+':'+String(o.id)));
   const units=plan.view.layers.units?plan.orderOfBattle.filter(keep('unit')):[];
