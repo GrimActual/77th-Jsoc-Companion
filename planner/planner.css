@@ -5,3 +5,6 @@
 .selection-box{position:absolute;z-index:1000;pointer-events:none;border:2px solid #ebc66f;background:#ebc66f25}#selectionCount{align-self:center}#saveState{font-weight:700}
 
 dialog{color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:10px;width:min(480px,94vw);max-height:90vh;overflow:auto}dialog::backdrop{background:#0009}dialog h2{margin-top:0}
+
+/* Longer translations stay within the existing panel tab layout. */
+.tabs button{min-width:0;padding-inline:6px;white-space:normal;overflow-wrap:anywhere}
