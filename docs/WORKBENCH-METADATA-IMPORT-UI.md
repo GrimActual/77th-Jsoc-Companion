@@ -1,6 +1,6 @@
 # Workbench metadata import — Development 9
 
-This is a usable **desktop workflow** in Development 9, following the source-only reader. It does not replace the tested Preview 5 archives yet.
+This usable **desktop workflow** was introduced in Development 9 and remains available in Development 10, following the source-only reader. It does not replace the tested Preview 5 archives yet.
 
 Use:
 

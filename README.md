@@ -2,7 +2,7 @@
 
 Everon ORBAT Planner and the optional Arma Reforger bridge.
 
-Current development source: **2.9.1-dev.9**, including [desktop metadata import](docs/WORKBENCH-METADATA-IMPORT-UI.md). The latest consolidated local package is **Preview 5**; the latest published tested build remains **2.9.0-rc.2**. Planner code is in [`planner/`](planner/). Published versions are preserved by Git tags and releases with matching source archives.
+Current development source: **2.9.1-dev.10**, including [desktop metadata import](docs/WORKBENCH-METADATA-IMPORT-UI.md) and [display/DPI diagnostics](docs/DISPLAY-QUALITY.md). The latest consolidated local package is **Preview 5**; the latest published tested build remains **2.9.0-rc.2**. Planner code is in [`planner/`](planner/). Published versions are preserved by Git tags and releases with matching source archives.
 
 ## Download
 

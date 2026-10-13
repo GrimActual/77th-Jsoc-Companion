@@ -1,0 +1,4 @@
+[
+  "Text clarity, display scaling and GPU checks",
+  "Settings → Display & graphics → Check display and graphics shows interface zoom, pixel ratio, monitor scale and GPU/driver status. Copy the report for local troubleshooting. High-DPI pixel ratios above 1 are normal; OS scaling and app zoom combine automatically. If text looks blurred, compare with 100% Interface scale in General and Larger panel text in Accessibility. Recheck after changing settings or moving monitors. GPU exits and software fallback are evidence, not proof of driver interference. Drivers, overlays and global GPU settings are not changed. Reports stay outside mission JSON."
+]

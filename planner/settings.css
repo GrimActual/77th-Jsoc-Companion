@@ -18,3 +18,5 @@ html[data-planner-theme=light] .map-hud strong{color:#ecf2e5}html[data-planner-t
 body.briefing-mode{height:100dvh;min-height:0;overflow:hidden}
 body.briefing-mode main{height:100dvh;min-height:0;overflow:hidden}
 body.briefing-mode .map-shell{height:100dvh;min-height:0;width:100%}
+
+#displayReadout{display:grid;grid-template-columns:minmax(100px,1fr) minmax(0,2fr);gap:6px 12px;font-size:12px}#displayReadout dd{margin:0}#displayReadout dt{color:var(--muted)}

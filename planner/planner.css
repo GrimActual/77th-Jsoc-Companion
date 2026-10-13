@@ -14,3 +14,6 @@ dialog{color:var(--text);background:var(--panel);border:1px solid var(--line);bo
 #presentationPreviewImage{background-color:#eee;background-image:linear-gradient(45deg,#ccc 25%,transparent 25%),linear-gradient(-45deg,#ccc 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#ccc 75%),linear-gradient(-45deg,transparent 75%,#ccc 75%);background-size:16px 16px;background-position:0 0,0 8px,8px -8px,-8px 0;text-align:center;max-height:55vh;overflow:auto}
 #presentationPreviewImageElement{display:block;width:100%;height:auto;max-height:55vh;object-fit:contain}
 #presentationPreviewCaption{font-size:11px;color:var(--muted);padding-top:6px;overflow-wrap:anywhere}
+
+/* Native system-font rasterization; no blanket 3D/compositor transforms on text panels. */
+:root{--ui-font:"Segoe UI Variable Text","Segoe UI",system-ui,Arial,sans-serif}body{font-family:var(--ui-font);font-kerning:normal;text-rendering:auto}button,input,select,textarea,summary{font-family:inherit}
