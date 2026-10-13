@@ -1,0 +1,1407 @@
+{
+  "version": 1,
+  "updated": "2026-10-13",
+  "statusMeaning": "Backlog proposal; audit existing implementation before scheduling",
+  "items": [
+    {
+      "id": 1,
+      "origin": "D",
+      "feature": "Advanced ORBAT hierarchy management.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 2,
+      "origin": "D",
+      "feature": "Nested command structures from headquarters to individual personnel.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 3,
+      "origin": "D",
+      "feature": "Unit and group organization tools.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 4,
+      "origin": "D",
+      "feature": "Editable unit identities and designations.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 5,
+      "origin": "D",
+      "feature": "Equipment and loadout profiles.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 6,
+      "origin": "E",
+      "feature": "Custom organizational templates.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 7,
+      "origin": "E",
+      "feature": "Unit readiness states.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 8,
+      "origin": "E",
+      "feature": "Personnel availability tracking.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 9,
+      "origin": "E",
+      "feature": "Vehicle assignment to units.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 10,
+      "origin": "E",
+      "feature": "Unit capability summaries.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 11,
+      "origin": "E",
+      "feature": "Formation presets.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 12,
+      "origin": "E",
+      "feature": "Reinforcement and reserve-force pools.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 13,
+      "origin": "E",
+      "feature": "Task organization for individual missions.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 14,
+      "origin": "E",
+      "feature": "Unit relationship and attachment management.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 15,
+      "origin": "E",
+      "feature": "Historical ORBAT snapshots.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 16,
+      "origin": "E",
+      "feature": "ORBAT comparison between mission versions.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 17,
+      "origin": "E",
+      "feature": "Import and export of standardized ORBAT data.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 18,
+      "origin": "E",
+      "feature": "Unit-specific notes and operational restrictions.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 19,
+      "origin": "E",
+      "feature": "Force strength and composition reports.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 20,
+      "origin": "E",
+      "feature": "Reusable faction and force libraries.",
+      "primaryPackage": "03",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 21,
+      "origin": "D",
+      "feature": "Advanced interactive operational maps.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 22,
+      "origin": "D",
+      "feature": "Multiple terrain support beyond Everon.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 23,
+      "origin": "D",
+      "feature": "Objective placement and editing.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 24,
+      "origin": "D",
+      "feature": "Mission phase planning.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 25,
+      "origin": "D",
+      "feature": "HVT and point-of-interest management.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 26,
+      "origin": "D",
+      "feature": "Map-based unit positioning.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 27,
+      "origin": "E",
+      "feature": "Route creation and editing.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 28,
+      "origin": "E",
+      "feature": "Waypoint sequencing.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 29,
+      "origin": "E",
+      "feature": "Operational boundaries and zones.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 30,
+      "origin": "E",
+      "feature": "Assembly areas and staging points.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 31,
+      "origin": "E",
+      "feature": "Named control measures.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 32,
+      "origin": "E",
+      "feature": "Custom map symbols and icon libraries.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 33,
+      "origin": "E",
+      "feature": "Layer visibility and filtering.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 34,
+      "origin": "E",
+      "feature": "Map annotations and freehand drawing.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 35,
+      "origin": "E",
+      "feature": "Measurement and coordinate tools.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 36,
+      "origin": "E",
+      "feature": "Mission planning templates.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 37,
+      "origin": "E",
+      "feature": "Alternate and contingency plans.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 38,
+      "origin": "E",
+      "feature": "Objective dependencies.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 39,
+      "origin": "E",
+      "feature": "Mission progress visualization.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 40,
+      "origin": "E",
+      "feature": "Map state presets for different operational roles.",
+      "primaryPackage": "04",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 41,
+      "origin": "D",
+      "feature": "Structured mission briefing generation.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 42,
+      "origin": "D",
+      "feature": "Improved briefing exports.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 43,
+      "origin": "D",
+      "feature": "Mission package preservation.",
+      "primaryPackage": "02",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 44,
+      "origin": "E",
+      "feature": "Automatically generated ORBAT annexes.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 45,
+      "origin": "E",
+      "feature": "Automatically generated objective lists.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 46,
+      "origin": "E",
+      "feature": "Map snapshot exports.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 47,
+      "origin": "E",
+      "feature": "Role-specific briefing versions.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 48,
+      "origin": "E",
+      "feature": "Commander overview documents.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 49,
+      "origin": "E",
+      "feature": "Squad-level mission extracts.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 50,
+      "origin": "E",
+      "feature": "Mission change summaries.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 51,
+      "origin": "E",
+      "feature": "Exportable operational timelines.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 52,
+      "origin": "E",
+      "feature": "Briefing revision history.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 53,
+      "origin": "E",
+      "feature": "Custom document templates.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 54,
+      "origin": "E",
+      "feature": "Printable mission cards.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 55,
+      "origin": "E",
+      "feature": "Consistent naming and numbering across exports.",
+      "primaryPackage": "05",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 56,
+      "origin": "D",
+      "feature": "Separate the application's core logic from its interface.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 57,
+      "origin": "D",
+      "feature": "Build an independent Companion engine.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 58,
+      "origin": "D",
+      "feature": "Create a modular ORBAT engine.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 59,
+      "origin": "D",
+      "feature": "Create a scenario engine.",
+      "primaryPackage": "06",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 60,
+      "origin": "D",
+      "feature": "Create a Game Master engine.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 61,
+      "origin": "D",
+      "feature": "Create a simulation engine.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 62,
+      "origin": "D",
+      "feature": "Create a synchronization engine.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 63,
+      "origin": "D",
+      "feature": "Create a replay engine.",
+      "primaryPackage": "09",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 64,
+      "origin": "D",
+      "feature": "Support operation without Arma running.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 65,
+      "origin": "D",
+      "feature": "Support optional Enfusion-linked operation.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 66,
+      "origin": "D",
+      "feature": "Keep the engine independent of the renderer.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 67,
+      "origin": "D",
+      "feature": "Define shared JSON schemas between components.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 68,
+      "origin": "E",
+      "feature": "Version the engine's public APIs.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 69,
+      "origin": "E",
+      "feature": "Create a deterministic simulation clock.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 70,
+      "origin": "E",
+      "feature": "Introduce an internal event bus.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 71,
+      "origin": "E",
+      "feature": "Support engine modules and extensions.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 72,
+      "origin": "E",
+      "feature": "Separate persistent plans from temporary world state.",
+      "primaryPackage": "02",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 73,
+      "origin": "E",
+      "feature": "Validate all engine commands before execution.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 74,
+      "origin": "E",
+      "feature": "Add engine diagnostics and health reporting.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 75,
+      "origin": "E",
+      "feature": "Build automated compatibility tests between modules.",
+      "primaryPackage": "01",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 76,
+      "origin": "D",
+      "feature": "Dedicated Game Master console.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 77,
+      "origin": "D",
+      "feature": "Manual control of simulated units.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 78,
+      "origin": "D",
+      "feature": "Manual objective state changes.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 79,
+      "origin": "D",
+      "feature": "Manual mission phase changes.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 80,
+      "origin": "D",
+      "feature": "GM-triggered scenario events.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 81,
+      "origin": "D",
+      "feature": "JSON-driven scenario definitions.",
+      "primaryPackage": "06",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 82,
+      "origin": "D",
+      "feature": "Conditional event triggers.",
+      "primaryPackage": "06",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 83,
+      "origin": "D",
+      "feature": "Time-based event triggers.",
+      "primaryPackage": "06",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 84,
+      "origin": "D",
+      "feature": "Objective-completion triggers.",
+      "primaryPackage": "06",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 85,
+      "origin": "D",
+      "feature": "Zone-entry triggers.",
+      "primaryPackage": "06",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 86,
+      "origin": "D",
+      "feature": "Reinforcement events.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 87,
+      "origin": "D",
+      "feature": "Simulated radio and intelligence reports.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 88,
+      "origin": "D",
+      "feature": "Event prerequisites and consequences.",
+      "primaryPackage": "06",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 89,
+      "origin": "D",
+      "feature": "Resource-limited scenario events.",
+      "primaryPackage": "06",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 90,
+      "origin": "D",
+      "feature": "Automated Game Master rules.",
+      "primaryPackage": "06",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 91,
+      "origin": "D",
+      "feature": "AI-assisted Game Master suggestions.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 92,
+      "origin": "D",
+      "feature": "Human approval before AI-generated state changes.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 93,
+      "origin": "E",
+      "feature": "GM event library.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 94,
+      "origin": "E",
+      "feature": "Scenario difficulty controls.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 95,
+      "origin": "E",
+      "feature": "GM-only hidden information.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 96,
+      "origin": "E",
+      "feature": "Event scheduling and cancellation.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 97,
+      "origin": "E",
+      "feature": "GM action undo where safe.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 98,
+      "origin": "E",
+      "feature": "Scenario pause, resume and reset.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 99,
+      "origin": "E",
+      "feature": "GM action history.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 100,
+      "origin": "E",
+      "feature": "Reusable Game Master scenario templates.",
+      "primaryPackage": "07",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 101,
+      "origin": "D",
+      "feature": "Synthetic units independent of live players.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 102,
+      "origin": "D",
+      "feature": "Simulated unit movement.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 103,
+      "origin": "D",
+      "feature": "Simulated resource consumption.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 104,
+      "origin": "D",
+      "feature": "Scenario progression based on world state.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 105,
+      "origin": "D",
+      "feature": "Persistent campaign state.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 106,
+      "origin": "D",
+      "feature": "Units retaining identity between missions.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 107,
+      "origin": "D",
+      "feature": "Mission consequences carrying into later scenarios.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 108,
+      "origin": "D",
+      "feature": "Exercise director controls.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 109,
+      "origin": "D",
+      "feature": "Scenario rehearsal.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 110,
+      "origin": "D",
+      "feature": "Decision evaluation during exercises.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 111,
+      "origin": "E",
+      "feature": "Simulated logistics and supply networks.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 112,
+      "origin": "E",
+      "feature": "Unit fatigue and readiness models.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 113,
+      "origin": "E",
+      "feature": "Environmental scenario variables.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 114,
+      "origin": "E",
+      "feature": "Probabilistic event outcomes.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 115,
+      "origin": "E",
+      "feature": "Reproducible simulation seeds.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 116,
+      "origin": "E",
+      "feature": "Scenario branching.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 117,
+      "origin": "E",
+      "feature": "Campaign progression rules.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 118,
+      "origin": "E",
+      "feature": "Simulation speed controls.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 119,
+      "origin": "E",
+      "feature": "Background synthetic unit behavior.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 120,
+      "origin": "E",
+      "feature": "Campaign archive and restoration.",
+      "primaryPackage": "08",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 121,
+      "origin": "D",
+      "feature": "Officially supported Enfusion integration layer.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 122,
+      "origin": "D",
+      "feature": "Dedicated-server adapter.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 123,
+      "origin": "D",
+      "feature": "Server-authorized live position reporting.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 124,
+      "origin": "D",
+      "feature": "Multiple friendly-unit positions, subject to authorization.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 125,
+      "origin": "D",
+      "feature": "Authorized unit status updates.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 126,
+      "origin": "D",
+      "feature": "Authorized vehicle status updates.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 127,
+      "origin": "D",
+      "feature": "Live objective synchronization.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 128,
+      "origin": "D",
+      "feature": "Game-to-Companion event reporting.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 129,
+      "origin": "D",
+      "feature": "Companion-to-game GM action requests where supported.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 130,
+      "origin": "D",
+      "feature": "Server-side validation of every requested game action.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 131,
+      "origin": "D",
+      "feature": "Confirmation of accepted or rejected commands.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 132,
+      "origin": "D",
+      "feature": "Clear distinction between simulated and real game state.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 133,
+      "origin": "D",
+      "feature": "Opt-in server connections.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 134,
+      "origin": "D",
+      "feature": "Graceful disconnection and reconnection.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 135,
+      "origin": "D",
+      "feature": "Stale-data indicators.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 136,
+      "origin": "D",
+      "feature": "Game-version compatibility handling.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 137,
+      "origin": "E",
+      "feature": "Server adapter capability negotiation.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 138,
+      "origin": "E",
+      "feature": "Live synchronization diagnostics.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 139,
+      "origin": "E",
+      "feature": "Controlled event subscription filters.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 140,
+      "origin": "E",
+      "feature": "Safe fallback when a game API changes.",
+      "primaryPackage": "11",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 141,
+      "origin": "D",
+      "feature": "Import permitted metadata from local Reforger resources.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 142,
+      "origin": "D",
+      "feature": "Workbench-compatible resource inspection.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 143,
+      "origin": "D",
+      "feature": "Terrain metadata import.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 144,
+      "origin": "D",
+      "feature": "Object and entity identifier import.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 145,
+      "origin": "D",
+      "feature": "Faction metadata import.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 146,
+      "origin": "D",
+      "feature": "Coordinate-system compatibility.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 147,
+      "origin": "D",
+      "feature": "Local-only resource processing where appropriate.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 148,
+      "origin": "D",
+      "feature": "Avoid bundling proprietary assets without permission.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 149,
+      "origin": "D",
+      "feature": "Dedicated resource import gateway.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 150,
+      "origin": "D",
+      "feature": "Licensing and usage checks for imported data.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 151,
+      "origin": "E",
+      "feature": "Resource format version detection.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 152,
+      "origin": "E",
+      "feature": "Import preview and validation.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 153,
+      "origin": "E",
+      "feature": "Duplicate resource detection.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 154,
+      "origin": "E",
+      "feature": "Asset reference resolution.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 155,
+      "origin": "E",
+      "feature": "Missing-resource warnings.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 156,
+      "origin": "E",
+      "feature": "User-selectable import directories.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 157,
+      "origin": "E",
+      "feature": "Incremental resource indexing.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 158,
+      "origin": "E",
+      "feature": "Import compatibility reports.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 159,
+      "origin": "E",
+      "feature": "Resource cache management.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 160,
+      "origin": "E",
+      "feature": "Clear provenance records for imported content.",
+      "primaryPackage": "12",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 161,
+      "origin": "D",
+      "feature": "Shared operational picture for multiple operators.",
+      "primaryPackage": "13",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 162,
+      "origin": "D",
+      "feature": "Collaborative mission annotations.",
+      "primaryPackage": "13",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 163,
+      "origin": "D",
+      "feature": "Shared mission revisions.",
+      "primaryPackage": "13",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 164,
+      "origin": "D",
+      "feature": "Role-based access control.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 165,
+      "origin": "D",
+      "feature": "Separate planner, observer and Game Master permissions.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 166,
+      "origin": "D",
+      "feature": "Server-owner opt-in and control.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 167,
+      "origin": "D",
+      "feature": "Server-authoritative actions.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 168,
+      "origin": "D",
+      "feature": "Strictly defined allowed commands.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 169,
+      "origin": "D",
+      "feature": "Authenticated bridge connections.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 170,
+      "origin": "D",
+      "feature": "Revocable session credentials.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 171,
+      "origin": "D",
+      "feature": "Emergency connection shutdown.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 172,
+      "origin": "D",
+      "feature": "Administrative audit logs.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 173,
+      "origin": "D",
+      "feature": "Privacy-conscious log retention.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 174,
+      "origin": "D",
+      "feature": "Abuse evidence export.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 175,
+      "origin": "D",
+      "feature": "A reporting pathway for suspected misuse.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 176,
+      "origin": "D",
+      "feature": "Potential cooperation with Bohemia on abuse handling.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 177,
+      "origin": "D",
+      "feature": "No unauthorized process memory manipulation.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 178,
+      "origin": "D",
+      "feature": "No hidden player tracking.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 179,
+      "origin": "E",
+      "feature": "Per-action rate limits and quotas.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 180,
+      "origin": "E",
+      "feature": "Approval workflows for sensitive GM actions.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 181,
+      "origin": "E",
+      "feature": "Permission checks at the server, not just in the UI.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 182,
+      "origin": "E",
+      "feature": "Conflict handling for simultaneous edits.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 183,
+      "origin": "E",
+      "feature": "Session and connection activity dashboards.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 184,
+      "origin": "E",
+      "feature": "Security-focused integration tests.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 185,
+      "origin": "E",
+      "feature": "Documented threat model and trust boundaries.",
+      "primaryPackage": "10",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 186,
+      "origin": "D",
+      "feature": "Move toward a native interface if beneficial.",
+      "primaryPackage": "14",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 187,
+      "origin": "D",
+      "feature": "Evaluate C#/.NET with Avalonia.",
+      "primaryPackage": "14",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 188,
+      "origin": "D",
+      "feature": "Evaluate Godot for an interactive simulation interface.",
+      "primaryPackage": "14",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 189,
+      "origin": "D",
+      "feature": "Keep Electron as an option while extracting the core.",
+      "primaryPackage": "14",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 190,
+      "origin": "D",
+      "feature": "After-action event replay.",
+      "primaryPackage": "09",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 191,
+      "origin": "D",
+      "feature": "After-action report generation.",
+      "primaryPackage": "09",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 192,
+      "origin": "D",
+      "feature": "Recorded operational event timelines.",
+      "primaryPackage": "09",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 193,
+      "origin": "D",
+      "feature": "Community plugin architecture.",
+      "primaryPackage": "15",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 194,
+      "origin": "D",
+      "feature": "Multiple game and simulation adapters.",
+      "primaryPackage": "15",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 195,
+      "origin": "D",
+      "feature": "Game-independent planning capabilities.",
+      "primaryPackage": "15",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 196,
+      "origin": "E",
+      "feature": "Better tutorials and first-run onboarding.",
+      "primaryPackage": "14",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 197,
+      "origin": "E",
+      "feature": "Reliable automatic backups and recovery.",
+      "primaryPackage": "02",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 198,
+      "origin": "E",
+      "feature": "Repeatable builds and release verification.",
+      "primaryPackage": "16",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 199,
+      "origin": "E",
+      "feature": "Plugin compatibility and permission management.",
+      "primaryPackage": "15",
+      "status": "proposed-audit-required"
+    },
+    {
+      "id": 200,
+      "origin": "D",
+      "feature": "A unified platform connecting ORBAT planning, Game Master control, simulation, live situational awareness and after-action analysis.",
+      "primaryPackage": "15",
+      "status": "proposed-audit-required"
+    }
+  ]
+}

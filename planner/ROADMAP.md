@@ -1,3 +1,13 @@
+# Roadmap navigation — updated 13 October 2026
+
+The current future programme is [the master roadmap](../ROADMAP.md), with [all 200 backlog items](../docs/FUTURE-FEATURE-WISHLIST.md) and [package ownership](../docs/FUTURE-FEATURE-MAPPING.json).
+
+Current development build: v2.9.1 Preview 1. Desktop/relay and fullscreen tests passed; new dedicated sender requires Enfusion and real-server validation. See [test debrief](../docs/V2.9.1-TEST-REPORT.md).
+
+The notes below are retained historical release notes. Their older pending/current labels are not the status of the latest build.
+
+---
+
 ## v2.8.1 delivery
 Scaling preferences, five source-verified side-mission planning templates, manual mission clock/event log and Excel-compatible planner CSV delivered. Native XLSX and GeoJSON/KML/KMZ/MilX are pending validated interoperability and, for geographic formats, a verified game-to-WGS84 mapping. Live game objectives/timers remain out of scope.
 
