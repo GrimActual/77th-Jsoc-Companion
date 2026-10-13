@@ -1,0 +1,5 @@
+const {performance}=require('node:perf_hooks'),M=require('../workbench-metadata'),R=require('../resource-index');
+const addon=M.project('GameProject { ID "Synthetic" GUID "6A969EB0C5012BB9" TITLE "Synthetic" Dependencies {} }').addon;
+const samples=[],input='MetaFileClass { Name "{0313BCE464A22D27}Test.ent" Configurations { ENTResourceClass PC {} ENTResourceClass HEADLESS : PC {} } }';
+for(let pass=0;pass<6;pass++){const start=performance.now(),resources=[];for(let i=0;i<500;i++){const guid=(i+1).toString(16).padStart(16,'0'),name='Test'+i+'.ent',text=input.replace('0313BCE464A22D27',guid).replace('Test.ent',name);resources.push(M.sidecar(text,'Worlds/'+name+'.meta',addon.id,'r'+i).resource);}R.validate({schema:'companion-resource-index',version:1,addons:[addon],resources});if(pass)samples.push(performance.now()-start);}
+process.stdout.write(JSON.stringify({node:process.version,scope:'Synthetic supported identity extraction, no disk scan or native validation',sidecars:500,runs:5,warmup:1,meanMs:+(samples.reduce((a,b)=>a+b,0)/samples.length).toFixed(2),maxMs:+Math.max(...samples).toFixed(2)},null,2)+'\n');

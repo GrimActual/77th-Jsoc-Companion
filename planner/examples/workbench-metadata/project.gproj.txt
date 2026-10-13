@@ -1,0 +1,8 @@
+GameProject {
+ ID "JSOCORBATBridge"
+ GUID "6A969EB0C5012BB9"
+ TITLE "JSOC_ORBAT_Bridge"
+ Dependencies {
+  "58D0FB3206B6F859"
+ }
+}
