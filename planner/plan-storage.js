@@ -1,0 +1,17 @@
+/* Legacy autosave stays authoritative. Recovery is explicit and bounded. */
+(function(root,factory){const api=factory(typeof module==='object'&&module.exports?require('./planner-core'):root.PlannerCore);if(typeof module==='object'&&module.exports)module.exports=api;else root.PlannerPlanStorage=api;})(globalThis,function(C){
+'use strict';const keys=['everonPlanRecoveryA','everonPlanRecoveryB'];
+function createStore(storage,{clock=Date.now,copyLimit=262144}={}){
+ let cached=new Map();
+ function copies(){const result=[];for(const key of keys){try{const text=storage.getItem(key);if(!text||text.length>copyLimit+1024)continue;let entry=cached.get(key);if(entry?.raw!==text){const data=JSON.parse(text);if(data.version!==1||!Number.isSafeInteger(data.generation)||data.generation<1||!Number.isFinite(data.savedAt))continue;entry={raw:text,...data,plan:C.validate(data.plan)};cached.set(key,entry);}result.push({key,...entry});}catch{}}return result.sort((a,b)=>b.generation-a.generation);}
+ function list(){return copies().map(e=>({generation:e.generation,savedAt:e.savedAt,name:e.plan.operation.name,units:e.plan.orderOfBattle.length}));}
+ return {list,recover(generation){const e=copies().find(e=>e.generation===generation);if(!e)throw Error('Recovery copy unavailable or invalid');return C.clone(e.plan);},save(raw,{recovery=true}={}){
+  const plan=C.validate(C.clone(raw)),text=JSON.stringify(plan);if(new Blob([text]).size>5000000)throw Error('Mission exceeds 5 MB');const previous=storage.getItem('everonOrbat');let trimmed=false;
+  if(previous!==text){try{storage.setItem('everonOrbat',text);}catch(error){if(error.name!=='QuotaExceededError'&&error.code!==22&&error.code!==1014)throw error;let valid=false;try{valid=!!C.validate(JSON.parse(previous));}catch{}if(!valid)throw error;const old=copies().reverse();let saved=false;for(const e of old){storage.removeItem(e.key);cached.delete(e.key);trimmed=true;try{storage.setItem('everonOrbat',text);saved=true;break;}catch{}}if(!saved)throw error;}}
+  if(storage.getItem('everonOrbat')!==text)throw Error('Mission save could not be verified');
+  if(!recovery)return {saved:true,warning:trimmed?'Managed recovery trimmed to save mission':''};
+  if(new Blob([text]).size>copyLimit)return {saved:true,warning:'Mission saved; too large for rotating recovery. Export a backup.'};
+  const prior=copies()[0];if(prior&&JSON.stringify(prior.plan)===text)return {saved:true,warning:''};
+  try{const key=prior?.key===keys[0]?keys[1]:keys[0],generation=(prior?.generation||0)+1;if(!Number.isSafeInteger(generation))throw Error('Recovery generation limit');const envelope=JSON.stringify({version:1,generation,savedAt:clock(),plan});storage.setItem(key,envelope);if(storage.getItem(key)!==envelope)throw Error('Recovery write verification failed');cached.delete(key);return {saved:true,warning:''};}catch{return {saved:true,warning:'Mission saved; rotating recovery unavailable. Export a backup.'};}
+ },clear(){for(const key of keys){storage.removeItem(key);cached.delete(key);}}};
+}return {createStore};});

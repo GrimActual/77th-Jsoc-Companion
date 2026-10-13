@@ -18,5 +18,6 @@
  function editorCandidate(){const text=$('gmJSONText').value;if(new Blob([text]).size>5000000)throw Error('Scenario exceeds 5 MB');return validate(JSON.parse(text));}
  $('gmJSONRefresh').onclick=()=>safe(()=>{$('gmJSONText').value=JSON.stringify(ready(),null,2);$('gmJSONFeedback').textContent='Draft copied into editor';});
  for(const [id,apply] of [['gmJSONApply',true],['gmJSONCheck',false]])$(id).onclick=()=>{try{const next=editorCandidate();if(apply){draft=next;refresh();}$('gmJSONFeedback').textContent=(apply?'Applied to draft':'Valid')+' · '+next.objectives.length+' objectives · '+next.events.length+' events. Active rehearsal unchanged.';}catch(e){$('gmJSONFeedback').textContent='Rejected: '+e.message+'; draft and rehearsal unchanged.';}};
+ window.CompanionScenarioBuilder={snapshot:ready,replace:raw=>{const next=validate(raw);draft=next;refresh();}};
  window.addEventListener('planner-plan-changed',()=>{draft={schema:'companion-scenario',version:1,id:'custom_rehearsal',objectives:[],events:[]};refresh();$('gmJSONText').value='';$('gmJSONFeedback').textContent='';$('gmBuildFeedback').textContent='Mission changed; builder cleared. Export scenario before editing the mission.';});refresh();
 })();

@@ -17,6 +17,9 @@ A validated objective/event builder, command playback controls, and printable HT
 ## GM preferences and continuous performance checks — 13 October 2026
 Game Master settings now cover recovery, overlay/zone visibility, marker scaling, time steps and replay defaults, with a Sarge destination. Performance and maintenance gates are recorded in AGENTS.md; measured results and removed redundant work are in [the debrief](docs/GM-SETTINGS-PERFORMANCE.md).
 
+## Mission recovery and scenario library — 13 October 2026
+Rotating bounded mission recovery, explicit restore with Undo, and a named rules library are delivered. The desktop/Enfusion responsibility split and future deployment package pipeline are recorded in [the future integration note](docs/ENFUSION-MISSION-PACKAGE-ROADMAP.md); they add scope without changing current priorities.
+
 ## Next integrated milestone
 An offline JSON-driven Game Master scenario: headless mission loading without data loss; versioned units/objectives/phases/events; allowlisted conditions/actions; GM controls; append-only event journal; deterministic replay; save/reload/undo/recovery; regression and malformed-input checks. Develop this in small verified increments, starting with an audit/extraction of existing core logic. Do not rebuild existing systems or replace Electron before an alternative passes the same workflows.
 
