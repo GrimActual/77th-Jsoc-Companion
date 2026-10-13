@@ -12,7 +12,7 @@
  <p id="bridgeInstructions">In Reforger, press Escape → ORBAT PLANNER – HOST PAIRING. Paste the address and code, click CONNECT, resume, and control a soldier. Keep this planner and your PC running.</p>
  <p id="localBridgePoint"></p><button id="localBridgeFit" type="button">Find live marker</button>
  <details id="serverProfiles"><summary>Server profiles / Dedicated server (experimental)</summary>
- <p>Dedicated mode shares one administrator-selected named entity. Requires the v2.9.1 server addon candidate and a v2 relay. Real dedicated-server validation is pending. Gameplay ports cannot be used as relay addresses.</p>
+ <p>Dedicated mode shares one administrator-selected named entity. Requires the v2.9.1 server addon candidate and a v2 relay. A bounded standalone dedicated-server HTTPS test passed; full scenarios remain experimental. Gameplay ports cannot be used as relay addresses.</p>
  <label>Saved profile<select id="bridgeProfileSelect"><option value="">New profile</option></select></label>
  <label>Profile name<input id="bridgeProfileName" maxlength="80" placeholder="77th JSOC Operations Server"></label>
  <label>Deployment<select id="bridgeDeployment"><option value="local">Local / player-hosted</option><option value="dedicated">Dedicated server — experimental</option></select></label>

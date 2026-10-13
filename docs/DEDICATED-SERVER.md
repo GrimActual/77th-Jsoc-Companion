@@ -1,6 +1,6 @@
 # v2.9.1 Preview 1 — dedicated server installation
 
-**Experimental: desktop and relay tested using an HTTP server adapter; PC and WORKBENCH compilation passed on engine 1.8.0.13; the native diagnostic local-server HTTPS path is now tested, while a standalone dedicated game server still requires validation.** Keep RC2 for the proven player-hosted path. No claim of whole-server tracking or stable dedicated support.
+**Experimental: desktop and relay tested using an HTTP server adapter; PC and WORKBENCH compilation passed on engine 1.8.0.13; the native diagnostic local-server HTTPS path is now tested, and a bounded standalone ArmaReforgerServer.exe HTTPS movement test passed.** Keep RC2 for the proven player-hosted path. No claim of whole-server tracking or stable dedicated support.
 
 ## What runs where
 - Desktop PC: planner; optionally its bundled temporary relay and Cloudflare tunnel.
@@ -68,4 +68,4 @@ Legacy {token,x,z} sessions remain supported. Dedicated sessions explicitly requ
 The isolated compile gate passed for engine 1.8.0.13; see GM-EVENT-INSPECTION.md and test-evidence/enfusion-compile.json. These API references and compile results do not establish an actual dedicated runtime test or Workshop package validity.
 
 ## Native diagnostic gate — 13 October 2026
-The actual Enforce sender and Companion desktop passed HTTPS position/movement and same-session interval reload in an isolated diagnostic local server. A reset-sequence bug was reproduced and fixed, followed by PC/WORKBENCH compilation and a native reload check. Native authentication rejection stops the sender without unchanged-config restart. This is not standalone dedicated-server or Workshop validation; see [native runtime evidence and remaining gates](NATIVE-BRIDGE-RUNTIME.md).
+The actual Enforce sender and Companion desktop passed HTTPS position/movement and same-session interval reload in an isolated diagnostic local server. A reset-sequence bug was reproduced and fixed, followed by PC/WORKBENCH compilation and a native reload check. Native authentication rejection stops the sender without unchanged-config restart. A subsequent standalone server HTTPS movement test passed; Workshop publication remains pending. See [native runtime evidence and remaining gates](NATIVE-BRIDGE-RUNTIME.md).
