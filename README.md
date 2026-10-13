@@ -28,3 +28,9 @@ This is an independent community planner, not an official Bohemia Interactive pr
 Simulation is a separate practice feature. Current RC2 has been user-tested in-game but remains labelled a release candidate. The prior stable release is v2.8.2.
 
 [Release history](RELEASES.md) · [Latest debrief](planner/RELEASE-DEBRIEF.md)
+
+Notice & Disclaimer:
+
+This project is an unofficial community-made companion tool for Arma Reforger. It is not affiliated with, endorsed, sponsored, or specifically approved by Bohemia Interactive a.s.
+
+Arma Reforger, Enfusion, and Bohemia Interactive are trademarks or registered trademarks of Bohemia Interactive a.s.
