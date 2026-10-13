@@ -42,3 +42,6 @@ Six-second comparison with 400 planned units and 500 selected prefab sidecars:
 Mission and stored mission were unchanged during both workloads. This short comparison indicates no material regression in this fixture, not a speedup or leak guarantee. Native file choices are injected by the test harness; the worker and filesystem reads are real. One follow-up harness run reloaded before initial load completed (ERR_ABORTED); waiting for initial load prevents that test race. No renderer error occurred in the completed workflow.
 
 Development 11 is available in the development executable. Preview 5 ZIPs remain unchanged. No new Workshop publication or native Enfusion behavior is part of this increment.
+
+## Development 12 follow-up
+Prepared assets can now be explicitly saved using Assets → Export planning catalog and reimported after restart. See [catalog portability steps](PORTABLE-PLANNING-CATALOGS.md). The session-only statements above describe Development 11 without this explicit catalog export.

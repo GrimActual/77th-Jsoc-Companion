@@ -2,7 +2,7 @@
 
 The current future programme is [the master roadmap](../ROADMAP.md), with [all 200 backlog items](../docs/FUTURE-FEATURE-WISHLIST.md) and [package ownership](../docs/FUTURE-FEATURE-MAPPING.json).
 
-Current development build: v2.9.1 Preview 1. Desktop/relay and fullscreen tests passed; new dedicated sender requires Enfusion and real-server validation. See [test debrief](../docs/V2.9.1-TEST-REPORT.md).
+Current development executable: v2.9.1 Development 12. Latest consolidated local package: Preview 5. Catalog portability is described below; dedicated runtime verification remains pending. Earlier desktop/relay/fullscreen evidence: [test debrief](../docs/V2.9.1-TEST-REPORT.md).
 
 The notes below are retained historical release notes. Their older pending/current labels are not the status of the latest build.
 
@@ -49,3 +49,6 @@ Full UI scale is native in the Windows EXE; browser fallback enlarges controls. 
 
 ## Reviewed prefab planning assets — 13 October 2026
 Development 11 advances Package 12 from identity review to usable planning references. Prefab rows offer explicit name/type selection and prepare the existing Units asset selector; applying/placing embeds GUID, addon ID, path, provenance and target warnings. Preparation is mission-neutral; assignments use existing save and one-step Undo/Redo. Conflicting duplicates are rejected, locale changes retain draft values, and Sarge/Settings guidance is synchronized in EN/FR/DE. Focused contracts and actual desktop assignment/reload passed; the same 400-unit/500-resource sample stayed near 59 FPS. [Guide and validation](../docs/REVIEWED-PREFAB-ASSETS.md). Engine spawning/component adapters and server verification remain separate unfinished milestones. Preview 5 archives remain unchanged.
+
+## Portable planning catalogs — 13 October 2026
+Development 12 continues Package 12: Assets can export the session catalog plus assigned unit snapshots through a validated native Save dialog, then reimport them after restart. GUID/provenance and warnings survive; conflicts stop export before saving, and no mission/Undo/live-state changes occur. Sarge and Settings guidance are synchronized in EN/FR/DE. Sixteen relevant checks, actual desktop save/reimport/error workflows and a narrow post-optimization save check passed. Operation timings were compared against Development 11; a redundant renderer validation pass was removed while retaining native validation. [Steps and measured limits](../docs/PORTABLE-PLANNING-CATALOGS.md). Preview 5 archives are unchanged. The separate manifest-copy experiment is not promoted into release source or treated as verified prefab GUID data.

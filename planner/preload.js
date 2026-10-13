@@ -8,4 +8,4 @@ contextBridge.exposeInMainWorld('plannerSimulation',{command:(action,options)=>i
 
 contextBridge.exposeInMainWorld('plannerLocalBridge',{command:(action,options)=>ipcRenderer.invoke('local-bridge-command',action,options),subscribe:callback=>{const listener=(_event,state)=>callback(state);ipcRenderer.on('local-bridge-state',listener);return ()=>ipcRenderer.removeListener('local-bridge-state',listener);}});
 
-contextBridge.exposeInMainWorld('plannerMetadata',{select:()=>ipcRenderer.invoke('workbench-metadata-select'),exportIndex:index=>ipcRenderer.invoke('workbench-metadata-export',index)});
+contextBridge.exposeInMainWorld('plannerMetadata',{select:()=>ipcRenderer.invoke('workbench-metadata-select'),exportIndex:index=>ipcRenderer.invoke('workbench-metadata-export',index),exportCatalog:catalog=>ipcRenderer.invoke('workbench-catalog-export',catalog)});
