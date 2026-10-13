@@ -24,7 +24,7 @@
  for(const [name,z]of [['gridPane',330],['areaPane',350],['routePane',390],['editPane',650]]){map.createPane(name);map.getPane(name).style.zIndex=z}
  map.getPane('gridPane').style.pointerEvents='none';
  const groups={grid:L.layerGroup().addTo(map),areas:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),units:L.layerGroup().addTo(map),arrows:L.layerGroup().addTo(map),handles:L.layerGroup().addTo(map),draft:L.layerGroup().addTo(map),measure:L.layerGroup().addTo(map)};
- window.PlannerSimulationLayer?.attach(map);window.PlannerLocalBridgeLayer?.attach(map);
+ window.PlannerSimulationLayer?.attach(map);window.PlannerLocalBridgeLayer?.attach(map);window.CompanionScenarioLayer?.attach(map);
  new ResizeObserver(()=>map.invalidateSize({pan:false})).observe($('map'));
  if(!navigator.onLine||PlannerPreferences.get().offlineTerrain)$('mapStatus').textContent='Offline base terrain · lower detail';
  let plan=C.empty(),history=[],future=[],selection=null,tool=null,draft=[],appendId=null,measure=[],lastPoint={lat:6450,lng:6450},catalog=[],catalogTicket=0,markerCustom=false;
@@ -35,7 +35,7 @@
  function drawingSelected(){return selection?.kind==='route'?plan.routes.find(r=>equal(r.id,selection.id)):selection?.kind==='area'?plan.areas.find(a=>equal(a.id,selection.id)):null}
  function phaseName(id){return plan.phases.find(p=>p.id===id)?.name||t('All phases')}
  function saveState(message,bad=false){$('saveState').textContent=message;$('saveState').classList.toggle('bad',bad)}
- function persist(){saveState('Saving…');try{localStorage.setItem('everonOrbat',JSON.stringify(plan));saveState('Saved locally · '+PlannerPreferences.time());return true}catch{saveState('Failed — not saved. Export a backup.',true);status('Browser storage is unavailable or full. Export your plan to keep a copy.',true);return false}}
+ function persist(){window.dispatchEvent(new Event('planner-plan-changed'));saveState('Saving…');try{localStorage.setItem('everonOrbat',JSON.stringify(plan));saveState('Saved locally · '+PlannerPreferences.time());return true}catch{saveState('Failed — not saved. Export a backup.',true);status('Browser storage is unavailable or full. Export your plan to keep a copy.',true);return false}}
  function buttons(){$('undo').disabled=!history.length;$('redo').disabled=!future.length}
  function commit(fn,message,allowLocks=false,refreshSelection=true){
   try{const next=C.clone(plan);fn(next);if(!allowLocks)for(const list of ['orderOfBattle','routes','areas'])for(const old of plan[list].filter(o=>o.locked)){const now=next[list].find(o=>equal(o.id,old.id));if(!now||JSON.stringify(now)!==JSON.stringify(old))throw Error('Unlock '+(old.name||'this object')+' before changing it')}const clean=C.validate(next);if(JSON.stringify(clean)===JSON.stringify(plan)){persist();status(message||'No changes.');return true}history.push(JSON.stringify(plan));if(history.length>50)history.shift();plan=clean;future=[];buttons();renderAll();if(selection&&refreshSelection)fillSelection();if(persist())status(message||'Plan saved.');return true}catch(e){status(e.message+' — no changes saved.',true);renderMap();return false}

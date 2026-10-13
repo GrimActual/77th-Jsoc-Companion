@@ -17,3 +17,6 @@ Determinism means identical source data and command sequences produce identical 
 Delivered: headless reuse, versioned scenario/journal envelopes, allowlisted commands, objective prerequisites, deterministic triggers, source-plan isolation, replay and malformed-input checks.
 
 Next: formal schema documents, GM desktop panel and transient map overlay, pause/reset/undo as audited commands, durable snapshot recovery and UI save/reload tests. The full integrated offline GM milestone is not yet complete. Existing mission-clock history remains a separate feature until an explicit migration is designed.
+
+## Desktop continuation
+The GM panel, transient rehearsal markers and journal replay slider are now implemented and tested. See OFFLINE-GM-DESKTOP.md. The remaining recovery/undo work is still pending.
