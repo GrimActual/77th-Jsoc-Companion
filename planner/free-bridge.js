@@ -12,9 +12,9 @@ function createFreeBridge(onState=()=>{},deps={}) {
   const oldRemote=remote;remote=null;oldRemote?.stop();
   const oldChild=child;child=null;oldChild?.kill();
   const oldRelay=relay;relay=null;if(oldRelay){oldRelay.close();oldRelay.closeAllConnections();}
-  state={mode:'free',status:reason?'error':'off',error:reason,token:'',endpoint:'',point:null,received:0};publish();return {...state};
+  state={...(reason?{diagnostics:state.diagnostics,lastReceived:state.lastReceived,traffic:state.traffic}:{}),mode:'free',status:reason?'error':'off',error:reason,token:'',endpoint:'',point:null,received:0};publish();return {...state};
  }
- async function start() {
+ async function start(options={}) {
   if(starting||state.status!=='off'&&state.status!=='error')return {...state};
   stop();const ticket=generation;starting=true;cancel=new AbortController();const signal=cancel.signal;
   const check=()=>{if(ticket!==generation)throw Error('Cancelled');};
@@ -40,12 +40,12 @@ function createFreeBridge(onState=()=>{},deps={}) {
    state={...state,status:'pairing',endpoint};publish();
    remote=remoteFactory(s=>{
     if(ticket!==generation)return;
-    if(s.status==='off'){if(!starting)stop('Pairing expired. Start again and copy the new code into the game.');return;}
+    if(['off','expired','authentication-failed','security-lockout','unsupported','interrupted','error'].includes(s.status)){if(!starting||s.status!=='off')stop(s.error||'Pairing expired. Start again and copy the new code into the game.');return;}
     state={...s,mode:'free',endpoint,error:''};publish();
    });
    // The planner and relay share this PC. Keep reads and pairing local;
    // only the game needs the public tunnel. Never expose this loopback URL in UI.
-   await remote.start('http://127.0.0.1:'+srv.address().port+'/');
+   await remote.start('http://127.0.0.1:'+srv.address().port+'/',options);
    check();starting=false;return {...state};
   }catch(e){if(ticket===generation)stop(e.message);return {...state};}
  }

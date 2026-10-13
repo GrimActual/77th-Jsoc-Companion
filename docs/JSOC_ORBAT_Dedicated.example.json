@@ -1,0 +1,10 @@
+{
+  "enabled": false,
+  "endpoint": "https://YOUR-RELAY.example/",
+  "pairingCode": "REPLACE_WITH_CURRENT_32_HEX_CODE",
+  "entityName": "ORBAT_TRACKED_ENTITY",
+  "entityId": "authorised_entity_1",
+  "intervalMs": 2000,
+  "timeoutSeconds": 5,
+  "autoReconnect": true
+}

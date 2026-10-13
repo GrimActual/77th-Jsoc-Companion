@@ -28,3 +28,8 @@ This is an independent community planner, not an official Bohemia Interactive pr
 Simulation is a separate practice feature. Current RC2 has been user-tested in-game but remains labelled a release candidate. The prior stable release is v2.8.2.
 
 [Release history](RELEASES.md) · [Latest debrief](planner/RELEASE-DEBRIEF.md)
+
+
+## v2.9.1 development preview
+
+This development branch adds experimental dedicated-server profiles and a single-entity sender candidate. See [setup](docs/DEDICATED-SERVER.md), [audit](docs/V2.9.1-AUDIT.md), and [preview notes](docs/V2.9.1-RELEASE-NOTES.md). Enfusion compilation and real dedicated hosting remain validation gates. Existing published downloads are unchanged.
