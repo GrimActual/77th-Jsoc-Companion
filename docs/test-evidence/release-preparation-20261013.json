@@ -1,7 +1,7 @@
 {
   "date": "2026-10-13",
   "workshopPrepared": true,
-  "workshopPublished": false,
+  "workshopPublished": true,
   "addonGuid": "6A969EB0C5012BB9",
   "proposedWorkshopVersion": "0.2.0",
   "sourceMatchesNativeCompile": true,
@@ -182,5 +182,6 @@
       "errors": []
     },
     "caveat": "Short sequential samples with Workbench closed; no substantial FPS change demonstrated. Not a stability soak or universal guarantee."
-  }
+  },
+  "workshopPublicationEvidence": "User confirmed publication of the prepared 0.2.0 update; installed Workshop download not independently tested."
 }

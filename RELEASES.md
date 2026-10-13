@@ -26,3 +26,5 @@ Published oldest first; GitHub displays newest first.
 - [v2.9.0-remote.2](https://github.com/GrimActual/77th-Jsoc-Companion/releases/tag/v2.9.0-remote.2) — prerelease
 - [v2.9.0-rc.1](https://github.com/GrimActual/77th-Jsoc-Companion/releases/tag/v2.9.0-rc.1) — prerelease
 - [v2.9.0-rc.2](https://github.com/GrimActual/77th-Jsoc-Companion/releases/tag/v2.9.0-rc.2) — prerelease
+
+- [v2.9.1-rc.1](https://github.com/GrimActual/77th-Jsoc-Companion/releases/tag/v2.9.1-rc.1) — consolidated prerelease candidate
