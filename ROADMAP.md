@@ -431,3 +431,7 @@ The real diagnostic local-server executable sent native Enforce position updates
 ## RC2 — bounded live tracking and deployment preview
 
 Packages 01/04/11 now carry 60 opt-in named-entity batches with native HTTPS evidence. Package 12/14 adds a desktop deployment review/export with GUID provenance and stale checks; execution remains pending. Settings and 47 EN/FR/DE Sarge topics accompany delivery. Automatic opt-in player discovery, respawn lifecycle, 120-player scaling, server-reviewed spawn/remove and optional compact GM workspace remain future milestones. See docs/RELEASE-CANDIDATE-2.md.
+
+## Player source pilot — unpublished
+
+Workshop 0.3.0 publication is user-confirmed. The next native candidate selects up to 60 explicit session player IDs with controller-bound leases, respawn delta resets and disconnect retirement. PC/Workbench compilation passes; real player lifecycle testing remains required. The existing RC2 reader is compatible with the batch format. See docs/PLAYER-TRACKING-PILOT.md.

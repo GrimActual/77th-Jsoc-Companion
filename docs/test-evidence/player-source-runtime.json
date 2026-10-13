@@ -1,0 +1,11 @@
+{
+  "scope": "Real standalone player source with zero connected players; synthetic production lease inputs; approved temporary HTTPS relay",
+  "success": true,
+  "seconds": 23.125,
+  "validEmptyHeartbeats": 10,
+  "productionLeaseAssertions": true,
+  "nativeScriptErrors": false,
+  "missionUnchanged": true,
+  "rendererErrors": [],
+  "sampledPeakServerMB": 582.41796875
+}
