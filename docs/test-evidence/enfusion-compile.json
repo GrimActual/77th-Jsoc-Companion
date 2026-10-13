@@ -1,7 +1,7 @@
 {
   "schema": "companion-enfusion-validation",
   "version": 1,
-  "utc": "2026-10-13T12:07:35.2301761Z",
+  "utc": "2026-10-13T17:47:48.5811679Z",
   "source": [
     {
       "file": "addon.gproj",
@@ -9,7 +9,7 @@
     },
     {
       "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_DedicatedBridge.c",
-      "sha256": "79e4eab20a16fc8e016f42a7a09d004d6c60ec7a011cb4c34af44bcf2644880f"
+      "sha256": "9ac9c15485b3623c104f74d41f3399456d63f50715dd6fb15c635807cf29e1e5"
     },
     {
       "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostBridge.c",
@@ -30,8 +30,8 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "seconds": 7.93,
-      "sampledPeakWorkingSetMB": 950.1,
+      "seconds": 7.98,
+      "sampledPeakWorkingSetMB": 952.3,
       "scriptWarnings": [
         "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(785): warning: 'GetPlayerPlatformKind' is obsolete",
         "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(786): warning: 'GetPlayerPlatformId' is obsolete",
@@ -54,8 +54,8 @@
       "success": true,
       "exitCode": 0,
       "timedOut": false,
-      "seconds": 7.81,
-      "sampledPeakWorkingSetMB": 969.9,
+      "seconds": 6.89,
+      "sampledPeakWorkingSetMB": 970.7,
       "scriptWarnings": [
         "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(785): warning: 'GetPlayerPlatformKind' is obsolete",
         "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(786): warning: 'GetPlayerPlatformId' is obsolete",

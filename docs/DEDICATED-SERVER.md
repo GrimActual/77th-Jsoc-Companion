@@ -1,6 +1,6 @@
 # v2.9.1 Preview 1 — dedicated server installation
 
-**Experimental: desktop and relay tested using an HTTP server adapter; PC and WORKBENCH compilation passed on engine 1.8.0.13; an actual dedicated game server still requires validation.** Keep RC2 for the proven player-hosted path. No claim of whole-server tracking or stable dedicated support.
+**Experimental: desktop and relay tested using an HTTP server adapter; PC and WORKBENCH compilation passed on engine 1.8.0.13; the native diagnostic local-server HTTPS path is now tested, while a standalone dedicated game server still requires validation.** Keep RC2 for the proven player-hosted path. No claim of whole-server tracking or stable dedicated support.
 
 ## What runs where
 - Desktop PC: planner; optionally its bundled temporary relay and Cloudflare tunnel.
@@ -22,7 +22,7 @@
 4. Alternatively choose Existing HTTPS relay and its HTTPS ROOT address. Run the included v2 relay there. The game's gameplay IP/UDP port is NOT this endpoint. A v1-only relay is rejected explicitly.
 
 ## 3. Configure the game server (private server files, NOT Workbench resources)
-Copy docs/JSOC_ORBAT_Dedicated.example.json to the directory selected by the dedicated server's -profile option, naming it JSOC_ORBAT_Dedicated.json.
+Copy docs/JSOC_ORBAT_Dedicated.example.json into the engine's resolved `$profile:` directory, naming it JSOC_ORBAT_Dedicated.json. The `-profile` argument selects its parent: for `-profile A:/ServerTest`, use `A:/ServerTest/profile/JSOC_ORBAT_Dedicated.json`, not `A:/ServerTest/JSOC_ORBAT_Dedicated.json`. The engine log reports the directory mounted as `profile`; use that to verify a hosting provider's layout. [Official profile parameter](https://community.bistudio.com/wiki/Arma_Reforger:Startup_Parameters).
 - Set enabled to true.
 - endpoint: copy the ADDRESS from the desktop planner's Live bridge panel.
 - pairingCode: copy the CODE from that same panel.
@@ -53,7 +53,7 @@ For an existing server config, merge a real addon entry into its existing game.m
 - Switching profiles closes the previous bridge. Profiles store no pairing/read tokens; mission export never includes them.
 
 ## Disable / uninstall
-Set enabled:false or remove the server-private JSON; sender halts within five seconds. Click Stop connection in the planner. Remove the addon from server configuration and restart if removing it entirely. Delete saved desktop profiles independently. Offline missions are unaffected.
+Set enabled:false or remove the server-private JSON; sender halts within five seconds. Click Stop connection in the planner. Remove the addon from server configuration and restart if removing it entirely. Create a fresh desktop pairing session before enabling a disabled or revoked sender again; do not reuse its old pairing code. Delete saved desktop profiles independently. Offline missions are unaffected.
 
 ## Protocol and boundaries
 Legacy {token,x,z} sessions remain supported. Dedicated sessions explicitly request protocol 2 and single-entity scope. Writer messages carry protocol, token, entityId, sequence, x, z. A paired session pins its first entity ID; conflicting entities/invalid messages lock that session after three authenticated violations. Duplicates do not advance revisions or refresh stale timestamps; older sequence values are rejected. Sender retries retain identical bytes. Latest positions coalesce; no events/commands or batched multi-unit feed are implemented. Limits: 2KB inbound marker; 4KB desktop relay response; supported Everon bounds ±13500m. No compression assumption is made for Enfusion.
@@ -66,3 +66,6 @@ Legacy {token,x,z} sessions remain supported. Dedicated sessions explicitly requ
 - https://community.bistudio.com/wikidata/external-data/arma-reforger/ArmaReforgerScriptAPIPublic/interfaceSCR__GameModeEditor.html
 
 The isolated compile gate passed for engine 1.8.0.13; see GM-EVENT-INSPECTION.md and test-evidence/enfusion-compile.json. These API references and compile results do not establish an actual dedicated runtime test or Workshop package validity.
+
+## Native diagnostic gate — 13 October 2026
+The actual Enforce sender and Companion desktop passed HTTPS position/movement and same-session interval reload in an isolated diagnostic local server. A reset-sequence bug was reproduced and fixed, followed by PC/WORKBENCH compilation and a native reload check. Native authentication rejection stops the sender without unchanged-config restart. This is not standalone dedicated-server or Workshop validation; see [native runtime evidence and remaining gates](NATIVE-BRIDGE-RUNTIME.md).

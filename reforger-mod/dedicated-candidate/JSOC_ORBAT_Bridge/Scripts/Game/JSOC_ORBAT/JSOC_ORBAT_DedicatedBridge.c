@@ -81,6 +81,11 @@ class JSOC_ORBAT_DedicatedBridge
         m_ConfigProblem = false;
         // An unchanged config never restarts an exhausted or locked-out session.
         if (m_Code == pairingCode && m_Endpoint == endpoint && m_EntityName == entityName && m_EntityId == entityId && m_Interval == intervalMs && m_Timeout == timeoutSeconds && m_Reconnect == autoReconnect) return;
+        // Interval/timeout changes keep the monotonic sequence of the same relay stream.
+        // A new endpoint, pairing code or entity ID starts a new stream instead.
+        int nextSequence = 0;
+        if (m_Code == pairingCode && m_Endpoint == endpoint && m_EntityId == entityId)
+            nextSequence = m_Sequence;
         Suspend();
         m_Endpoint = endpoint; m_Code = pairingCode; m_EntityName = entityName; m_EntityId = entityId;
         m_Interval = intervalMs; m_Timeout = timeoutSeconds; m_Reconnect = autoReconnect;
@@ -88,7 +93,7 @@ class JSOC_ORBAT_DedicatedBridge
         if (!m_Context) return;
         m_Context.SetTimeout(timeoutSeconds);
         m_Callback = new JSOC_ORBAT_DedicatedCallback(); m_Callback.Owner = this;
-        m_Active = true; m_Sequence = 0; m_Failures = 0; m_Body = "";
+        m_Active = true; m_Sequence = nextSequence; m_Failures = 0; m_Body = "";
         Print("[JSOC ORBAT] Dedicated sender enabled: one authorised named entity, read-only.");
         GetGame().GetCallqueue().CallLater(Send, m_Interval, false);
     }

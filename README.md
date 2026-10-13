@@ -45,3 +45,5 @@ Development 12 adds [portable planning catalog export](docs/PORTABLE-PLANNING-CA
 Development 13 adds [downloaded-addon project identity review](docs/PROJECT-IDENTITY-COMPATIBILITY.md), accepting opaque project configuration blocks without inferring prefab GUIDs. Available in the development executable; Preview 5 archives remain unchanged.
 
 Development 14 adds [resource index reuse in Assets](docs/RESOURCE-INDEX-REVIEW-UI.md), with worker-backed JSON loading, multiple-addon review and cached dependency findings. Available in the development executable; Preview 5 archives remain unchanged.
+
+Native read-only bridge [diagnostic runtime gate](docs/NATIVE-BRIDGE-RUNTIME.md) passed real Enforce-to-HTTPS-to-Companion position and authentication checks. Same-session interval reload is fixed in the dedicated candidate. Standalone server and Workshop candidate validation remain pending; Preview 5 archives are unchanged.
