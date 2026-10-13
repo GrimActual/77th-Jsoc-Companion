@@ -1,0 +1,116 @@
+{
+  "type": "object",
+  "properties": {
+    "schema": {
+      "const": "companion-journal"
+    },
+    "version": {
+      "const": 2
+    },
+    "scenarioId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,64}$"
+    },
+    "mission": {
+      "type": "object"
+    },
+    "scenario": {
+      "oneOf": [
+        {
+          "$ref": "urn:77th-jsoc:scenario:1"
+        },
+        {
+          "$ref": "urn:77th-jsoc:scenario:2"
+        }
+      ]
+    },
+    "events": {
+      "type": "array",
+      "maxItems": 10000,
+      "items": {
+        "type": "object",
+        "properties": {
+          "revision": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10000
+          },
+          "command": {
+            "oneOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "enum": [
+                      "pause",
+                      "resume",
+                      "undo",
+                      "reset"
+                    ]
+                  }
+                },
+                "required": [
+                  "type"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "const": "fire"
+                  },
+                  "eventId": {
+                    "type": "string",
+                    "pattern": "^[a-zA-Z0-9_-]{1,64}$"
+                  }
+                },
+                "required": [
+                  "type",
+                  "eventId"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "const": "advance"
+                  },
+                  "deltaMs": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 60000
+                  }
+                },
+                "required": [
+                  "type",
+                  "deltaMs"
+                ],
+                "additionalProperties": false
+              }
+            ]
+          }
+        },
+        "required": [
+          "revision",
+          "command"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema",
+    "version",
+    "scenarioId",
+    "mission",
+    "scenario",
+    "events"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:77th-jsoc:journal:2",
+  "title": "Companion Journal v2",
+  "description": "Requires registered scenario schemas; ordered revisions, commands and embedded mission/scenario must also pass deterministic restore."
+}
