@@ -1,0 +1,49 @@
+{
+  "schema": "companion-scenario",
+  "version": 1,
+  "id": "sea_serpent_rehearsal",
+  "objectives": [
+    {
+      "id": "checkpoint",
+      "name": "Rehearsal checkpoint",
+      "status": "active"
+    }
+  ],
+  "events": [
+    {
+      "id": "checkpoint_secured",
+      "name": "Checkpoint secured",
+      "atMs": 10000,
+      "requires": [],
+      "actions": [
+        {
+          "type": "objective",
+          "id": "checkpoint",
+          "status": "complete"
+        },
+        {
+          "type": "report",
+          "text": "Exercise checkpoint secured."
+        }
+      ]
+    },
+    {
+      "id": "advance",
+      "name": "Advance authorised unit",
+      "atMs": 10000,
+      "requires": [
+        "checkpoint"
+      ],
+      "actions": [
+        {
+          "type": "move",
+          "unitId": "actual",
+          "position": {
+            "lat": 8300,
+            "lng": 4850
+          }
+        }
+      ]
+    }
+  ]
+}

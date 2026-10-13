@@ -8,6 +8,9 @@ Updated 13 October 2026. Ordered by technical dependencies, with no dates or del
 - Existing headless validation, ORBAT hierarchy, map geometry, phases, imports/exports, simulation fixtures, backups and bridge protocols are foundations to reuse. Package completion must be based on evidence, not assumed from feature names.
 - Complete the v2.9.1 engine/server validation gate before calling its dedicated path stable. Future architectural work can proceed offline without waiting for a live server.
 
+## First core increment — 13 October 2026
+Headless mission validation is reused by a new offline scenario module and CLI. Typed actions, prerequisites, ordered journals and replay are implemented and tested; see [core guide](docs/OFFLINE-SCENARIO-CORE.md). GM UI and durable recovery remain pending. This development increment does not alter the packaged preview.
+
 ## Next integrated milestone
 An offline JSON-driven Game Master scenario: headless mission loading without data loss; versioned units/objectives/phases/events; allowlisted conditions/actions; GM controls; append-only event journal; deterministic replay; save/reload/undo/recovery; regression and malformed-input checks. Develop this in small verified increments, starting with an audit/extraction of existing core logic. Do not rebuild existing systems or replace Electron before an alternative passes the same workflows.
 
