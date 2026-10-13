@@ -383,3 +383,8 @@ Development 6 adds validated session-only Undo/Redo for applied scenario authori
 
 ## Reforger native properties, COOP template and UI references — 13 October 2026
 The user-provided Bohemia attribute tutorial, GRAD COOP Template and Reforger UI screenshot are reviewed in [the reference note](docs/REFORGER-GM-REFERENCES.md). They inform future authorised property integration, scenario setup and an optional compact GM workspace while preserving our own version and current priorities. GRAD uses APL restrictions; no foreign code or artwork was incorporated. The screenshot is retained locally outside source/release trees. This research does not implement a network property API or 3D viewport, and does not repeat previously passing application tests.
+
+## Scenario preflight and optional workspace proposal — 13 October 2026
+Development 7 adds advisory initial-draft preflight, diagnostic export, stale-result protection, a Settings shortcut and 43 translated Sarge topics. Eight focused tests and the actual desktop isolation/export workflow passed; the capped 500-finding review latency is recorded in [the guide](docs/GM-SCENARIO-PREFLIGHT.md). No unrelated passing gates were repeated.
+
+Proposed UI sub-milestone **14.1 — Optional Game Master workspace** is recorded in [the implementation plan](docs/OPTIONAL-GM-WORKSPACE-PLAN.md). MagicPath is the proposed design tool for panel hierarchy and boundaries; no prototype or layout rewrite is delivered yet. The proposal stays inside the 16-package roadmap. Its “Package 20” is mapped to existing security/integration/release owners, and unimplemented properties/automatic-play behavior remain future work.
