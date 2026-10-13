@@ -2,7 +2,7 @@
 
 The first property adapter translates explicit requests into **existing canonical planner-unit fields**. It is headless source work for the property catalogue/integration foundation, not a delivered native Enfusion property adapter or a new desktop control.
 
-Current desktop: **2.9.1 Development 7**. Current consolidated release ZIP: **Preview 4**. Neither contains a newly exposed property-import UI. Sarge and Settings remain unchanged for this source-only increment; guidance must be added with a delivered UI rather than describing controls that do not exist.
+This note records the headless foundation. **Development 8** subsequently adds a property-review UI, Settings shortcut and translated Sarge guide; see [the UI guide](UNIT-PROPERTY-REVIEW.md). The consolidated release ZIP remains **Preview 4** until a later packaging gate.
 
 ## Supported translation
 
@@ -59,4 +59,4 @@ Ten focused Node tests passed: translation and preservation, all-or-nothing bloc
 
 Evidence: `docs/test-evidence/property-adapter-performance.json`. This is a synthetic offline sample, not map FPS or engine/server timing. There was no prior equivalent adapter to compare. No unrelated completed map, bridge or native compile gates were repeated.
 
-The next integration step is a review UI using existing authoring controls and history, followed separately by verified native property mappings. Neither is implied by these headless tests. Do not use the example request with **Import plan**: it is a property-review contract, not a mission file.
+Development 8 delivers the review UI, tested separately as recorded in its guide. Verified native property mappings remain pending. Do not use the example request with **Import plan**: it is a property-review contract, not a mission file.

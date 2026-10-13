@@ -6,7 +6,7 @@
  function t(source,requestedLanguage=language()){return dictionaries[requestedLanguage]?.[source]??source;}
  const records=new WeakMap();
  // These containers mix user content with UI. Their fixed labels are localized at source.
- const excluded='script,style,svg,textarea,input,[contenteditable],#map,#roster,#drawingList,#symbolPreview,#assetMeta,#asset,#parent,#unitPhase,#drawingPhase,#phases,#unitTitle,#drawingTitle';
+ const excluded='script,style,svg,textarea,input,[contenteditable],#map,#roster,#drawingList,#symbolPreview,#assetMeta,#asset,#parent,#unitPhase,#drawingPhase,#phases,#unitTitle,#drawingTitle,#propertyReviewRows';
  function translated(source){
   if(t(source)!==source)return t(source);
   const patterns=[

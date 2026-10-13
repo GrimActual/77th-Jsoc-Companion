@@ -1,0 +1,4 @@
+[
+  "Review offline unit property changes",
+  "Units → Review unit property changes loads a property-request JSON file or reviews pasted JSON. Expand each finding to inspect before/after values. Unsupported fields, invalid values, locked units and missing targets block the entire batch. If the plan or request changes, review again. Apply reviewed changes edits only the planner mission and supports its Undo/Redo; it clears the scenario builder and active rehearsal, so export them first. A source resource index is optional unless the request declares a resource ID. It proves metadata identity only. This does not edit Reforger components or live game state. One mission Undo restores the complete unit batch and the scenario builder, including unapplied editor text. Redo reapplies the batch. Rehearsals stay unloaded. Builder snapshots share a 2 MiB session history limit; oversized captures are rejected before applying."
+]
