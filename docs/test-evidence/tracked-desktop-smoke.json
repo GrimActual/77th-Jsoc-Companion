@@ -1,0 +1,11 @@
+{
+  "count": 60,
+  "cleared": true,
+  "intervalMaximum": "2",
+  "idsEnabled": true,
+  "missionUnchanged": true,
+  "sampleFrames": 180,
+  "frameMedianMs": 16.699999999999818,
+  "frameP95Ms": 16.800000000000182,
+  "rendererErrors": []
+}

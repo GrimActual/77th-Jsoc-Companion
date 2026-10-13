@@ -1,6 +1,6 @@
 {
   "name": "everon-orbat-workshop-bridge",
-  "version": "2.9.1-rc.1",
+  "version": "2.9.1-tracking.1",
   "private": true,
   "description": "Experimental single-host ORBAT bridge with HTTPS relay support",
   "main": "main.js",
@@ -11,7 +11,8 @@
     "package": "electron-packager . \"Everon ORBAT Planner\" --platform=win32 --arch=x64 --out=dist --overwrite",
     "scenario": "node scenario-cli.js",
     "resources": "node resource-index-cli.js",
-    "metadata": "node workbench-metadata-cli.js"
+    "metadata": "node workbench-metadata-cli.js",
+    "test:tracking": "node --test tracked-entities.test.js tracked-http.test.js tracked-layer.test.js tracked-lifecycle.test.js deployment-intent.test.js"
   },
   "devDependencies": {
     "electron": "^30.5.1",

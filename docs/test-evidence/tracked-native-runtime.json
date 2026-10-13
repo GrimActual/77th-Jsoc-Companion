@@ -1,0 +1,13 @@
+{
+  "scope": "Real standalone server and Companion; 60 named synthetic entities; temporary approved HTTPS relay",
+  "success": true,
+  "seconds": 40.207,
+  "initial60": true,
+  "stationaryHeartbeat": true,
+  "movedEntity": true,
+  "deletedEntityRemoved": true,
+  "markerCount": 59,
+  "missionUnchanged": true,
+  "rendererErrors": [],
+  "sampledPeakServerMB": 582.1484375
+}

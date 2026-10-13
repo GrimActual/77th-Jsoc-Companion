@@ -93,6 +93,7 @@ modded class SCR_BaseGameMode
 {
     protected ref JSOC_ORBAT_HostBridge m_JSOCBridge;
     protected ref JSOC_ORBAT_DedicatedBridge m_JSOCDedicated;
+    protected ref JSOC_ORBAT_TrackedBridge m_JSOCTracked;
     override void OnGameStart()
     {
         super.OnGameStart();
@@ -100,6 +101,8 @@ modded class SCR_BaseGameMode
         {
             m_JSOCDedicated = new JSOC_ORBAT_DedicatedBridge();
             m_JSOCDedicated.Start();
+            m_JSOCTracked = new JSOC_ORBAT_TrackedBridge();
+            m_JSOCTracked.Start();
         }
     }
     JSOC_ORBAT_HostBridge GetJSOCBridge()
@@ -112,5 +115,6 @@ modded class SCR_BaseGameMode
     {
         if (m_JSOCBridge) m_JSOCBridge.Disconnect();
         if (m_JSOCDedicated) m_JSOCDedicated.Stop();
+        if (m_JSOCTracked) m_JSOCTracked.Stop();
     }
 }

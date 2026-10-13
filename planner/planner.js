@@ -24,7 +24,7 @@
  for(const [name,z]of [['gridPane',330],['areaPane',350],['routePane',390],['editPane',650]]){map.createPane(name);map.getPane(name).style.zIndex=z}
  map.getPane('gridPane').style.pointerEvents='none';
  const groups={grid:L.layerGroup().addTo(map),areas:L.layerGroup().addTo(map),routes:L.layerGroup().addTo(map),units:L.layerGroup().addTo(map),arrows:L.layerGroup().addTo(map),handles:L.layerGroup().addTo(map),draft:L.layerGroup().addTo(map),measure:L.layerGroup().addTo(map)};
- window.PlannerSimulationLayer?.attach(map);window.PlannerLocalBridgeLayer?.attach(map);window.CompanionScenarioLayer?.attach(map);
+ window.PlannerSimulationLayer?.attach(map);window.PlannerLocalBridgeLayer?.attach(map);window.PlannerTrackedLayer?.attach(map);window.CompanionScenarioLayer?.attach(map);
  new ResizeObserver(()=>map.invalidateSize({pan:false})).observe($('map'));
  if(!navigator.onLine||PlannerPreferences.get().offlineTerrain)$('mapStatus').textContent='Offline base terrain · lower detail';
  const planStorage=PlannerPlanStorage.createStore(localStorage);

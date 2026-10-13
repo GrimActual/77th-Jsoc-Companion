@@ -492,5 +492,129 @@
       ]
     },
     "valid": false
+  },
+  {
+    "name": "valid tracked batch",
+    "schema": "tracked-batch-v3.schema.json",
+    "data": {
+      "protocol": 3,
+      "token": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "sequence": 1,
+      "full": true,
+      "activeIds": [
+        "alpha"
+      ],
+      "entities": [
+        {
+          "id": "alpha",
+          "x": 4241.47,
+          "z": 9469.76
+        }
+      ]
+    },
+    "valid": true
+  },
+  {
+    "name": "tracked cap rejects 61 IDs",
+    "schema": "tracked-batch-v3.schema.json",
+    "data": {
+      "protocol": 3,
+      "token": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "sequence": 1,
+      "full": true,
+      "activeIds": [
+        "unit_0",
+        "unit_1",
+        "unit_2",
+        "unit_3",
+        "unit_4",
+        "unit_5",
+        "unit_6",
+        "unit_7",
+        "unit_8",
+        "unit_9",
+        "unit_10",
+        "unit_11",
+        "unit_12",
+        "unit_13",
+        "unit_14",
+        "unit_15",
+        "unit_16",
+        "unit_17",
+        "unit_18",
+        "unit_19",
+        "unit_20",
+        "unit_21",
+        "unit_22",
+        "unit_23",
+        "unit_24",
+        "unit_25",
+        "unit_26",
+        "unit_27",
+        "unit_28",
+        "unit_29",
+        "unit_30",
+        "unit_31",
+        "unit_32",
+        "unit_33",
+        "unit_34",
+        "unit_35",
+        "unit_36",
+        "unit_37",
+        "unit_38",
+        "unit_39",
+        "unit_40",
+        "unit_41",
+        "unit_42",
+        "unit_43",
+        "unit_44",
+        "unit_45",
+        "unit_46",
+        "unit_47",
+        "unit_48",
+        "unit_49",
+        "unit_50",
+        "unit_51",
+        "unit_52",
+        "unit_53",
+        "unit_54",
+        "unit_55",
+        "unit_56",
+        "unit_57",
+        "unit_58",
+        "unit_59",
+        "unit_60"
+      ],
+      "entities": [
+        {
+          "id": "alpha",
+          "x": 4241.47,
+          "z": 9469.76
+        }
+      ]
+    },
+    "valid": false
+  },
+  {
+    "name": "tracked rejects executable extras",
+    "schema": "tracked-batch-v3.schema.json",
+    "data": {
+      "protocol": 3,
+      "token": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "sequence": 1,
+      "full": true,
+      "activeIds": [
+        "alpha"
+      ],
+      "entities": [
+        {
+          "id": "alpha",
+          "x": 4241.47,
+          "z": 9469.76
+        }
+      ],
+      "command": "spawn"
+    },
+    "valid": false
   }
 ]
