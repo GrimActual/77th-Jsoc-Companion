@@ -32,3 +32,7 @@ After restarting the game/app connection, use a fresh address/code in mixed mode
 ## Resource provenance
 
 Owner addon: Arma Reforger `58D0FB3206B6F859`, depending on Enfusion core `5614BBCCBB55ED1C`. Resource GUID: `26A9756790131354`. Import metadata retains `nativeAvailability: unverified` because it cannot guarantee the current game session's installed assets. The native executor rechecks exact identity before spawning. No game asset binaries are copied into these files; license/entitlement is not inferred.
+
+## Placement correction
+
+Use desktop 2.9.1-dev.gm.2 for native spawning: deployment reverses the +50 m map imagery offset in each axis without moving saved plan markers. Discard old pending requests and review again. No Workshop mod update is required. See [GM-PLACEMENT-FIX.md](GM-PLACEMENT-FIX.md).

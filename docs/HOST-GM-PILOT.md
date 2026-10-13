@@ -71,3 +71,7 @@ Before promoting to a public release candidate, test the actual Host Local panel
 ## Ready vanilla spawn fixture
 
 The user confirmed mixed Host Local tracking and faction deselection in-game. For the next native spawn gate, the real vanilla US Rifleman reference was resolved and loaded read-only by Workbench. See [the numbered catalog/index workflow](VANILLA-GM-SPAWN-TEST.md). The fixture contains metadata only; it does not replace a plan or modify the Workshop addon.
+
+## Placement correction
+
+Use desktop 2.9.1-dev.gm.2 for native spawning: deployment reverses the +50 m map imagery offset in each axis without moving saved plan markers. Discard old pending requests and review again. No Workshop mod update is required. See [GM-PLACEMENT-FIX.md](GM-PLACEMENT-FIX.md).

@@ -18,7 +18,7 @@ function showWindow(){if(quitting)return;if(!mainWindow||mainWindow.isDestroyed(
 function createWindow(){
  if(quitting)return;
  const startupSize=require('./display-main').size(screen?.getPrimaryDisplay?.()?.workArea);
- const win=new BrowserWindow({...startupSize,title:'77th JSOC · Everon ORBAT Planner 2.9.1 GM Control Pilot',icon:path.join(__dirname,'jsoc-logo.png'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
+ const win=new BrowserWindow({...startupSize,title:'77th JSOC · Everon ORBAT Planner 2.9.1 GM Control Pilot — Placement Fix',icon:path.join(__dirname,'jsoc-logo.png'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
  mainWindow=win;win.setMenuBarVisibility(false);
  win.webContents.on('did-start-navigation',(_event,_url,_inPlace,isMainFrame)=>{if(isMainFrame){simulation.reset();localBridge.stop();metadata.reset();}});
  win.webContents.on('render-process-gone',()=>{simulation.reset();localBridge.stop();metadata.reset();});

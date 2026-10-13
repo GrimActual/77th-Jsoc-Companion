@@ -439,3 +439,7 @@ Workshop 0.3.0 publication is user-confirmed. The next native candidate selects 
 ## Host Local mixed roster and first native GM execution pilot — 13 October 2026
 
 Packages 04/11 gain explicit human/GM-editable AI selection and faction filters sharing 60 aliases. Package 14 now has reviewed spawn/remove requests with host approval, expiry, cancellation, duplicate protection and root ownership checks. Two synthetic objects passed actual native HTTPS execution; final safeguards compile and desktop/queue checks pass. This is a bounded development pilot, not the full GM suite or a real 60-player validation. Sarge has 50 EN/FR/DE topics. See [HOST-GM-PILOT.md](docs/HOST-GM-PILOT.md). Next: real Host Local lifecycle/UI gate, then native AI orders/property/environment adapters. RC2 and published Workshop 0.3.0 remain unchanged until the candidate is uploaded.
+
+## Real Host Local gate and placement correction
+
+The user confirmed mixed tracking, faction deselection and actual character spawn/removal in Host Local. Placement exposed a missing inverse map-image offset; desktop 2.9.1-dev.gm.2 now subtracts 50 m per axis for native requests and intention exports, leaving saved plan coordinates unchanged. Production single/mixed render round trips, the installed app and matched converter timings pass. Precise corrected placement still requires user confirmation; full player lifecycle/occupied removal/GM roadmap features remain open. See docs/GM-PLACEMENT-FIX.md.

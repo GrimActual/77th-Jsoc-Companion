@@ -1,0 +1,19 @@
+{
+  "scope": "Same 400-unit mission, 16-unit reviewed batch, alternating before/after order after warm-up; no map renderer or native changes",
+  "before": {
+    "samples": 12,
+    "meanMs": 11.25808333333334,
+    "maxMs": 15.227100000000064
+  },
+  "after": {
+    "samples": 12,
+    "meanMs": 9.973691666666648,
+    "maxMs": 12.018600000000106
+  },
+  "intentBytesBefore": 13928,
+  "intentBytesAfter": 13928,
+  "savedMissionUnchanged": true,
+  "additionalNetworkRequests": 0,
+  "perEntityOffsetMeters": 50,
+  "limit": 16
+}
