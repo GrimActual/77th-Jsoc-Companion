@@ -4,7 +4,7 @@ Package 12 now has a bounded, read-only reader for the **observed identity field
 
 ## Supported subset
 
-- `GameProject`: quoted ID, GUID and TITLE, plus a flat quoted Dependencies block. The addon GUID becomes the owner identity; version remains unknown rather than inferred.
+- `GameProject`: quoted ID, GUID and TITLE, plus a flat quoted Dependencies block and an optional bounded opaque Configurations block. The addon GUID becomes the owner identity; version remains unknown rather than inferred.
 - `MetaFileClass`: one quoted `Name` in `{16-hex-GUID}resource-name` form. The declared name must match the selected sidecar's addon-relative target path or basename. The resource classification comes from the existing index contract.
 - Whitespace, UTF-8 BOM, line/block comments, quoted braces, escaped quote/backslash and bounded nested blocks are handled. Configuration bodies remain opaque and are never executed or interpreted as dependencies.
 - Unknown top-level fields or unsupported structures/escapes are rejected rather than silently discarded. Other native text variants need new observed fixtures before support is expanded.
@@ -44,3 +44,5 @@ Eleven focused checks passed across the parser, selected-file boundaries, duplic
 The synthetic supported-subset benchmark extracted and validated 500 sidecars in a mean **21.11 ms**, maximum **22.26 ms**, over five runs after one warm-up on Node v24.19.0. It measures metadata identity extraction without disk scanning or native target parsing. Evidence: `docs/test-evidence/workbench-metadata-performance.json`; harness: `planner/tools/benchmark-workbench-metadata.js`. There was no prior reader to compare, and no desktop rendering/storage code changed, so completed full Preview 5 tests were not repeated.
 
 Development 9 adds the desktop metadata workflow, Settings shortcut and translated Sarge topic, tested separately in its guide. Native property translation, binary formats, component configurations and server validation remain separate adapter gates.
+
+Development 13 also accepts project-only CLI input with zero selected sidecars and exposes the [desktop project identity workflow](PROJECT-IDENTITY-COMPATIBILITY.md). This produces an addon declaration and zero resources, without inferring prefab GUIDs or engine availability.

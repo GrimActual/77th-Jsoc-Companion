@@ -48,3 +48,5 @@ The same six-second, offline 400-unit map-pan fixture was compared with Preview 
 Both had 400 marker elements and two terrain tiles. The import finished during the measured window, and mission data and stored plan text remained unchanged. These short samples show the checked workload, not a causal speedup, memory-leak guarantee or native/server capacity result. Worker memory is not included in the renderer heap figure.
 
 Evidence: `docs/test-evidence/metadata-import-ui.json`; harnesses: `planner/tools/check-metadata-import.cjs` and `check-metadata-performance.cjs`. Existing full Preview 5 tests were retained; only relevant changed integration/lifecycle/localization gates were rerun. No new release ZIP or Workshop publication is implied by this development increment.
+
+Development 13 adds [Review project identity only](PROJECT-IDENTITY-COMPATIBILITY.md), using one project picker without sidecars. The full project-and-sidecars mode remains available.

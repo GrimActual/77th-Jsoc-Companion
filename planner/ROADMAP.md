@@ -2,7 +2,7 @@
 
 The current future programme is [the master roadmap](../ROADMAP.md), with [all 200 backlog items](../docs/FUTURE-FEATURE-WISHLIST.md) and [package ownership](../docs/FUTURE-FEATURE-MAPPING.json).
 
-Current development executable: v2.9.1 Development 12. Latest consolidated local package: Preview 5. Catalog portability is described below; dedicated runtime verification remains pending. Earlier desktop/relay/fullscreen evidence: [test debrief](../docs/V2.9.1-TEST-REPORT.md).
+Current development executable: v2.9.1 Development 13. Latest consolidated local package: Preview 5. Catalog portability is described below; dedicated runtime verification remains pending. Earlier desktop/relay/fullscreen evidence: [test debrief](../docs/V2.9.1-TEST-REPORT.md).
 
 The notes below are retained historical release notes. Their older pending/current labels are not the status of the latest build.
 
@@ -52,3 +52,6 @@ Development 11 advances Package 12 from identity review to usable planning refer
 
 ## Portable planning catalogs — 13 October 2026
 Development 12 continues Package 12: Assets can export the session catalog plus assigned unit snapshots through a validated native Save dialog, then reimport them after restart. GUID/provenance and warnings survive; conflicts stop export before saving, and no mission/Undo/live-state changes occur. Sarge and Settings guidance are synchronized in EN/FR/DE. Sixteen relevant checks, actual desktop save/reimport/error workflows and a narrow post-optimization save check passed. Operation timings were compared against Development 11; a redundant renderer validation pass was removed while retaining native validation. [Steps and measured limits](../docs/PORTABLE-PLANNING-CATALOGS.md). Preview 5 archives are unchanged. The separate manifest-copy experiment is not promoted into release source or treated as verified prefab GUID data.
+
+## Downloaded-addon project identity review — 13 October 2026
+Development 13 extends Package 12 with opaque bounded GameProject Configurations acceptance and a one-picker project-only review. Real copied Invade & Annex identity/dependencies now import without sidecars, exporting zero resource records rather than inventing GUIDs. Sarge/Settings are synchronized in EN/FR/DE. Twenty-three relevant checks and the actual desktop copy workflow passed; parser timing was compared with Development 12. All 12 original installed addon files remain hash-identical. [Steps and compatibility limits](../docs/PROJECT-IDENTITY-COMPATIBILITY.md). The isolated manifest test stays preserved; binary resource mapping and native engine adapters remain future gates. Preview 5 packages are unchanged.
