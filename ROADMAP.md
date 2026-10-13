@@ -14,6 +14,9 @@ Headless mission validation is reused by a new offline scenario module and CLI. 
 ## Scenario authoring / replay / AAR increment — 13 October 2026
 A validated objective/event builder, command playback controls, and printable HTML/JSON after-action report exports are implemented in the GM development desktop. See [guide](docs/GM-AUTHORING-AAR.md). Inside-radius conditions and temporary zone boundaries are now implemented in scenario version 2; see [spatial guide](docs/GM-SPATIAL-RULES.md). Validated complete JSON scenario editing and versioned schema contracts are now delivered; see [editing guide](docs/GM-SCENARIO-EDITING.md). Additional visual editing, conditions and campaign mechanics remain future work.
 
+## GM preferences and continuous performance checks — 13 October 2026
+Game Master settings now cover recovery, overlay/zone visibility, marker scaling, time steps and replay defaults, with a Sarge destination. Performance and maintenance gates are recorded in AGENTS.md; measured results and removed redundant work are in [the debrief](docs/GM-SETTINGS-PERFORMANCE.md).
+
 ## Next integrated milestone
 An offline JSON-driven Game Master scenario: headless mission loading without data loss; versioned units/objectives/phases/events; allowlisted conditions/actions; GM controls; append-only event journal; deterministic replay; save/reload/undo/recovery; regression and malformed-input checks. Develop this in small verified increments, starting with an audit/extraction of existing core logic. Do not rebuild existing systems or replace Electron before an alternative passes the same workflows.
 
