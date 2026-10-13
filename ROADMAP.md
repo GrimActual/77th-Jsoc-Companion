@@ -4,7 +4,7 @@ Updated 13 October 2026. Ordered by technical dependencies, with no dates or del
 
 ## Current foundations and immediate validation gate
 - v2.8.2 is the prior stable release; RC2 has a user-tested single-host position feed.
-- v2.9.1 Preview 1 adds experimental dedicated profiles/sender source, bounded reconnects, diagnostics, and full map/fullscreen. Its desktop and relay tests pass; Enfusion compilation and a real dedicated-server test remain pending.
+- v2.9.1 Preview 1 adds experimental dedicated profiles/sender source, bounded reconnects, diagnostics, and full map/fullscreen. Its desktop and relay tests pass. The bridge candidate now compiles for PC and WORKBENCH on engine 1.8.0.13; a real dedicated-server test remains pending.
 - Existing headless validation, ORBAT hierarchy, map geometry, phases, imports/exports, simulation fixtures, backups and bridge protocols are foundations to reuse. Package completion must be based on evidence, not assumed from feature names.
 - Complete the v2.9.1 engine/server validation gate before calling its dedicated path stable. Future architectural work can proceed offline without waiting for a live server.
 
@@ -20,8 +20,11 @@ Game Master settings now cover recovery, overlay/zone visibility, marker scaling
 ## Mission recovery and scenario library — 13 October 2026
 Rotating bounded mission recovery, explicit restore with Undo, and a named rules library are delivered. The desktop/Enfusion responsibility split and future deployment package pipeline are recorded in [the future integration note](docs/ENFUSION-MISSION-PACKAGE-ROADMAP.md); they add scope without changing current priorities.
 
-## Next integrated milestone
+## Integrated offline milestone and remaining gates
 An offline JSON-driven Game Master scenario: headless mission loading without data loss; versioned units/objectives/phases/events; allowlisted conditions/actions; GM controls; append-only event journal; deterministic replay; save/reload/undo/recovery; regression and malformed-input checks. Develop this in small verified increments, starting with an audit/extraction of existing core logic. Do not rebuild existing systems or replace Electron before an alternative passes the same workflows.
+
+## Event inspection and compile assurance — 13 October 2026
+GM event readiness, prerequisite/zone/time/action inspection, session filters and a saved default filter are delivered, with 40 translated Sarge topics. PC and WORKBENCH compilation passed using the repeatable isolated validation tool. The 122-test regression gate and dense 400-unit / 200-event performance comparison passed; see [inspection and validation guide](docs/GM-EVENT-INSPECTION.md). Dedicated runtime and Workshop packaging remain separate uncompleted gates. Passing gates are not repeatedly rerun without a relevant change or failure.
 
 ## How the two proposals fit
 The 16 engineering packages below are the delivery structure. The [200-item catalogue](docs/FUTURE-FEATURE-WISHLIST.md) retains every numbered [D]/[E] item as a traceable backlog, not 200 separate release tasks. The [package mapping](docs/FUTURE-FEATURE-MAPPING.json) assigns each item a primary package; many also have cross-package dependencies. Specific priorities and acceptance criteria are set when a package enters development.

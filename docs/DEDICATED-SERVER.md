@@ -1,6 +1,6 @@
 # v2.9.1 Preview 1 — dedicated server installation
 
-**Experimental: desktop and relay tested using an HTTP server adapter; Enfusion compilation and an actual dedicated game server still require validation.** Keep RC2 for the proven player-hosted path. No claim of whole-server tracking or stable dedicated support.
+**Experimental: desktop and relay tested using an HTTP server adapter; PC and WORKBENCH compilation passed on engine 1.8.0.13; an actual dedicated game server still requires validation.** Keep RC2 for the proven player-hosted path. No claim of whole-server tracking or stable dedicated support.
 
 ## What runs where
 - Desktop PC: planner; optionally its bundled temporary relay and Cloudflare tunnel.
@@ -10,7 +10,7 @@
 
 ## 1. Prepare the addon and scenario (administrator / Workbench)
 1. Use reforger-mod/dedicated-candidate/JSOC_ORBAT_Bridge from the source ZIP. It extends the existing addon; do not enable two copies of the same addon identity.
-2. Open its addon.gproj in Workbench. Build → Validate and Reload Scripts. This source candidate has not been compiled by our automated Node tests. Resolve any version-specific engine error before uploading.
+2. Open its addon.gproj in Workbench. Build → Validate and Reload Scripts. This source candidate was compiled successfully with installed Reforger Tools for PC and WORKBENCH. Node tests alone do not establish that. Revalidate only if source or engine version changes; resolve any version-specific engine error before uploading.
 3. In your scenario, give the ONE entity you explicitly authorise for tracking the unique editor name ORBAT_TRACKED_ENTITY. Names and entityId accept letters, digits, underscore and hyphen, up to 64 characters. This is a scenario entity name, not a player callsign. A player may possess that character. Automatic selection of arbitrary players on vanilla scenarios is not implemented.
 4. Save and package your scenario as appropriate. Publish/update the addon through your existing Workbench Workshop project only after validation. Keep credentials out of the project. The already published Host Local version does not contain this dedicated sender.
 5. Add the actual Workshop mod ID/version to the server's normal game.mods list and enable the scenario. Obtain IDs from the actual published items; no placeholder ID in this guide is a working addon.
@@ -65,4 +65,4 @@ Legacy {token,x,z} sessions remain supported. Dedicated sessions explicitly requ
 - https://community.bistudio.com/wikidata/external-data/arma-reforger/EnfusionScriptAPIPublic/interfaceBaseWorld.html
 - https://community.bistudio.com/wikidata/external-data/arma-reforger/ArmaReforgerScriptAPIPublic/interfaceSCR__GameModeEditor.html
 
-Those references establish API availability, not a successful test of this candidate on your installed engine version.
+The isolated compile gate passed for engine 1.8.0.13; see GM-EVENT-INSPECTION.md and test-evidence/enfusion-compile.json. These API references and compile results do not establish an actual dedicated runtime test or Workshop package validity.

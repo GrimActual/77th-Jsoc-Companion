@@ -17,6 +17,14 @@ function action(a,plan,objectives){if(!a||typeof a!=='object')throw Error('Inval
  default:throw Error('Action is not allowlisted');}
 }
 function create(mission,raw){const original=C.validate(copy(mission)),scenario=validate(raw,original);let state,events=[],active=0,parents=new Map();
+ function inspectEvents(){
+  const units=new Map(state.units.map(u=>[u.id,u])),objectives=new Map(state.objectives.map(o=>[o.id,o])),fired=new Set(state.fired);
+  return scenario.events.map(e=>{const prerequisites=e.requires.map(id=>{const o=objectives.get(id);return {id,name:o.name,status:o.status,met:o.status==='complete'};});
+   const zones=(e.conditions||[]).map(r=>{const u=units.get(r.unitId),distance=Math.hypot(u.position.lat-r.center.lat,u.position.lng-r.center.lng);return {unitId:r.unitId,center:copy(r.center),radius:r.radius,distance,met:distance<=r.radius};});
+   const completed=fired.has(e.id),eligible=prerequisites.every(p=>p.met)&&zones.every(z=>z.met);
+   return {id:e.id,name:e.name,status:completed?'fired':eligible?'available':'waiting',canFire:!completed&&eligible,prerequisites,zones,atMs:e.atMs,remainingMs:e.atMs===null?null:Math.max(0,e.atMs-state.timeMs),paused:state.paused,automatic:e.atMs!==null||zones.length>0,checkAfterEvents:scenario.version===2,actions:copy(e.actions)};
+  });
+ }
  function resetState(){state={timeMs:0,paused:true,units:original.orderOfBattle.map(u=>({id:u.id,position:copy(u.position)})),objectives:copy(scenario.objectives),phaseId:null,fired:[],reports:[]};}resetState();
  function eligible(e){return e.requires.every(id=>state.objectives.find(o=>o.id===id).status==='complete')&&(e.conditions||[]).every(rule=>{const u=state.units.find(u=>u.id===rule.unitId);return Math.hypot(u.position.lat-rule.center.lat,u.position.lng-rule.center.lng)<=rule.radius;});}
  function automatic(){let progress=true;while(progress){progress=false;for(const e of scenario.events){const triggered=e.atMs!==null?e.atMs<=state.timeMs:(e.conditions||[]).length>0;if(triggered&&!state.fired.includes(e.id)&&eligible(e)){applyEvent(e.id);progress=true;}}}}
@@ -33,7 +41,7 @@ function create(mission,raw){const original=C.validate(copy(mission)),scenario=v
  }
  function dispatch(cmd){if(events.length>=10000)throw Error('Journal capacity reached');const before=copy(state);try{execute(cmd);}catch(e){state=before;throw e;}const rev=events.length+1;if(!['undo','reset'].includes(cmd.type)){parents.set(rev,active);active=rev;}events.push({revision:rev,command:copy(cmd)});return copy(state);}
  function restore(doc){strict(doc,['schema','version','scenarioId','mission','scenario','events']);if(doc.schema!=='companion-journal'||![1,2].includes(doc.version)||doc.scenarioId!==scenario.id||JSON.stringify(doc.mission)!==JSON.stringify(original)||JSON.stringify(doc.scenario)!==JSON.stringify(scenario)||!Array.isArray(doc.events)||doc.events.length>10000)throw Error('Journal does not match its source mission and scenario');const previous=copy(state),prior=events,oldActive=active,oldParents=parents;resetState();events=[];active=0;parents=new Map();try{for(const e of doc.events){strict(e,['revision','command']);if(e.revision!==events.length+1)throw Error('Journal revisions are not ordered');if(doc.version===1&&['undo','reset'].includes(e.command?.type))throw Error('v1 journal does not support undo/reset');dispatch(e.command);}}catch(e){state=previous;events=prior;active=oldActive;parents=oldParents;throw e;}return copy(state);}
- return {dispatch,revision:()=>events.length,canUndo:()=>active>0,state:()=>copy(state),mission:()=>copy(original),scenario:()=>copy(scenario),journal:()=>({schema:'companion-journal',version:2,scenarioId:scenario.id,mission:copy(original),scenario:copy(scenario),events:copy(events)}),restore};
+ return {dispatch,inspectEvents,revision:()=>events.length,canUndo:()=>active>0,state:()=>copy(state),mission:()=>copy(original),scenario:()=>copy(scenario),journal:()=>({schema:'companion-journal',version:2,scenarioId:scenario.id,mission:copy(original),scenario:copy(scenario),events:copy(events)}),restore};
 }
 return {VERSION:1,validate,create};
 });
