@@ -1,0 +1,31 @@
+{
+  "schema": "companion-resource-index",
+  "version": 1,
+  "addons": [
+    {"id":"6A969EB0C5012BB9","name":"JSOC ORBAT Bridge","version":null,"dependencies":["58D0FB3206B6F859"]},
+    {"id":"58D0FB3206B6F859","name":"Arma Reforger","version":null,"dependencies":["5614BBCCBB55ED1C"]},
+    {"id":"5614BBCCBB55ED1C","name":"core","version":null,"dependencies":[]}
+  ],
+  "resources": [
+    {
+      "id":"host-bridge-script",
+      "addonId":"6A969EB0C5012BB9",
+      "path":"Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostBridge.c",
+      "guid":null,
+      "kind":"script",
+      "observation":"metadata-only",
+      "provenance":{"method":"manual","source":"Demonstration metadata; not filesystem or server inspection","license":null},
+      "dependencies":[{"addonId":"6A969EB0C5012BB9","guid":null,"path":"UI/layouts/JSOC_ORBAT_Pairing.layout"}]
+    },
+    {
+      "id":"pairing-layout",
+      "addonId":"6A969EB0C5012BB9",
+      "path":"UI/layouts/JSOC_ORBAT_Pairing.layout",
+      "guid":null,
+      "kind":"layout",
+      "observation":"metadata-only",
+      "provenance":{"method":"manual","source":"Demonstration metadata; asset GUID has not been observed","license":null},
+      "dependencies":[]
+    }
+  ]
+}
