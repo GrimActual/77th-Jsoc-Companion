@@ -2,6 +2,7 @@
 const http = require('node:http');
 const crypto = require('node:crypto');
 const Tracked=require('./tracked-protocol');
+const GM=require('./gm-commands');
 
 // Single-instance ephemeral relay. No plans, identity data or tokens are logged/stored on disk.
 function createRelay({clock = Date.now, maxSessions = 100, lifetime = 3600000, staleAfter = 7000} = {}) {
@@ -29,21 +30,33 @@ function createRelay({clock = Date.now, maxSessions = 100, lifetime = 3600000, s
       if(s.protocol===3)return reply(200,{protocol:3,sessionId:s.id,sequence:s.tracked.lastSequence,entities:Tracked.snapshot(s.tracked,clock()),expires:s.expires});
       return reply(200, {protocol:s.protocol, sessionId:s.id, entityId:s.entityId||null, sequence:s.sequence, point:s.point && clock()-s.updated < staleAfter ? s.point : null, expires:s.expires});
     }
-    if (req.method !== 'POST' || !['/sessions','/marker','/batch'].includes(req.url)) return reply(404, {error:'Not found'});
+    if (req.method !== 'POST' || !['/sessions','/marker','/batch','/gm-request','/gm-poll','/gm-approve','/gm-result','/gm-status','/gm-cancel'].includes(req.url)) return reply(404, {error:'Not found'});
     let size = 0, parts = [];
     try {
       for await (const chunk of req) {
         size += chunk.length;
-        if (size > (req.url==='/batch'?32768:req.url==='/sessions'?8192:2048)) { reply(413, {error:'Payload too large'}); req.destroy(); return; }
+        if (size > (req.url.startsWith('/gm-')?32768:req.url==='/batch'?32768:req.url==='/sessions'?8192:2048)) { reply(413, {error:'Payload too large'}); req.destroy(); return; }
         parts.push(chunk);
       }
       const body = JSON.parse(Buffer.concat(parts).toString('utf8'));
+      if(req.url.startsWith('/gm-')){
+        const writer=['/gm-poll','/gm-approve','/gm-result'].includes(req.url),credential=writer?body?.token:body?.reader,s=(writer?sessions:readers).get(credential);
+        if(!s)return reply(401,{error:'Invalid GM session'});if(s.locked)return reply(423,{error:'Session locked'});if(!s.gm)return reply(403,{error:'GM commands were not enabled for this pairing'});
+        try{
+          if(req.url==='/gm-request'){if(Object.keys(body).sort().join(',')!=='reader,request')throw Error('Unsupported GM envelope');return reply(202,{ok:true,record:s.gm.submit(body.request)});}
+          if(req.url==='/gm-cancel'){if(Object.keys(body).sort().join(',')!=='reader,requestId')throw Error('Unsupported GM envelope');return reply(200,{record:s.gm.cancel(body.requestId)});}
+          if(req.url==='/gm-status'){if(Object.keys(body).join(',')!=='reader')throw Error('Unsupported GM envelope');return reply(200,{records:s.gm.history(),groups:s.gm.groups()});}
+          if(req.url==='/gm-poll'){if(Object.keys(body).join(',')!=='token')throw Error('Unsupported GM envelope');return reply(200,{record:s.gm.poll()});}
+          if(req.url==='/gm-approve'){if(Object.keys(body).sort().join(',')!=='requestId,token')throw Error('Unsupported GM envelope');return reply(200,{record:s.gm.approve(body.requestId)});}
+          if(Object.keys(body).sort().join(',')!=='result,token')throw Error('Unsupported GM envelope');return reply(200,{record:s.gm.result(body.result)});
+        }catch(e){return reply(409,{error:e.message});}
+      }
       if (req.url === '/sessions') {
         if (++creates > 3 || sessions.size >= maxSessions) return reply(429, {error:'Session capacity reached'});
-        let tracked=null;const batch=body&&Object.keys(body).sort().join(',')==='entityIds,protocol,scope'&&body.protocol===3&&body.scope==='allowlisted-entities';if(batch){try{tracked=Tracked.state(body.entityIds);}catch{return reply(400,{error:'Invalid tracked allowlist'});}}
+        let tracked=null;const batch=body&&['entityIds,protocol,scope','entityIds,gmCommands,protocol,scope'].includes(Object.keys(body).sort().join(','))&&body.protocol===3&&body.scope==='allowlisted-entities';if(batch){try{if('gmCommands' in body&&body.gmCommands!==true)throw Error('Explicit GM opt-in required');tracked=Tracked.state(body.entityIds);}catch{return reply(400,{error:'Invalid tracked allowlist'});}}
         if(size>8192||!body||Array.isArray(body)||(!batch&&Object.keys(body).length&&!(Object.keys(body).sort().join(',')==='protocol,scope'&&body.protocol===2&&body.scope==='single-entity')))return reply(400,{error:'Unsupported session request'});
         const s = {id:crypto.randomBytes(16).toString('hex'), protocol:body.protocol||1, invalid:0, locked:false, entityId:'', senderSequence:0, write:crypto.randomBytes(16).toString('hex'), read:crypto.randomBytes(32).toString('hex'), expires:clock()+lifetime, sequence:0, point:null, updated:0};
-        if(tracked)s.tracked=tracked;
+        if(tracked)s.tracked=tracked;if(batch&&body.gmCommands===true)s.gm=GM.createQueue(clock);
         sessions.set(s.write,s); readers.set(s.read,s);
         return reply(201, {token:s.write, reader:s.read, expires:s.expires, protocol:s.protocol, sessionId:s.id});
       }

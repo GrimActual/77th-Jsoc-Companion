@@ -26,6 +26,9 @@ class JSOC_ORBAT_HostCallback : RestCallback
 
 class JSOC_ORBAT_HostBridge
 {
+    bool UseMixed;
+    protected ref JSOC_ORBAT_HostMixedBridge m_Mixed;
+    JSOC_ORBAT_HostMixedBridge Mixed() { if (!m_Mixed) m_Mixed = new JSOC_ORBAT_HostMixedBridge(); return m_Mixed; }
     protected string m_Code;
     protected string m_Endpoint = "http://127.0.0.1:8791/";
     string Endpoint() { return m_Endpoint; }
@@ -85,6 +88,7 @@ class JSOC_ORBAT_HostBridge
         m_Callback = null;
         m_Context = null;
         m_Code = "";
+        if (m_Mixed) m_Mixed.Stop();
         m_Status = "Disconnected";
     }
 }

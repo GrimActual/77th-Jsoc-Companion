@@ -1,0 +1,13 @@
+{
+  "scope": "Approved synthetic native GM spawn/remove plus shared-cap/faction policy; no players or game client",
+  "success": true,
+  "twoNativeObjectsSpawned": true,
+  "bridgeOwnedRemoval": true,
+  "unownedRemovalRejected": true,
+  "seconds": 12.403,
+  "sharedCapAndFactionPolicy": true,
+  "nativeScriptErrors": false,
+  "missionUnchanged": true,
+  "rendererErrors": [],
+  "sampledPeakServerMB": 582.54296875
+}

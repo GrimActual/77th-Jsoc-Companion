@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-13",
+  "tests": 42,
+  "passed": 42,
+  "failed": 0,
+  "scope": [
+    "tracked store/HTTP/layer/lifecycle",
+    "deployment intent/export",
+    "GM queue/authentication/cancellation/expiry/history",
+    "EN/FR/DE guidance",
+    "legacy local/free/dedicated bridge"
+  ],
+  "nativeConfigurations": [
+    "PC",
+    "WORKBENCH"
+  ],
+  "realHostLocalTested": false,
+  "gameClientLaunched": false
+}

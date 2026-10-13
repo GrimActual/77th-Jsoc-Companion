@@ -1,12 +1,12 @@
 # Reviewed deployment preview
 
-## Desktop steps
-1. Prepare reviewed prefab assets in Assets and assign them to planned units.
-2. In Units, select 1–16 units. Open Deployment preview (also available through Settings and Sarge).
-3. Load the matching resource index JSON, or use the reviewed metadata index in Assets. Enter heading in degrees.
-4. Review selected units. Inspect world X/Z, GUID-qualified resource paths, source provenance and required addons. Missing dependency metadata remains explicitly flagged.
-5. Export reviewed deployment JSON. Choose the destination in the native Save dialog. Plan, heading or index changes require a fresh review.
+1. In Assets, prepare reviewed prefabs from a matching resource index; assign them to units.
+2. In Units, select 1–16 units and open Deployment preview (also available through Settings and Sarge).
+3. Load the matching index, set heading, Review selected units. Inspect exact GUID/path, world X/Z, provenance and required addons.
+4. Export reviewed deployment JSON creates an intention package; exporting does not execute game commands. Changes to the plan, heading or index require fresh review.
 
-The selected units captured during review define this package. Later selection changes do not silently replace them. Mission coordinates map directly to world X/Z; terrain elevation is unresolved. This is intention-only export, with nativeValidationRequired true. It cannot spawn units or approve a server action.
+The GM development pilot adds a separate Send reviewed spawn request button, explicit connection permission, in-game host approval and result/removal controls. See [Host GM pilot steps and validation scope](HOST-GM-PILOT.md). Published RC2 remains intention-only.
 
-The CLI remains available: `node deployment-cli.js mission.json index.json "[1,2]" 90 output.json`. Use actual selected IDs. Existing files are not overwritten. A server-reviewed execution adapter remains future work.
+Selection captured during review defines the package. Later selection does not silently replace its entities. Terrain elevation is resolved by the native executor. Missing addon metadata is flagged; native resource validation remains mandatory.
+
+CLI export: `node deployment-cli.js mission.json index.json "[1,2]" 90 output.json`. Existing files are not overwritten. Offline plan/undo compatibility is preserved.

@@ -1,0 +1,15 @@
+{
+  "scope": "Desktop buttons and explicit GM opt-in with an isolated mock IPC; actual RPC/native execution covered separately",
+  "success": true,
+  "gmDefaultOff": true,
+  "mixedAliasesAutomatic": true,
+  "reviewedRequestSent": true,
+  "staleSendDisabled": true,
+  "resultsDisplayed": true,
+  "pendingCancellation": true,
+  "ownedGroupRemovalSelection": true,
+  "guideLanguageContextRetained": true,
+  "userTextNotTranslatedOrInjected": true,
+  "missionUnchanged": true,
+  "rendererErrors": []
+}

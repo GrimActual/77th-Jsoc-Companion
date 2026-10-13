@@ -1,0 +1,109 @@
+{
+  "schema": "companion-enfusion-validation",
+  "version": 1,
+  "utc": "2026-10-13T22:08:47.5334823Z",
+  "source": [
+    {
+      "file": "addon.gproj",
+      "sha256": "b62cc045d105623dcda1cf8129bd3903e8329259d234abf7bd2a736f44844d9b"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_DedicatedBridge.c",
+      "sha256": "9ac9c15485b3623c104f74d41f3399456d63f50715dd6fb15c635807cf29e1e5"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_GMMenu.c",
+      "sha256": "07bcc79bb9c64d11abbeb8ee93b83a5ca699d667e622ca864790a53cfc224b13"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostBridge.c",
+      "sha256": "6bc544cbb4950eef8d6d493f2577eefc3f346ddc1d7d81dfe7f1e72f2f4586a9"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostGM.c",
+      "sha256": "f79dd3af7606f565d7adb65c2aa0de6b45197d1d60c90879a9d62eb5c9abf64f"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostMixed.c",
+      "sha256": "8014117ed6747e0db62a44126554bbdb1aecbbadc85e6e5311bfd06b1f2116e9"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_PairingMenu.c",
+      "sha256": "ceb3fd233c122aa69879ddfae7dedf7f57a10c8cab0e8e9e7749b521ffb07de7"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_RosterMenu.c",
+      "sha256": "de5bcb0b277cb9243cdda439036a482bc89c183f1f2fa0156c455c75398c2762"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_TrackedBridge.c",
+      "sha256": "1eb2b7c9fdbcbedf5bb1050700f14c422be688cf4e3bd65bc57694ef39223bb7"
+    },
+    {
+      "file": "UI/layouts/JSOC_ORBAT_GM.layout",
+      "sha256": "d4a6d472a4dfa2923c66f22f7e0620a0ef6baf249160442802cd1a37a2c5071d"
+    },
+    {
+      "file": "UI/layouts/JSOC_ORBAT_Pairing.layout",
+      "sha256": "4e91bd6d4629072a9a9e924445f45ac5d42c7099465d38bb4ab8eecfff6df661"
+    },
+    {
+      "file": "UI/layouts/JSOC_ORBAT_Roster.layout",
+      "sha256": "1d6c96f6e022cc89fd8513f2d989756c87e6eb66e3adf6b1fbdf4522d59cbccb"
+    }
+  ],
+  "results": [
+    {
+      "configuration": "PC",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "seconds": 15.78,
+      "sampledPeakWorkingSetMB": 950.2,
+      "scriptWarnings": [
+        "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(785): warning: 'GetPlayerPlatformKind' is obsolete",
+        "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(786): warning: 'GetPlayerPlatformId' is obsolete",
+        "Scripts/Game/Workshop/SCR_AddonManager.c(876): warning: 'GetRefCount' is obsolete: Will be removed",
+        "Scripts/Game/Campaign/SCR_PlayerProfileManagerComponent.c(142): warning: 'PlayerData' is obsolete",
+        "Scripts/Game/UI/Backend/CareerBackend.c(159): warning: 'GetDSSession' is obsolete",
+        "Scripts/Game/UI/Backend/CareerBackend.c(162): warning: 'RoomID' is obsolete",
+        "Scripts/Game/UI/Backend/CareerBackend.c(197): warning: 'GetDSSession' is obsolete",
+        "Scripts/Game/UI/Backend/CareerBackend.c(201): warning: 'RoomID' is obsolete",
+        "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(481): warning: 'GetStorage' is obsolete",
+        "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(483): warning: 'GetOnlineWritePrivilege' is obsolete",
+        "Scripts/Game/Utilities/SCR_PlayerIdentityUtils.c(20): warning: 'GetPlayerIdentityId' is obsolete",
+        "Scripts/Game/UI/Menu/MainMenuUI.c(643): warning: 'GetNotifyCount' is obsolete: Will be substitued by Notification Api.",
+        "Scripts/Game/UI/Menu/MainMenuUI.c(645): warning: 'GetNotifyItem' is obsolete: Will be substitued by Notification Api.",
+        "Scripts/Game/DataCollection/PlayerData/SCR_PlayerData.c(210): warning: 'PlayerData' is obsolete"
+      ]
+    },
+    {
+      "configuration": "WORKBENCH",
+      "success": true,
+      "exitCode": 0,
+      "timedOut": false,
+      "seconds": 10.02,
+      "sampledPeakWorkingSetMB": 973.3,
+      "scriptWarnings": [
+        "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(785): warning: 'GetPlayerPlatformKind' is obsolete",
+        "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(786): warning: 'GetPlayerPlatformId' is obsolete",
+        "Scripts/Game/Workshop/SCR_AddonManager.c(876): warning: 'GetRefCount' is obsolete: Will be removed",
+        "Scripts/Game/Campaign/SCR_PlayerProfileManagerComponent.c(142): warning: 'PlayerData' is obsolete",
+        "Scripts/Game/UI/Backend/CareerBackend.c(159): warning: 'GetDSSession' is obsolete",
+        "Scripts/Game/UI/Backend/CareerBackend.c(162): warning: 'RoomID' is obsolete",
+        "Scripts/Game/UI/Backend/CareerBackend.c(197): warning: 'GetDSSession' is obsolete",
+        "Scripts/Game/UI/Backend/CareerBackend.c(201): warning: 'RoomID' is obsolete",
+        "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(481): warning: 'GetStorage' is obsolete",
+        "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(483): warning: 'GetOnlineWritePrivilege' is obsolete",
+        "Scripts/Game/Utilities/SCR_PlayerIdentityUtils.c(20): warning: 'GetPlayerIdentityId' is obsolete",
+        "Scripts/Game/UI/Menu/MainMenuUI.c(643): warning: 'GetNotifyCount' is obsolete: Will be substitued by Notification Api.",
+        "Scripts/Game/UI/Menu/MainMenuUI.c(645): warning: 'GetNotifyItem' is obsolete: Will be substitued by Notification Api.",
+        "Scripts/Game/DataCollection/PlayerData/SCR_PlayerData.c(210): warning: 'PlayerData' is obsolete"
+      ]
+    }
+  ],
+  "worldStarted": false,
+  "published": false,
+  "dedicatedRuntimeTested": false,
+  "note": "Compilation only. Inspect full local logs for resource warnings; this does not test UI layout, packaging, HTTPS callbacks or a dedicated game session."
+}

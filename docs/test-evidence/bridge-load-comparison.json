@@ -1,0 +1,24 @@
+{
+  "scope": "One sequential local headless small-scene pair; no relay; not GeForce NOW or full Everon",
+  "runs": [
+    {
+      "bridgeEnabled": false,
+      "entered": true,
+      "wallSeconds": 15.041,
+      "compileGameMs": 3437.8495,
+      "loadEntitiesMs": 4117.2163,
+      "scriptErrors": false,
+      "missingConfigMessages": 0
+    },
+    {
+      "bridgeEnabled": true,
+      "entered": true,
+      "wallSeconds": 9.341,
+      "compileGameMs": 2335.766,
+      "loadEntitiesMs": 3112.0578,
+      "scriptErrors": false,
+      "missingConfigMessages": 0
+    }
+  ],
+  "caution": "Baseline ran first; caches and host load may influence timings. No causal GFN conclusion."
+}

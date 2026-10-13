@@ -1,0 +1,9 @@
+{
+  "scope": "Same ten completed 16-unit commands: full request bodies versus compact result summaries; no map rendering changes",
+  "fullHistoryBytes": 30871,
+  "compactHistoryBytes": 4001,
+  "queueTenCommandsMs": 8.516399999999976,
+  "missionWrites": 0,
+  "historyLimit": 10,
+  "requestLimit": 100
+}

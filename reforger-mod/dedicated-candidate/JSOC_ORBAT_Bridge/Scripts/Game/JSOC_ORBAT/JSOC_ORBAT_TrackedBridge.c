@@ -116,19 +116,9 @@ class JSOC_ORBAT_TrackedBridge : JSOC_ORBAT_DedicatedBridge
         {
             bool full = m_Full || m_Batches % 10 == 0;
             string active = "", states = "";
-            PlayerManager manager;
-            if (m_Source == "players") manager = GetGame().GetPlayerManager();
             for (int i = 0; i < m_Ids.Count(); i++)
             {
-                // Retry only missing registered names every five batches; never enumerate world entities.
-                if (m_Source == "players")
-                {
-                    IEntity controlled = ResolvePlayer(manager, i);
-                    if (controlled != m_Targets[i]) m_HavePosition[i] = false;
-                    m_Targets[i] = controlled;
-                }
-                else if (!m_Targets[i] && m_Batches % 5 == 0) m_Targets[i] = GetGame().GetWorld().FindEntityByName(m_Names[i]);
-                IEntity target = m_Targets[i];
+                IEntity target = ResolveTarget(i);
                 if (!target) { m_HavePosition[i] = false; continue; }
                 vector p = target.GetOrigin();
                 if (p[0] < -13500 || p[0] > 13500 || p[2] < -13500 || p[2] > 13500) { Halt(); return; }
@@ -149,6 +139,17 @@ class JSOC_ORBAT_TrackedBridge : JSOC_ORBAT_DedicatedBridge
             m_Body = string.Format("{\"protocol\":3,\"token\":\"%1\",\"sequence\":%2,\"full\":%3,\"activeIds\":[%4],\"entities\":[%5]}", m_Code, m_Sequence, fullText, active, states);
         }
         m_Context.POST(m_Callback, "batch", m_Body);
+    }
+    protected IEntity ResolveTarget(int index)
+    {
+        if (m_Source == "players")
+        {
+            IEntity controlled = ResolvePlayer(GetGame().GetPlayerManager(), index);
+            if (controlled != m_Targets[index]) m_HavePosition[index] = false;
+            m_Targets[index] = controlled;
+        }
+        else if (!m_Targets[index] && m_Batches % 5 == 0) m_Targets[index] = GetGame().GetWorld().FindEntityByName(m_Names[index]);
+        return m_Targets[index];
     }
     protected IEntity ResolvePlayer(PlayerManager manager, int index)
     {

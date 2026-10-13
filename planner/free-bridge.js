@@ -49,7 +49,7 @@ function createFreeBridge(onState=()=>{},deps={}) {
    check();starting=false;return {...state};
   }catch(e){if(ticket===generation)stop(e.message);return {...state};}
  }
- return {start,stop,status:()=>({...state})};
+ return {start,stop,gm:(action,payload)=>{if(!remote)throw Error('Connect first');return remote.gm(action,payload);},status:()=>({...state})};
 }
 module.exports={createFreeBridge};
 

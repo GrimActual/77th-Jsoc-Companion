@@ -53,6 +53,6 @@ function createRemote(onState=()=>{}, {fetchImpl=fetch,allowHttp=false,pollMs=20
   staleTimer=setInterval(()=>{if(generation===epoch&&state.point&&clock()-lastAdvance>=7000){state={...state,status:'stale',point:null};event('Warning','Position became stale');publish();}},500);staleTimer.unref?.();
   timer=setTimeout(poll,0);return {...state};
  }
- return {start,stop,status:()=>tracked?tracked.status():({...state})};
+ return {start,stop,gm:(action,payload)=>{if(!tracked)throw Error('A mixed GM-enabled session is required');return tracked.gm(action,payload);},status:()=>tracked?tracked.status():({...state})};
 }
 module.exports={createRemote};

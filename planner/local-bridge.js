@@ -36,7 +36,11 @@ function install({app,ipcMain,getWindow,indexURL,clipboard}){
  function stop(){local.stop();remote.stop();free.stop();active=local;return local.status();}
  ipcMain.handle('local-bridge-command',async(event,action,options)=>{
   const w=getWindow();if(!w||event.sender!==w.webContents||event.senderFrame!==event.sender.mainFrame||event.senderFrame.url!==indexURL)throw Error('Unexpected sender');
-  if(action==='profile-start'){const profile=require('./server-profiles').validate(options);stop();active=profile.method==='free'?free:remote;const config={intervalMs:profile.intervalMs,timeoutMs:profile.timeoutMs,autoReconnect:profile.autoReconnect,dedicated:profile.deployment==='dedicated',...(profile.entityIds?{entityIds:profile.entityIds}: {})};return profile.method==='free'?free.start(config):remote.start(profile.endpoint,config);}
+  if(action==='gm-request'){return active.gm('request',require('./bridge-runtime/gm-commands').fromIntent(require('./deployment-intent').validate(options.intent),options.requestId));}
+  if(action==='gm-cancel')return active.gm('cancel',options.requestId);
+  if(action==='gm-status')return active.gm('status');
+  if(action==='gm-remove'){return active.gm('request',{version:1,requestId:options.requestId,kind:'remove',targetRequestId:options.targetRequestId});}
+  if(action==='profile-start'){const profile=require('./server-profiles').validate(options);stop();active=profile.method==='free'?free:remote;const config={intervalMs:profile.intervalMs,timeoutMs:profile.timeoutMs,autoReconnect:profile.autoReconnect,dedicated:profile.deployment==='dedicated',gmCommands:profile.gmCommands===true,...(profile.entityIds?{entityIds:profile.entityIds}: {})};return profile.method==='free'?free.start(config):remote.start(profile.endpoint,config);}
   if(action==='free-start'){if(active===free&&!['off','error'].includes(free.status().status))return free.status();stop();active=free;return free.start();}
   if(action==='copy-address'||action==='copy-code'){const s=active.status();const value=action==='copy-address'?(s.endpoint||(s.status!=='off'?'http://127.0.0.1:8791/':'')):s.token;if(!value)throw Error('Start a connection first.');clipboard.writeText(value);return s;}
   if(action==='start'){stop();active=local;return local.start();}

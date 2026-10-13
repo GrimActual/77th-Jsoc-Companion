@@ -435,3 +435,7 @@ Packages 01/04/11 now carry 60 opt-in named-entity batches with native HTTPS evi
 ## Player source pilot — unpublished
 
 Workshop 0.3.0 publication is user-confirmed. The next native candidate selects up to 60 explicit session player IDs with controller-bound leases, respawn delta resets and disconnect retirement. PC/Workbench compilation passes; real player lifecycle testing remains required. The existing RC2 reader is compatible with the batch format. See docs/PLAYER-TRACKING-PILOT.md.
+
+## Host Local mixed roster and first native GM execution pilot — 13 October 2026
+
+Packages 04/11 gain explicit human/GM-editable AI selection and faction filters sharing 60 aliases. Package 14 now has reviewed spawn/remove requests with host approval, expiry, cancellation, duplicate protection and root ownership checks. Two synthetic objects passed actual native HTTPS execution; final safeguards compile and desktop/queue checks pass. This is a bounded development pilot, not the full GM suite or a real 60-player validation. Sarge has 50 EN/FR/DE topics. See [HOST-GM-PILOT.md](docs/HOST-GM-PILOT.md). Next: real Host Local lifecycle/UI gate, then native AI orders/property/environment adapters. RC2 and published Workshop 0.3.0 remain unchanged until the candidate is uploaded.
