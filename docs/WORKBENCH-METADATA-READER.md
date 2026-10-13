@@ -1,6 +1,6 @@
 # Selected Workbench metadata identity reader
 
-Package 12 now has a bounded, read-only reader for the **observed identity fields** in readable `GameProject` and `MetaFileClass` text. It is source-only work following Preview 5. Existing preview archives and the desktop interface are unchanged; this is not a universal Enfusion parser or native importer UI.
+Package 12 now has a bounded, read-only reader for the **observed identity fields** in readable `GameProject` and `MetaFileClass` text. This note records the reader foundation following Preview 5. Development 9 adds its [desktop selection/review workflow](WORKBENCH-METADATA-IMPORT-UI.md); existing preview archives remain unchanged. This is not a universal Enfusion parser.
 
 ## Supported subset
 
@@ -43,4 +43,4 @@ Eleven focused checks passed across the parser, selected-file boundaries, duplic
 
 The synthetic supported-subset benchmark extracted and validated 500 sidecars in a mean **21.11 ms**, maximum **22.26 ms**, over five runs after one warm-up on Node v24.19.0. It measures metadata identity extraction without disk scanning or native target parsing. Evidence: `docs/test-evidence/workbench-metadata-performance.json`; harness: `planner/tools/benchmark-workbench-metadata.js`. There was no prior reader to compare, and no desktop rendering/storage code changed, so completed full Preview 5 tests were not repeated.
 
-Settings and Sarge remain unchanged until an actual metadata selection/import UI is delivered. Native property translation, binary formats, component configurations and server validation remain separate adapter gates.
+Development 9 adds the desktop metadata workflow, Settings shortcut and translated Sarge topic, tested separately in its guide. Native property translation, binary formats, component configurations and server validation remain separate adapter gates.

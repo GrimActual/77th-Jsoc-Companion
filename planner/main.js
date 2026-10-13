@@ -10,15 +10,16 @@ const indexURL=pathToFileURL(indexPath).href;
 if(typeof app.setPath==='function'&&!process.argv?.some(a=>a.startsWith('--user-data-dir')))app.setPath('userData',path.join(app.getPath('appData'),'Everon-ORBAT-OneClick-Bridge'));
 const localBridge=require('./local-bridge').install({app,ipcMain,getWindow:()=>mainWindow,indexURL,clipboard});
 const simulation=require('./simulation-main').install({app,ipcMain,getWindow:()=>mainWindow,indexURL});
+const metadata=require('./workbench-metadata-main').install({ipcMain,dialog,getWindow:()=>mainWindow,indexURL});
 function log(event){try{const file=path.join(app.getPath('userData'),'planner-lifecycle.log');fs.mkdirSync(path.dirname(file),{recursive:true});if(fs.existsSync(file)&&fs.statSync(file).size>250000)fs.renameSync(file,file+'.previous');fs.appendFileSync(file,new Date().toISOString()+' '+event+'\n')}catch{}}
 function external(url){try{const parsed=new URL(url);if(!['https:','http:'].includes(parsed.protocol))return;shell.openExternal(parsed.href).catch(()=>log('external-link-failed'))}catch{}}
 function showWindow(){if(quitting)return;if(!mainWindow||mainWindow.isDestroyed()){createWindow();return}if(mainWindow.isMinimized())mainWindow.restore();mainWindow.show();mainWindow.focus();}
 function createWindow(){
  if(quitting)return;
- const win=new BrowserWindow({width:1600,height:900,title:'77th JSOC · Everon ORBAT Planner 2.9.1 Preview 5',icon:path.join(__dirname,'jsoc-logo.png'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
+ const win=new BrowserWindow({width:1600,height:900,title:'77th JSOC · Everon ORBAT Planner 2.9.1 Development 9',icon:path.join(__dirname,'jsoc-logo.png'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
  mainWindow=win;win.setMenuBarVisibility(false);
- win.webContents.on('did-start-navigation',(_event,_url,_inPlace,isMainFrame)=>{if(isMainFrame){simulation.reset();localBridge.stop();}});
- win.webContents.on('render-process-gone',()=>{simulation.reset();localBridge.stop();});
+ win.webContents.on('did-start-navigation',(_event,_url,_inPlace,isMainFrame)=>{if(isMainFrame){simulation.reset();localBridge.stop();metadata.reset();}});
+ win.webContents.on('render-process-gone',()=>{simulation.reset();localBridge.stop();metadata.reset();});
  // Closing during the initial load aborts loadFile before the closed event fires.
  // Do not turn that normal shutdown into a blocking startup-error dialog.
  let closing=false;win.on('close',()=>{closing=true;});
@@ -35,7 +36,7 @@ const primary=app.requestSingleInstanceLock();
 if(!primary){app.quit()}else{
  app.on('second-instance',()=>{log('second-launch-focus');if(app.isReady())showWindow();else app.once('ready',showWindow)});
  app.on('activate',()=>{if(app.isReady())showWindow()});
- app.on('before-quit',()=>{quitting=true;for(const controller of pendingTiles)controller.abort();log('before-quit')});
+ app.on('before-quit',()=>{metadata.reset();quitting=true;for(const controller of pendingTiles)controller.abort();log('before-quit')});
  app.on('will-quit',()=>log('will-quit'));
  app.on('window-all-closed',()=>{if(process.platform!=='darwin')app.quit()});
  ipcMain.handle('inject-mod-aos',async event=>{
