@@ -16,21 +16,23 @@ function action(a,plan,objectives){if(!a||typeof a!=='object')throw Error('Inval
  case 'report':strict(a,['type','text']);if(typeof a.text!=='string'||!a.text.trim()||a.text.length>500)throw Error('Invalid report');break;
  default:throw Error('Action is not allowlisted');}
 }
-function create(mission,raw){const original=C.validate(copy(mission)),scenario=validate(raw,original);let state,events=[];
+function create(mission,raw){const original=C.validate(copy(mission)),scenario=validate(raw,original);let state,events=[],active=0,parents=new Map();
  function resetState(){state={timeMs:0,paused:true,units:original.orderOfBattle.map(u=>({id:u.id,position:copy(u.position)})),objectives:copy(scenario.objectives),phaseId:null,fired:[],reports:[]};}resetState();
  function applyEvent(id){const e=scenario.events.find(e=>e.id===id);if(!e||state.fired.includes(id)||e.requires.some(id=>state.objectives.find(o=>o.id===id).status!=='complete'))throw Error('Event unavailable or prerequisites incomplete');
   for(const a of e.actions){if(a.type==='move')state.units.find(u=>u.id===a.unitId).position=copy(a.position);else if(a.type==='objective')state.objectives.find(o=>o.id===a.id).status=a.status;else if(a.type==='phase')state.phaseId=a.id;else state.reports.push({timeMs:state.timeMs,text:a.text});}state.fired.push(id);
  }
- function execute(cmd){strict(cmd,['type','eventId','deltaMs']);if(cmd.type==='pause'||cmd.type==='resume'){if(Object.keys(cmd).length!==1)throw Error('Invalid clock command');state.paused=cmd.type==='pause';}
+ function execute(cmd){strict(cmd,['type','eventId','deltaMs']);if(cmd.type==='undo'){if(Object.keys(cmd).length!==1||!active)throw Error('Nothing to undo');active=parents.get(active)||0;const chain=[];for(let at=active;at;at=parents.get(at)||0)chain.unshift(events[at-1].command);resetState();for(const c of chain)execute(c);}
+  else if(cmd.type==='reset'){if(Object.keys(cmd).length!==1)throw Error('Invalid reset');resetState();active=0;}
+  else if(cmd.type==='pause'||cmd.type==='resume'){if(Object.keys(cmd).length!==1)throw Error('Invalid clock command');state.paused=cmd.type==='pause';}
   else if(cmd.type==='fire'){if(Object.keys(cmd).length!==2||!key(cmd.eventId))throw Error('Invalid event command');applyEvent(cmd.eventId);}
   else if(cmd.type==='advance'){if(Object.keys(cmd).length!==2||!Number.isSafeInteger(cmd.deltaMs)||cmd.deltaMs<1||cmd.deltaMs>60000||state.paused||state.timeMs+cmd.deltaMs>86400000)throw Error('Invalid clock advance');state.timeMs+=cmd.deltaMs;
    // Stable declaration order, repeated until newly satisfied dependencies are exhausted.
    let progress=true;while(progress){progress=false;for(const e of scenario.events)if(e.atMs!==null&&e.atMs<=state.timeMs&&!state.fired.includes(e.id)&&e.requires.every(id=>state.objectives.find(o=>o.id===id).status==='complete')){applyEvent(e.id);progress=true;}}
   }else throw Error('Command is not allowlisted');
  }
- function dispatch(cmd){if(events.length>=10000)throw Error('Journal capacity reached');const before=copy(state);try{execute(cmd);}catch(e){state=before;throw e;}events.push({revision:events.length+1,command:copy(cmd)});return copy(state);}
- function restore(doc){strict(doc,['schema','version','scenarioId','mission','scenario','events']);if(doc.schema!=='companion-journal'||doc.version!==1||doc.scenarioId!==scenario.id||JSON.stringify(doc.mission)!==JSON.stringify(original)||JSON.stringify(doc.scenario)!==JSON.stringify(scenario)||!Array.isArray(doc.events)||doc.events.length>10000)throw Error('Journal does not match its source mission and scenario');const previous=copy(state),prior=events;resetState();events=[];try{for(const e of doc.events){strict(e,['revision','command']);if(e.revision!==events.length+1)throw Error('Journal revisions are not ordered');dispatch(e.command);}}catch(e){state=previous;events=prior;throw e;}return copy(state);}
- return {dispatch,state:()=>copy(state),mission:()=>copy(original),scenario:()=>copy(scenario),journal:()=>({schema:'companion-journal',version:1,scenarioId:scenario.id,mission:copy(original),scenario:copy(scenario),events:copy(events)}),restore};
+ function dispatch(cmd){if(events.length>=10000)throw Error('Journal capacity reached');const before=copy(state);try{execute(cmd);}catch(e){state=before;throw e;}const rev=events.length+1;if(!['undo','reset'].includes(cmd.type)){parents.set(rev,active);active=rev;}events.push({revision:rev,command:copy(cmd)});return copy(state);}
+ function restore(doc){strict(doc,['schema','version','scenarioId','mission','scenario','events']);if(doc.schema!=='companion-journal'||![1,2].includes(doc.version)||doc.scenarioId!==scenario.id||JSON.stringify(doc.mission)!==JSON.stringify(original)||JSON.stringify(doc.scenario)!==JSON.stringify(scenario)||!Array.isArray(doc.events)||doc.events.length>10000)throw Error('Journal does not match its source mission and scenario');const previous=copy(state),prior=events,oldActive=active,oldParents=parents;resetState();events=[];active=0;parents=new Map();try{for(const e of doc.events){strict(e,['revision','command']);if(e.revision!==events.length+1)throw Error('Journal revisions are not ordered');if(doc.version===1&&['undo','reset'].includes(e.command?.type))throw Error('v1 journal does not support undo/reset');dispatch(e.command);}}catch(e){state=previous;events=prior;active=oldActive;parents=oldParents;throw e;}return copy(state);}
+ return {dispatch,canUndo:()=>active>0,state:()=>copy(state),mission:()=>copy(original),scenario:()=>copy(scenario),journal:()=>({schema:'companion-journal',version:2,scenarioId:scenario.id,mission:copy(original),scenario:copy(scenario),events:copy(events)}),restore};
 }
 return {VERSION:1,validate,create};
 });
