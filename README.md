@@ -2,11 +2,11 @@
 
 Everon ORBAT Planner and the optional Arma Reforger bridge.
 
-Current development source: **2.9.1-dev.10**, including [desktop metadata import](docs/WORKBENCH-METADATA-IMPORT-UI.md) and [display/DPI diagnostics](docs/DISPLAY-QUALITY.md). The latest consolidated local package is **Preview 5**; the latest published tested build remains **2.9.0-rc.2**. Planner code is in [`planner/`](planner/). Published versions are preserved by Git tags and releases with matching source archives.
+Current consolidated release candidate: **2.9.1-rc.1**. Includes offline planning, scenario/property workflows, reviewed asset catalogs, display diagnostics and experimental dedicated-server integration. Planner code is in [`planner/`](planner/). Published versions retain matching tags and source archives.
 
 ## Download
 
-[Download the current tested RC2 Windows build](https://github.com/GrimActual/77th-Jsoc-Companion/releases/tag/v2.9.0-rc.2).
+[Download 2.9.1 Release Candidate 1](https://github.com/GrimActual/77th-Jsoc-Companion/releases/tag/v2.9.1-rc.1).
 
 [Browse all releases](https://github.com/GrimActual/77th-Jsoc-Companion/releases). Historical builds retain their original versions. Experimental builds and release candidates are marked as prereleases.
 
