@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "selectedUnits": 1,
+  "exportedProvenance": true,
+  "headingStaleRejected": true,
+  "missionChangeStaleRejected": true,
+  "languages": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "safeText": true,
+  "settingsShortcut": true,
+  "missionUnchanged": true,
+  "rendererErrors": []
+}

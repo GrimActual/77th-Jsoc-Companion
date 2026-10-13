@@ -427,3 +427,7 @@ Development 14 advances Package 12 with a one-picker worker-backed resource-inde
 
 ## Native read-only bridge runtime gate — 13 October 2026
 The real diagnostic local-server executable sent native Enforce position updates through temporary HTTPS into Companion. Movement, unchanged mission JSON, same-stream interval reload after a reproduced counter-reset fix, native authentication rejection and cleanup were verified. Changed Enforce source compiled for PC/WORKBENCH. Server profile-path instructions are corrected in the guide, Settings and translated Sarge guidance. [Native runtime scope/evidence](docs/NATIVE-BRIDGE-RUNTIME.md). The standalone dedicated-server HTTPS movement gate now passed. Endpoint-preserving revocation/retry-limit checks and testing the downloaded Workshop package remains pending. No new feature-build number or package was created; consolidate after the remaining release gates.
+
+## RC2 — bounded live tracking and deployment preview
+
+Packages 01/04/11 now carry 60 opt-in named-entity batches with native HTTPS evidence. Package 12/14 adds a desktop deployment review/export with GUID provenance and stale checks; execution remains pending. Settings and 47 EN/FR/DE Sarge topics accompany delivery. Automatic opt-in player discovery, respawn lifecycle, 120-player scaling, server-reviewed spawn/remove and optional compact GM workspace remain future milestones. See docs/RELEASE-CANDIDATE-2.md.

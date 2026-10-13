@@ -1,5 +1,12 @@
-# Reviewed deployment intent: offline pilot
+# Reviewed deployment preview
 
-This source-only CLI reviews up to 16 selected planner units against a resource index and emits a bounded JSON intention package. It preserves the mission, resolves asset ownership/dependencies, rejects unsafe paths and refuses export after the source mission changes. It does not spawn entities, import native layers or approve a server command.
+## Desktop steps
+1. Prepare reviewed prefab assets in Assets and assign them to planned units.
+2. In Units, select 1–16 units. Open Deployment preview (also available through Settings and Sarge).
+3. Load the matching resource index JSON, or use the reviewed metadata index in Assets. Enter heading in degrees.
+4. Review selected units. Inspect world X/Z, GUID-qualified resource paths, source provenance and required addons. Missing dependency metadata remains explicitly flagged.
+5. Export reviewed deployment JSON. Choose the destination in the native Save dialog. Plan, heading or index changes require a fresh review.
 
-Run from planner with Node: `node deployment-cli.js mission.json index.json "[1,2]" 90 output.json`. Use actual selected unit IDs. Heading is explicit, terrain elevation must be resolved by Enfusion. Existing output files are not overwritten. Native validation and an administrator-reviewed execution adapter remain future work.
+The selected units captured during review define this package. Later selection changes do not silently replace them. Mission coordinates map directly to world X/Z; terrain elevation is unresolved. This is intention-only export, with nativeValidationRequired true. It cannot spawn units or approve a server action.
+
+The CLI remains available: `node deployment-cli.js mission.json index.json "[1,2]" 90 output.json`. Use actual selected IDs. Existing files are not overwritten. A server-reviewed execution adapter remains future work.
