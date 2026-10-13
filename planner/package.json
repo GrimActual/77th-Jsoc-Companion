@@ -7,7 +7,7 @@
   "scripts": {
     "start": "electron .",
     "server": "node server.js",
-    "test": "node --test core.test.js editing.test.js backend.test.js i18n.test.js shortcuts.test.js export-model.test.js main.test.js branding-profile.test.js briefing-language.test.js symbol-layout.test.js release281.test.js simulation-main.test.js bridge/tests/bridge.test.js bridge/tests/recovery.test.js local-bridge.test.js bridge-alignment.test.js free-bridge.test.js live-marker.test.js dedicated-bridge.test.js scenario-core.test.js scenario-recovery.test.js scenario-aar.test.js",
+    "test": "node --test core.test.js editing.test.js backend.test.js i18n.test.js shortcuts.test.js export-model.test.js main.test.js branding-profile.test.js briefing-language.test.js symbol-layout.test.js release281.test.js simulation-main.test.js bridge/tests/bridge.test.js bridge/tests/recovery.test.js local-bridge.test.js bridge-alignment.test.js free-bridge.test.js live-marker.test.js dedicated-bridge.test.js scenario-core.test.js scenario-recovery.test.js scenario-aar.test.js scenario-spatial.test.js",
     "package": "electron-packager . \"Everon ORBAT Planner\" --platform=win32 --arch=x64 --out=dist --overwrite",
     "scenario": "node scenario-cli.js"
   },
