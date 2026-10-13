@@ -67,3 +67,7 @@ AI discovery covers standard `SCR_EditableCharacterComponent` characters registe
 Ten identical completed 16-unit requests: compact status history **4,001 bytes**, versus **30,871 bytes** retaining full bodies. The same fixture was used for both representations. Older active group choices remain separately available. No map renderer changes were made in this step; no FPS claim follows from this traffic comparison.
 
 Before promoting to a public release candidate, test the actual Host Local panels, humans and standard AI, faction deselection, respawn/disconnect, selected-group occupied-player rejection and normal prefab spawn/removal. Custom prefabs and long session lifecycle remain further coverage. AI orders, weather, triggers, live property adapters and the complete GM workspace are subsequent roadmap work.
+
+## Ready vanilla spawn fixture
+
+The user confirmed mixed Host Local tracking and faction deselection in-game. For the next native spawn gate, the real vanilla US Rifleman reference was resolved and loaded read-only by Workbench. See [the numbered catalog/index workflow](VANILLA-GM-SPAWN-TEST.md). The fixture contains metadata only; it does not replace a plan or modify the Workshop addon.
