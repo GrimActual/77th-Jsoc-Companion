@@ -375,3 +375,5 @@ The biggest optimization here is architectural: you're not building 200 independ
 For example, a well-designed event engine supports mission triggers, GM actions, simulated radio reports, automated scenarios, replay, audit logs and after-action reviews. Build that engine once, and several major parts of the wishlist become much easier.
 
 That's how I'd turn your current project into a serious Companion Core + Game Master + Enfusion integration platform, without wasting effort rebuilding the same functionality over and over.
+## Existing scenario draft editing — 13 October 2026
+Roadmap packages 05/06/07 now support validated in-place objective/event edits with stable IDs, explicit Apply/Cancel, initial objective status and a Settings shortcut. Complex rules stay in the complete editor and unapplied JSON is preserved. Sarge has 41 translated topics. The relevant 16-test gate, actual desktop workflow and large-authoring latency check passed; see [editing guide](docs/GM-DRAFT-EDITING.md). This development increment follows Preview 4 and does not repeat unrelated passing gates or imply a new Workshop publication.
