@@ -47,3 +47,9 @@ Development 13 adds [downloaded-addon project identity review](docs/PROJECT-IDEN
 Development 14 adds [resource index reuse in Assets](docs/RESOURCE-INDEX-REVIEW-UI.md), with worker-backed JSON loading, multiple-addon review and cached dependency findings. Available in the development executable; Preview 5 archives remain unchanged.
 
 Native read-only bridge [diagnostic runtime gate](docs/NATIVE-BRIDGE-RUNTIME.md) passed real Enforce-to-HTTPS-to-Companion position and authentication checks. Same-session interval reload is fixed in the dedicated candidate. A bounded standalone dedicated-server HTTPS movement test also passed; The user confirmed Workshop 0.2.0 publication; testing the downloaded Workshop package remains separate. Preview 5 archives are unchanged.
+
+Notice & Disclaimer:
+
+This project is an unofficial community-made companion tool for Arma Reforger. It is not affiliated with, endorsed, sponsored, or specifically approved by Bohemia Interactive a.s.
+
+Arma Reforger, Enfusion, and Bohemia Interactive are trademarks or registered trademarks of Bohemia Interactive a.s.
