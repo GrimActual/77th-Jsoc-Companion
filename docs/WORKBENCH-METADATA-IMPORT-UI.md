@@ -50,3 +50,5 @@ Both had 400 marker elements and two terrain tiles. The import finished during t
 Evidence: `docs/test-evidence/metadata-import-ui.json`; harnesses: `planner/tools/check-metadata-import.cjs` and `check-metadata-performance.cjs`. Existing full Preview 5 tests were retained; only relevant changed integration/lifecycle/localization gates were rerun. No new release ZIP or Workshop publication is implied by this development increment.
 
 Development 13 adds [Review project identity only](PROJECT-IDENTITY-COMPATIBILITY.md), using one project picker without sidecars. The full project-and-sidecars mode remains available.
+
+Development 14 also supports [Load resource index JSON](RESOURCE-INDEX-REVIEW-UI.md). Imported observations are declarations, not fresh local-file checks; multiple-addon/empty indexes are supported.

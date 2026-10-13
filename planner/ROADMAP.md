@@ -2,7 +2,7 @@
 
 The current future programme is [the master roadmap](../ROADMAP.md), with [all 200 backlog items](../docs/FUTURE-FEATURE-WISHLIST.md) and [package ownership](../docs/FUTURE-FEATURE-MAPPING.json).
 
-Current development executable: v2.9.1 Development 13. Latest consolidated local package: Preview 5. Catalog portability is described below; dedicated runtime verification remains pending. Earlier desktop/relay/fullscreen evidence: [test debrief](../docs/V2.9.1-TEST-REPORT.md).
+Current development executable: v2.9.1 Development 14. Latest consolidated local package: Preview 5. Catalog portability is described below; dedicated runtime verification remains pending. Earlier desktop/relay/fullscreen evidence: [test debrief](../docs/V2.9.1-TEST-REPORT.md).
 
 The notes below are retained historical release notes. Their older pending/current labels are not the status of the latest build.
 
@@ -55,3 +55,6 @@ Development 12 continues Package 12: Assets can export the session catalog plus 
 
 ## Downloaded-addon project identity review — 13 October 2026
 Development 13 extends Package 12 with opaque bounded GameProject Configurations acceptance and a one-picker project-only review. Real copied Invade & Annex identity/dependencies now import without sidecars, exporting zero resource records rather than inventing GUIDs. Sarge/Settings are synchronized in EN/FR/DE. Twenty-three relevant checks and the actual desktop copy workflow passed; parser timing was compared with Development 12. All 12 original installed addon files remain hash-identical. [Steps and compatibility limits](../docs/PROJECT-IDENTITY-COMPATIBILITY.md). The isolated manifest test stays preserved; binary resource mapping and native engine adapters remain future gates. Preview 5 packages are unchanged.
+
+## Resource index reuse in Assets — 13 October 2026
+Development 14 advances Package 12 with a one-picker worker-backed resource-index JSON load, multiple-addon owner review, bounded unresolved-reference findings and the existing prefab-to-unit preparation flow. Imported observations are explicitly declarations; referenced files are not rechecked and target-warning filtering is disabled. Empty indexes and cancel/rejection retention work. Sarge/Settings are synchronized in EN/FR/DE. Thirteen relevant checks and the actual 501-resource desktop workflow passed. The review retains its audit instead of rebuilding it during paging/preferences; matching 500/5,000-reference timings and zero UI rebuilds were recorded. [Steps and evidence](../docs/RESOURCE-INDEX-REVIEW-UI.md). Native GUID extraction from RDB and engine/server adapters remain subsequent gates; Preview 5 archives are unchanged.

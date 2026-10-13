@@ -43,3 +43,5 @@ Development 11: [reviewed prefab planning assets](docs/REVIEWED-PREFAB-ASSETS.md
 Development 12 adds [portable planning catalog export](docs/PORTABLE-PLANNING-CATALOGS.md) for reuse after restart, retaining assigned asset provenance without changing mission state. Available in the development executable; existing Preview 5 archives are unchanged.
 
 Development 13 adds [downloaded-addon project identity review](docs/PROJECT-IDENTITY-COMPATIBILITY.md), accepting opaque project configuration blocks without inferring prefab GUIDs. Available in the development executable; Preview 5 archives remain unchanged.
+
+Development 14 adds [resource index reuse in Assets](docs/RESOURCE-INDEX-REVIEW-UI.md), with worker-backed JSON loading, multiple-addon review and cached dependency findings. Available in the development executable; Preview 5 archives remain unchanged.
