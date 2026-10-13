@@ -1,0 +1,11 @@
+{
+  "schema": "companion-property-request",
+  "version": 1,
+  "source": {"label":"Manual offline example; no native property observation","resourceId":null},
+  "changes": [
+    {"unitId":1,"property":"name","value":"ALPHA ACTUAL"},
+    {"unitId":1,"property":"unitType","value":"recon"},
+    {"unitId":1,"property":"strength","value":"8 personnel; observe harbour"},
+    {"unitId":1,"property":"position","value":{"lat":9469.76,"lng":4241.47}}
+  ]
+}
