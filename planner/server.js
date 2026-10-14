@@ -94,7 +94,8 @@ const server = http.createServer(async (req, res) => {
     ['/presentation.js',['presentation.js','text/javascript; charset=utf-8']],
     ['/planner.css',['planner.css','text/css; charset=utf-8']],
     ['/vendor/milsymbol.js',['vendor/milsymbol.js','text/javascript; charset=utf-8']],
-    ['/jsoc-logo.png',['jsoc-logo.png','image/png']]
+    ['/jsoc-logo.png',['command-logo.png','image/png']],
+    ['/command-logo.png',['command-logo.png','image/png']]
   ]);
   for(const file of ['leaflet.js','leaflet.css'])staticFiles.set('/vendor/leaflet/'+file,['vendor/leaflet/'+file,file.endsWith('.css')?'text/css':'text/javascript']);
   for(let x=0;x<4;x++)for(let y=0;y<4;y++)staticFiles.set('/terrain/everon/'+x+'-'+y+'.jpg',['terrain/everon/'+x+'-'+y+'.jpg','image/jpeg']);

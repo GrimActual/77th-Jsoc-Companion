@@ -16,4 +16,4 @@ Verification: 18 automated core/editing/backend tests passed. Desktop checks cov
 
 See ROADMAP.md for remaining immediate targets and later TOC features. The 20-name location registry has no verified coordinates and is not a project import.
 
-Install: export a JSON backup, close the old version, extract the entire Windows ZIP into a new folder, and run Everon ORBAT Planner.exe. Do not remove the application data folder containing your local saves.
+Install: export a JSON backup, close the old version, extract the entire Windows ZIP into a new folder, and run COMMAND Planner.exe. Do not remove the application data folder containing your local saves.

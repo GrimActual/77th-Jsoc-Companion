@@ -12,7 +12,7 @@ function external(url){try{const parsed=new URL(url);if(!['https:','http:'].incl
 function showWindow(){if(quitting)return;if(!mainWindow||mainWindow.isDestroyed()){createWindow();return}if(mainWindow.isMinimized())mainWindow.restore();mainWindow.show();mainWindow.focus();}
 function createWindow(){
  if(quitting)return;
- const win=new BrowserWindow({width:1600,height:900,title:'77th JSOC · Everon ORBAT Planner',icon:path.join(__dirname,'jsoc-logo.png'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
+ const win=new BrowserWindow({width:1600,height:900,title:'COMMAND — ORBAT / Mission Planner',icon:path.join(__dirname,'command-icon.ico'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
  mainWindow=win;win.setMenuBarVisibility(false);
  // Closing during the initial load aborts loadFile before the closed event fires.
  // Do not turn that normal shutdown into a blocking startup-error dialog.

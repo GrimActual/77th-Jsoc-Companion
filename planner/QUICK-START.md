@@ -1,6 +1,6 @@
-# Everon ORBAT Planner 2.6.1
+# COMMAND ORBAT / Mission Planner 2.6.1
 
-Extract **the whole Windows ZIP** into a fresh folder and run **Everon ORBAT Planner.exe**. Keep all bundled files and folders together.
+Extract **the whole Windows ZIP** into a fresh folder and run **COMMAND Planner.exe**. Keep all bundled files and folders together.
 
 For source development, install Node.js 18 or later, run `npm ci`, then `npm start` for the desktop app. For the browser edition, run `npm run server` and open **http://127.0.0.1:8787**. The editor and bundled lower-detail terrain work offline; Workshop and online detail require internet.
 
