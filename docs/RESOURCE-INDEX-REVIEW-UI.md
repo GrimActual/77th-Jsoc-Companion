@@ -3,7 +3,7 @@
 Package 12 now reopens exported Companion resource indexes directly in Assets. This uses the existing version-1 resource identity contract, worker and native file selection; it does not read resource paths listed inside the index or load engine assets.
 
 ## English
-1. Open `A:/Everon-ORBAT-Development/experiments/gm-desktop/Everon ORBAT Planner.exe` (Development 14).
+1. Open `A:/Everon-ORBAT-Development/experiments/gm-desktop/COMMAND Planner.exe` (Development 14).
 2. Open **Assets → Import Workbench metadata → Load resource index JSON**.
 3. Select an exported `companion-resource-index` version-1 JSON. A mission JSON, planning catalog or download checksum manifest is a different format and is rejected here.
 4. Review addon/resource counts, owner IDs, GUIDs, provenance and declared dependency gaps. Multiple addons and an empty valid index are supported. Unresolved resource-reference findings show a count and up to 50 entries; resource rows remain paged in groups of 50.

@@ -36,7 +36,7 @@ modded class PauseMenuUI
         SCR_BaseGameMode mode = SCR_BaseGameMode.Cast(GetGame().GetGameMode());
         if (!mode) return;
         m_JSOCPanel = GetGame().GetWorkspace().CreateWidgets("UI/layouts/JSOC_ORBAT_Pairing.layout", GetRootWidget());
-        if (!m_JSOCPanel) { Print("[JSOC ORBAT] Pairing layout failed to load", LogLevel.ERROR); return; }
+        if (!m_JSOCPanel) { Print("[COMMAND ORBAT] Pairing layout failed to load", LogLevel.ERROR); return; }
         EditBoxWidget endpoint = EditBoxWidget.Cast(m_JSOCPanel.FindAnyWidget("JSOCEndpoint"));
         if (endpoint) endpoint.SetText(mode.GetJSOCBridge().Endpoint());
         m_JSOCHandler = new JSOC_ORBAT_PairingHandler();
