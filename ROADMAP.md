@@ -443,3 +443,6 @@ Packages 04/11 gain explicit human/GM-editable AI selection and faction filters 
 ## Real Host Local gate and placement correction
 
 The user confirmed mixed tracking, faction deselection and actual character spawning in Host Local. Removal reported executed; visual removal confirmation remains separate. Placement exposed a missing inverse map-image offset; desktop 2.9.1-dev.gm.2 now subtracts 50 m per axis for native requests and intention exports, leaving saved plan coordinates unchanged. Production single/mixed render round trips, the installed app and matched converter timings pass. Precise corrected placement still requires user confirmation; full player lifecycle/occupied removal/GM roadmap features remain open. See docs/GM-PLACEMENT-FIX.md.
+
+### Asset browser usability — 14 October 2026
+Searchable, paged asset cards replace the full catalog dropdown. Unit type links to troop/armoured/APC/light-vehicle/aircraft/logistics filters; prefab faction filters and variant visibility remain independent of mission faction. Exact asset snapshots and GUIDs are retained. Settings opens the browser; Sarge and EN/FR/DE guidance cover the workflow. Deployment review explains missing or invalid names. Native spawn availability remains separate from classification hints.

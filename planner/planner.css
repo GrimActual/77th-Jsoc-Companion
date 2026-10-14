@@ -17,3 +17,13 @@ dialog{color:var(--text);background:var(--panel);border:1px solid var(--line);bo
 
 /* Native system-font rasterization; no blanket 3D/compositor transforms on text panels. */
 :root{--ui-font:"Segoe UI Variable Text","Segoe UI",system-ui,Arial,sans-serif}body{font-family:var(--ui-font);font-kerning:normal;text-rendering:auto}button,input,select,textarea,summary{font-family:inherit}
+
+/* Paged asset chooser: long resource names stay readable within the sidebar. */
+#assetBrowse{width:100%;text-align:left;white-space:normal;overflow-wrap:anywhere;min-height:44px}
+.asset-browser{padding:10px;margin-top:8px;border:1px solid var(--border,#405a4c);border-radius:6px}
+#assetResults{display:grid;gap:8px;max-height:460px;overflow-y:auto}
+.asset-result{display:grid;gap:5px;text-align:left;width:100%;padding:12px;min-height:78px;white-space:normal}
+.asset-result strong{font-size:15px;line-height:1.35}.asset-result span{font-size:13px}.asset-result small{font-size:12px;line-height:1.4;opacity:.8;overflow-wrap:anywhere}
+.asset-result[aria-pressed="true"]{outline:2px solid #62b8ff;outline-offset:-2px}
+.asset-browser input[type="search"]{font-size:15px}.asset-browser .check{display:flex;gap:8px;align-items:center}
+#assetResultCount{font-size:13px}.asset-browser .actions{display:flex;justify-content:space-between}

@@ -22,3 +22,4 @@ test('deployment world coordinates render back onto the planned map position wit
  const invalid=fixture();invalid.orderOfBattle[0].position={lat:49,lng:50};await a.rejects(D.review(invalid,index,[1],0),/supported Everon/);
  const boundary=fixture();boundary.orderOfBattle[0].position={lat:50,lng:50};a.deepEqual((await D.review(boundary,index,[1],0)).preview().entities[0].position,{worldX:0,worldZ:0,heightMode:'terrain'});
 });
+test('deployment review explains blank and oversized unit names without modifying the mission',async()=>{for(const name of ['', ' ', 'X'.repeat(161)]){const p=fixture();p.orderOfBattle[0].name=name;const before=JSON.stringify(p);await a.rejects(D.review(p,index,[1],0),/name.*(Units|characters)/);a.equal(JSON.stringify(p),before);}});

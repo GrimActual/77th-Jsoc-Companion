@@ -1,0 +1,76 @@
+{
+  "UI-TEST.json": {
+    "success": true,
+    "version": "2.9.1-dev.gm.3",
+    "catalogEntries": 2721,
+    "importMs": 100.09119999999893,
+    "maximumVisibleResultCards": 20,
+    "hiddenSelectOptions": 1,
+    "infantryAndArmourLinksPassed": true,
+    "searchByGuidAndReadableName": true,
+    "languageChangesPreservePendingAsset": true,
+    "browsingDoesNotModifyMission": true,
+    "assignmentAndReloadPreserveExactGuid": true,
+    "blankNameReviewExplained": true,
+    "renamedUnitReviewPassed": true,
+    "nativePickerMocked": true,
+    "noSpawnCommandSent": true,
+    "noAutomaticBridgeConnection": true,
+    "filterRenderP95Ms": 1.700000001117587,
+    "filterRenderMaxMs": 1.900000000372529,
+    "rendererErrors": []
+  },
+  "PERFORMANCE-TEST.json": {
+    "scope": "Matched 400-unit, six-second map pan samples on this PC; no universal FPS claim",
+    "reports": [
+      {
+        "label": "previous",
+        "performance": {
+          "fps": 57.833333333333336,
+          "p95FrameMs": 17.40000000037253,
+          "maxFrameMs": 117.79999999888241,
+          "framesOver100Ms": 1,
+          "heapBytes": 14300000,
+          "markers": 400,
+          "tiles": 2
+        },
+        "missionUnchanged": true,
+        "rendererErrors": []
+      },
+      {
+        "label": "asset-browser",
+        "performance": {
+          "fps": 58.5,
+          "p95FrameMs": 16.90000000037253,
+          "maxFrameMs": 83.29999999888241,
+          "framesOver100Ms": 0,
+          "heapBytes": 16100000,
+          "markers": 400,
+          "tiles": 2
+        },
+        "missionUnchanged": true,
+        "rendererErrors": []
+      }
+    ],
+    "unsafeImportedNamesRenderedAsText": true
+  },
+  "GUIDANCE-TEST.json": {
+    "success": true,
+    "catalogImportUsesCurrentUnitType": true,
+    "recognizedTemplatesHiddenByDefault": true,
+    "settingsShortcutOpensAssetBrowser": true,
+    "locales": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "sargeTopicPreserved": true,
+    "filterPreservedAcrossLanguages": true,
+    "rendererErrors": []
+  },
+  "focusedTests": {
+    "passed": 14,
+    "backendPassed": true,
+    "note": "Later classification/guidance edits passed their six focused checks; initial catalog filter and helper defaults passed the final guidance desktop check."
+  }
+}

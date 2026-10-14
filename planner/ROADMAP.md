@@ -69,3 +69,6 @@ Packages 01/04/11 now carry 60 opt-in named-entity batches with native HTTPS evi
 ## Unpublished player-source pilot
 
 Explicit positive session player IDs, stable telemetry aliases, controller-bound leases, respawn baseline resets and disconnect retirement compile in PC/Workbench. Synthetic native policy and real empty-player-source HTTPS checks passed. Actual connected-player validation is pending; Workshop 0.3.0 and RC2 remain unchanged. See ../docs/PLAYER-TRACKING-PILOT.md.
+
+### Asset browser usability — 14 October 2026
+Searchable, paged asset cards replace the full catalog dropdown. Unit type links to troop/armoured/APC/light-vehicle/aircraft/logistics filters; prefab faction filters and variant visibility remain independent of mission faction. Exact asset snapshots and GUIDs are retained. Settings opens the browser; Sarge and EN/FR/DE guidance cover the workflow. Deployment review explains missing or invalid names. Native spawn availability remains separate from classification hints.
