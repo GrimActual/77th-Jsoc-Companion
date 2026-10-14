@@ -14,6 +14,6 @@ Mouse gestures (Ctrl+click selection and Alt+drag), Shift speed boost, dialog Es
 
 Validation: 26 automated tests; desktop checks for custom bindings, persistence, typing protection, conflict rejection without partial writes, movement release/focus stop, reset semantics, translations and unchanged plan data. Existing desktop editor regression and language checks are also run on this release.
 
-Install: close the old app, extract the entire ZIP into a new folder, then run Everon ORBAT Planner.exe. Keep your manual JSON backups.
+Install: close the old app, extract the entire ZIP into a new folder, then run COMMAND Planner.exe. Keep your manual JSON backups.
 
 Next roadmap task: presentation export improvements, beginning with selected-object exports and preview. SVG and branding remain pending.

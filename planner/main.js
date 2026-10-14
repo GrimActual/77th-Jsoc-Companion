@@ -14,7 +14,7 @@ function external(url){try{const parsed=new URL(url);if(!['https:','http:'].incl
 function showWindow(){if(quitting)return;if(!mainWindow||mainWindow.isDestroyed()){createWindow();return}if(mainWindow.isMinimized())mainWindow.restore();mainWindow.show();mainWindow.focus();}
 function createWindow(){
  if(quitting)return;
- const win=new BrowserWindow({width:1600,height:900,title:'77th JSOC · Phase C SIMULATION (experimental)',icon:path.join(__dirname,'jsoc-logo.png'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
+ const win=new BrowserWindow({width:1600,height:900,title:'COMMAND · Phase C SIMULATION (experimental)',icon:path.join(__dirname,'command-icon.ico'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
  mainWindow=win;win.setMenuBarVisibility(false);
  win.webContents.on('did-start-navigation',(_event,_url,_inPlace,isMainFrame)=>{if(isMainFrame)simulation.reset();});
  win.webContents.on('render-process-gone',()=>simulation.reset());
