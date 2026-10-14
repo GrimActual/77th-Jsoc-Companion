@@ -2,13 +2,13 @@
   "name": "everon-orbat-workshop-bridge",
   "version": "2.6.1",
   "private": true,
-  "description": "Small CORS-safe metadata bridge with persistent Workshop JSON cache for Everon ORBAT Mapper",
+  "description": "COMMAND — independent ORBAT and mission planner for Arma Reforger.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
     "server": "node server.js",
     "test": "node --test core.test.js editing.test.js backend.test.js i18n.test.js shortcuts.test.js export-model.test.js main.test.js branding-profile.test.js briefing-language.test.js",
-    "package": "electron-packager . \"Everon ORBAT Planner\" --platform=win32 --arch=x64 --out=dist --overwrite"
+    "package": "electron-packager . \"COMMAND Planner\" --platform=win32 --arch=x64 --out=dist --overwrite"
   },
   "devDependencies": {
     "electron": "^30.5.1",
