@@ -58,3 +58,9 @@ This project is an unofficial community-made companion tool for Arma Reforger. I
 Arma Reforger, Enfusion, and Bohemia Interactive are trademarks or registered trademarks of Bohemia Interactive a.s.
 
 COMMAND is an independent community project. This branding update preserves saved plans and the existing Workshop addon identity. Historical branding editions retain their own feature versions and limitations.
+
+## Current GM pilot and vanilla catalog bundle
+
+[Download the COMMAND 2.9.1-dev.gm.2 pilot and vanilla files](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/releases/tag/v2.9.1-dev.gm.2-command). The data bundle includes 19,438 indexed vanilla prefab identities and a 2,721-entry operational catalog with matching resource index. Native spawn availability remains subject to host review and validation.
+
+For matching current pilot source, use tag v2.9.1-dev.gm.2-command or the [development/tracking-pilot branch](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/tree/development/tracking-pilot). The default branch retains the earlier release-candidate runtime baseline. [Vanilla import instructions](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/blob/development/tracking-pilot/docs/VANILLA-ASSETS.md).
