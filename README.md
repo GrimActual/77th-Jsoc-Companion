@@ -1,14 +1,14 @@
-# 77th JSOC Companion
+# COMMAND — ORBAT / Mission Planner
 
-Everon ORBAT Planner and the optional Arma Reforger bridge.
+COMMAND ORBAT / Mission Planner and the optional Arma Reforger bridge.
 
 Current consolidated release candidate: **2.9.1-rc.1**. Includes offline planning, scenario/property workflows, reviewed asset catalogs, display diagnostics and experimental dedicated-server integration. Planner code is in [`planner/`](planner/). Published versions retain matching tags and source archives.
 
 ## Download
 
-[Download 2.9.1 Release Candidate 1](https://github.com/GrimActual/77th-Jsoc-Companion/releases/tag/v2.9.1-rc.1).
+[Download 2.9.1 Release Candidate 1](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/releases/tag/v2.9.1-rc.1-command).
 
-[Browse all releases](https://github.com/GrimActual/77th-Jsoc-Companion/releases). Historical builds retain their original versions. Experimental builds and release candidates are marked as prereleases.
+[Browse all releases](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/releases). Historical builds retain their original versions. Experimental builds and release candidates are marked as prereleases.
 
 ## Run from source
 
@@ -21,7 +21,7 @@ This is an independent community planner, not an official Bohemia Interactive pr
 ## Live bridge quick start
 
 1. In the planner, open Settings → Live bridge → Start free connection.
-2. In Reforger with the companion mod enabled, open ORBAT PLANNER – HOST PAIRING.
+2. In Reforger with the companion mod enabled, open COMMAND – HOST PAIRING.
 3. Copy the planner address into the game’s first field and the code into its second field; click CONNECT, resume and control a soldier.
 4. Keep the planner PC awake. Temporary tunnel addresses change; public codes expire after one hour.
 

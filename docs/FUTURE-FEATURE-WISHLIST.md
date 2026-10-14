@@ -2,7 +2,7 @@
 
 Preserved user-supplied wishlist. [D] means discussed; [E] means an expanded proposal. Neither means delivered or individually approved for implementation. Existing functionality must be audited before extending it.
 
-# 77th JSOC Companion — 200-feature master wishlist
+# COMMAND — ORBAT / Mission Planner — 200-feature master wishlist
 
 ## 1. ORBAT and force management
 
@@ -238,7 +238,7 @@ Preserved user-supplied wishlist. [D] means discussed; [E] means an expanded pro
 
 THE OVERALL PRODUCT VISION
 
-# 77th JSOC Companion
+# COMMAND — ORBAT / Mission Planner
 
 Integrated Simulation & Operations Platform
 

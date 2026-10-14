@@ -4,7 +4,7 @@ This usable **desktop workflow** was introduced in Development 9 and remains ava
 
 Use:
 
-`A:/Everon-ORBAT-Development/experiments/gm-desktop/Everon ORBAT Planner.exe`
+`A:/Everon-ORBAT-Development/experiments/gm-desktop/COMMAND Planner.exe`
 
 ## In the Companion application
 

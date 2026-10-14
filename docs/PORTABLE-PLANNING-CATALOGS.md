@@ -3,7 +3,7 @@
 Package 12 adds an explicit catalog export to the existing Assets workflow. Prepared prefab references no longer need to be assigned to a unit just to keep them for later sessions. No catalog is automatically restored or connected to a game.
 
 ## English: save and reuse
-1. Open `A:/Everon-ORBAT-Development/experiments/gm-desktop/Everon ORBAT Planner.exe` (Development 12).
+1. Open `A:/Everon-ORBAT-Development/experiments/gm-desktop/COMMAND Planner.exe` (Development 12).
 2. In **Assets**, import your catalog with **Import catalog JSON**, or prepare reviewed prefab references under **Import Workbench metadata**.
 3. Click **Export planning catalog**. Choose the destination in the native Save dialog. This saves all current session assets plus the snapshots assigned to existing mission units, including their resource GUID, addon ID, path, provenance and target warnings when present.
 4. Wait for **Planning catalog saved. Mission unchanged.** The export does not commit unit form edits, change mission JSON or create an Undo step.

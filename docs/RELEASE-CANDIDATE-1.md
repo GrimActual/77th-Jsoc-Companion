@@ -1,6 +1,6 @@
-# 77th JSOC Companion 2.9.1 Release Candidate 1
+# COMMAND — ORBAT / Mission Planner 2.9.1 Release Candidate 1
 
-Extract the Windows ZIP fully, then run Everon ORBAT Planner.exe. Keep a Project JSON backup before switching versions. The source ZIP contains the planner, relay, bridge addon source, tests and guides. Old release archives are preserved.
+Extract the Windows ZIP fully, then run COMMAND Planner.exe. Keep a Project JSON backup before switching versions. The source ZIP contains the planner, relay, bridge addon source, tests and guides. Old release archives are preserved.
 
 ## What is included
 
@@ -8,11 +8,11 @@ Extract the Windows ZIP fully, then run Everon ORBAT Planner.exe. Keep a Project
 - Reviewed Workbench resource-index imports, explicit prefab asset preparation and portable planning catalogs with addon/GUID provenance.
 - Display/graphics diagnostics and 46 Sarge topics with English/French/German guidance.
 - Host Local live pairing and experimental dedicated-server tracking of one named authorised entity.
-- Workshop bridge 0.2.0 publication confirmed by the user. Obtain the existing 77th JSOC ORBAT Bridge item in Reforger Workshop; do not enable duplicate addon identities.
+- Workshop bridge 0.2.0 publication confirmed by the user. Obtain the existing COMMAND ORBAT Bridge item in Reforger Workshop; do not enable duplicate addon identities.
 
 ## Start a live connection
 
-Open Settings → Live bridge. Host Local uses the game's ORBAT PLANNER - HOST PAIRING panel: ADDRESS goes in endpoint, CODE goes in pairing code. GeForce NOW requires reachable HTTPS. Dedicated mode uses the server administrator's private profile configuration; see DEDICATED-SERVER.md. Use a fresh session after disabling/revoking. No automatic connection starts at app launch.
+Open Settings → Live bridge. Host Local uses the game's COMMAND - HOST PAIRING panel: ADDRESS goes in endpoint, CODE goes in pairing code. GeForce NOW requires reachable HTTPS. Dedicated mode uses the server administrator's private profile configuration; see DEDICATED-SERVER.md. Use a fresh session after disabling/revoking. No automatic connection starts at app launch.
 
 ## Completed validation
 
@@ -26,6 +26,6 @@ Dedicated support is experimental beyond the bounded synthetic test. Full scenar
 
 The Windows executable is unsigned. SHA256SUMS checks file integrity, not publisher trust or antivirus approval. This is a prerelease candidate, not a stable production release.
 
-Français : extrayez entièrement le ZIP puis lancez Everon ORBAT Planner.exe. Sauvegardez votre Project JSON. Pont dédié expérimental, une seule entité autorisée. Consultez DEDICATED-SERVER.md ; ne publiez jamais un code temporaire ni le fichier privé du serveur.
+Français : extrayez entièrement le ZIP puis lancez COMMAND Planner.exe. Sauvegardez votre Project JSON. Pont dédié expérimental, une seule entité autorisée. Consultez DEDICATED-SERVER.md ; ne publiez jamais un code temporaire ni le fichier privé du serveur.
 
-Deutsch: ZIP vollständig entpacken und Everon ORBAT Planner.exe starten. Project JSON vorher sichern. Dedizierte Brücke experimentell, nur eine autorisierte Entität. DEDICATED-SERVER.md beachten; temporären Code und private Serverdatei niemals veröffentlichen.
+Deutsch: ZIP vollständig entpacken und COMMAND Planner.exe starten. Project JSON vorher sichern. Dedizierte Brücke experimentell, nur eine autorisierte Entität. DEDICATED-SERVER.md beachten; temporären Code und private Serverdatei niemals veröffentlichen.

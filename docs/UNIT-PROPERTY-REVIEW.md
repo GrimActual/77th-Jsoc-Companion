@@ -2,7 +2,7 @@
 
 Available in the development executable:
 
-`A:/Everon-ORBAT-Development/experiments/gm-desktop/Everon ORBAT Planner.exe`
+`A:/Everon-ORBAT-Development/experiments/gm-desktop/COMMAND Planner.exe`
 
 This workflow was introduced in **Development 8** and remains available in **Development 9**, which additionally accepts indices from the desktop metadata importer. The latest consolidated package is Preview 5; Development 9 is not a new release ZIP or Workshop update. These controls edit the offline planner mission; they do not modify live Reforger components or start a connection.
 
