@@ -1,14 +1,14 @@
-# 77th JSOC Everon ORBAT Planner — 2.9.0 RC1
+# COMMAND COMMAND ORBAT / Mission Planner — 2.9.0 RC1
 
 ## Install or upgrade
 1. In your previous planner, click Save Backup and check the downloaded JSON.
 2. Close the previous planner. Extract the ENTIRE application ZIP into a new folder.
-3. Run Everon ORBAT Planner.exe inside that folder. Keep resources, locales, DLLs and other files alongside it.
+3. Run COMMAND Planner.exe inside that folder. Keep resources, locales, DLLs and other files alongside it.
 4. This candidate uses the same local profile as the previous OneClick Bridge build. If your operation does not appear, use Import plan with your backup. Previous release folders have not been changed.
 
 ## Connect to Reforger / GeForce NOW
 1. PLANNER ON YOUR PC: gear → Live bridge → Start free connection. Wait for Ready; startup can take about two minutes.
-2. GAME: enable the published JSOC ORBAT Bridge mod and host your scenario. Press Escape to open ORBAT PLANNER – HOST PAIRING.
+2. GAME: enable the published COMMAND ORBAT Bridge mod and host your scenario. Press Escape to open COMMAND – HOST PAIRING.
 3. PLANNER: Copy address. GAME: paste it into the FIRST field (address).
 4. PLANNER: Copy pairing code. GAME: paste it into the SECOND field (code), then click CONNECT.
 5. GAME: resume and spawn or possess a soldier. PLANNER: Find live marker centers the map on the latest position.
