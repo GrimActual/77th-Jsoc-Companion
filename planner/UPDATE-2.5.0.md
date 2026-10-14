@@ -30,6 +30,6 @@ SVG, custom branding/logos/patches, operation date controls, watermarks and fict
 
 ## Installation and location
 
-Extract the entire Windows ZIP into a new folder and run Everon ORBAT Planner.exe. Keep a manual JSON backup of important operations. Local preferences and saved plans remain compatible.
+Extract the entire Windows ZIP into a new folder and run COMMAND Planner.exe. Keep a manual JSON backup of important operations. Local preferences and saved plans remain compatible.
 
 New development files, temporary tests and release files live under A:\Everon-ORBAT-Development. Existing releases and the application data profile were not moved or deleted.
