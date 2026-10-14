@@ -1,0 +1,336 @@
+{
+  "NATIVE-TEST.json": {
+    "scope": "Bounded initial waypoint-state/activity binding selection only; synthetic infantry group and loopback relay. No navigation/arrival proof.",
+    "success": true,
+    "arrivalTested": false,
+    "behaviorTreePathsMustBeObservedNotAssumed": true,
+    "longerTraceNavigationFailureRetained": true,
+    "move": "AI move waypoint accepted; arrival is not confirmed",
+    "hold": "Timed AI hold waypoint accepted; combat reactions remain possible",
+    "seconds": 21.986,
+    "oneWaypointAfterReplacement": true,
+    "nativeHoldSeconds": 60,
+    "foreignWaypointRejectedAndRetained": true,
+    "ownedRemoval": true,
+    "serverScriptErrors": false,
+    "requestWaypointCorrelationPassed": true,
+    "behaviorTrace": [
+      "spawn request= selected=0 state=none activity=none tree=none",
+      "move request= selected=0 state=none activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "hold request=move selected=0 state=none activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "execute request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "move_again request=hold selected=0 state=none activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "foreign request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt"
+    ],
+    "sampledPeakServerMB": 659.171875,
+    "serverAndRelayStopped": true,
+    "privatePairingFileCleared": true
+  },
+  "TACTICAL-PROTOTYPE-TEST.json": {
+    "scope": "Bounded initial waypoint-state/activity binding selection only; synthetic infantry group and loopback relay. No navigation/arrival proof.",
+    "success": true,
+    "arrivalTested": false,
+    "behaviorTreePathsMustBeObservedNotAssumed": true,
+    "longerTraceNavigationFailureRetained": true,
+    "behaviorTrace": [
+      "spawn request= selected=0 state=none activity=none tree=none",
+      "sample request=defend-prototype selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "execute request=defend-prototype selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=defend-prototype selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "sample request=defend-prototype selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "sample request=defend-prototype selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "sample request=defend-prototype selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "sample request=defend-prototype selected=0 state=none activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "sample request=defend-prototype selected=0 state=none activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=defend-prototype selected=0 state=none activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt"
+    ],
+    "nativeDefendStateAndActivity": true,
+    "ownedWaypointCancellation": true,
+    "desktopAndRelayTacticalCommandsImplemented": false,
+    "seconds": 12.87,
+    "ownedRemoval": true,
+    "serverScriptErrors": false,
+    "sampledPeakServerMB": 644.3828125,
+    "serverAndRelayStopped": true,
+    "privatePairingFileCleared": true
+  },
+  "TACTICAL-WIRED-TEST.json": {
+    "scope": "Bounded initial waypoint-state/activity binding selection only; synthetic infantry group and loopback relay. No navigation/arrival proof.",
+    "success": true,
+    "arrivalTested": false,
+    "behaviorTreePathsMustBeObservedNotAssumed": true,
+    "longerTraceNavigationFailureRetained": true,
+    "defend": "Native defend waypoint accepted; arrival and combat outcome are unconfirmed",
+    "halt": "Companion waypoint cancelled; combat reactions remain enabled",
+    "move": "AI move waypoint accepted; arrival is not confirmed",
+    "hostApprovedTacticalDispatch": true,
+    "nativeDefendStateAndTree": true,
+    "nativeCancelAndSubsequentLegacyMove": true,
+    "seconds": 15.972,
+    "ownedRemoval": true,
+    "serverScriptErrors": false,
+    "behaviorTrace": [
+      "spawn request= selected=0 state=none activity=none tree=none",
+      "defend request= selected=0 state=none activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=defend selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "execute request=defend selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=defend selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=defend selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "sample request=defend selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "sample request=defend selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "sample request=defend selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "sample request=defend selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "sample request=defend selected=1 state=SCR_AIDefendWaypointState activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "halt request=defend selected=0 state=none activity=SCR_AIDefendActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityDefend.bt",
+      "move request=defend selected=0 state=none activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt"
+    ],
+    "sampledPeakServerMB": 659.15625,
+    "serverAndRelayStopped": true,
+    "privatePairingFileCleared": true
+  },
+  "LEGACY-RELAY-TEST.json": {
+    "scope": "Bounded initial waypoint-state/activity binding selection only; synthetic infantry group and loopback relay. No navigation/arrival proof.",
+    "success": true,
+    "arrivalTested": false,
+    "behaviorTreePathsMustBeObservedNotAssumed": true,
+    "longerTraceNavigationFailureRetained": true,
+    "move": "AI move waypoint accepted; arrival is not confirmed",
+    "hold": "Timed AI hold waypoint accepted; combat reactions remain possible",
+    "seconds": 20.907,
+    "oneWaypointAfterReplacement": true,
+    "nativeHoldSeconds": 60,
+    "foreignWaypointRejectedAndRetained": true,
+    "ownedRemoval": true,
+    "serverScriptErrors": false,
+    "requestWaypointCorrelationPassed": true,
+    "oldRelayCapabilityFallbackAndMoveHoldPassed": true,
+    "behaviorTrace": [
+      "spawn request= selected=0 state=none activity=none tree=none",
+      "move request= selected=0 state=none activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "hold request=move selected=0 state=none activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "execute request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=hold selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "move_again request=hold selected=0 state=none activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIIdleActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityIdle.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "sample request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt",
+      "foreign request=move_again selected=1 state=SCR_AIWaypointState activity=SCR_AIMoveActivity tree=AI/BehaviorTrees/Chimera/Group/ActivityMove.bt"
+    ],
+    "sampledPeakServerMB": 658.6015625,
+    "serverAndRelayStopped": true,
+    "privatePairingFileCleared": true
+  },
+  "TACTICAL-UI-TEST.json": {
+    "success": true,
+    "version": "2.9.1-dev.gm.6",
+    "tacticalCapabilityGate": true,
+    "reviewedDefendCoordinatesAndDuration": true,
+    "cancelHasNoFakeDestinationOrDuration": true,
+    "staleMissionReviewRejected": true,
+    "oldModRestoresMoveControls": true,
+    "missionUnchanged": true,
+    "unsafeNamesAsText": true,
+    "locales": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "nativeCommandsInThisUIRun": "mocked; separate real-server execution gate",
+    "rendererErrors": []
+  },
+  "longerNoNavigationFixtureFailure": {
+    "scope": "Longer diagnostic trace in the synthetic world without terrain/navmesh",
+    "outcome": "Engine pathfinding reached a VM NodeError in SCR_AIProcessFailedMovementResult through Group.bt and MoveToLocation.bt",
+    "retained": true,
+    "arrivalTested": false,
+    "interpretation": "Binding selection is separate from physical navigation. This error is not treated as a successful navigation or stability test."
+  },
+  "nativeCompilation": {
+    "source": [
+      {
+        "file": "addon.gproj",
+        "sha256": "b2fb398bacfb82613cf129c75c49c1268a7d6cb56c8bf274a86629500d564095"
+      },
+      {
+        "file": "Scripts/Game/JSOC_ORBAT/COMMAND_ORBAT_TacticalOrders.c",
+        "sha256": "1567a726a8846e1d979f19e0191c3cb84aa32180fd3e586f85b463c29f8c6883"
+      },
+      {
+        "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_AIOrders.c",
+        "sha256": "18143d0b374697abaac2bcb9aa9819ba5e7a7938f678bdf446391d813cd5e6e8"
+      },
+      {
+        "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_DedicatedBridge.c",
+        "sha256": "70316de3b93af276733d3130fa1186556604c3083adea6c5e1b1b29927556055"
+      },
+      {
+        "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_GMMenu.c",
+        "sha256": "07bcc79bb9c64d11abbeb8ee93b83a5ca699d667e622ca864790a53cfc224b13"
+      },
+      {
+        "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostBridge.c",
+        "sha256": "6bc544cbb4950eef8d6d493f2577eefc3f346ddc1d7d81dfe7f1e72f2f4586a9"
+      },
+      {
+        "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostGM.c",
+        "sha256": "82e463a944887c65806afbcd75e92e0110a7d2316c17dfd28b11465a8bce0cd2"
+      },
+      {
+        "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostMixed.c",
+        "sha256": "8014117ed6747e0db62a44126554bbdb1aecbbadc85e6e5311bfd06b1f2116e9"
+      },
+      {
+        "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_PairingMenu.c",
+        "sha256": "7607bb76f5f593ddcdab6c4f26944eb5fe6c8d466ecc6ffb44b7101168227920"
+      },
+      {
+        "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_RosterMenu.c",
+        "sha256": "de5bcb0b277cb9243cdda439036a482bc89c183f1f2fa0156c455c75398c2762"
+      },
+      {
+        "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_TrackedBridge.c",
+        "sha256": "3b4845b69a0d52047e9526fea6c1dcec9765379e0666d3cac0ddf398a267b3c2"
+      },
+      {
+        "file": "UI/layouts/JSOC_ORBAT_GM.layout",
+        "sha256": "f3aedc6e6b7bd6741612eba86ec117b5e521a6345ab5142815d9fc21e0d27a0e"
+      },
+      {
+        "file": "UI/layouts/JSOC_ORBAT_Pairing.layout",
+        "sha256": "c2ad4fa824e54a397597ad39fd4b94da6e6cded598d6a499f6646238db7ac81c"
+      },
+      {
+        "file": "UI/layouts/JSOC_ORBAT_Roster.layout",
+        "sha256": "1d6c96f6e022cc89fd8513f2d989756c87e6eb66e3adf6b1fbdf4522d59cbccb"
+      }
+    ],
+    "results": [
+      {
+        "configuration": "PC",
+        "success": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "seconds": 13.67,
+        "sampledPeakWorkingSetMB": 955.1,
+        "scriptWarnings": [
+          "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(785): warning: 'GetPlayerPlatformKind' is obsolete",
+          "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(786): warning: 'GetPlayerPlatformId' is obsolete",
+          "Scripts/Game/Workshop/SCR_AddonManager.c(876): warning: 'GetRefCount' is obsolete: Will be removed",
+          "Scripts/Game/Campaign/SCR_PlayerProfileManagerComponent.c(142): warning: 'PlayerData' is obsolete",
+          "Scripts/Game/UI/Backend/CareerBackend.c(159): warning: 'GetDSSession' is obsolete",
+          "Scripts/Game/UI/Backend/CareerBackend.c(162): warning: 'RoomID' is obsolete",
+          "Scripts/Game/UI/Backend/CareerBackend.c(197): warning: 'GetDSSession' is obsolete",
+          "Scripts/Game/UI/Backend/CareerBackend.c(201): warning: 'RoomID' is obsolete",
+          "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(481): warning: 'GetStorage' is obsolete",
+          "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(483): warning: 'GetOnlineWritePrivilege' is obsolete",
+          "Scripts/Game/Utilities/SCR_PlayerIdentityUtils.c(20): warning: 'GetPlayerIdentityId' is obsolete",
+          "Scripts/Game/UI/Menu/MainMenuUI.c(643): warning: 'GetNotifyCount' is obsolete: Will be substitued by Notification Api.",
+          "Scripts/Game/UI/Menu/MainMenuUI.c(645): warning: 'GetNotifyItem' is obsolete: Will be substitued by Notification Api.",
+          "Scripts/Game/DataCollection/PlayerData/SCR_PlayerData.c(210): warning: 'PlayerData' is obsolete"
+        ]
+      },
+      {
+        "configuration": "WORKBENCH",
+        "success": true,
+        "exitCode": 0,
+        "timedOut": false,
+        "seconds": 7.99,
+        "sampledPeakWorkingSetMB": 964.5,
+        "scriptWarnings": [
+          "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(785): warning: 'GetPlayerPlatformKind' is obsolete",
+          "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(786): warning: 'GetPlayerPlatformId' is obsolete",
+          "Scripts/Game/Workshop/SCR_AddonManager.c(876): warning: 'GetRefCount' is obsolete: Will be removed",
+          "Scripts/Game/Campaign/SCR_PlayerProfileManagerComponent.c(142): warning: 'PlayerData' is obsolete",
+          "Scripts/Game/UI/Backend/CareerBackend.c(159): warning: 'GetDSSession' is obsolete",
+          "Scripts/Game/UI/Backend/CareerBackend.c(162): warning: 'RoomID' is obsolete",
+          "Scripts/Game/UI/Backend/CareerBackend.c(197): warning: 'GetDSSession' is obsolete",
+          "Scripts/Game/UI/Backend/CareerBackend.c(201): warning: 'RoomID' is obsolete",
+          "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(481): warning: 'GetStorage' is obsolete",
+          "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(483): warning: 'GetOnlineWritePrivilege' is obsolete",
+          "Scripts/Game/Utilities/SCR_PlayerIdentityUtils.c(20): warning: 'GetPlayerIdentityId' is obsolete",
+          "Scripts/Game/UI/Menu/MainMenuUI.c(643): warning: 'GetNotifyCount' is obsolete: Will be substitued by Notification Api.",
+          "Scripts/Game/UI/Menu/MainMenuUI.c(645): warning: 'GetNotifyItem' is obsolete: Will be substitued by Notification Api.",
+          "Scripts/Game/DataCollection/PlayerData/SCR_PlayerData.c(210): warning: 'PlayerData' is obsolete"
+        ]
+      }
+    ],
+    "worldStarted": false
+  },
+  "regression": {
+    "tests": 219,
+    "passed": 219,
+    "failed": 0
+  },
+  "performance": {
+    "scope": "Same 60 synthetic completed one-root requests; 100 warmups then 1000 command-status serializations; no map FPS or network-latency claims",
+    "previous": {
+      "bytes": 10126,
+      "medianMs": 0.18139999999999645,
+      "p95Ms": 0.25720000000001164,
+      "maxMs": 0.41339999999999577,
+      "groups": 60,
+      "targetLabels": 60
+    },
+    "candidate": {
+      "bytes": 10143,
+      "medianMs": 0.1816000000000031,
+      "p95Ms": 0.26640000000003283,
+      "maxMs": 0.5668000000000006,
+      "groups": 60,
+      "targetLabels": 60
+    },
+    "automaticStatusPolling": false,
+    "missionWrites": 0
+  }
+}

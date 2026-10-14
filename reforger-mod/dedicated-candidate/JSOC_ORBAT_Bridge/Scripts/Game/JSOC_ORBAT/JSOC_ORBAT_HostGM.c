@@ -51,10 +51,11 @@ class JSOC_ORBAT_HostGM
     protected bool m_Busy;
     protected bool m_LegacyRelay;
     protected bool m_OrdersAllowed;
+    protected int m_CapabilityMode;
     protected string m_Expected;
     ref JSOC_ORBAT_GMRecord Pending;
     string Status = "No GM request loaded";
-    void Pair(string endpoint, string code) { Stop(); m_LegacyRelay = false; m_OrdersAllowed = false; m_Context = GetGame().GetRestApi().GetContext(endpoint); if (m_Context) m_Context.SetTimeout(5); m_Code = code; }
+    void Pair(string endpoint, string code) { Stop(); m_LegacyRelay = false; m_OrdersAllowed = false; m_CapabilityMode = 2; m_Context = GetGame().GetRestApi().GetContext(endpoint); if (m_Context) m_Context.SetTimeout(5); m_Code = code; }
     void Stop() { if (m_Callback) { m_Callback.Stopped = true; m_Callback.Owner = null; } m_Callback = null; m_Context = null; m_Code = ""; m_Busy = false; m_OrdersAllowed = false; Pending = null; }
     void Post(string action, string body)
     {
@@ -66,7 +67,8 @@ class JSOC_ORBAT_HostGM
     {
         Status = "Checking paired GM requests";
         if (m_LegacyRelay) Post("poll",string.Format("{\"token\":\"%1\"}",m_Code));
-        else Post("poll",string.Format("{\"token\":\"%1\",\"capabilities\":[\"ai-orders-v1\"]}",m_Code));
+        else if (m_CapabilityMode == 1) Post("poll",string.Format("{\"token\":\"%1\",\"capabilities\":[\"ai-orders-v1\"]}",m_Code));
+        else Post("poll",string.Format("{\"token\":\"%1\",\"capabilities\":[\"ai-orders-v1\",\"ai-tactical-v1\"]}",m_Code));
     }
     bool CanApprove() { return Pending && Pending.request && !m_Busy; }
     string Preview(int index)
@@ -75,6 +77,8 @@ class JSOC_ORBAT_HostGM
         JSOC_ORBAT_GMRequest request = Pending.request;
         if (request.kind == "ai-move") return string.Format("MOVE AI infantry group %1 / planned unit %2\nDestination X %3 / Z %4\nReplaces only the previous Companion waypoint. Player-controlled or mounted groups are blocked. Arrival is not confirmed by acceptance.",request.targetRequestId,request.unitId,request.worldX,request.worldZ);
         if (request.kind == "ai-hold") return string.Format("HOLD AI infantry group %1 / planned unit %2\nWait at current leader position for %3 seconds. AI may still react to combat.\nPlayer-controlled or mounted groups are blocked.",request.targetRequestId,request.unitId,request.holdSeconds);
+        if (request.kind == "ai-defend") return string.Format("DEFEND infantry AI group %1 / planned unit %2\nX %3 / Z %4 for %5 seconds, using the native defend preset.\nApproval confirms installation, not arrival or successful defence.",request.targetRequestId,request.unitId,request.worldX,request.worldZ,request.holdSeconds);
+        if (request.kind == "ai-halt") return "CANCEL the Companion-owned movement/defend waypoint for group " + request.targetRequestId + " / unit " + request.unitId + ". Combat reactions remain enabled.";
         if (request.kind == "remove") return "REMOVE bridge-created group " + request.targetRequestId;
         if (index < 0 || index >= request.entities.Count()) return Status;
         JSOC_ORBAT_GMEntityIntent entity = request.entities[index];
@@ -95,7 +99,7 @@ class JSOC_ORBAT_HostGM
     void Complete(string action, int code, string data)
     {
         m_Busy = false;
-        if (action == "poll" && code == 409 && !m_LegacyRelay) { m_LegacyRelay = true; m_OrdersAllowed = false; Poll(); return; }
+        if (action == "poll" && code == 409 && !m_LegacyRelay) { m_CapabilityMode--; m_LegacyRelay = m_CapabilityMode <= 0; m_OrdersAllowed = false; Poll(); return; }
         if (code != 200) { Status = "GM relay rejected request or connection unavailable"; return; }
         if (action == "poll" && !m_LegacyRelay) m_OrdersAllowed = true;
         if (action == "result") { Status = "GM result acknowledged by Companion relay"; Pending = null; return; }
@@ -108,7 +112,7 @@ class JSOC_ORBAT_HostGM
             ExecuteApproved(record.request); return;
         }
         Pending = record;
-        if (record.request.kind == "ai-move" || record.request.kind == "ai-hold") Status = "Pending infantry AI order. Review target and waypoint before approving.";
+        if (record.request.kind == "ai-move" || record.request.kind == "ai-hold" || record.request.kind == "ai-defend" || record.request.kind == "ai-halt") Status = "Pending infantry AI order. Review target and waypoint before approving.";
         else Status = string.Format("Pending %1 request %2 (%3 units). Review before approving.", record.request.kind, record.request.requestId, record.request.entities.Count());
     }
     protected bool SafeKey(string value)
@@ -132,7 +136,7 @@ class JSOC_ORBAT_HostGM
         string cached;
         if (m_Results.Find(request.requestId, cached)) { Post("result", cached); return; }
         if (m_Results.Count() >= 100) { Status = "Scene GM command budget reached"; return; }
-        if (request.kind == "ai-move" || request.kind == "ai-hold") { ExecuteAIOrder(request); return; }
+        if (request.kind == "ai-move" || request.kind == "ai-hold" || request.kind == "ai-defend" || request.kind == "ai-halt") { ExecuteAIOrder(request); return; }
         if (request.version != 1) { Report(request.requestId,"failed","Unsupported GM version for this action",""); return; }
         if (request.kind == "remove")
         {
@@ -198,8 +202,8 @@ class JSOC_ORBAT_HostGM
     protected void ExecuteAIOrder(JSOC_ORBAT_GMRequest request)
     {
         if (request.version != 2 || !m_OrdersAllowed || !SafeKey(request.targetRequestId) || request.targetRequestId.Length() > 40 || !SafeKey(request.unitId)) { Report(request.requestId,"failed","AI order requires the updated paired mod and a safe target",""); return; }
-        if (request.kind == "ai-move" && (!(request.worldX >= 0 && request.worldX <= 13500) || !(request.worldZ >= 0 && request.worldZ <= 13500))) { Report(request.requestId,"failed","AI destination is outside supported Everon bounds",""); return; }
-        if (request.kind == "ai-hold" && (request.holdSeconds < 5 || request.holdSeconds > 300)) { Report(request.requestId,"failed","Hold duration must be 5 to 300 seconds",""); return; }
+        if ((request.kind == "ai-move" || request.kind == "ai-defend") && (!(request.worldX >= 0 && request.worldX <= 13500) || !(request.worldZ >= 0 && request.worldZ <= 13500))) { Report(request.requestId,"failed","AI destination is outside supported Everon bounds",""); return; }
+        if ((request.kind == "ai-hold" || request.kind == "ai-defend") && (request.holdSeconds < 5 || request.holdSeconds > 300)) { Report(request.requestId,"failed","Hold duration must be 5 to 300 seconds",""); return; }
         JSOC_ORBAT_GMSpawnGroup ownedBatch;
         if (!m_Owned.Find(request.targetRequestId,ownedBatch)) { Report(request.requestId,"failed","Only bridge-created groups can receive AI orders",""); return; }
         int index = ownedBatch.UnitIds.Find(request.unitId);
@@ -208,7 +212,16 @@ class JSOC_ORBAT_HostGM
         ownedBatch.Orders.Find(request.unitId,previous);
         string problem = JSOC_ORBAT_AIOrders.Check(group,previous);
         if (!problem.IsEmpty()) { Report(request.requestId,"failed",problem,""); return; }
-        AIWaypoint waypoint = JSOC_ORBAT_AIOrders.Create(request,group);
+        if ((request.kind == "ai-defend" || request.kind == "ai-halt") && m_CapabilityMode != 2) { Report(request.requestId,"failed","Paired relay did not negotiate tactical AI support",""); return; }
+        if (request.kind == "ai-halt")
+        {
+            if (!previous) { Report(request.requestId,"executed","No active Companion waypoint; combat reactions remain enabled",""); return; }
+            if (!COMMAND_ORBAT_TacticalOrders.CancelOwnedMovement(group,previous)) { Report(request.requestId,"failed","Owned waypoint cancellation could not be confirmed",""); return; }
+            ownedBatch.Orders.Remove(request.unitId); Report(request.requestId,"executed","Companion waypoint cancelled; combat reactions remain enabled",""); return;
+        }
+        AIWaypoint waypoint;
+        if (request.kind == "ai-defend") waypoint = COMMAND_ORBAT_TacticalOrders.CreateDefend(group,previous,request.worldX,request.worldZ,request.holdSeconds);
+        else waypoint = JSOC_ORBAT_AIOrders.Create(request,group);
         if (!waypoint) { Report(request.requestId,"failed","Required native waypoint is unavailable; previous order retained",""); return; }
         // The old waypoint is left intact until validation and new-resource creation succeed.
         if (previous) group.RemoveWaypoint(previous);
@@ -223,6 +236,7 @@ class JSOC_ORBAT_HostGM
         ownedBatch.Orders.Set(request.unitId,waypoint);
         if (previous) SCR_EntityHelper.DeleteEntityAndChildren(previous);
         if (request.kind == "ai-move") Report(request.requestId,"executed","AI move waypoint accepted; arrival is not confirmed","");
+        else if (request.kind == "ai-defend") Report(request.requestId,"executed","Native defend waypoint accepted; arrival and combat outcome are unconfirmed","");
         else Report(request.requestId,"executed","Timed AI hold waypoint accepted; combat reactions remain possible","");
     }
     protected void Report(string id, string status, string message, string ids)

@@ -26,6 +26,7 @@ class JSOC_ORBAT_AIOrders
     static string Check(SCR_AIGroup group, AIWaypoint ownedWaypoint)
     {
         if (!group) return "Target must be a bridge-created infantry AI group";
+        if (!group.GetGroupUtilityComponent()) return "Native group AI utility and waypoint processing are unavailable";
         if (PlayerOccupies(group)) return "Group control is unavailable or a player occupies this group";
         array<AIAgent> agents = {}; group.GetAgents(agents);
         if (agents.Count() < 1 || agents.Count() > 16) return "Order supports 1 to 16 resolved infantry AI members";
@@ -45,6 +46,7 @@ class JSOC_ORBAT_AIOrders
     }
     static AIWaypoint Create(JSOC_ORBAT_GMRequest request, SCR_AIGroup group)
     {
+        if (!request || !group || (request.kind != "ai-move" && request.kind != "ai-hold")) return null;
         ResourceName name = MOVE;
         vector position = Vector(request.worldX, 0, request.worldZ);
         if (request.kind == "ai-hold") { name = WAIT; position = group.GetLeaderEntity().GetOrigin(); }
@@ -54,7 +56,7 @@ class JSOC_ORBAT_AIOrders
         Math3D.AnglesToMatrix(Vector(0,0,0),parameters.Transform);
         parameters.Transform[3] = Vector(position[0],GetGame().GetWorld().GetSurfaceY(position[0],position[2]),position[2]);
         IEntity entity = GetGame().SpawnEntityPrefab(resource,GetGame().GetWorld(),parameters);
-        AIWaypoint waypoint = AIWaypoint.Cast(entity);
+        SCR_AIWaypoint waypoint = SCR_AIWaypoint.Cast(entity);
         if (!waypoint) { if (entity) SCR_EntityHelper.DeleteEntityAndChildren(entity); return null; }
         waypoint.SetCompletionRadius(5);
         if (request.kind == "ai-hold")
