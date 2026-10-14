@@ -1,8 +1,8 @@
 # Reviewed Arma 3 class-to-prefab mappings
 
-This next source checkpoint adds reusable, explicit resource mappings to the migration review. It is available in the separate COMMAND-Class-Map-Candidate, not in the unchanged published dev.gm.7 ZIP. The candidate uses the existing dev.gm.7 runtime and compatibility identifiers; it is not a new public release/tag.
+These features are included in COMMAND 2.9.1-dev.gm.8, in the COMMAND-Mission-Migration Windows package. Earlier dev.gm.7 downloads remain unchanged. Compatibility identifiers are preserved.
 
-1. Close the older Companion before switching test builds. Back up your current operation. Open COMMAND Planner.exe in the separate class-map candidate folder.
+1. Close the older Companion before switching test builds. Back up your current operation. Open COMMAND Planner.exe inside COMMAND-Mission-Migration.
 2. In Assets → Arma 3 migration review, inspect your SQF/SQM/EXT/HPP files. Expand Arma 3 asset mappings.
 3. Load target resource index. Start with the COMMAND Vanilla-Assets bundle's Start-Here/01-Operational-Assets-Resource-Index.json (2,721 identities), or your reviewed modded index.
 4. Choose a detected source class. Search target prefabs by name/path/GUID, and select Troops, Armoured vehicles or another type filter. Cards are paged at 20; source classes at 10. Templates and variants are hidden unless explicitly included.

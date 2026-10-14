@@ -1,6 +1,6 @@
 # Supported-pattern migration mission drafts
 
-This source checkpoint extends the separate mapping candidate with bounded supported-pattern parsing and non-executable neutral intent drafts. Published releases and earlier test copies remain unchanged. The new executable is work/sqf-intent-draft/COMMAND-Mission-Draft-Candidate/COMMAND Planner.exe under A:/Everon-ORBAT-Development.
+These features are included in COMMAND 2.9.1-dev.gm.8, in the COMMAND-Mission-Migration Windows package. Earlier dev.gm.7 downloads remain unchanged. Compatibility identifiers are preserved.
 
 ## Workflow
 
