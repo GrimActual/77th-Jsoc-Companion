@@ -1,4 +1,4 @@
-# 77th JSOC ORBAT Planner v2.8.1
+# COMMAND ORBAT / Mission Planner v2.8.1
 
 ## Added
 - Settings sliders (50–200%) for interface scale, map icons, map labels, route/boundary thickness and presentation-export symbols/labels. Adaptive zoom scaling can be switched off. Preferences stay on this device; coordinates and saved object styles are unchanged.
@@ -21,7 +21,7 @@
 - Optional `operation.timing` is additive to schema v4. Older releases may discard the timer/log when resaving. Existing files without timing remain unchanged.
 
 ## Install
-Extract the entire Windows ZIP to a new folder, then run `Everon ORBAT Planner.exe`. Keep all files and both resource folders together. Export a Project JSON backup before moving between versions. The source ZIP is for GitHub and development; do not upload the installed mod's PAK or research script copies.
+Extract the entire Windows ZIP to a new folder, then run `COMMAND Planner.exe`. Keep all files and both resource folders together. Export a Project JSON backup before moving between versions. The source ZIP is for GitHub and development; do not upload the installed mod's PAK or research script copies.
 
 ## Verification
 45 automated checks cover existing plan/asset round-trips, editing, backend safeguards, translations, export scopes, lifecycle and the new timer, CSV and scaling preferences. Desktop checks cover the actual installed mod, all five objective templates, AO filtering, Undo/Redo, native interface scaling, persistence, CSV downloads and malformed imports. Presentation checks cover PNG/JPEG/PDF/SVG. Packaged release checks and ZIP integrity results are recorded in TEST-RESULTS.md.
