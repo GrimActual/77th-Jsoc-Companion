@@ -37,6 +37,7 @@ function install({app,ipcMain,getWindow,indexURL,clipboard}){
  ipcMain.handle('local-bridge-command',async(event,action,options)=>{
   const w=getWindow();if(!w||event.sender!==w.webContents||event.senderFrame!==event.sender.mainFrame||event.senderFrame.url!==indexURL)throw Error('Unexpected sender');
   if(action==='gm-request'){return active.gm('request',require('./bridge-runtime/gm-commands').fromIntent(require('./deployment-intent').validate(options.intent),options.requestId));}
+  if(action==='gm-order'){const request=require('./bridge-runtime/ai-orders-contract').validate(options?.request);return active.gm('request',request);}
   if(action==='gm-cancel')return active.gm('cancel',options.requestId);
   if(action==='gm-status')return active.gm('status');
   if(action==='gm-remove'){return active.gm('request',{version:1,requestId:options.requestId,kind:'remove',targetRequestId:options.targetRequestId});}

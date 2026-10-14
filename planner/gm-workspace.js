@@ -20,6 +20,7 @@
  const inspectorButton=button('gmWorkspaceInspector','Inspector',()=>toggleDrawer('inspector'));
  const editorButton=button('gmWorkspaceEditor','Editor',()=>{editor=!editor;layout();});
  button('gmWorkspaceDeployment','Review deployment',openDeployment);
+ button('gmWorkspaceAIOrders','Native AI orders',()=>{showEditor('units');window.CompanionAIOrders?.open();});
  const resultButton=button('gmWorkspaceResults','Request results',()=>{openDeployment();$('deploymentGMStatus').click();});
  button('gmWorkspaceOffline','Offline rehearsal',()=>showEditor('gm'));
  const pauseButton=button('gmWorkspacePause','Pause rehearsal',()=>{if(!$('gmPause').disabled)$('gmPause').click();});
@@ -55,7 +56,7 @@
  // Prevent a narrow overlay editor from obscuring the open inspector.
  window.addEventListener('resize',layout);
  document.querySelector('.tabs').addEventListener('click',e=>{if(P.get().gmWorkspace&&e.target.closest('[data-tab]')){editor=true;layout();}},true);
- document.addEventListener('keydown',e=>{if(e.key!=='Escape'||e.isComposing||!P.get().gmWorkspace||body.classList.contains('briefing-mode')||document.querySelector('dialog[open]')||e.target.closest('input,textarea,select'))return;if(editor){editor=false;layout();editorButton.focus();}else if(!assets.box.hidden){save('gmAssetDrawer',false);assetsButton.focus();}else if(!inspector.box.hidden){save('gmInspector',false);inspectorButton.focus();}else return;e.preventDefault();e.stopImmediatePropagation();},true);
+ document.addEventListener('keydown',e=>{if(window.EveronPlanner?.isChoosingOrderDestination?.())return;if(e.key!=='Escape'||e.isComposing||!P.get().gmWorkspace||body.classList.contains('briefing-mode')||document.querySelector('dialog[open]')||e.target.closest('input,textarea,select'))return;if(editor){editor=false;layout();editorButton.focus();}else if(!assets.box.hidden){save('gmAssetDrawer',false);assetsButton.focus();}else if(!inspector.box.hidden){save('gmInspector',false);inspectorButton.focus();}else return;e.preventDefault();e.stopImmediatePropagation();},true);
  const section=$('gmSettingsPanel'),check=document.createElement('label');check.className='check';const input=document.createElement('input');input.type='checkbox';input.id='pref-gmWorkspace';input.dataset.pref='gmWorkspace';const text=document.createElement('span');labels.set(text,'Enable compact GM workspace');check.append(input,text);section.prepend(check);button('gmWorkspaceSettingsOpen','Open compact GM workspace',()=>{$('settingsClose').click();editor=false;save('gmWorkspace',true);toggle.focus();},section);
  window.CompanionGMWorkspace={open(){save('gmWorkspace',true);},refresh:refreshInspector};layout();
 })();

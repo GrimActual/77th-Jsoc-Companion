@@ -1,0 +1,233 @@
+{
+  "UI-TEST.json": {
+    "success": true,
+    "offlineStartup": true,
+    "capabilityGate": true,
+    "stalePlanAndFormRejection": true,
+    "currentPairingIsolation": true,
+    "destinationAlignment": true,
+    "missionUnchanged": true,
+    "compactPickerEscapeAndClick": true,
+    "namesRenderedAsText": true,
+    "locales": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "explicitSendAndCancelMocked": true,
+    "nativeCommandsExecuted": false,
+    "rendererErrors": []
+  },
+  "NATIVE-TEST.json": {
+    "scope": "Isolated native server, synthetic infantry group, loopback relay, no game client or real players",
+    "success": true,
+    "arrivalTested": false,
+    "move": "AI move waypoint accepted; arrival is not confirmed",
+    "hold": "Timed AI hold waypoint accepted; combat reactions remain possible",
+    "seconds": 16.35,
+    "oneWaypointAfterReplacement": true,
+    "nativeHoldSeconds": 60,
+    "foreignWaypointRejectedAndRetained": true,
+    "ownedRemoval": true,
+    "serverScriptErrors": false,
+    "sampledPeakServerMB": 662.69921875,
+    "serverAndRelayStopped": true,
+    "privatePairingFileCleared": true
+  },
+  "PERFORMANCE-TEST.json": {
+    "scope": "Same 60 synthetic completed one-root requests; 100 warmups then 1000 command-status serializations; no map FPS or network-latency claims",
+    "previous": {
+      "bytes": 6292,
+      "medianMs": 0.06969999999999743,
+      "p95Ms": 0.08639999999999759,
+      "maxMs": 0.24660000000000082,
+      "groups": 60,
+      "targetLabels": 0
+    },
+    "candidate": {
+      "bytes": 10112,
+      "medianMs": 0.1893000000000029,
+      "p95Ms": 0.2807999999999993,
+      "maxMs": 0.3973000000000013,
+      "groups": 60,
+      "targetLabels": 60
+    },
+    "automaticStatusPolling": false,
+    "missionWrites": 0
+  },
+  "regression": {
+    "tests": 215,
+    "passed": 215,
+    "failed": 0,
+    "ranOnceBeforePackaging": true
+  },
+  "nativeCompilation": {
+    "PC": {
+      "source": [
+        {
+          "file": "addon.gproj",
+          "sha256": "b2fb398bacfb82613cf129c75c49c1268a7d6cb56c8bf274a86629500d564095"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_AIOrders.c",
+          "sha256": "d79f1062b40af57023932a917391f52b4c34048afcb58e847f6e3312b5f00790"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_DedicatedBridge.c",
+          "sha256": "70316de3b93af276733d3130fa1186556604c3083adea6c5e1b1b29927556055"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_GMMenu.c",
+          "sha256": "07bcc79bb9c64d11abbeb8ee93b83a5ca699d667e622ca864790a53cfc224b13"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostBridge.c",
+          "sha256": "6bc544cbb4950eef8d6d493f2577eefc3f346ddc1d7d81dfe7f1e72f2f4586a9"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostGM.c",
+          "sha256": "a75cfb0e591054a9ff910d432861d1cf1ade93d4ddbe0293705461a44c9d3387"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostMixed.c",
+          "sha256": "8014117ed6747e0db62a44126554bbdb1aecbbadc85e6e5311bfd06b1f2116e9"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_PairingMenu.c",
+          "sha256": "7607bb76f5f593ddcdab6c4f26944eb5fe6c8d466ecc6ffb44b7101168227920"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_RosterMenu.c",
+          "sha256": "de5bcb0b277cb9243cdda439036a482bc89c183f1f2fa0156c455c75398c2762"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_TrackedBridge.c",
+          "sha256": "3b4845b69a0d52047e9526fea6c1dcec9765379e0666d3cac0ddf398a267b3c2"
+        },
+        {
+          "file": "UI/layouts/JSOC_ORBAT_GM.layout",
+          "sha256": "f3aedc6e6b7bd6741612eba86ec117b5e521a6345ab5142815d9fc21e0d27a0e"
+        },
+        {
+          "file": "UI/layouts/JSOC_ORBAT_Pairing.layout",
+          "sha256": "c2ad4fa824e54a397597ad39fd4b94da6e6cded598d6a499f6646238db7ac81c"
+        },
+        {
+          "file": "UI/layouts/JSOC_ORBAT_Roster.layout",
+          "sha256": "1d6c96f6e022cc89fd8513f2d989756c87e6eb66e3adf6b1fbdf4522d59cbccb"
+        }
+      ],
+      "results": [
+        {
+          "configuration": "PC",
+          "success": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "seconds": 24.58,
+          "sampledPeakWorkingSetMB": 947.7,
+          "scriptWarnings": [
+            "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(785): warning: 'GetPlayerPlatformKind' is obsolete",
+            "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(786): warning: 'GetPlayerPlatformId' is obsolete",
+            "Scripts/Game/Workshop/SCR_AddonManager.c(876): warning: 'GetRefCount' is obsolete: Will be removed",
+            "Scripts/Game/Campaign/SCR_PlayerProfileManagerComponent.c(142): warning: 'PlayerData' is obsolete",
+            "Scripts/Game/UI/Backend/CareerBackend.c(159): warning: 'GetDSSession' is obsolete",
+            "Scripts/Game/UI/Backend/CareerBackend.c(162): warning: 'RoomID' is obsolete",
+            "Scripts/Game/UI/Backend/CareerBackend.c(197): warning: 'GetDSSession' is obsolete",
+            "Scripts/Game/UI/Backend/CareerBackend.c(201): warning: 'RoomID' is obsolete",
+            "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(481): warning: 'GetStorage' is obsolete",
+            "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(483): warning: 'GetOnlineWritePrivilege' is obsolete",
+            "Scripts/Game/Utilities/SCR_PlayerIdentityUtils.c(20): warning: 'GetPlayerIdentityId' is obsolete",
+            "Scripts/Game/UI/Menu/MainMenuUI.c(643): warning: 'GetNotifyCount' is obsolete: Will be substitued by Notification Api.",
+            "Scripts/Game/UI/Menu/MainMenuUI.c(645): warning: 'GetNotifyItem' is obsolete: Will be substitued by Notification Api.",
+            "Scripts/Game/DataCollection/PlayerData/SCR_PlayerData.c(210): warning: 'PlayerData' is obsolete"
+          ]
+        }
+      ],
+      "worldStarted": false
+    },
+    "WORKBENCH": {
+      "source": [
+        {
+          "file": "addon.gproj",
+          "sha256": "b2fb398bacfb82613cf129c75c49c1268a7d6cb56c8bf274a86629500d564095"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_AIOrders.c",
+          "sha256": "d79f1062b40af57023932a917391f52b4c34048afcb58e847f6e3312b5f00790"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_DedicatedBridge.c",
+          "sha256": "70316de3b93af276733d3130fa1186556604c3083adea6c5e1b1b29927556055"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_GMMenu.c",
+          "sha256": "07bcc79bb9c64d11abbeb8ee93b83a5ca699d667e622ca864790a53cfc224b13"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostBridge.c",
+          "sha256": "6bc544cbb4950eef8d6d493f2577eefc3f346ddc1d7d81dfe7f1e72f2f4586a9"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostGM.c",
+          "sha256": "a75cfb0e591054a9ff910d432861d1cf1ade93d4ddbe0293705461a44c9d3387"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostMixed.c",
+          "sha256": "8014117ed6747e0db62a44126554bbdb1aecbbadc85e6e5311bfd06b1f2116e9"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_PairingMenu.c",
+          "sha256": "7607bb76f5f593ddcdab6c4f26944eb5fe6c8d466ecc6ffb44b7101168227920"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_RosterMenu.c",
+          "sha256": "de5bcb0b277cb9243cdda439036a482bc89c183f1f2fa0156c455c75398c2762"
+        },
+        {
+          "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_TrackedBridge.c",
+          "sha256": "3b4845b69a0d52047e9526fea6c1dcec9765379e0666d3cac0ddf398a267b3c2"
+        },
+        {
+          "file": "UI/layouts/JSOC_ORBAT_GM.layout",
+          "sha256": "f3aedc6e6b7bd6741612eba86ec117b5e521a6345ab5142815d9fc21e0d27a0e"
+        },
+        {
+          "file": "UI/layouts/JSOC_ORBAT_Pairing.layout",
+          "sha256": "c2ad4fa824e54a397597ad39fd4b94da6e6cded598d6a499f6646238db7ac81c"
+        },
+        {
+          "file": "UI/layouts/JSOC_ORBAT_Roster.layout",
+          "sha256": "1d6c96f6e022cc89fd8513f2d989756c87e6eb66e3adf6b1fbdf4522d59cbccb"
+        }
+      ],
+      "results": [
+        {
+          "configuration": "WORKBENCH",
+          "success": true,
+          "exitCode": 0,
+          "timedOut": false,
+          "seconds": 8.03,
+          "sampledPeakWorkingSetMB": 963.6,
+          "scriptWarnings": [
+            "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(785): warning: 'GetPlayerPlatformKind' is obsolete",
+            "Scripts/Game/Editor/Components/EditableEntity/SCR_EditableEntityComponent.c(786): warning: 'GetPlayerPlatformId' is obsolete",
+            "Scripts/Game/Workshop/SCR_AddonManager.c(876): warning: 'GetRefCount' is obsolete: Will be removed",
+            "Scripts/Game/Campaign/SCR_PlayerProfileManagerComponent.c(142): warning: 'PlayerData' is obsolete",
+            "Scripts/Game/UI/Backend/CareerBackend.c(159): warning: 'GetDSSession' is obsolete",
+            "Scripts/Game/UI/Backend/CareerBackend.c(162): warning: 'RoomID' is obsolete",
+            "Scripts/Game/UI/Backend/CareerBackend.c(197): warning: 'GetDSSession' is obsolete",
+            "Scripts/Game/UI/Backend/CareerBackend.c(201): warning: 'RoomID' is obsolete",
+            "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(481): warning: 'GetStorage' is obsolete",
+            "Scripts/Game/DataCollection/SCR_DataCollectorComponent.c(483): warning: 'GetOnlineWritePrivilege' is obsolete",
+            "Scripts/Game/Utilities/SCR_PlayerIdentityUtils.c(20): warning: 'GetPlayerIdentityId' is obsolete",
+            "Scripts/Game/UI/Menu/MainMenuUI.c(643): warning: 'GetNotifyCount' is obsolete: Will be substitued by Notification Api.",
+            "Scripts/Game/UI/Menu/MainMenuUI.c(645): warning: 'GetNotifyItem' is obsolete: Will be substitued by Notification Api.",
+            "Scripts/Game/DataCollection/PlayerData/SCR_PlayerData.c(210): warning: 'PlayerData' is obsolete"
+          ]
+        }
+      ],
+      "worldStarted": false
+    }
+  },
+  "nativeRuntimeSourceNote": "Runtime lifecycle gate preceded a final review-header wording correction; final production source subsequently compiled for PC and Workbench. Execution logic unchanged."
+}

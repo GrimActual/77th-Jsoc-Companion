@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:command:native-ai-order:v2",
+  "title": "Host-reviewed native AI order",
+  "oneOf": [
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "requestId",
+        "targetRequestId",
+        "unitId",
+        "kind",
+        "worldX",
+        "worldZ"
+      ],
+      "properties": {
+        "version": {
+          "const": 2
+        },
+        "requestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,40}$"
+        },
+        "targetRequestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,40}$"
+        },
+        "unitId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        },
+        "kind": {
+          "const": "ai-move"
+        },
+        "worldX": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 13500
+        },
+        "worldZ": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 13500
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "requestId",
+        "targetRequestId",
+        "unitId",
+        "kind",
+        "holdSeconds"
+      ],
+      "properties": {
+        "version": {
+          "const": 2
+        },
+        "requestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,40}$"
+        },
+        "targetRequestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,40}$"
+        },
+        "unitId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        },
+        "kind": {
+          "const": "ai-hold"
+        },
+        "holdSeconds": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 300
+        }
+      }
+    }
+  ]
+}

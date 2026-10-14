@@ -65,3 +65,7 @@ COMMAND is an independent community project. The supplied COMMAND artwork replac
 [Download the COMMAND 2.9.1-dev.gm.2 pilot and vanilla assets](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/releases/tag/v2.9.1-dev.gm.2-command). This is a development pilot, with host-approved spawn/remove requests and the verified placement correction; it is not a stable full Game Master release. Workshop bridge 0.4.1 is the matching branding update, retaining addon ID 6A969EB0C5012BB9.
 
 The vanilla snapshot contains 19,438 unique prefab identities. Start with the 2,721-entry operational catalog and its matching resource index. [Import instructions](docs/VANILLA-ASSETS.md) explain complete category files, metadata limits and older rifleman test compatibility. Modded assets retain their separate reviewed import workflow.
+
+## Latest development pilot
+
+[COMMAND 2.9.1-dev.gm.5](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/releases/tag/v2.9.1-dev.gm.5-command) adds host-reviewed Move and timed Hold for bridge-created infantry AI groups with matching Workshop candidate 0.5.0. It retains the searchable vanilla assets, compact workspace and opt-in mixed tracking pilot. Native waypoint acceptance was tested; actual arrival is still a Host Local gate. See [instructions and limitations](docs/NATIVE-AI-ORDERS-PILOT.md).

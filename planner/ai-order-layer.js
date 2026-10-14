@@ -1,0 +1,2 @@
+"use strict";
+(()=>{let layer;window.CompanionAIOrderLayer={attach(map){layer=L.layerGroup().addTo(map);}};window.addEventListener('gm-order-destination',e=>{if(!layer)return;layer.clearLayers();const p=e.detail;if(p)L.circleMarker([p.worldZ+50,p.worldX+50],{radius:9,color:'#ebc66f',fillOpacity:.25,weight:2,dashArray:'3 3',interactive:false}).addTo(layer).bindTooltip(PlannerI18n.t('AI order destination'));});})();
