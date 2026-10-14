@@ -9,7 +9,7 @@
  <label>1. Address — paste into the GAME’s first field<input id="bridgeAddress" readonly autocomplete="off" spellcheck="false"></label><button id="bridgeCopyAddress" type="button">Copy address</button>
  <label>2. Pairing code — paste into the GAME’s second field<input id="localBridgeToken" readonly autocomplete="off" spellcheck="false"></label><button id="bridgeCopyCode" type="button">Copy pairing code</button>
  <p id="bridgeCopyStatus" role="status"></p>
- <p>In Reforger, press Escape → ORBAT PLANNER – HOST PAIRING. Paste the address and code, click CONNECT, resume, and control a soldier. Keep this planner and your PC running.</p>
+ <p>In Reforger, press Escape → COMMAND – HOST PAIRING. Paste the address and code, click CONNECT, resume, and control a soldier. Keep this planner and your PC running.</p>
  <p id="localBridgePoint"></p><button id="localBridgeFit" type="button">Find live marker</button>
  <details><summary>Advanced: existing relay or local Workbench</summary><label>Existing HTTPS relay<input id="remoteBridgeEndpoint" type="url" placeholder="https://your-relay.example/" autocomplete="off" spellcheck="false"></label><button id="remoteBridgeStart" type="button">Connect via relay</button> <button id="localBridgeStart" type="button">Start local receiver</button></details>
  <p>Connection buttons take effect immediately. Closing or reloading the planner stops this connection. Starting again creates a new address and code. Codes expire after one hour. Stale positions disappear; your saved plan and exports are unchanged.</p>`;
