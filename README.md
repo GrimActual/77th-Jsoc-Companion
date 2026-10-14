@@ -59,3 +59,9 @@ Arma Reforger, Enfusion, and Bohemia Interactive are trademarks or registered tr
 ## Branding
 
 COMMAND is an independent community project. The supplied COMMAND artwork replaces the former crest. Compatibility identifiers, saved plans, user-chosen names and existing Workshop addon identity are retained.
+
+## COMMAND GM pilot and vanilla asset files
+
+[Download the COMMAND 2.9.1-dev.gm.2 pilot and vanilla assets](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/releases/tag/v2.9.1-dev.gm.2-command). This is a development pilot, with host-approved spawn/remove requests and the verified placement correction; it is not a stable full Game Master release. Workshop bridge 0.4.1 is the matching branding update, retaining addon ID 6A969EB0C5012BB9.
+
+The vanilla snapshot contains 19,438 unique prefab identities. Start with the 2,721-entry operational catalog and its matching resource index. [Import instructions](docs/VANILLA-ASSETS.md) explain complete category files, metadata limits and older rifleman test compatibility. Modded assets retain their separate reviewed import workflow.
