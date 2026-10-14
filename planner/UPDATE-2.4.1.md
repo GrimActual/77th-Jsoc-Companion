@@ -8,6 +8,6 @@ Callsigns, operation text, phase names, imported equipment names, IDs, mod metad
 
 Scope: technical validation/network diagnostics may remain English. Generated Discord brief and presentation legend labels remain English; place names are part of the map imagery. Translations have been functionally tested, but have not had an independent native-speaker review.
 
-Install: close the previous version, extract the entire Windows ZIP into a new folder, then launch Everon ORBAT Planner.exe. Keep a manual JSON backup of important plans.
+Install: close the previous version, extract the entire Windows ZIP into a new folder, then launch COMMAND Planner.exe. Keep a manual JSON backup of important plans.
 
 For contributors: translations.js contains English-source-to-French/German dictionaries; i18n.js localizes interface text only. Containers mixing user content and labels are excluded and localized explicitly in planner.js. Do not translate plan values or remove those exclusions. npm test includes translation/preference coverage.

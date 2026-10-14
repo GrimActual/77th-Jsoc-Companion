@@ -1,4 +1,4 @@
-# 77th JSOC — development roadmap, 10 October 2026
+# COMMAND — development roadmap, 10 October 2026
 
 ## Current tested increment: v2.6.0
 
