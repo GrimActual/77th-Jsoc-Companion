@@ -18,7 +18,7 @@ Alternatively deploy the included render.yaml as a Blueprint. Review that it say
 Official instructions: https://render.com/docs/web-services and https://render.com/docs/free . Free services sleep after 15 minutes without inbound traffic. Open /health and let the service wake before pairing if the first request times out. A service restart loses all temporary sessions; pair again. Run one instance only: sessions are held in memory and are not shared across replicas.
 
 ## 2. Open the new planner
-1. Extract Everon-ORBAT-Remote-Bridge-Test.zip completely, then run Everon ORBAT Planner.exe from that folder.
+1. Extract Everon-ORBAT-Remote-Bridge-Test.zip completely, then run COMMAND Planner.exe from that folder.
 2. Open the gear > Live bridge test.
 3. Enter the root HTTPS relay address and click Connect via relay.
 4. Copy the temporary pairing code. Keep the planner running. The code lasts up to one hour.
@@ -27,7 +27,7 @@ Official instructions: https://render.com/docs/web-services and https://render.c
 ## 3. Prepare and test the mod
 Use the existing project at A:/Everon-ORBAT-Development/mods/JSOC_ORBAT_Bridge. Validate and Reload Scripts once for the new endpoint-retention change. The sanitized mod ZIP excludes the old BridgeTest world and pairing secrets. It includes available layout metadata.
 Workshop publication and Host Local runtime tests are still required. Do not mark this as a verified release. Once the tested mod is published, download/enable it in Reforger on GeForce NOW, then Host Local a vanilla Everon scenario.
-Open Escape > ORBAT PLANNER - HOST PAIRING. Paste the SAME HTTPS root address and current planner pairing code. Click CONNECT, resume, and possess a character. Check the planner update count and marker as you move.
+Open Escape > COMMAND - HOST PAIRING. Paste the SAME HTTPS root address and current planner pairing code. Click CONNECT, resume, and possess a character. Check the planner update count and marker as you move.
 Disconnect should clear the planner marker. Re-pair after expiry, relay restart, or planner reload. Do not paste a pairing code into Workshop descriptions or saved world resources.
 
 ## Data and limits

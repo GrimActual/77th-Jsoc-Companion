@@ -4,7 +4,7 @@ Version 2.9.0-sim.1 · 11 October 2026. This is a separate test build, not a rep
 
 ## Try it
 
-1. Extract the entire `Everon-ORBAT-Phase-C-Simulation.zip` into a new folder. Run `Everon ORBAT Planner.exe` from that folder.
+1. Extract the entire `Everon-ORBAT-Phase-C-Simulation.zip` into a new folder. Run `COMMAND Planner.exe` from that folder.
 2. This build uses separate local storage (`Everon-ORBAT-PhaseC-Simulation`). Your regular operation is not automatically copied. If needed, export Project JSON from your regular planner and import a copy here, or import the included `feature-tour.json` from `resources/app`.
 3. Open the gear → **Game Connection**, or click **SIMULATION OFF** above the map.
 4. Check **Enable simulation**, then **Connect simulation**. Click **Fit simulated units** to see the demonstration area.

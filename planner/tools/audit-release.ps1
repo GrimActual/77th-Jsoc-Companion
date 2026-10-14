@@ -5,7 +5,7 @@ param(
 )
 $ErrorActionPreference='Stop'
 $folder=(Resolve-Path -LiteralPath $ReleaseFolder).Path
-$exe=Join-Path $folder 'Everon ORBAT Planner.exe'
+$exe=Join-Path $folder 'COMMAND Planner.exe'
 if (!(Test-Path -LiteralPath $exe -PathType Leaf)) { throw 'Planner EXE missing from release folder' }
 $signature=Get-AuthenticodeSignature -LiteralPath $exe
 $files=@(Get-ChildItem -LiteralPath $folder -Recurse -File | Sort-Object FullName | ForEach-Object {
