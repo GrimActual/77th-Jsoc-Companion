@@ -1,12 +1,12 @@
-# 77th JSOC Companion
+# COMMAND — ORBAT / Mission Planner
 
-Everon ORBAT Planner and the optional Arma Reforger bridge.
+COMMAND ORBAT / Mission Planner and the optional Arma Reforger bridge.
 
 Source snapshot: **2.4.3**. Planner code is in [`planner/`](planner/). Each version is preserved by a Git tag and a release with matching source archives.
 
 ## Download
 
-[Browse all releases](https://github.com/GrimActual/77th-Jsoc-Companion/releases). Historical builds retain their original versions. Experimental builds and release candidates are marked as prereleases.
+[Browse all releases](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/releases). Historical builds retain their original versions. Experimental builds and release candidates are marked as prereleases.
 
 ## Run from source
 

@@ -4,7 +4,7 @@
   "app": "Everon ORBAT Mapper",
   "operation": {
     "name": "FEATURE TOUR — OPTIONAL SAMPLE",
-    "taskForce": "77th JSOC",
+    "taskForce": "COMMAND",
     "version": "01",
     "briefing": "Optional demonstration of the planning tools. Import your own asset JSON to assign actual equipment. Toggle Phase I, II and III; drag tree entries; select routes and areas to edit them."
   },

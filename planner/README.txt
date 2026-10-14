@@ -1,4 +1,4 @@
-EVERON ORBAT PLANNER 2.0.0 — 77TH JSOC
+EVERON ORBAT PLANNER 2.0.0 — COMMAND
 
 START
 Extract the whole ZIP, including vendor/. With Node.js 18+ installed, open a
