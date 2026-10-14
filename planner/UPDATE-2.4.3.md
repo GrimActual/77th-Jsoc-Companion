@@ -33,6 +33,6 @@ These are local measurements, not a guaranteed frame rate. Network tile detail s
 
 ## Install
 
-Close the previous version, extract the entire Windows ZIP into a new folder and launch Everon ORBAT Planner.exe. Your local profile and manual JSON backups remain compatible.
+Close the previous version, extract the entire Windows ZIP into a new folder and launch COMMAND Planner.exe. Your local profile and manual JSON backups remain compatible.
 
 Reference: Electron graphics status terminology: https://www.electronjs.org/docs/latest/api/structures/gpu-feature-status/

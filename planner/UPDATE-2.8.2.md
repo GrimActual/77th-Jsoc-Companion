@@ -1,4 +1,4 @@
-# 77th JSOC ORBAT Planner v2.8.2 — Sarge field guide
+# COMMAND ORBAT / Mission Planner v2.8.2 — Sarge field guide
 
 Click **? Ask Sarge** in the bottom-right corner. Search for a feature (CSV, HVT, scale, backup), choose a topic, and use **Show me where** when available to open its panel. Previous/Next browse the filtered results; clearing the search restores all topics. Escape closes help.
 
