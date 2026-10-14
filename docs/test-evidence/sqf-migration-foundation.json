@@ -1,0 +1,45 @@
+{
+  "UI-TEST.json": {
+    "success": true,
+    "actualElectronWorker": true,
+    "filePickerAndDrop": true,
+    "rejectedInputRetainsReview": true,
+    "unsafeNamesAsText": true,
+    "locales": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "missionUnchanged": true,
+    "rendererErrors": [],
+    "sourceOnlyNotNativeExecution": true
+  },
+  "PERFORMANCE-TEST.json": {
+    "scope": "Headless static lexical scan; 20 files and 800 command findings, 10 warmups then 50 runs. Not whole-app FPS or RAM.",
+    "bytes": 31800,
+    "medianMs": 2.4284999999999854,
+    "p95Ms": 4.887000000000171,
+    "maxMs": 6.550999999999931,
+    "noMissionWrites": true,
+    "uiWorker": true
+  },
+  "RELEASE-SMOKE.json": {
+    "success": true,
+    "version": "2.9.1-dev.gm.7",
+    "offlineStartup": true,
+    "settingsShortcut": true,
+    "paging40": true,
+    "nativeJSONSave": true,
+    "saveDialogSelection": "automated test path; real native validation and filesystem write",
+    "nonExecutableExport": true
+  },
+  "REGRESSION-TEST.json": {
+    "exitCode": 0,
+    "tests": 226,
+    "passed": 226,
+    "failed": 0,
+    "scope": "Full release desktop/contract regression suite; native production scripts unchanged and prior evidence retained."
+  },
+  "nativeProductionSourceUnchanged": true,
+  "roadmapsAppendOnlyVerified": true
+}
