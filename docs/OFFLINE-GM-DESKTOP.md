@@ -1,6 +1,6 @@
 # Offline GM desktop increment — 13 October 2026
 
-Launch experiments/gm-desktop/Everon ORBAT Planner.exe. This development copy contains the new GM panel; the previously packaged Preview 1 ZIP does not. Export a mission backup before changing builds; the normal desktop profile is shared with the previous app unless you launch with a separate --user-data-dir.
+Launch experiments/gm-desktop/COMMAND Planner.exe. This development copy contains the new GM panel; the previously packaged Preview 1 ZIP does not. Export a mission backup before changing builds; the normal desktop profile is shared with the previous app unless you launch with a separate --user-data-dir.
 
 1. Open/import a plan containing units. Choose the new GM tab on the right.
 2. Click Create rehearsal from this plan for a small demonstration, or Load scenario JSON for a custom validated scenario.

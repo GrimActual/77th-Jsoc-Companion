@@ -14,7 +14,7 @@ The two-object runtime test preceded the final occupied-player removal guard and
 
 ## 1. Prepare the two applications
 
-1. On your PC, open **GM Control Pilot / Everon ORBAT Planner.exe** from the supplied pilot package. Keep published RC2 available separately.
+1. On your PC, open **GM Control Pilot / COMMAND Planner.exe** from the supplied pilot package. Keep published RC2 available separately.
 2. In Workbench on your PC, open the clean **JSOC_ORBAT_Bridge-0.4.0-pilot/addon.gproj** candidate supplied with this pilot. Keep the original GUID `6A969EB0C5012BB9` so this is an update of your existing Workshop mod. Save All, validate scripts, then File → Publish to Workshop. Use **0.4.0** as the test update version; describe it as experimental. Do not upload private server profile files or test world fixtures. This guide does not claim it is already published.
 3. On GeForce NOW, download/update that Workshop addon and enable it in **Host locally → Mods**. Use Game Master – Everon for the first test. The old 0.3.0 package will not show the new controls.
 
@@ -31,7 +31,7 @@ The two-object runtime test preceded the final occupied-player removal guard and
 
 ## 3. Reforger GAME: choose tracked units
 
-1. Host your Everon scenario with the candidate addon enabled. Press Escape → **ORBAT PLANNER – HOST PAIRING**.
+1. Host your Everon scenario with the candidate addon enabled. Press Escape → **COMMAND – HOST PAIRING**.
 2. Open **Players / AI / factions**. Enable Humans and/or AI as wanted. Cycle faction keys and toggle each wanted faction ON. Factions start deselected; `NO_FACTION` is a separate opt-in.
 3. **Refresh roster** after spawning units or changing controlled bodies. Click individual rows to select them, or **Select matching** for the filtered list. Bulk selection rejects overflow instead of silently truncating. Total human+AI cap: 60.
 4. Return to pairing. GAME **first field / endpoint:** paste the APP's full HTTPS ADDRESS. GAME **second field / pairing code:** paste the APP's current 32-character CODE. Click **CONNECT** and resume.

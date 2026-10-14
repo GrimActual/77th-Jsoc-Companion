@@ -3,7 +3,7 @@
 Package 12 now connects the selected metadata review to the existing asset selector. This is an explicit planning reference, not an engine prefab loader or spawn command.
 
 ## English
-1. Open the development executable at `A:/Everon-ORBAT-Development/experiments/gm-desktop/Everon ORBAT Planner.exe`.
+1. Open the development executable at `A:/Everon-ORBAT-Development/experiments/gm-desktop/COMMAND Planner.exe`.
 2. To change an existing unit, select it in **Units** first. Otherwise leave a new unit selected.
 3. Open **Assets → Import Workbench metadata → Select project and sidecars**. Select your `addon.gproj`, then the desired `.et.meta` files inside its project.
 4. Expand a prefab row. Review its GUID, source sidecar and missing/empty target warning. Enter **Planning asset name** and choose **Planning asset type**. Default Unclassified deliberately avoids guessing from filenames.

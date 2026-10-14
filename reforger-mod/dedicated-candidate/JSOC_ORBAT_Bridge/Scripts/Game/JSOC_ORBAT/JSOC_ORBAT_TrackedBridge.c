@@ -106,7 +106,7 @@ class JSOC_ORBAT_TrackedBridge : JSOC_ORBAT_DedicatedBridge
         m_Context.SetTimeout(timeout);
         m_Callback = new JSOC_ORBAT_DedicatedCallback(); m_Callback.Owner = this;
         m_Sequence = sequence; m_Active = true; m_Failures = 0; m_Body = ""; m_Full = true; m_Batches = 0; m_Recovery = 0; m_ConfigProblem = false;
-        Print("[JSOC ORBAT] Tracked sender enabled: explicit allowlist, maximum 60, read-only.");
+        Print("[COMMAND ORBAT] Tracked sender enabled: explicit allowlist, maximum 60, read-only.");
         GetGame().GetCallqueue().CallLater(Send, m_Interval, false);
     }
     override void Send()
@@ -170,7 +170,7 @@ class JSOC_ORBAT_TrackedBridge : JSOC_ORBAT_DedicatedBridge
         if (code == 409)
         {
             m_Recovery++;
-            if (m_Recovery > 3) { Print("[JSOC ORBAT] Tracked snapshot recovery exhausted; sender stopped."); Halt(); return; }
+            if (m_Recovery > 3) { Print("[COMMAND ORBAT] Tracked snapshot recovery exhausted; sender stopped."); Halt(); return; }
             m_Body = ""; m_Full = true;
             GetGame().GetCallqueue().CallLater(Send, m_Interval, false);
             return;

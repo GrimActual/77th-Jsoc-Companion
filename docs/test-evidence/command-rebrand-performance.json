@@ -1,0 +1,45 @@
+{
+  "scope": "Matched 400-unit offline map pan; six-second samples, not universal performance guarantees",
+  "reports": [
+    {
+      "mode": "baseline",
+      "version": "2.9.1-dev.gm.2",
+      "performance": {
+        "seconds": 6,
+        "frames": 346,
+        "fps": 57.666666666666664,
+        "p95FrameMs": 17.700000000186265,
+        "maxFrameMs": 84.29999999981374,
+        "framesOver100Ms": 0,
+        "heapBytes": 18200000,
+        "markers": 400,
+        "tiles": 2
+      },
+      "planUnchanged": true,
+      "userChosenNamePreserved": true,
+      "noAutomaticBridgeConnection": true,
+      "sargeTopics": 50,
+      "errors": []
+    },
+    {
+      "mode": "command",
+      "version": "2.9.1-dev.gm.2",
+      "performance": {
+        "seconds": 6,
+        "frames": 355,
+        "fps": 59.166666666666664,
+        "p95FrameMs": 16.899999999441206,
+        "maxFrameMs": 82.70000000018626,
+        "framesOver100Ms": 0,
+        "heapBytes": 18200000,
+        "markers": 400,
+        "tiles": 2
+      },
+      "planUnchanged": true,
+      "userChosenNamePreserved": true,
+      "noAutomaticBridgeConnection": true,
+      "sargeTopics": 50,
+      "errors": []
+    }
+  ]
+}

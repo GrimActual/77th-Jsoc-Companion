@@ -1,4 +1,4 @@
-# 77th JSOC Companion — future development roadmap
+# COMMAND — ORBAT / Mission Planner — future development roadmap
 
 Updated 13 October 2026. Ordered by technical dependencies, with no dates or delivery promises. This is future planning; it does not authorize implementing all 200 items in one release.
 
@@ -53,7 +53,7 @@ Package 16 starts immediately and runs throughout, despite depending on evidence
 
 ---
 
-# 77th JSOC Companion — Master Implementation Plan
+# COMMAND — ORBAT / Mission Planner — Master Implementation Plan
 
 TARGET ARCHITECTURE
 

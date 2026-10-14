@@ -8,5 +8,6 @@
   },
   "engines": {
     "node": ">=22"
-  }
+  },
+  "description": "COMMAND — independent ORBAT and mission planner for Arma Reforger."
 }

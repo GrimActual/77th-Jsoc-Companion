@@ -1,6 +1,6 @@
 # Proposed package 14.1 — optional Game Master workspace
 
-User clarification reviewed 13 October 2026. This is a proposed design milestone inside the existing 77th JSOC Companion, not a separate app, replacement interface or implemented feature. MagicPath is the proposed design workspace for panel hierarchy and component boundaries; no MagicPath prototype has been created in this increment.
+User clarification reviewed 13 October 2026. This is a proposed design milestone inside the existing COMMAND — ORBAT / Mission Planner, not a separate app, replacement interface or implemented feature. MagicPath is the proposed design workspace for panel hierarchy and component boundaries; no MagicPath prototype has been created in this increment.
 
 ## Design target
 - Compact GM toolbar using verified existing planning/rehearsal commands.

@@ -1,6 +1,6 @@
 # GM undo and local recovery — 13 October 2026
 
-Available in experiments/gm-desktop/Everon ORBAT Planner.exe, on the GM tab. The previously released Preview 1 ZIP is unchanged.
+Available in experiments/gm-desktop/COMMAND Planner.exe, on the GM tab. The previously released Preview 1 ZIP is unchanged.
 
 - Undo GM action reverses the last applied rehearsal command, including an event, clock step or pause/resume. It adds an undo record instead of deleting history. You can continue from the restored state, and replay reconstructs the same branch.
 - Reset rehearsal returns to the initial scenario state and is recorded in the journal. Reset establishes a new undo root and cannot itself be undone; earlier history remains available to export and replay.
