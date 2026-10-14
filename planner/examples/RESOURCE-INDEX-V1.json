@@ -2,7 +2,7 @@
   "schema": "companion-resource-index",
   "version": 1,
   "addons": [
-    {"id":"6A969EB0C5012BB9","name":"JSOC ORBAT Bridge","version":null,"dependencies":["58D0FB3206B6F859"]},
+    {"id":"6A969EB0C5012BB9","name":"COMMAND ORBAT Bridge","version":null,"dependencies":["58D0FB3206B6F859"]},
     {"id":"58D0FB3206B6F859","name":"Arma Reforger","version":null,"dependencies":["5614BBCCBB55ED1C"]},
     {"id":"5614BBCCBB55ED1C","name":"core","version":null,"dependencies":[]}
   ],

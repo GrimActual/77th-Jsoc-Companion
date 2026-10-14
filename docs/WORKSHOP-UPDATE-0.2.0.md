@@ -4,14 +4,14 @@ The clean upload project is `A:/Everon-ORBAT-Development/publish/JSOC_ORBAT_Brid
 
 The five source files match the hashes in the successful PC/WORKBENCH compile evidence. Workbench regenerated its resource database with the dedicated sender included. The folder contains only the project, three bridge scripts, pairing layout and generated resource database. Test worlds, profile configuration, pairing credentials and third-party addon fixtures are excluded.
 
-Proposed name: **77th JSOC ORBAT Bridge**. Proposed version: **0.2.0**. Paste-ready description and changes are in `A:/Everon-ORBAT-Development/publish/WORKSHOP-TEXT.txt`. The bounded standalone HTTPS movement gate passed; dedicated support remains experimental for full scenarios and extended lifecycle coverage.
+Proposed name: **COMMAND ORBAT Bridge**. Proposed version: **0.2.0**. Paste-ready description and changes are in `A:/Everon-ORBAT-Development/publish/WORKSHOP-TEXT.txt`. The bounded standalone HTTPS movement gate passed; dedicated support remains experimental for full scenarios and extended lifecycle coverage.
 
 ## Publishing steps
 
 1. Keep Steam open. Close large unrelated applications first; Workbench ran out of memory with only 352 MB free during preparation.
 2. Open `A:/Everon-ORBAT-Development/publish/Open-Clean-Bridge-Project.cmd`. Do not upload the old working project containing BridgeTest worlds and development notes.
 3. In **Enfusion Workbench**, select **File → Publish to Workshop**. Confirm it loads the existing bridge item and preserves its addon identity.
-4. Set **Project Name** to `77th JSOC ORBAT Bridge`, **Version** to `0.2.0`, and use the summary/description/changes from `WORKSHOP-TEXT.txt`. Retain the existing preview image and appropriate licence. Do not add private profile files or pairing codes.
+4. Set **Project Name** to `COMMAND ORBAT Bridge`, **Version** to `0.2.0`, and use the summary/description/changes from `WORKSHOP-TEXT.txt`. Retain the existing preview image and appropriate licence. Do not add private profile files or pairing codes.
 5. Publish and wait for the explicit success message. Until that message appears, this document describes a prepared update, not a published update.
 6. In **Arma Reforger**, refresh/download the existing mod's update. Enable one copy of the addon. Test Host Local pairing with a fresh Companion session; dedicated testing uses the separate private server-profile setup in [Dedicated server setup](DEDICATED-SERVER.md).
 

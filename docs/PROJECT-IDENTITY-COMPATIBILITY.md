@@ -5,7 +5,7 @@ Package 12 now accepts an optional top-level GameProject `Configurations` block 
 The desktop now has a project-only review mode. This makes an installed addon's `addon.gproj` useful for identifying its owner and declared dependency gaps even when no `.meta` sidecars are available. Download checksum manifests still do not provide prefab resource GUIDs.
 
 ## English: inspect a downloaded addon
-1. Open `A:/Everon-ORBAT-Development/experiments/gm-desktop/Everon ORBAT Planner.exe` (Development 13).
+1. Open `A:/Everon-ORBAT-Development/experiments/gm-desktop/COMMAND Planner.exe` (Development 13).
 2. Open **Assets → Import Workbench metadata → Review project identity only**.
 3. Choose the actual `addon.gproj`. Do not choose `addon.gproj_..._manifest.json` or `data.pak_..._manifest.json`.
 4. Review the addon name/ID and **Dependency not indexed** entries. The result contains zero prefab resources; this is an identity review, not a failed prefab import. A gap means the dependency is absent from this selected index, not that it is uninstalled or unavailable in the game.

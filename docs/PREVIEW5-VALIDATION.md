@@ -5,7 +5,7 @@ Validated locally on 13 October 2026. This consolidates the post-Preview-4 autho
 ## Run and use
 
 1. Extract `Everon-ORBAT-Planner-2.9.1-Preview5.zip` completely into its own folder.
-2. Run `Everon ORBAT Planner.exe` from the extracted folder. Keep your Project JSON backup before switching builds. Normal desktop preferences use the existing application profile; no live connection or saved rehearsal starts automatically.
+2. Run `COMMAND Planner.exe` from the extracted folder. Keep your Project JSON backup before switching builds. Normal desktop preferences use the existing application profile; no live connection or saved rehearsal starts automatically.
 3. For property review, choose **Units → Review unit property changes**, or **Settings → Game Master → Open unit property review**. Load a property-request file, expand the findings, then explicitly apply a valid batch. The matching source ZIP includes `planner/examples/PROPERTY-REQUEST-V1.json` as a format example; its unit ID must match your plan.
 4. Use mission Undo/Redo for whole-batch edits and paired scenario-builder restoration. Active rehearsals stay unloaded. Export journals separately if needed.
 5. Sarge has 44 topics in EN/FR/DE. Full workflow instructions: [unit property review](UNIT-PROPERTY-REVIEW.md), [draft editing](GM-DRAFT-EDITING.md), [draft history](GM-DRAFT-HISTORY.md) and [preflight](GM-SCENARIO-PREFLIGHT.md).

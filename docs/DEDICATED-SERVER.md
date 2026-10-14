@@ -31,7 +31,7 @@ Copy docs/JSOC_ORBAT_Dedicated.example.json into the engine's resolved `$profile
 - intervalMs: 2000; timeoutSeconds: 5; autoReconnect: true.
 Restrict file access to trusted server administrators. Do not commit this file or include it in a Workshop upload. The sender checks it every five seconds. Stop/disabling removes network updates. If a provider prevents custom profile files or outbound HTTPS, that provider cannot use this path.
 
-For an existing server config, merge a real addon entry into its existing game.mods array: {"modId":"YOUR_ACTUAL_WORKSHOP_MOD_ID","name":"77th JSOC ORBAT Bridge","version":"YOUR_PUBLISHED_VERSION"}. Do not replace the rest of the server configuration.
+For an existing server config, merge a real addon entry into its existing game.mods array: {"modId":"YOUR_ACTUAL_WORKSHOP_MOD_ID","name":"COMMAND ORBAT Bridge","version":"YOUR_PUBLISHED_VERSION"}. Do not replace the rest of the server configuration.
 
 ## 4. Verify in the game and desktop
 1. Start the dedicated server and join with the matching mod. Look for the server log message: Dedicated sender enabled.

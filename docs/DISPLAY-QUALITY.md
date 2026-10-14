@@ -1,6 +1,6 @@
 # Text, high-DPI and graphics checks — Development 10
 
-Development 10 retains the usable metadata workflow and adds a display-quality pass. Run `A:/Everon-ORBAT-Development/experiments/gm-desktop/Everon ORBAT Planner.exe`. Existing Preview 5 archives remain unchanged.
+Development 10 retains the usable metadata workflow and adds a display-quality pass. Run `A:/Everon-ORBAT-Development/experiments/gm-desktop/COMMAND Planner.exe`. Existing Preview 5 archives remain unchanged.
 
 ## What changed
 

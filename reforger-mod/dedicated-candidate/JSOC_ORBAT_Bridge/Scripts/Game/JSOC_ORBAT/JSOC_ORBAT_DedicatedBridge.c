@@ -43,7 +43,7 @@ class JSOC_ORBAT_DedicatedBridge
     }
     void InvalidConfig()
     {
-        if (!m_ConfigProblem) Print("[JSOC ORBAT] Invalid dedicated configuration; sender disabled. Check required fields and supported limits.");
+        if (!m_ConfigProblem) Print("[COMMAND ORBAT] Invalid dedicated configuration; sender disabled. Check required fields and supported limits.");
         m_ConfigProblem = true;
         Suspend();
     }
@@ -94,7 +94,7 @@ class JSOC_ORBAT_DedicatedBridge
         m_Context.SetTimeout(timeoutSeconds);
         m_Callback = new JSOC_ORBAT_DedicatedCallback(); m_Callback.Owner = this;
         m_Active = true; m_Sequence = nextSequence; m_Failures = 0; m_Body = "";
-        Print("[JSOC ORBAT] Dedicated sender enabled: one authorised named entity, read-only.");
+        Print("[COMMAND ORBAT] Dedicated sender enabled: one authorised named entity, read-only.");
         GetGame().GetCallqueue().CallLater(Send, m_Interval, false);
     }
     void Send()
@@ -105,7 +105,7 @@ class JSOC_ORBAT_DedicatedBridge
             IEntity target = GetGame().GetWorld().FindEntityByName(m_EntityName);
             if (!target)
             {
-                if (!m_Missing) Print("[JSOC ORBAT] Waiting for the configured named entity; no player enumeration.");
+                if (!m_Missing) Print("[COMMAND ORBAT] Waiting for the configured named entity; no player enumeration.");
                 m_Missing = true;
                 GetGame().GetCallqueue().CallLater(Send, m_Interval, false);
                 return;
@@ -124,19 +124,19 @@ class JSOC_ORBAT_DedicatedBridge
         if (!m_Active) return;
         if (code == 200)
         {
-            if (m_Sequence == 1) Print("[JSOC ORBAT] Dedicated relay acknowledged the permitted position.");
+            if (m_Sequence == 1) Print("[COMMAND ORBAT] Dedicated relay acknowledged the permitted position.");
             m_Failures = 0; m_Body = "";
             GetGame().GetCallqueue().CallLater(Send, m_Interval, false);
             return;
         }
         if (code == 400 || code == 401 || code == 403 || code == 404 || code == 409 || code == 413 || code == 423 || code == 426)
-        { Print("[JSOC ORBAT] Pairing, protocol or permission rejected. Sender stopped; configure a new session."); Halt(); return; }
+        { Print("[COMMAND ORBAT] Pairing, protocol or permission rejected. Sender stopped; configure a new session."); Halt(); return; }
         m_Failures++;
         if (!m_Reconnect || m_Failures > 5)
-        { Print("[JSOC ORBAT] Retry limit reached. Sender stopped."); Halt(); return; }
+        { Print("[COMMAND ORBAT] Retry limit reached. Sender stopped."); Halt(); return; }
         int delay = 1000;
         for (int n = 1; n < m_Failures; n++) delay *= 2;
-        Print("[JSOC ORBAT] Connection interrupted; bounded retry scheduled.");
+        Print("[COMMAND ORBAT] Connection interrupted; bounded retry scheduled.");
         GetGame().GetCallqueue().CallLater(Send, delay, false);
     }
     void Halt()

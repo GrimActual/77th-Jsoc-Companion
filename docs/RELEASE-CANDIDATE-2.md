@@ -1,9 +1,9 @@
-# 77th JSOC Companion 2.9.1 RC2
+# COMMAND — ORBAT / Mission Planner 2.9.1 RC2
 
 RC2 adds experimental dedicated tracking of up to 60 explicitly named entities and a reviewed deployment preview. It preserves offline planning and the previous Host Local character feed. It does not implement automatic 60-player tracking, 120-player support or native spawning.
 
 ## Start here
-1. Extract the whole Windows ZIP into a new folder. Run **Everon ORBAT Planner.exe** there. Keep your old installation and plan backups.
+1. Extract the whole Windows ZIP into a new folder. Run **COMMAND Planner.exe** there. Keep your old installation and plan backups.
 2. Import your saved plan or continue offline. Connections and rehearsals never start automatically.
 3. For dedicated allowlists, update the Workshop bridge to 0.3.0 and use the matching protocol 3 relay bundled with RC2. See TRACKED-ENTITIES-PILOT.md. Existing Workshop 0.2.0 remains suitable for the previous single-entity feed.
 4. Deployment preview is in Units and Settings. Select 1–16 units with reviewed prefab references, load a matching resource index, review and save an intention JSON through the Save dialog. The game does not execute it.

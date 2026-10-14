@@ -3,7 +3,7 @@
 1. Keep Steam open. Close memory-heavy applications before opening Workbench.
 2. Open the clean project `A:/Everon-ORBAT-Development/publish/JSOC_ORBAT_Bridge-0.3.0/addon.gproj` in Enfusion Workbench. The prior 0.2 upload folder remains intact.
 3. File → Publish to Workshop. Confirm this updates the existing addon **6A969EB0C5012BB9** rather than creating another item.
-4. Set Project Name **77th JSOC ORBAT Bridge**, Version **0.3.0**. Copy summary, description and changes from `A:/Everon-ORBAT-Development/publish/WORKSHOP-TEXT-0.3.0.txt`. Retain the preview image and existing licence.
+4. Set Project Name **COMMAND ORBAT Bridge**, Version **0.3.0**. Copy summary, description and changes from `A:/Everon-ORBAT-Development/publish/WORKSHOP-TEXT-0.3.0.txt`. Retain the preview image and existing licence.
 5. Publish; wait for the explicit success message. Only then is Workshop updated.
 6. Refresh the addon in the game/server. Use Companion RC2. For 60 named entities, follow TRACKED-ENTITIES-PILOT.md and put secrets only in the private server profile. Host Local still uses the pause-menu pairing panel and one controlled character.
 
