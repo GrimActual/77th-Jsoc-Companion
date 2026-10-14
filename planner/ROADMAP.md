@@ -1,7 +1,7 @@
 ## v2.8.1 delivery
 Scaling preferences, five source-verified side-mission planning templates, manual mission clock/event log and Excel-compatible planner CSV delivered. Native XLSX and GeoJSON/KML/KMZ/MilX are pending validated interoperability and, for geographic formats, a verified game-to-WGS84 mapping. Live game objectives/timers remain out of scope.
 
-# 77th JSOC — development roadmap, 10 October 2026
+# COMMAND — development roadmap, 10 October 2026
 
 ## Current tested increment: v2.6.1
 

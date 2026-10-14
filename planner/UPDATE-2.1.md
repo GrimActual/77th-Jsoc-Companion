@@ -1,4 +1,4 @@
-# Everon ORBAT Planner 2.1
+# COMMAND ORBAT / Mission Planner 2.1
 
 Replace your application with the entire extracted Windows folder. Keep your existing JSON exports. Schema version remains 4.
 
