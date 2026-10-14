@@ -89,7 +89,8 @@ const server = http.createServer(async (req, res) => {
     ['/presentation.js',['presentation.js','text/javascript; charset=utf-8']],
     ['/planner.css',['planner.css','text/css; charset=utf-8']],
     ['/vendor/milsymbol.js',['vendor/milsymbol.js','text/javascript; charset=utf-8']],
-    ['/jsoc-logo.png',['jsoc-logo.png','image/png']]
+    ['/jsoc-logo.png',['command-logo.png','image/png']],
+    ['/command-logo.png',['command-logo.png','image/png']]
   ]);
   if(staticFiles.has(url.pathname)){
     const [file,type]=staticFiles.get(url.pathname);
