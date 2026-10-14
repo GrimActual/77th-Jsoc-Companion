@@ -2,7 +2,7 @@
 
 The current future programme is [the master roadmap](../ROADMAP.md), with [all 200 backlog items](../docs/FUTURE-FEATURE-WISHLIST.md) and [package ownership](../docs/FUTURE-FEATURE-MAPPING.json).
 
-Current development executable: v2.9.1 Development 14. Latest consolidated local package: Preview 5. Catalog portability is described below; dedicated runtime verification remains pending. Earlier desktop/relay/fullscreen evidence: [test debrief](../docs/V2.9.1-TEST-REPORT.md).
+Current development executable: **2.9.1-dev.gm.4 — COMMAND compact GM workspace pilot**. It retains the placement fix, searchable vanilla catalog and existing reviewed spawn/remove workflow. Earlier release notes below are historical; current scope is recorded in [the compact workspace guide](../docs/COMPACT-GM-WORKSPACE.md).
 
 The notes below are retained historical release notes. Their older pending/current labels are not the status of the latest build.
 
@@ -72,3 +72,6 @@ Explicit positive session player IDs, stable telemetry aliases, controller-bound
 
 ### Asset browser usability — 14 October 2026
 Searchable, paged asset cards replace the full catalog dropdown. Unit type links to troop/armoured/APC/light-vehicle/aircraft/logistics filters; prefab faction filters and variant visibility remain independent of mission faction. Exact asset snapshots and GUIDs are retained. Settings opens the browser; Sarge and EN/FR/DE guidance cover the workflow. Deployment review explains missing or invalid names. Native spawn availability remains separate from classification hints.
+
+## Package 14.1 — compact GM workspace, 14 October 2026
+The optional layout is implemented in 2.9.1-dev.gm.4: existing asset chooser in a collapsible drawer, capped read-only planned-selection inspector, existing deployment/results links and explicitly offline rehearsal controls. Mode/drawer preferences stay outside mission JSON; layout-only changes skip map/asset rebuilds and leave active replay running. Existing forms, pending edits, selection, Undo/Redo and full-map behavior are retained. Settings and 50 Sarge topics have EN/FR/DE guidance. The active MagicPath design is COMMAND — Compact GM Workspace. See [the workflow guide](../docs/COMPACT-GM-WORKSPACE.md). Native AI orders, properties and environment adapters remain the next integration milestones; this layout does not implement them.

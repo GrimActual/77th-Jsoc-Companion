@@ -9,7 +9,7 @@ test('backend: CORS, methods, static files, cache expiry, deduplication, timeout
   const request=(url,opts)=>original(base+url,opts);assert.equal((await request('/health',{headers:{Origin:'https://evil.example'}})).status,403);
   const health=await request('/health',{headers:{Origin:'http://localhost:8787'}});assert.equal(health.headers.get('access-control-allow-origin'),'http://localhost:8787');assert.equal(health.status,200);
   assert.equal((await request('/health',{method:'POST'})).status,405);assert.equal((await request('/')).status,200);assert.equal((await request('/server.js')).status,404);
-  assert.equal((await request('/asset-tools.js')).headers.get('content-type'),'text/javascript; charset=utf-8');
+  assert.equal((await request('/asset-tools.js')).headers.get('content-type'),'text/javascript; charset=utf-8');const workspace=await request('/gm-workspace.js');assert.equal(workspace.status,200);assert.match(await workspace.text(),/Optional layout shell/);
   assert.equal((await request('/jsoc-logo.png')).headers.get('content-type'),'image/png');
   const read=fs.readFileSync;try{fs.readFileSync=function(p,...args){if(p===path.join(__dirname,'index.html'))throw new Error('Fixture: missing file');return read(p,...args)};assert.equal((await request('/')).status,404)}finally{fs.readFileSync=read}
   assert.equal((await request('/health')).status,200);

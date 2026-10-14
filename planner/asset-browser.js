@@ -44,7 +44,7 @@ function attach({select,host,translate,choose}){
  function refresh(){labels();render();sync();}
  summary.onclick=()=>{panel.hidden=!panel.hidden;summary.setAttribute('aria-expanded',String(!panel.hidden));if(!panel.hidden){render();query.focus();}};
  query.oninput=()=>{clearTimeout(timer);timer=setTimeout(()=>{page=0;render();},100);};type.onchange=faction.onchange=variants.onchange=()=>{clearTimeout(timer);page=0;render();};prev.onclick=()=>{page--;render();};next.onclick=()=>{page++;render();};clear.onclick=()=>{choose({id:'none',name:'No asset assigned'});sync();render();};
- globalThis.addEventListener?.('planner-preferences-changed',refresh);
+ globalThis.addEventListener?.('planner-preferences-changed',()=>{if(!globalThis.PlannerPreferences?.layoutOnlyChange?.())refresh();});
  return {setUnitType(unitType){const link={infantry:'troops',armor:'armor',mechanized:'mechanized',motorized:'motorized',rotary:'rotary',fixed:'fixed',logistics:'logistics',medical:'troops',engineer:'troops',recon:'troops',special:'troops'};type.value=link[unitType]||'all';query.value='';page=0;render();},setItems(items){rows=items.filter(a=>a.id!=='none').map(a=>{if(!cache.has(a))cache.set(a,describe(a));return cache.get(a);});page=0;refresh();},sync};
 }
 return {describe,filter,categories,attach};

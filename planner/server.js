@@ -83,6 +83,7 @@ const server = http.createServer(async (req, res) => {
     ['/', ['index.html','text/html; charset=utf-8']],
     ['/index.html',['index.html','text/html; charset=utf-8']],
     ['/asset-catalog.json',['asset-catalog.json','application/json; charset=utf-8']],
+    ['/gm-workspace.js',['gm-workspace.js','text/javascript; charset=utf-8']],
     ['/asset-browser.js',['asset-browser.js','text/javascript; charset=utf-8']],
     ['/asset-tools.js',['asset-tools.js','text/javascript; charset=utf-8']],
     ['/planner-core.js',['planner-core.js','text/javascript; charset=utf-8']],

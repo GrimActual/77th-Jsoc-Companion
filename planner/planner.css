@@ -27,3 +27,18 @@ dialog{color:var(--text);background:var(--panel);border:1px solid var(--line);bo
 .asset-result[aria-pressed="true"]{outline:2px solid #62b8ff;outline-offset:-2px}
 .asset-browser input[type="search"]{font-size:15px}.asset-browser .check{display:flex;gap:8px;align-items:center}
 #assetResultCount{font-size:13px}.asset-browser .actions{display:flex;justify-content:space-between}
+
+/* Optional GM workspace: map stays primary; editor and drawers are reversible. */
+body.gm-workspace main{display:block;position:relative}body.gm-workspace .map-shell{height:100%;min-height:420px;width:100%}
+body.gm-workspace main>aside{display:none;position:absolute;z-index:850;right:10px;top:90px;bottom:12px;width:360px;max-width:calc(100% - 20px);overflow:auto;border:1px solid var(--line);border-radius:7px;box-shadow:0 4px 18px #0008}
+body.gm-workspace.gm-workspace-editor main>aside{display:block}
+#gmWorkspaceBar{position:absolute;z-index:800;top:82px;left:12px;right:12px;display:flex;flex-wrap:wrap;gap:5px;align-items:center;padding:7px;background:var(--panel);border:1px solid var(--line);border-radius:6px}
+#gmWorkspaceBar button{font-size:12px;min-height:34px;padding:6px 9px}#gmWorkspaceBar span{font-size:11px;max-width:240px;overflow-wrap:anywhere}
+.gm-drawer{position:absolute;z-index:800;top:176px;bottom:105px;width:320px;max-width:calc(100% - 24px);overflow:auto;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:7px;box-shadow:0 4px 18px #0008}
+#gmAssetDrawer{left:12px}#gmSelectionInspector{right:12px}.gm-drawer .section-heading{gap:6px}.gm-drawer h2{font-size:14px}.gm-drawer .section-heading button{font-size:11px;padding:5px;min-height:32px}.gm-inspector-card{padding:9px;border:1px solid var(--line);border-radius:5px;margin-bottom:8px}.gm-inspector-card p{margin:5px 0;font-size:12px;overflow-wrap:anywhere}.gm-inspector-card strong{font-size:14px;overflow-wrap:anywhere}
+body.gm-workspace.gm-workspace-editor #gmSelectionInspector{display:none}
+body.briefing-mode #gmWorkspaceBar,body.briefing-mode .gm-drawer{display:none!important}
+@media(max-width:950px){body.gm-workspace{height:100dvh;overflow:hidden}body.gm-workspace .map-shell{height:100%;min-height:300px}.gm-drawer{top:200px;bottom:110px;width:300px}body.gm-workspace main>aside{top:140px}#gmWorkspaceBar{top:92px}}
+@media(max-width:650px){#gmWorkspaceBar{top:92px;gap:3px}#gmWorkspaceBar span{display:none}.gm-drawer{top:210px;bottom:110px;width:calc(100% - 24px)}body.gm-workspace:has(#gmAssetDrawer:not([hidden])) #gmSelectionInspector{display:none}}
+
+#gmWorkspaceBar .gm-workspace-state{font-size:12px;line-height:1.4;padding:5px 8px;border:1px solid var(--line);border-radius:5px;background:var(--panel2);max-width:290px}

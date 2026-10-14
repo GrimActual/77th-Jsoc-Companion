@@ -1,0 +1,147 @@
+{
+  "UI-TEST.json": {
+    "success": true,
+    "version": "2.9.1-dev.gm.4",
+    "defaultOff": true,
+    "existingChooserNodeRetained": true,
+    "pendingFormAndSearchRetained": true,
+    "missionNeutralLayoutAndBrowsing": true,
+    "plannedInspectorGuidAndDetachedCopy": true,
+    "unsafeNamesRenderedAsText": true,
+    "narrowDrawersExclusive": true,
+    "escapeFocusAndFullMapRestore": true,
+    "existingFormUndoRedoPassed": true,
+    "offlinePauseAdvanceDelegationPassed": true,
+    "explicitResultsShortcutIntercepted": true,
+    "settingsToggleAndReloadPassed": true,
+    "noAutomaticBridgeOrRehearsalStart": true,
+    "locales": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "rendererErrors": []
+  },
+  "PERFORMANCE-TEST.json": {
+    "scope": "Matched 400-unit/2721-asset, six-second pan samples at the same window size. Compact mode intentionally expands the map and shows 20 asset cards plus 16 inspector objects. Short samples, not universal FPS guarantees.",
+    "reports": [
+      {
+        "label": "previous",
+        "performance": {
+          "fps": 54,
+          "p95FrameMs": 17.100000001490116,
+          "maxFrameMs": 326.90000000037253,
+          "framesOver100Ms": 2,
+          "heapBytes": 29400000,
+          "markers": 400,
+          "tiles": 2,
+          "mapWidth": 1070,
+          "mapHeight": 818
+        },
+        "layoutSwitchMs": null,
+        "missionUnchanged": true,
+        "rendererErrors": []
+      },
+      {
+        "label": "compact-workspace",
+        "performance": {
+          "fps": 50.166666666666664,
+          "p95FrameMs": 17.899999998509884,
+          "maxFrameMs": 307.90000000037253,
+          "framesOver100Ms": 4,
+          "heapBytes": 29400000,
+          "markers": 400,
+          "tiles": 3,
+          "mapWidth": 1440,
+          "mapHeight": 818
+        },
+        "layoutSwitchMs": {
+          "p95": 44.5,
+          "max": 44.5,
+          "sampleCount": 12
+        },
+        "missionUnchanged": true,
+        "rendererErrors": []
+      }
+    ],
+    "inspectorCappedAt16": true,
+    "settingsShortcutAndCurrentLabelsPassed": true
+  },
+  "PERFORMANCE-AFTER-TEST.json": {
+    "scope": "Post-optimization matched 400-unit/2721-asset, six-second warmed pan samples at the same window size. Compact mode intentionally expands the map and shows 20 asset cards plus 16 inspector objects. Short samples, not universal FPS guarantees.",
+    "reports": [
+      {
+        "label": "previous",
+        "performance": {
+          "fps": 60,
+          "p95FrameMs": 16.800000000745058,
+          "maxFrameMs": 28.299999998882413,
+          "framesOver100Ms": 0,
+          "heapBytes": 37300000,
+          "markers": 400,
+          "tiles": 2,
+          "mapWidth": 1070,
+          "mapHeight": 818
+        },
+        "layoutSwitchMs": null,
+        "missionUnchanged": true,
+        "rendererErrors": []
+      },
+      {
+        "label": "compact-workspace",
+        "performance": {
+          "fps": 60.166666666666664,
+          "p95FrameMs": 16.90000000037253,
+          "maxFrameMs": 20.199999999254942,
+          "framesOver100Ms": 0,
+          "heapBytes": 35100000,
+          "markers": 400,
+          "tiles": 2,
+          "mapWidth": 1440,
+          "mapHeight": 818
+        },
+        "layoutSwitchMs": {
+          "p95": 50.90000000037253,
+          "max": 50.90000000037253,
+          "sampleCount": 12
+        },
+        "missionUnchanged": true,
+        "rendererErrors": []
+      }
+    ],
+    "inspectorCappedAt16": true,
+    "settingsShortcutAndCurrentLabelsPassed": true
+  },
+  "LAYOUT-ISOLATION-TEST.json": {
+    "success": true,
+    "layoutOnlyPreferenceDetected": true,
+    "activeReplayContinuesAcrossLayoutChanges": true,
+    "missionUnchanged": true,
+    "noAutomaticBridgeConnection": true,
+    "rendererErrors": []
+  },
+  "POSITION-TEST.json": {
+    "success": true,
+    "layoutSwitchSampleCount": 12,
+    "synchronousSwitchP95Ms": 40.80000000074506,
+    "synchronousSwitchMaxMs": 40.80000000074506,
+    "drawerMeasurementsCoalesced": true,
+    "desktopAndNarrowToolbarClearance": true,
+    "inspectorCap": 16,
+    "missionUnchanged": true,
+    "rendererErrors": []
+  },
+  "focusedChecks": {
+    "workspacePreferences": true,
+    "gmPreferences": true,
+    "i18nAnd50SargeTopics": true,
+    "backendWorkspaceRoute": true,
+    "scope": "Relevant gates only; earlier native spawning and asset-catalog gates retained, not rerun."
+  },
+  "branding": {
+    "product": "COMMAND \u2014 ORBAT / Mission Planner",
+    "activeMagicPathProjectId": "461104450405294080",
+    "activeMagicPathName": "COMMAND \u2014 Compact GM Workspace",
+    "newWorkspaceAndHeaderContainOldCommunityBrand": false
+  }
+}
