@@ -79,7 +79,7 @@ function validate(d){
  }),'area');
  const o=d.operation??{};if(typeof o!=='object'||Array.isArray(o))fail('Invalid operation');
  const v=d.view??{},layers=v.layers??{};
- return {schema:'everon-orbat-plan',schemaVersion:VERSION,app:'Everon ORBAT Mapper',operation:{name:text(o.name,'OPERATION EVERON',300),taskForce:text(o.taskForce,'JSOC',200),version:text(o.version,'01',50),briefing:text(o.briefing,'')},map:{name:'Everon',game:'Arma Reforger',coordinateSystem:'mapper-local',gridOrder:'easting-northing'},phases,orderOfBattle:units,routes,areas,view:{gridDigits:v.gridDigits===8?8:6,hiddenPhases:Array.isArray(v.hiddenPhases)?v.hiddenPhases.filter(x=>x==='shared'||phaseIds.has(x)):[],layers:{grid:layers.grid===true,units:layers.units!==false,routes:layers.routes!==false,areas:layers.areas!==false,labels:layers.labels!==false}}};
+ return {schema:'everon-orbat-plan',schemaVersion:VERSION,app:'Everon ORBAT Mapper',operation:{name:text(o.name,'OPERATION EVERON',300),taskForce:text(o.taskForce,'COMMAND',200),version:text(o.version,'01',50),briefing:text(o.briefing,'')},map:{name:'Everon',game:'Arma Reforger',coordinateSystem:'mapper-local',gridOrder:'easting-northing'},phases,orderOfBattle:units,routes,areas,view:{gridDigits:v.gridDigits===8?8:6,hiddenPhases:Array.isArray(v.hiddenPhases)?v.hiddenPhases.filter(x=>x==='shared'||phaseIds.has(x)):[],layers:{grid:layers.grid===true,units:layers.units!==false,routes:layers.routes!==false,areas:layers.areas!==false,labels:layers.labels!==false}}};
 }
 function empty(){return validate({schemaVersion:4,orderOfBattle:[],routes:[],areas:[]})}
 function visible(plan,item){return !plan.view.hiddenPhases.includes(item.phaseId??'shared')}

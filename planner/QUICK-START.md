@@ -1,4 +1,4 @@
-# Everon ORBAT Planner 2.0
+# COMMAND ORBAT / Mission Planner 2.0
 
 Extract **the whole ZIP** into a fresh folder. Keep the `vendor` folder and all app files together. With Node.js 18 or later installed, open a terminal in that folder and run `npm start`. Open **http://127.0.0.1:8787**. No `npm install` is needed.
 
