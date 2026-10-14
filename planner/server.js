@@ -80,6 +80,10 @@ const server = http.createServer(async (req, res) => {
   if(req.method!=='GET'){res.setHeader('Allow','GET, OPTIONS');return send(res,405,{error:'Method not allowed'});}
   let url;try{url=new URL(req.url,'http://localhost')}catch{return send(res,400,{error:'Invalid URL'})}
   const staticFiles=new Map([
+    ['/sqf-intent-draft.js',['sqf-intent-draft.js','text/javascript; charset=utf-8']],
+    ['/sqf-intent-draft-ui.js',['sqf-intent-draft-ui.js','text/javascript; charset=utf-8']],
+    ['/sqf-intent-draft-worker.js',['sqf-intent-draft-worker.js','text/javascript; charset=utf-8']],
+
     ['/sqf-class-map.js',['sqf-class-map.js','text/javascript; charset=utf-8']],
     ['/sqf-class-map-ui.js',['sqf-class-map-ui.js','text/javascript; charset=utf-8']],
     ['/sqf-class-map-worker.js',['sqf-class-map-worker.js','text/javascript; charset=utf-8']],

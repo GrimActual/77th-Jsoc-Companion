@@ -40,17 +40,17 @@ const bytes=s=>new TextEncoder().encode(s).length;
 function tokenize(text){
  const out=[];let i=0,line=1,column=1,stack=[];
  const advance=()=>{const c=text.charAt(i);i+=1;if(c==='\n'){line++;column=1;}else column++;return c;};
- const push=(kind,value,l,c)=>{out.push({kind,value,line:l,column:c});if(out.length>LIMITS.tokens)fail('Token limit exceeded');};
+ const push=(kind,value,l,c,start)=>{out.push({kind,value,line:l,column:c,start,end:i});if(out.length>LIMITS.tokens)fail('Token limit exceeded');};
  while(i<text.length){let c=text[i];if(/\s/.test(c)){advance();continue;}
   if(text.slice(i,i+2)==='//'){while(i<text.length&&text[i]!=='\n')advance();continue;}
   if(text.slice(i,i+2)==='/*'){advance();advance();let closed=false;while(i<text.length){if(text.slice(i,i+2)==='*/'){advance();advance();closed=true;break;}advance();}if(!closed)fail('Unclosed comment');continue;}
-  const l=line,col=column;
-  if(c==='"'||c==="'"){const quote=c;advance();let value='',closed=false;while(i<text.length){const character=text.charAt(i);advance();if(character!==quote){value+=character;continue;}if(text.charAt(i)===quote){advance();value+=quote;continue;}closed=true;break;}if(!closed)fail('Unclosed string at '+l+':'+col);push('string',value,l,col);continue;}
-  if(/[A-Za-z_]/.test(c)){let value='';while(i<text.length&&/[A-Za-z0-9_]/.test(text[i]))value+=advance();push('word',value,l,col);continue;}
-  if(/[0-9]/.test(c)||c==='-'&&/[0-9]/.test(text[i+1]||'')){let value='';while(i<text.length&&/[0-9.eE+\-]/.test(text[i]))value+=advance();push('number',value,l,col);continue;}
+  const l=line,col=column,start=i;
+  if(c==='"'||c==="'"){const quote=c;advance();let value='',closed=false;while(i<text.length){const character=text.charAt(i);advance();if(character!==quote){value+=character;continue;}if(text.charAt(i)===quote){advance();value+=quote;continue;}closed=true;break;}if(!closed)fail('Unclosed string at '+l+':'+col);push('string',value,l,col,start);continue;}
+  if(/[A-Za-z_]/.test(c)){let value='';while(i<text.length&&/[A-Za-z0-9_]/.test(text[i]))value+=advance();push('word',value,l,col,start);continue;}
+  if(/[0-9]/.test(c)||c==='-'&&/[0-9]/.test(text[i+1]||'')){let value='';while(i<text.length&&/[0-9.eE+\-]/.test(text[i]))value+=advance();push('number',value,l,col,start);continue;}
   if('[{('.includes(c)){stack.push(c);if(stack.length>LIMITS.depth)fail('Nesting limit exceeded');}
   if(']})'.includes(c)&&stack.pop()!==({']':'[','}':'{',')':'('})[c])fail('Unbalanced delimiters');
-  push('symbol',advance(),l,col);
+  push('symbol',advance(),l,col,start);
  }
  if(stack.length)fail('Unclosed delimiter');return out;
 }
@@ -104,5 +104,5 @@ function validateReport(raw){
  const expected={files:raw.files.length,bytes:total,findings:raw.findings.length,candidates:raw.findings.filter(r=>r.status==='candidate').length,manual:raw.findings.filter(r=>r.status!=='candidate').length,unmappedClasses:raw.classNames.length};if(JSON.stringify(raw.summary)!==JSON.stringify(expected))fail('Inconsistent review summary');
  const text=JSON.stringify(raw);if(bytes(text)>8388608)fail('Review export limit exceeded');return JSON.parse(text);
 }
-return {LIMITS,MOVE,analyze,validateReport};
+return {LIMITS,MOVE,analyze,validateReport,tokenize};
 });

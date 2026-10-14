@@ -1,0 +1,101 @@
+{
+  "UI-TEST.json": {
+    "success": true,
+    "actualOfflineWorkerAST": true,
+    "nativeJSONSave": true,
+    "saveDialog": "automated selection; real validation and filesystem write",
+    "exactMappedSpawnAndMoveLink": true,
+    "sourceSHA256Verified": true,
+    "conditionalNotPromoted": true,
+    "mapMutationLocksExport": true,
+    "rejectedSourceRetainsPrevious": true,
+    "overLimitDraftRetainsPrevious": true,
+    "lateWorkerResultRejected": true,
+    "lateWorkerGate": "real worker message delayed by harness",
+    "localeContext": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "missionUnchanged": true,
+    "rendererErrors": [],
+    "gameExecution": false
+  },
+  "PERFORMANCE-TEST.json": {
+    "scope": "Headless hash + bounded AST + dataflow + contract validation, one source file, 200 mapped spawns and 200 linked moves. Five warmups, 20 samples; not map FPS or native execution.",
+    "sourceBytes": 21559,
+    "draftBytes": 244567,
+    "medianMs": 16.317099999999982,
+    "p95Ms": 18.167299999999955,
+    "maxMs": 21.470500000000015,
+    "intents": 400,
+    "definitions": 200,
+    "executionReady": 0,
+    "uiWorker": true,
+    "sourceCloningOnRender": false
+  },
+  "SCHEMA-TEST.json": {
+    "success": true,
+    "cases": [
+      {
+        "case": "sqf-class-map-v1.schema.json sample",
+        "valid": true
+      },
+      {
+        "case": "sqf-class-map-v1.schema.json executable",
+        "rejected": true
+      },
+      {
+        "case": "sqf-class-map-v1.schema.json future version",
+        "rejected": true
+      },
+      {
+        "case": "sqf-class-map-v1.schema.json extra field",
+        "rejected": true
+      },
+      {
+        "case": "sqf-intent-draft-v1.schema.json sample",
+        "valid": true
+      },
+      {
+        "case": "sqf-intent-draft-v1.schema.json executable",
+        "rejected": true
+      },
+      {
+        "case": "sqf-intent-draft-v1.schema.json future version",
+        "rejected": true
+      },
+      {
+        "case": "sqf-intent-draft-v1.schema.json extra field",
+        "rejected": true
+      },
+      {
+        "case": "removed review gates",
+        "rejected": true
+      },
+      {
+        "case": "fake binding",
+        "rejected": true
+      },
+      {
+        "case": "bad vector",
+        "rejected": true
+      },
+      {
+        "case": "execution ready",
+        "rejected": true
+      },
+      {
+        "case": "fake hash",
+        "rejected": true
+      }
+    ],
+    "scope": "Independent JSON Schema shape cases; dynamic ownership, DAG, axis consistency and source-dataflow validation remain enforced by the native JS contract."
+  },
+  "focusedChecks": {
+    "uniqueTests": 39,
+    "passed": 39,
+    "failed": 0,
+    "scope": "12 draft + 7 migration + 9 class map + 3 localization + 8 shared native-file checks. Unrelated passing gates retained."
+  }
+}
