@@ -1,0 +1,55 @@
+{
+  "UI-TEST.json": {
+    "success": true,
+    "realSelected2721ResourceIndex": true,
+    "indexRead": "actual native worker with automated file-dialog selection",
+    "searchablePagedTargets": true,
+    "infantryAndArmorFilters": true,
+    "repeatedClassReuse": true,
+    "exactGUIDAddonPathProvenance": true,
+    "nativeSave": true,
+    "portableWorkerLoad": true,
+    "incompatibleIndexAndBadMapRetainPrevious": true,
+    "unsafeClassText": true,
+    "locales": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "missionUnchanged": true,
+    "rendererErrors": [],
+    "nativeSpawnAvailabilityNotClaimed": true
+  },
+  "LIMIT-UI-TEST.json": {
+    "success": true,
+    "sourceCap1000Visible": true,
+    "sourceButtonsPagedAt10": true,
+    "clearResetsSourceInventory": true
+  },
+  "PERFORMANCE-TEST.json": {
+    "scope": "Matched prefab searches against 2721-resource index; cached model versus deliberate revalidation/reconstruction baseline. Not prior-build FPS or app RAM.",
+    "cached": {
+      "samples": 100,
+      "medianMs": 0.23379999999815482,
+      "p95Ms": 0.3407000000006519,
+      "maxMs": 0.35129999999844586
+    },
+    "reconstructed": {
+      "samples": 20,
+      "medianMs": 66.42030000000159,
+      "p95Ms": 76.63220000000001,
+      "maxMs": 81.82300000000032
+    },
+    "identicalSearchResults": true,
+    "resultRowsCappedAt20": true,
+    "diagnosticAuditBuiltOnce": true,
+    "missionWrites": 0
+  },
+  "focusedTests": {
+    "uniqueTests": 27,
+    "passed": 27,
+    "failed": 0,
+    "scope": "9 mapping + 7 migration + 3 localization + 8 affected native-file checks; passing unrelated gates not rerun"
+  },
+  "publishedDev7Preserved": true
+}
