@@ -1,0 +1,19 @@
+{
+  "scope": "One full regression run with bounded concurrency, followed by two focused checks for the later expanded-package export. No repeat of unchanged passing gates.",
+  "fullRun": {
+    "files": 105,
+    "passed": 796,
+    "failed": 0,
+    "durationSeconds": 21.678
+  },
+  "additionalFocusedChecks": {
+    "passed": 2,
+    "failed": 0
+  },
+  "nativeExistingScalarCases": 82,
+  "nativeNewSchedulerCases": 24,
+  "packagedDesktop": "rc3-desktop.json",
+  "performance": "rc3-performance.json",
+  "privateCorpora": "rc3-preprocessing-validation.json",
+  "gameClientLaunched": false
+}

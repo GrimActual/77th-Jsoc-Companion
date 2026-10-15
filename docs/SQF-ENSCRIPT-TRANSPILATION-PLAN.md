@@ -218,3 +218,12 @@ The ten requested priorities remain tracked explicitly:
 | 10 Real mod/release validation | Private source review continues; complete real-mod migration and consolidated release are not complete. |
 
 This is progress on the ten tasks, not a claim that all ten are finished. The wider planner, GM/server, resource, binary inventory and release roadmap remains intact. Sarge, Settings destinations and EN/FR/DE guides accompany this checkpoint.
+
+
+## Additive RC3 milestone — preprocessing, owned scheduling and game-review handoff
+
+RC3 delivers bounded implementations for the remaining release-batch priorities: selected function-style preprocessing with origin-preserving fresh review export; native-tested owned delay/readiness job scaffolds; imported-unit handoff to the existing host-approved deployment adapter; and consolidated real-source, regression, desktop and performance validation. See docs/RC3-MIGRATION-ADAPTERS.md and docs/RC3-RELEASE-DEBRIEF.md.
+
+The ten-priority batch now has concrete supported paths for registered files, selected preprocessing, structured calls, scalar contracts, initialized branch scope, literal loops, owned scheduling, reviewed engine deployment, isolated native handoff and prerelease validation. This does not complete arbitrary SQF-to-EnScript translation. Native preprocessing parity, missing external headers, engine-side UI/audio/events, general scheduling, crew/group reconstruction and unsupported source semantics remain explicit manual/roadmap items. No broader goal is removed or marked complete by inference.
+
+Source is never executed to infer meaning. Generated jobs are not auto-started; deployment still requires in-game host approval. Runtime state remains separate from saved missions and Undo. Existing Workshop scripts were not changed for these desktop additions.

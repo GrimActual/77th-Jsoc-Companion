@@ -1,22 +1,4 @@
 {
-  "scope": "Actual packaged Electron, four native review workers and exclusive export writes; OS pickers substituted only. Private Weather/Main source reused locally, never published.",
-  "integerExport": true,
-  "integerFragments": 24,
-  "integerParentStatementsRemainManual": true,
-  "coverageSearchFilterPaging": true,
-  "coverageRowsPerPage": 20,
-  "previewRequiresNoSaveDialog": true,
-  "sourceFamilyChangesClearCoverageAndAcknowledgment": true,
-  "languages": [
-    "en",
-    "fr",
-    "de"
-  ],
-  "matchingLanguageChangesRetainCoverage": true,
-  "zeroEligibleBlockExportDisabled": true,
-  "realComponentFiles": 48,
-  "narrowWidth": 680,
-  "missionUnchanged": true,
-  "sargeDestination": true,
-  "pageErrors": []
+  "scope": "Private external-source validation details withheld from distribution. Refer to synthetic tests and native adapter receipts for public reproducible checks.",
+  "sourceIncluded": false
 }

@@ -24,15 +24,9 @@ The new registration profile uses the existing bounded Node-worker runner: 15-se
 
 26 new focused cases plus 22 affected dependency/core/worker regression cases passed across focused runs. These cover explicit roots and virtual mounts, literal/ambiguous/dynamic declarations, duplicate names, inherited/macro/conditional config evidence, source path containment, lexical call limitations, source spans/line endings, malformed sources, deterministic context hashes, input/depth/token bounds, worker cancellation/deadlines, profile isolation, unchanged input bytes and no-overwrite CLI output. The existing hosted compiler workflow now includes these tests; local and hosted results are recorded separately. Both Windows Node 22 and Linux Node 24 jobs passed for source af32c6281afc28702ef8d71214455763ee05669d: [hosted run 38751338862](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38751338862).
 
-Five pinned external fixture sets combine the prior 55 scripts/headers with ten captured configs: 65 supplied files. Config downloads matched pinned Git blob identities, source-set JSON hashes were unchanged after review, and upstream files were not modified. All source-linked bodies stay private in A:/Everon-ORBAT-Development/work/root-corpus-20261015/registration-fixtures. Public evidence contains hashes, summaries, coverage and source paths, not the supplied code. No source was executed or compiled and no game/server was launched.
+Private external-source test details are withheld. The general implementation goals and supported contracts remain unchanged.
 
-| Repository | Files | Literal registrations | Exact supplied source paths | Lexical call/spawn sites |
-| --- | ---: | ---: | ---: | ---: |
-| 77th-JSOC-Missions | 8 | 30 | 3 | 39 |
-| Advanced-Equipment | 13 | 0 | 0 | 13 |
-| Root_Anomalies | 15 | 0 | 0 | 7 |
-| Root_Cyberwarfare | 12 | 156 | 5 | 23 |
-| Root_Effects | 17 | 0 | 0 | 37 |
+Private external-source test details are withheld. The general implementation goals and supported contracts remain unchanged.
 
 Totals: 186 registration candidates, eight exact supplied source-path matches and 119 lexical call/spawn sites. Two Cyberwarfare call sites had a unique declaration-name candidate. This does not imply that either runtime call or referenced script has been semantically validated. The three macro-heavy project samples show zero literal registrations under this restricted pass and visible unresolved config statements, not absence of registered functions. Missing files reflect an explicitly sampled source set, not necessarily broken upstream projects. This is not a whole-mod conversion percentage.
 

@@ -8,6 +8,8 @@ on:
       - 'tools/sqf-review/**'
       - 'tools/boolean-mapping/**'
       - 'planner/native-evidence/**'
+      - 'planner/native-adapters/**'
+      - 'planner/migration-handoff*'
       - '.github/workflows/sqf-review.yml'
   pull_request:
     paths:
@@ -16,6 +18,8 @@ on:
       - 'tools/sqf-review/**'
       - 'tools/boolean-mapping/**'
       - 'planner/native-evidence/**'
+      - 'planner/native-adapters/**'
+      - 'planner/migration-handoff*'
       - '.github/workflows/sqf-review.yml'
   workflow_dispatch:
 

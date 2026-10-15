@@ -31,3 +31,5 @@ Published oldest first; GitHub displays newest first.
 
 
 - [v2.9.1-dev.gm.5 — reviewed native infantry AI orders](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/releases/tag/v2.9.1-dev.gm.5-command)
+
+- [v2.9.1-rc.3 — migration adapters](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/releases/tag/v2.9.1-rc.3-command)

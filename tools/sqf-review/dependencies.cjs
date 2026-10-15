@@ -2,7 +2,7 @@
 'use strict';
 const fs=require('node:fs/promises'),path=require('node:path'),crypto=require('node:crypto'),{start,MAX_INPUT_BYTES}=require('./dependency-runner.cjs');
 async function inspect(input,output,{profile='dependencies'}={}){
- if(!['dependencies','registrations','includes','conditions','scalars','aliases','crossfile','flow','effects','constraints'].includes(profile))throw Error('Unknown compiler review profile');
+ if(!['dependencies','registrations','includes','conditions','scalars','aliases','macros','crossfile','flow','effects','constraints'].includes(profile))throw Error('Unknown compiler review profile');
  if(typeof input!=='string'||typeof output!=='string'||!input||!output)throw Error('Supply source-set JSON and a new report filename');
  const source=path.resolve(input),target=path.resolve(output);
  const stat=await fs.lstat(source);if(!stat.isFile()||stat.isSymbolicLink()||stat.size>MAX_INPUT_BYTES)throw Error('Source set must be a bounded regular JSON file');

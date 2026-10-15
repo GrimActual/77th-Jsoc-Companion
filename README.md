@@ -81,3 +81,8 @@ Original COMMAND source code is licensed under [GNU GPL-3.0-only](LICENSE). Thir
 ### Typed function migration development checkpoint
 
 The development branch includes explicit scalar function contracts, selected literal CfgFunctions bodies, structured closed calls, branch-local scope and bounded literal loops. See [current supported contracts and native handoff](docs/FUNCTION-MODULES.md). Preprocessing, scheduling and migration-to-engine wiring remain separate unfinished stages; this checkpoint does not claim complete mod conversion.
+
+
+### RC3 migration adapters
+
+The [RC3 guide](docs/RC3-MIGRATION-ADAPTERS.md) covers function-style preprocessing review, fresh-source export, explicit owned jobs and imported-unit deployment handoff. Read the [debrief and supported limits](docs/RC3-RELEASE-DEBRIEF.md). This prerelease does not claim complete automatic mod conversion.

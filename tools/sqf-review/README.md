@@ -184,3 +184,8 @@ A read-only preview now explains supported/mixed/manual files before exporting. 
 ## Typed pure function module family
 
 Coverage and helper export now include a separate pure Boolean function-module compiler with explicit params/defaults and closed cross-file calls. External registration and caller/lifecycle integration stay manual. See [the EN/FR/DE guide](../../docs/TYPED-BOOLEAN-FUNCTIONS.md). Previous families remain unchanged.
+
+
+## Function-style macro review
+
+Run macros.cjs --source-set <package.json> --output <new-report.json>. The package contains files, mounts, entries and an explicit-closed-set environment. See [RC3 guide](../../docs/RC3-MIGRATION-ADAPTERS.md). No source execution, automatic dependency discovery or native preprocessor parity is claimed.

@@ -1,39 +1,4 @@
 {
-  "scope": "One local compiler sample per unchanged private selected package and one 32-function closed chain; no source SQF, native game, network or third-party source redistribution. Times are observations, not sustained guarantees.",
-  "privateCorpora": [
-    {
-      "label": "root-weather-main",
-      "sourceFiles": 48,
-      "sourceBytes": 101457,
-      "elapsedMs": 106.78,
-      "supportedFunctions": 0,
-      "manualCandidates": 40,
-      "status": "manual-review-required",
-      "sourceContextUnchanged": true,
-      "sourceExecuted": false,
-      "sourceRedistributed": false,
-      "fullModConverted": false
-    },
-    {
-      "label": "bfv-radio",
-      "sourceFiles": 7,
-      "sourceBytes": 11418,
-      "elapsedMs": 10.99,
-      "supportedFunctions": 0,
-      "manualCandidates": 4,
-      "status": "manual-review-required",
-      "sourceContextUnchanged": true,
-      "sourceExecuted": false,
-      "sourceRedistributed": false,
-      "fullModConverted": false
-    }
-  ],
-  "chain": {
-    "files": 32,
-    "calls": 31,
-    "sourceBytes": 2429,
-    "elapsedMs": 18.86,
-    "supportedFunctions": 32,
-    "maxInvocationStepUpperBound": 32
-  }
+  "scope": "Private external-source validation details withheld from distribution. Refer to synthetic tests and native adapter receipts for public reproducible checks.",
+  "sourceIncluded": false
 }

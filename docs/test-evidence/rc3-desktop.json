@@ -1,0 +1,27 @@
+{
+  "scope": "Actual packaged RC3 offline Electron, real source/class-map/draft/export workers and validators; only OS pickers substituted. Synthetic sources and asset identity, no game request.",
+  "macroExpansion": true,
+  "expandedPackageFreshReview": true,
+  "originalCopiesPreserved": true,
+  "preprocessorParityNotClaimed": true,
+  "ownedJobExport": true,
+  "nativeOwnerProof": true,
+  "autoStarted": false,
+  "policyChangeClearsAcknowledgment": true,
+  "languages": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "matchingLanguageChangeRetainsContext": true,
+  "narrowWidth": 680,
+  "importToDeployment": true,
+  "sourceAndPrefabIdentityPreserved": true,
+  "coordinateOffsetAppliedOnce": true,
+  "manualSelectionInvalidatesDeployment": true,
+  "clearingSelectionInvalidatesDeployment": true,
+  "oneUndoRemovesImport": true,
+  "missionUnchangedByReview": true,
+  "sargeAndSettingsDestination": true,
+  "pageErrors": []
+}

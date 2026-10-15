@@ -28,15 +28,9 @@ Bounds: 256 files; 256 KiB per file; 8 MiB aggregate source; 64 mounts; 8,192 di
 
 22 focused core/worker/CLI cases passed. A CR-only comment-boundary issue found by the new line-ending case was fixed and the related comment/offset cases passed. Coverage includes literal/angle includes, explicit virtual mounts, path boundaries, competing mounts, case ambiguity, missing files, traversal, macro continuation, comments/strings, conditionals, cycle evidence, Unicode/BOM/line offsets, deterministic ordering, non-coercing input rejection, budgets, worker completion/cancel/deadline and no-overwrite/invalid-encoding CLI behavior. No native engine or game client was launched. Previously passing unrelated app tests were not replayed.
 
-The five pinned external projects supplied 55 scripts/headers and 16 explicit fixture mounts from captured literal PBOPREFIX values. This capture heuristic is test setup, not production automatic prefix discovery. All captured downloads matched pinned Git blob identities; before/after source-set JSON hashes matched and no source was modified. Private source/header data remains on A:/Everon-ORBAT-Development/work/root-corpus-20261015/dependency-fixtures. Public aggregate hashes/provenance omit script bodies.
+Private external-source test details are withheld. The general implementation goals and supported contracts remain unchanged.
 
-| Project | Supplied files | Exact include paths | Unresolved includes |
-| --- | ---: | ---: | ---: |
-| 77th-JSOC-Missions | 6 | 0 | 0 |
-| Advanced-Equipment | 11 | 7 | 2 |
-| Root_Anomalies | 13 | 14 | 2 |
-| Root_Cyberwarfare | 10 | 9 | 1 |
-| Root_Effects | 15 | 19 | 1 |
+Private external-source test details are withheld. The general implementation goals and supported contracts remain unchanged.
 
 Totals: 629 directives, 55 include requests, 49 exact matches and six unresolved virtual-prefix requests. Four are CBA header references; one is a base-game DIK header; one is an unmapped WIP SCP173 addon prefix. Zero includes in the six sampled mission scripts does not establish zero project dependencies. No macro, runtime function, symbol binding or native adapter is thereby resolved.
 

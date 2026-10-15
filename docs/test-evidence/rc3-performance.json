@@ -1,0 +1,38 @@
+{
+  "scope": "Matched 400-unit offline mission, 1440x900 viewport, editor open, approximately 3.5-second pan sample for RC3 packaged app with migration adapters; same fixture as prior gm-layout-performance.json. Short single-run observations, not a speedup or sustained FPS guarantee.",
+  "results": [
+    {
+      "label": "rc3",
+      "frames": 211,
+      "elapsedMs": 3509.5,
+      "fps": 60.12252457615045,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.800000000000182,
+      "maxFrameMs": 16.899999999999864,
+      "framesOver100Ms": 0,
+      "markers": 400,
+      "tiles": 2,
+      "heapBytes": 19300000,
+      "missionUnchanged": true
+    }
+  ],
+  "gameLaunched": false,
+  "previousMatchedSample": {
+    "file": "function-modules-performance.json",
+    "result": {
+      "label": "function-modules",
+      "frames": 211,
+      "elapsedMs": 3510.299999991059,
+      "fps": 60.10882260790743,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.800000000000182,
+      "maxFrameMs": 16.90000000000009,
+      "framesOver100Ms": 0,
+      "markers": 400,
+      "tiles": 2,
+      "heapBytes": 19300000,
+      "missionUnchanged": true
+    }
+  },
+  "comparison": "Matched 400-unit fixture, viewport and input sequence; both short samples had p95 16.8 ms and no frames above 100 ms. No sustained performance or speedup guarantee."
+}

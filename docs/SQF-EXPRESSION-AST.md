@@ -20,7 +20,7 @@ Per expression: 256 Ki UTF-16 characters, 8,192 tokens/nodes, nesting depth 64. 
 
 Fifteen focused tests cover compact arithmetic, associativity/grouping, decimal/exponent boundaries, nested arrays, inert Unicode/script-like strings, unknown syntax, malformed/non-finite inputs, resource limits, coercion avoidance, full-span parsing, deterministic ordering, binary/configuration separation, asynchronous input mutation and graph containment. Scoped parser performance is recorded separately in `docs/test-evidence/sqf-expression-ast.json`; this core-only change does not add work to map frames.
 
-Optional user sample inspection: `A:/BFV Radio Station` contains three empty `.c` placeholders and project resources, while `A:/@BFV_Radio/Addons/BFV Radio.pbo` is a 43,442,605-byte archive. No loose SQF files were available. Neither directory was modified, extracted, executed or copied into this repository. No third-party code is distributed in this checkpoint.
+Private external-source test details are withheld. The general implementation goals and supported contracts remain unchanged.
 
 Primary references: [SQF syntax](https://community.bohemia.net/wiki/SQF_Syntax), [Operators](https://community.bohemia.net/wiki/Operators). Source precedence must be verified before adding each further operator or command family; Enforce precedence is not a substitute.
 

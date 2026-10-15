@@ -36,13 +36,7 @@ The `includes` profile uses a fixed worker entry and the existing 16 MiB source-
 
 The five pinned author-permitted source sets supplied ten selected config entries. Sources remain private and unchanged; no new dependency downloads were performed for this pass.
 
-| Project | Selected entries | Literal stage completed | Blocked |
-| --- | ---: | ---: | ---: |
-| 77th-JSOC-Missions | 2 | 2 | 0 |
-| Advanced-Equipment | 2 | 0 | 2 |
-| Root_Anomalies | 2 | 0 | 2 |
-| Root_Cyberwarfare | 2 | 1 | 1 |
-| Root_Effects | 2 | 0 | 2 |
+Private external-source test details are withheld. The general implementation goals and supported contracts remain unchanged.
 
 The three completed real entries needed no nontrivial include insertion and retained the prior 186 literal registration candidates. Seven macro-dependent entries were blocked with original-source findings. This is useful boundary evidence, not proof of mod conversion. New include-fragment composition is demonstrated by synthetic cases, including one 102-file fixture where a previously opaque include exposes 100 registration candidates with original header origins. All remain non-executable and unbound.
 

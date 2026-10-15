@@ -1,0 +1,10 @@
+{
+  "scope": "Synthetic preprocessing throughput fixture only; private test-source details are not distributed.",
+  "synthetic": {
+    "invocations": 512,
+    "elapsedMs": 23.99,
+    "sourceBytes": 20954,
+    "expandedCharacters": 16789,
+    "macroReplacements": 1536
+  }
+}

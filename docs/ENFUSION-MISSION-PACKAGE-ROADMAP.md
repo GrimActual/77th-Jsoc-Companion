@@ -99,7 +99,7 @@ Added source-shape compatibility/mismatch/unresolved checks and explicit potenti
 
 ## Author-operated mod conversion corpus and pathway priorities (15 October 2026)
 
-Added a 20-repository public catalogue/tree inventory and revision-pinned, read-only tests of 30 small SQF samples from the five author-permitted priority projects. All 30 review bundles passed integrity/strict-report checks with unchanged captured source bytes; 248 selected expression parts were recognized and 282 remained unsupported. This is sampled static coverage, not whole-mod conversion or native verification. Evidence retains provenance without bundling third-party script bodies. The product destination is an in-app workflow for authors to convert their own sources: inventory/dependency review, bounded source-mapped preprocessing, explicit class/resource mappings, typed context/lifetime IR, reviewed output and isolated native validation. Current deeper checks remain developer tools. All prior roadmap items remain; new corpus priorities supplement them. See docs/EXTERNAL-MOD-CONVERSION-CORPUS.md and docs/test-evidence/root-corpus.json.
+Private external-source test details are withheld. The general implementation goals and supported contracts remain unchanged.
 
 
 ## Supplied-source include resolver and compiler CI (15 October 2026)
@@ -186,7 +186,7 @@ Added opt-in literal-only Boolean value helpers with source/output maps and a ma
 
 ### 15 October 2026 — consistent component source review
 
-Added explicit unpacked component capture with preserved nested paths and virtual mounts, plus one desktop source-package action for all four inspectors. Sequential bounded workers publish all four native export snapshots together; cancellation/failure preserves prior reviews. Private Weather/Main corpus: 48 source files, 47/48 literal includes resolved, remaining CBA shared header explicitly unresolved. All four reviews now share one source selection; no source execution, macro expansion or new native conversion claim. Settings reuse the same dialog; Sarge now has 57 EN/FR/DE topics. See [component source review](COMPONENT-SOURCE-REVIEW.md). Typed local assignment lowering, function-like macro resolution and all existing roadmap goals remain pending/intact.
+Private external-source test details are withheld. The general implementation goals and supported contracts remain unchanged.
 
 
 ### 15 October 2026 — initialized Boolean local blocks
@@ -207,3 +207,12 @@ Added explicit read-only coverage previews for every expression/block family, wi
 ### 15 October 2026 — typed pure function module compiler
 
 Added explicit Boolean params/defaults, named code-valued function bodies, local state, branches, function-root guard exits and cross-file calls inside a selected closed module. Candidate/write uniqueness, typed argument checks, dependency propagation and cycle rejection prevent speculative bindings. Native 1.8.0.13 diagnostic server compiled six methods and executed 42 invocation/default cases. Source registration, dynamic scope, external callers, lifecycle and engine hooks stay manual. Coverage/export now includes typed functions and source/parameter/method/call-edge maps; base comments-only handoff remains intact. Settings and 62 EN/FR/DE Sarge topics are synchronized. All prior goals remain. See [typed Boolean functions](TYPED-BOOLEAN-FUNCTIONS.md).
+
+
+## Additive RC3 milestone — preprocessing, owned scheduling and game-review handoff
+
+RC3 delivers bounded implementations for the remaining release-batch priorities: selected function-style preprocessing with origin-preserving fresh review export; native-tested owned delay/readiness job scaffolds; imported-unit handoff to the existing host-approved deployment adapter; and consolidated real-source, regression, desktop and performance validation. See docs/RC3-MIGRATION-ADAPTERS.md and docs/RC3-RELEASE-DEBRIEF.md.
+
+The ten-priority batch now has concrete supported paths for registered files, selected preprocessing, structured calls, scalar contracts, initialized branch scope, literal loops, owned scheduling, reviewed engine deployment, isolated native handoff and prerelease validation. This does not complete arbitrary SQF-to-EnScript translation. Native preprocessing parity, missing external headers, engine-side UI/audio/events, general scheduling, crew/group reconstruction and unsupported source semantics remain explicit manual/roadmap items. No broader goal is removed or marked complete by inference.
+
+Source is never executed to infer meaning. Generated jobs are not auto-started; deployment still requires in-game host approval. Runtime state remains separate from saved missions and Undo. Existing Workshop scripts were not changed for these desktop additions.
