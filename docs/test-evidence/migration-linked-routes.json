@@ -1,0 +1,111 @@
+{
+  "scope": "Optional reviewed linked movement routes; planning-only",
+  "focusedTests": 15,
+  "focusedTestsPassed": true,
+  "ui": {
+    "passed": true,
+    "actualOfflineElectron": true,
+    "linkedRoutes": true,
+    "routePaging20": true,
+    "routeAcknowledgementRequired": true,
+    "unitDeselectionClearsAssociatedMoves": true,
+    "sourceClearRemovesRoutes": true,
+    "realSourceAndMapWorkers": true,
+    "manualAnchor": true,
+    "displayOffsetOnce": true,
+    "explicitSelectionAndFaction": true,
+    "previewMissionUnchanged": true,
+    "atomicUndoRedo": true,
+    "missionEditStale": true,
+    "anchorEditStale": true,
+    "sourceClearStale": true,
+    "localeContext": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "rendererErrors": [],
+    "gameExecution": false
+  },
+  "performance": {
+    "scope": "Short local same-fixture comparison; not universal FPS/RAM guarantees, network/gameplay or terrain validation. File-selection timing includes automation dispatch.",
+    "preparation": {
+      "units": 60,
+      "routes": 60,
+      "movementPoints": 240,
+      "samples": 20,
+      "warmups": 5,
+      "medianMs": 11.857799999999997,
+      "p95Ms": 12.970900000000029,
+      "maxMs": 13.042500000000018
+    },
+    "results": [
+      {
+        "build": "previous-terrain-candidate",
+        "fixture": "Same 60-unit / 60-route / 240-movement-point mission JSON, offline terrain, reduced motion, default viewport; no panning",
+        "frameMedianMs": 16.69999999999891,
+        "frameP95Ms": 16.799999999999272,
+        "frameMaxMs": 16.80000000000109,
+        "framesOver50ms": 0,
+        "longTasks": [
+          428
+        ],
+        "units": 60,
+        "routes": 60,
+        "routePaths": 0,
+        "markerCount": 60,
+        "tileCount": 16,
+        "jsHeapEstimateBytes": 17100000,
+        "mainProcessMemoryKB": {
+          "residentSet": 95428,
+          "private": 75388,
+          "shared": 408
+        },
+        "savedMissionBytes": 217115,
+        "importThroughFileSelectionMs": 1180.800000011921
+      },
+      {
+        "build": "linked-route-candidate",
+        "fixture": "Same 60-unit / 60-route / 240-movement-point mission JSON, offline terrain, reduced motion, default viewport; no panning",
+        "frameMedianMs": 16.699999999999818,
+        "frameP95Ms": 16.800000000000182,
+        "frameMaxMs": 33.25199999999995,
+        "framesOver50ms": 0,
+        "longTasks": [
+          74,
+          84
+        ],
+        "units": 60,
+        "routes": 60,
+        "routePaths": 0,
+        "markerCount": 60,
+        "tileCount": 16,
+        "jsHeapEstimateBytes": 17100000,
+        "mainProcessMemoryKB": {
+          "residentSet": 95892,
+          "private": 74096,
+          "shared": 408
+        },
+        "savedMissionBytes": 217115,
+        "importThroughFileSelectionMs": 318.5
+      }
+    ]
+  },
+  "drawCountCorrection": {
+    "passed": true,
+    "note": "Follow-up count in the custom route pane; initial performance selector counted the default overlay pane instead.",
+    "results": [
+      {
+        "build": "previous",
+        "routePaneSVGPaths": 60
+      },
+      {
+        "build": "candidate",
+        "routePaneSVGPaths": 60
+      }
+    ]
+  },
+  "nativeSourceChanged": false,
+  "gameExecution": false,
+  "publishedReleaseChanged": false
+}

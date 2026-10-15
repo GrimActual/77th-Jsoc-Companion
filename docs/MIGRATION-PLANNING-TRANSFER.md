@@ -39,3 +39,8 @@ Preparing/validating 60 selected placements: five warmups, 20 samples, median 4.
 ## Next additive milestones
 
 Multi-landmark terrain fit/residual review; reviewed source-group/faction adapters; explicit linked route transfer; versioned validated deployment handoff and native authority/lifecycle adapters. Full SQF/SQM conversion, native scene export, the AI command roadmap and all earlier milestones remain retained.
+
+
+## Subsequent linked-route checkpoint
+
+Optional reviewed linked doMove points can now be imported as proposed planning routes in the separate unreleased candidate described in MIGRATION-LINKED-ROUTES.md. Original execution timing, groups, terrain height and native execution remain unresolved. Public dev.gm.8 downloads remain unchanged.

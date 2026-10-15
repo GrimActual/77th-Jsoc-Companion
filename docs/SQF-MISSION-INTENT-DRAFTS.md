@@ -46,3 +46,8 @@ Primary syntax references: [identifier rules](https://community.bistudio.com/wik
 ## Subsequent source checkpoint
 
 Manual anchor preview and selected mapped-spawn planning transfer are now available in the separate unreleased candidate described in MIGRATION-PLANNING-TRANSFER.md. The dev.gm.8 download and this non-executable draft contract remain unchanged. Verified terrain calibration, movement conversion and native execution remain future milestones.
+
+
+## Subsequent linked-route checkpoint
+
+Optional reviewed linked doMove points can now be imported as proposed planning routes in the separate unreleased candidate described in MIGRATION-LINKED-ROUTES.md. Original execution timing, groups, terrain height and native execution remain unresolved. Public dev.gm.8 downloads remain unchanged.
