@@ -42,3 +42,8 @@ Unter **Quelltextdiagnose → Export und Gerüste** eine Typen- oder Effektprüf
 Nur vollständige flache SQF-Dateien mit initialisierten privaten booleschen Variablen, nachfolgenden Zuweisungen und abschließendem booleschem Wert werden akzeptiert. Lesezugriffe benötigen vorherige Initialisierung. Quellnamen werden ohne Beachtung der Großschreibung verglichen und Zielnamen erzeugt. Unbekannte Werte, Typwechsel, globale Variablen, erneute Deklarationen, Kommandos, Zweige, Schleifen, Callbacks und ausgewählte Direktiven bleiben manuell. Keine Teilblöcke. Die Ausgabe ergänzt unabhängige Helfer und Quell-/Ausgabekarten; Rechte, Aufrufer und Lebenszyklus erfordern menschliche Prüfung. Der normale Gerüstexport bleibt kommentarbasiert. Keine vollständige Mod oder Mission wird als ausführbar bezeichnet.
 
 Der native Diagnoseserver 1.8.0.13 kompilierte und prüfte 24 Fälle und wurde anschließend beendet. Kein Quell-SQF und kein Spielclient wurde ausgeführt. Der Beleg bindet Code-, Parser- und Fixture-Prüfsummen. Der obige Befehl erstellt lediglich ein isoliertes Projekt in einem neuen Ordner und startet keinen Motor.
+
+
+## Additive Boolean branch family
+
+The block-family selector now offers a separate bounded if/else mapper over existing initialized Boolean locals. Earlier straight-line rules remain unchanged for their own family. See [the EN/FR/DE branch guide](BOOLEAN-BRANCH-MAPPING.md).

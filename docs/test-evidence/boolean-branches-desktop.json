@@ -1,0 +1,18 @@
+{
+  "scope": "Actual packaged Electron with native source capture, four real workers and exclusive export writes. Only OS pickers substituted; offline and no game client.",
+  "branchExport": true,
+  "sourceOutputMaps": true,
+  "commentOnlyModeRetained": true,
+  "familySourceProfileChangesResetAcknowledgment": true,
+  "languageRetainsFamilyAndMatchingAcknowledgment": true,
+  "unreachableUnsupportedArmRejected": true,
+  "languages": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "narrowWidth": 680,
+  "missionUnchanged": true,
+  "sargeDestination": true,
+  "pageErrors": []
+}

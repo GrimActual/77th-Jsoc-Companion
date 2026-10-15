@@ -1,0 +1,8 @@
+{
+  "focusedUniqueChecks": 47,
+  "nativeFixtureCases": 32,
+  "independentTruthTables": true,
+  "scope": "Boolean branches over initialized locals. Shared exporter regression tests were rerun because its accepted formats and writer paths changed; native proof was run once.",
+  "gameClientLaunched": false,
+  "sourceSQFExecuted": false
+}

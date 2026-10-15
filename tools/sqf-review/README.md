@@ -169,3 +169,8 @@ The additive `project.cjs` command preserves recursive component paths and expli
 ## Additive Boolean local block export
 
 The separate opt-in local-block export now supports complete flat initialized Boolean locals, reads and assignments, with an explicit final result. Previous mode descriptions remain valid for their own formats. See [the EN/FR/DE local-block guide](../../docs/BOOLEAN-LOCAL-MAPPING.md). No general SQF-to-Enforce conversion is claimed.
+
+
+## Additive Boolean branch family
+
+The block-family selector now offers a separate bounded if/else mapper over existing initialized Boolean locals. Earlier straight-line rules remain unchanged for their own family. See [the EN/FR/DE branch guide](../../docs/BOOLEAN-BRANCH-MAPPING.md).

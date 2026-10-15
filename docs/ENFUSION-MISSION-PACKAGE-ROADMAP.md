@@ -192,3 +192,8 @@ Added explicit unpacked component capture with preserved nested paths and virtua
 ### 15 October 2026 — initialized Boolean local blocks
 
 Added optional complete flat Boolean local-block lowering: initialized private declarations, preceding local reads, sequential assignments and an explicit final Boolean value. Unknown/global/type-changing or control-flow operations reject that file as a whole. Native 1.8.0.13 diagnostic server compiled and executed 24 cases, then stopped; source SQF and game client were not run. Detached helpers carry original source/output maps and require caller/lifecycle integration. Existing comments-only and literal-expression modes remain intact. Separate review-bound acknowledgment, 58 EN/FR/DE Sarge topics and existing Settings routes cover the feature. This completes only the Boolean straight-line subset; general locals, functions, branches, loops, macros and all earlier roadmap goals remain intact. See [Boolean local mapping](BOOLEAN-LOCAL-MAPPING.md).
+
+
+### 15 October 2026 — bounded pure Boolean if/else lowering
+
+Added an optional Boolean branch family alongside the existing straight-line local export. Statement-form if/else, optional else and bounded nesting can write previously initialized Boolean locals; both arms are checked. Branch-local declarations, unknown/global/engine operations, loops, value-form if and lifecycle integration stay manual. Native 1.8.0.13 diagnostic server compiled and executed 32 independently checked fixture outcomes, then stopped. No source SQF or game client was run. Family/source/profile changes reset scope acknowledgment; EN/FR/DE guidance and 59 Sarge topics are synchronized. All earlier goals and modes remain intact. See [Boolean branch mapping](BOOLEAN-BRANCH-MAPPING.md).
