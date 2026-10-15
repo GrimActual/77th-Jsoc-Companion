@@ -611,5 +611,28 @@
     },
     "rendererMeasured": false
   },
-  "finalCapturedReportsUnchanged": true
+  "finalCapturedReportsUnchanged": true,
+  "hostedCI": {
+    "status": "completed",
+    "jobs": [
+      {
+        "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38751338862/job/116478222352",
+        "status": "completed",
+        "conclusion": "success",
+        "id": 116478222352,
+        "name": "Core and worker checks (windows-2022, Node 22)"
+      },
+      {
+        "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38751338862/job/116478222718",
+        "status": "completed",
+        "conclusion": "success",
+        "id": 116478222718,
+        "name": "Core and worker checks (ubuntu-24.04, Node 24)"
+      }
+    ],
+    "sourceCommit": "af32c6281afc28702ef8d71214455763ee05669d",
+    "conclusion": "success",
+    "runId": 38751338862,
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38751338862"
+  }
 }
