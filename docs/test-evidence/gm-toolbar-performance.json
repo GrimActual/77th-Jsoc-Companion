@@ -1,0 +1,20 @@
+{
+  "scope": "Matched 400-unit offline mission, 1440x900 viewport, editor open, approximately 3.5-second pan sample for compact-toolbar packaged app; same fixture as prior gm-layout-performance.json. Short single-run observations, not a speedup or sustained FPS guarantee.",
+  "results": [
+    {
+      "label": "compact-toolbar",
+      "frames": 204,
+      "elapsedMs": 3509.2999999940394,
+      "fps": 58.131251246786114,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.800000000000182,
+      "maxFrameMs": 83.30000000000018,
+      "framesOver100Ms": 0,
+      "markers": 400,
+      "tiles": 2,
+      "heapBytes": 18200000,
+      "missionUnchanged": true
+    }
+  ],
+  "gameLaunched": false
+}

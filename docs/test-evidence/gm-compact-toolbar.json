@@ -1,0 +1,78 @@
+{
+  "layouts": [
+    {
+      "width": 1920,
+      "height": 1000,
+      "language": "en",
+      "toolbar": {
+        "x": 12,
+        "y": 164,
+        "width": 387.953125,
+        "height": 44
+      },
+      "menu": {
+        "x": 13,
+        "y": 215,
+        "width": 270,
+        "height": 280.796875
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "language": "en",
+      "toolbar": {
+        "x": 12,
+        "y": 164,
+        "width": 387.953125,
+        "height": 44
+      },
+      "menu": {
+        "x": 13,
+        "y": 215,
+        "width": 270,
+        "height": 280.796875
+      }
+    },
+    {
+      "width": 700,
+      "height": 820,
+      "language": "fr",
+      "toolbar": {
+        "x": 12,
+        "y": 301,
+        "width": 518.734375,
+        "height": 44
+      },
+      "menu": {
+        "x": 13,
+        "y": 352,
+        "width": 270,
+        "height": 280.796875
+      }
+    },
+    {
+      "width": 520,
+      "height": 760,
+      "language": "de",
+      "toolbar": {
+        "x": 12,
+        "y": 301,
+        "width": 458.59375,
+        "height": 44
+      },
+      "menu": {
+        "x": 13,
+        "y": 352,
+        "width": 270,
+        "height": 280.796875
+      }
+    }
+  ],
+  "menuDelegatesExistingDeploymentReview": true,
+  "escapeClosesMenuBeforeEditor": true,
+  "fullMapRestoresClosedMenu": true,
+  "missionUnchanged": true,
+  "rendererErrors": [],
+  "gameLaunched": false
+}

@@ -32,7 +32,7 @@ dialog{color:var(--text);background:var(--panel);border:1px solid var(--line);bo
 body.gm-workspace main{display:block;position:relative}body.gm-workspace .map-shell{height:100%;min-height:420px;width:100%}
 body.gm-workspace main>aside{display:none;position:absolute;z-index:850;right:10px;top:90px;bottom:105px;width:360px;max-width:calc(100% - 20px);overflow:auto;border:1px solid var(--line);border-radius:7px;box-shadow:0 4px 18px #0008}
 body.gm-workspace.gm-workspace-editor main>aside{display:block}
-#gmWorkspaceBar{position:absolute;z-index:800;top:82px;left:12px;right:12px;display:flex;flex-wrap:wrap;gap:5px;align-items:center;padding:7px;background:var(--panel);border:1px solid var(--line);border-radius:6px}
+#gmWorkspaceBar{position:absolute;z-index:900;top:82px;left:12px;right:auto;width:max-content;max-width:calc(100% - 24px);display:flex;flex-wrap:wrap;gap:5px;align-items:center;padding:7px;background:var(--panel);border:1px solid var(--line);border-radius:6px}
 #gmWorkspaceBar button{font-size:12px;min-height:34px;padding:6px 9px}#gmWorkspaceBar span{font-size:11px;max-width:240px;overflow-wrap:anywhere}
 .gm-drawer{position:absolute;z-index:800;top:176px;bottom:105px;width:320px;max-width:calc(100% - 24px);overflow:auto;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:7px;box-shadow:0 4px 18px #0008}
 #gmAssetDrawer{left:12px}#gmSelectionInspector{right:12px}.gm-drawer .section-heading{gap:6px}.gm-drawer h2{font-size:14px}.gm-drawer .section-heading button{font-size:11px;padding:5px;min-height:32px}.gm-inspector-card{padding:9px;border:1px solid var(--line);border-radius:5px;margin-bottom:8px}.gm-inspector-card p{margin:5px 0;font-size:12px;overflow-wrap:anywhere}.gm-inspector-card strong{font-size:14px;overflow-wrap:anywhere}
@@ -50,3 +50,14 @@ body.gm-workspace main>aside :is(button,input,select,textarea,details,.panel){ma
 body.gm-workspace main>aside :is(button,p,summary,small){overflow-wrap:anywhere}
 body.gm-workspace main>aside button{white-space:normal}
 body.gm-workspace main>aside pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%}
+
+/* Small floating command group; secondary GM controls open only when requested. */
+#gmWorkspaceBar{padding:4px;background:color-mix(in srgb,var(--panel) 92%,transparent);gap:4px;border-radius:8px;box-shadow:0 2px 8px #0003}
+#gmWorkspaceMenu{margin:0;position:static}
+#gmWorkspaceMenu>summary{list-style:none;font-size:12px;min-height:34px;padding:6px 9px;color:var(--text);background:var(--panel2);border:1px solid var(--line);border-radius:6px;display:flex;align-items:center;gap:7px}
+#gmWorkspaceMenu>summary::after{content:'▾';font-size:10px}
+#gmWorkspaceMenu[open]>summary{border-color:var(--green)}
+#gmWorkspaceActions{position:absolute;left:0;top:calc(100% + 8px);width:270px;max-width:calc(100vw - 24px);max-height:60dvh;overflow:auto;display:grid;gap:5px;padding:8px;background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:0 5px 16px #0006}
+#gmWorkspaceActions button{text-align:left;white-space:normal;overflow-wrap:anywhere;width:100%}
+#gmWorkspaceBar #gmWorkspaceLive{display:inline-block;border:0;background:none;padding:3px 6px;color:var(--muted)}
+#gmWorkspaceBar #gmWorkspaceRehearsal{display:block;max-width:100%;overflow-wrap:anywhere}

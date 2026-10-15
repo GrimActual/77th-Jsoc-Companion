@@ -241,3 +241,8 @@ Added an explicit native source picker and on-demand desktop dependency review w
 ### 15 October 2026 — GM workspace layout correction
 
 Packages 14/16: the floating editor and drawers clear wrapped map tools; long controls stay inside the panel. Five actual-app size/language/text combinations, Full map restoration, drawers, source-file inspection and unchanged mission checks passed. A matched short 400-unit comparison found no obvious frame-time regression. Existing Sarge/Settings destinations remain unchanged; EN/FR/DE usage notes and limits are recorded in [the layout guide](../docs/GM-WORKSPACE-LAYOUT-FIX.md). This is a small usability correction; diagnostic explorers and all existing roadmap goals remain pending as previously recorded.
+
+
+### 15 October 2026 — compact floating GM controls
+
+The full-width bar is now content-sized. Assets, Inspector, Editor and live status remain visible; GM actions contains secondary commands. Existing handlers, approval boundaries and mission state are preserved. Sarge/EN/FR/DE guidance, responsive menu checks and the short performance sample are in [the toolbar guide](../docs/GM-COMPACT-TOOLBAR.md). All existing roadmap goals remain.
