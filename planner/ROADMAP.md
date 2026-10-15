@@ -236,3 +236,8 @@ Added a developer-only source-constraint inventory over the existing control/con
 ### 15 October 2026 — desktop dependency inspector
 
 Added an explicit native source picker and on-demand desktop dependency review with unresolved-include filters, search, 40-row pages and captured-source previews. Settings and 51 Sarge topics are synchronized in EN/FR/DE. Cancelling/rejecting retains the previous review; clearing affects only session inspection. Includes are not auto-loaded, guards are not evaluated and source is never executed. This is the first desktop diagnostic increment; function/type/effects explorers, a graph view and combined export remain later work. Existing goals are retained. See [the workflow and validation](../docs/DESKTOP-DEPENDENCY-INSPECTOR.md).
+
+
+### 15 October 2026 — GM workspace layout correction
+
+Packages 14/16: the floating editor and drawers clear wrapped map tools; long controls stay inside the panel. Five actual-app size/language/text combinations, Full map restoration, drawers, source-file inspection and unchanged mission checks passed. A matched short 400-unit comparison found no obvious frame-time regression. Existing Sarge/Settings destinations remain unchanged; EN/FR/DE usage notes and limits are recorded in [the layout guide](../docs/GM-WORKSPACE-LAYOUT-FIX.md). This is a small usability correction; diagnostic explorers and all existing roadmap goals remain pending as previously recorded.

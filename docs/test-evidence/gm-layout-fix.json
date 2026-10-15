@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "width": 1920,
+      "height": 1000,
+      "lang": "en",
+      "textSize": "normal",
+      "aside": {
+        "x": 1550,
+        "y": 224,
+        "right": 1910,
+        "bottom": 895,
+        "width": 360,
+        "height": 671
+      },
+      "toolbar": {
+        "x": 1273.4375,
+        "y": 914,
+        "right": 1910,
+        "bottom": 952,
+        "width": 636.5625,
+        "height": 38
+      },
+      "overflow": 0,
+      "bodyOverflow": 0
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "lang": "en",
+      "textSize": "normal",
+      "aside": {
+        "x": 910,
+        "y": 261,
+        "right": 1270,
+        "bottom": 695,
+        "width": 360,
+        "height": 434
+      },
+      "toolbar": {
+        "x": 633.4375,
+        "y": 714,
+        "right": 1270,
+        "bottom": 752,
+        "width": 636.5625,
+        "height": 38
+      },
+      "overflow": 0,
+      "bodyOverflow": 0
+    },
+    {
+      "width": 900,
+      "height": 800,
+      "lang": "fr",
+      "textSize": "normal",
+      "aside": {
+        "x": 530,
+        "y": 371,
+        "right": 890,
+        "bottom": 695,
+        "width": 360,
+        "height": 324
+      },
+      "toolbar": {
+        "x": 150.171875,
+        "y": 714,
+        "right": 890,
+        "bottom": 752,
+        "width": 739.828125,
+        "height": 38
+      },
+      "overflow": 0,
+      "bodyOverflow": 0
+    },
+    {
+      "width": 700,
+      "height": 820,
+      "lang": "de",
+      "textSize": "normal",
+      "aside": {
+        "x": 330,
+        "y": 400,
+        "right": 690,
+        "bottom": 715,
+        "width": 360,
+        "height": 315
+      },
+      "toolbar": {
+        "x": 55.203125,
+        "y": 740,
+        "right": 690,
+        "bottom": 772,
+        "width": 634.796875,
+        "height": 32
+      },
+      "overflow": 0,
+      "bodyOverflow": 0
+    },
+    {
+      "width": 520,
+      "height": 760,
+      "lang": "de",
+      "textSize": "large",
+      "aside": {
+        "x": 150,
+        "y": 398,
+        "right": 510,
+        "bottom": 634,
+        "width": 360,
+        "height": 236
+      },
+      "toolbar": {
+        "x": 10,
+        "y": 644,
+        "right": 510,
+        "bottom": 712,
+        "width": 500,
+        "height": 68
+      },
+      "overflow": 0,
+      "bodyOverflow": 0
+    }
+  ],
+  "loadedRealSQFSources": 6,
+  "fullMapRestoresEditor": true,
+  "narrowDrawerExclusivity": true,
+  "escapeFocus": true,
+  "missionUnchanged": true,
+  "rendererErrors": [],
+  "scope": "Actual fixed packaged app, isolated profile and read-only selected source files. No game launched."
+}

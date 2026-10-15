@@ -30,7 +30,7 @@ dialog{color:var(--text);background:var(--panel);border:1px solid var(--line);bo
 
 /* Optional GM workspace: map stays primary; editor and drawers are reversible. */
 body.gm-workspace main{display:block;position:relative}body.gm-workspace .map-shell{height:100%;min-height:420px;width:100%}
-body.gm-workspace main>aside{display:none;position:absolute;z-index:850;right:10px;top:90px;bottom:12px;width:360px;max-width:calc(100% - 20px);overflow:auto;border:1px solid var(--line);border-radius:7px;box-shadow:0 4px 18px #0008}
+body.gm-workspace main>aside{display:none;position:absolute;z-index:850;right:10px;top:90px;bottom:105px;width:360px;max-width:calc(100% - 20px);overflow:auto;border:1px solid var(--line);border-radius:7px;box-shadow:0 4px 18px #0008}
 body.gm-workspace.gm-workspace-editor main>aside{display:block}
 #gmWorkspaceBar{position:absolute;z-index:800;top:82px;left:12px;right:12px;display:flex;flex-wrap:wrap;gap:5px;align-items:center;padding:7px;background:var(--panel);border:1px solid var(--line);border-radius:6px}
 #gmWorkspaceBar button{font-size:12px;min-height:34px;padding:6px 9px}#gmWorkspaceBar span{font-size:11px;max-width:240px;overflow-wrap:anywhere}
@@ -42,3 +42,11 @@ body.briefing-mode #gmWorkspaceBar,body.briefing-mode .gm-drawer{display:none!im
 @media(max-width:650px){#gmWorkspaceBar{top:92px;gap:3px}#gmWorkspaceBar span{display:none}.gm-drawer{top:210px;bottom:110px;width:calc(100% - 24px)}body.gm-workspace:has(#gmAssetDrawer:not([hidden])) #gmSelectionInspector{display:none}}
 
 #gmWorkspaceBar .gm-workspace-state{font-size:12px;line-height:1.4;padding:5px 8px;border:1px solid var(--line);border-radius:5px;background:var(--panel2);max-width:290px}
+
+/* Keep the floating editor clear of map tools and contain long labels/source paths. */
+body.gm-workspace main>aside .row{flex-wrap:wrap}
+body.gm-workspace main>aside .row>button{flex-shrink:1}
+body.gm-workspace main>aside :is(button,input,select,textarea,details,.panel){max-width:100%;min-width:0}
+body.gm-workspace main>aside :is(button,p,summary,small){overflow-wrap:anywhere}
+body.gm-workspace main>aside button{white-space:normal}
+body.gm-workspace main>aside pre{white-space:pre-wrap;overflow-wrap:anywhere;max-width:100%}

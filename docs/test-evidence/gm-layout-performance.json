@@ -1,0 +1,34 @@
+{
+  "scope": "Matched 400-unit offline mission, 1440x900 viewport, editor open, approximately 3.5-second pan sample per previous/fixed packaged app. Short single-run observations, not a speedup or sustained FPS guarantee.",
+  "results": [
+    {
+      "label": "previous",
+      "frames": 209,
+      "elapsedMs": 3509.999999994039,
+      "fps": 59.544159544260665,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.800000000000182,
+      "maxFrameMs": 33.299999999999955,
+      "framesOver100Ms": 0,
+      "markers": 400,
+      "tiles": 2,
+      "heapBytes": 19300000,
+      "missionUnchanged": true
+    },
+    {
+      "label": "fixed",
+      "frames": 211,
+      "elapsedMs": 3508.1999999970194,
+      "fps": 60.14480360303838,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.800000000000182,
+      "maxFrameMs": 16.90000000000009,
+      "framesOver100Ms": 0,
+      "markers": 400,
+      "tiles": 2,
+      "heapBytes": 17100000,
+      "missionUnchanged": true
+    }
+  ],
+  "gameLaunched": false
+}
