@@ -51,3 +51,18 @@ English: source-semantics.json distinguishes compatible known shapes, unresolved
 Francais : source-semantics.json distingue les formes connues compatibles, les operandes non resolus et les incompatibilites connues. Il conserve les effets possibles et les obligations de planification/nettoyage des rappels. Aucun code ni texte de condition n'est execute. La validation structurelle ne prouve pas l'equivalence native; les anciens formats restent lisibles.
 
 Deutsch: source-semantics.json unterscheidet kompatible bekannte Formen, ungeklaerte Operanden und bekannte Unvereinbarkeiten. Moegliche Effekte sowie Callback-Zeitpunkt und Aufraeumpflichten bleiben sichtbar. Code und Bedingungstexte werden nicht ausgefuehrt. Strukturelle Pruefung beweist keine native Verhaltensgleichheit; aeltere Berichtsformate bleiben lesbar.
+
+
+## Include dependency review / Dependances / Abhaengigkeiten (developer-only)
+
+**English:** Prepare a UTF-8 JSON file with exactly `files` (relative `{name,text}` records) and `mounts` (`{prefix,root}` records, empty array allowed). Example: `{"files":[{"name":"addons/main/init.sqf","text":"#include \"script_component.hpp\""},{"name":"addons/main/script_component.hpp","text":"#define DEMO 1"}],"mounts":[{"prefix":"/z/demo/addons/main","root":"addons/main"}]}`. Supply your own local text; this tool does not traverse directories or fetch missing dependencies. Names preserve package-relative paths. No macro expansion, config symbol resolution or Enforce generation is performed.
+
+```powershell
+node tools/sqf-review/dependencies.cjs --source-set "A:/Reviews/source-set.json" --output "A:/Reviews/new-dependencies.json"
+```
+
+Review unresolved/case/unsafe-path results and potential cycles. Exact include paths do not prove active branches, function bindings or conversion readiness. Processing uses a cancellable bounded Node worker. The new report must not overwrite an existing file and is not an app import/deployment contract. See docs/SQF-SOURCE-DEPENDENCIES.md for limits and examples.
+
+**Francais :** Creez un fichier JSON UTF-8 avec seulement `files` (noms relatifs et textes) et `mounts` (prefixes virtuels et racines relatives, tableau vide autorise). Utilisez la commande ci-dessus avec un nouveau fichier de sortie. Aucun dossier ou fichier manquant n'est charge automatiquement. Le worker Node analyse les directives sans executer les sources ni developper les macros. Examinez les chemins manquants, ambigus ou dangereux et les cycles potentiels. Un chemin trouve ne prouve ni une branche active, ni une fonction resolue, ni une conversion executable. Outil de developpement, pas une nouvelle fonction de l'application.
+
+**Deutsch:** Erstellen Sie eine UTF-8-JSON-Datei nur mit `files` (relative Namen und Texte) sowie `mounts` (virtuelle Praefixe und relative Wurzeln; leeres Array erlaubt). Verwenden Sie den obigen Befehl mit einer neuen Ausgabedatei. Keine automatische Ordnersuche oder Beschaffung fehlender Dateien. Ein begrenzter Node-Worker untersucht Direktiven ohne Quellcodeausfuehrung oder Makroexpansion. Pruefen Sie fehlende, mehrdeutige oder unsichere Pfade und moegliche Zyklen. Gefundene Pfade beweisen keine aktiven Zweige, aufgeloesten Funktionen oder ausfuehrbare Konvertierung. Dies ist ein Entwicklerwerkzeug, keine neue App-Funktion.
