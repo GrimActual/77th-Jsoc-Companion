@@ -1,6 +1,6 @@
 {
   "realRadioFiles": 7,
-  "realRadioStatus": "Function review ready · 4 function name candidates · 6 calls · 0 names requiring review",
+  "realRadioStatus": "Function review ready \u00b7 4 function name candidates \u00b7 6 calls \u00b7 0 names requiring review",
   "syntheticNames": 200,
   "syntheticRows": 1000,
   "rowsPerPage": 40,
@@ -29,5 +29,12 @@
   "gameLaunched": false,
   "performanceScope": "One click-to-result automation sample; not map FPS or a sustained guarantee.",
   "sourcePaneSideBySideOnDesktop": true,
-  "sourcePaneStacksOnNarrowWindows": true
+  "sourcePaneStacksOnNarrowWindows": true,
+  "hostedCI": {
+    "runId": 38781768739,
+    "sourceCommit": "714d60a91e454256e2c6cec745fea3ee44031045",
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38781768739",
+    "windowsNode22": "success",
+    "linuxNode24": "success"
+  }
 }

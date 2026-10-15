@@ -29,3 +29,5 @@ The packaged app inspected seven selected user radio files and displayed four fu
 One synthetic click-to-result automation observation was 147.06 ms; this is not a universal parsing time or FPS claim. The same 400-unit offline map fixture as the prior compact-toolbar check retained median/p95 frame times of 16.7/16.8 ms, 400 markers and two tiles, with no frame over 100 ms and unchanged mission data in the short sample. The previous passing baseline was reused; these separate short runs do not establish a speedup or sustained stability. Evidence: `docs/test-evidence/function-explorer-performance.json` and `gm-toolbar-performance.json`.
 
 Development executable: `A:/Everon-ORBAT-Development/work/function-explorer/COMMAND-Function-Explorer-Candidate/COMMAND Planner.exe`. Existing dev.gm.8 runtime/version label is retained for this checkpoint; previous candidates remain intact. This is not a new public release.
+
+Hosted full compiler/worker checks passed on Windows/Node 22 and Linux/Node 24 for source `714d60a91e454256e2c6cec745fea3ee44031045`: [run 38781768739](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38781768739).
