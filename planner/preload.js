@@ -13,3 +13,5 @@ contextBridge.exposeInMainWorld('plannerMetadata',{exportSQFAST:report=>ipcRende
 contextBridge.exposeInMainWorld('plannerDependencies',{select:()=>ipcRenderer.invoke('sqf-dependency-select'),cancel:()=>ipcRenderer.invoke('sqf-dependency-cancel')});
 
 contextBridge.exposeInMainWorld('plannerFunctions',{select:()=>ipcRenderer.invoke('sqf-function-select'),cancel:()=>ipcRenderer.invoke('sqf-function-cancel')});
+
+contextBridge.exposeInMainWorld('plannerTypes',{select:()=>ipcRenderer.invoke('sqf-type-select'),cancel:()=>ipcRenderer.invoke('sqf-type-cancel')});
