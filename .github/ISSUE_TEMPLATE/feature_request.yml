@@ -1,0 +1,66 @@
+{
+  "name": "Feature request",
+  "description": "Suggest a focused improvement to the planner or developer workflow.",
+  "title": "[Feature]: ",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Thanks for helping improve COMMAND. Do not post credentials, pairing codes, private relay addresses or personal data. Report vulnerabilities through the private security link, not this form."
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "problem",
+      "attributes": {
+        "label": "Problem to solve",
+        "description": "Who is affected and what is difficult today?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "proposal",
+      "attributes": {
+        "label": "Proposed behavior"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "success",
+      "attributes": {
+        "label": "How would we verify success?"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "input",
+      "id": "roadmap",
+      "attributes": {
+        "label": "Related roadmap item or issue",
+        "description": "Link existing work if you found it; suggestions should add to existing goals."
+      },
+      "validations": {
+        "required": false
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "alternatives",
+      "attributes": {
+        "label": "Alternatives considered",
+        "description": "Optional."
+      },
+      "validations": {
+        "required": false
+      }
+    }
+  ]
+}

@@ -11,5 +11,6 @@
   "engines": {
     "node": ">=18"
   },
-  "description": "COMMAND bridge source prototype"
+  "description": "COMMAND bridge source prototype",
+  "license": "GPL-3.0-only"
 }

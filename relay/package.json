@@ -9,5 +9,6 @@
   "engines": {
     "node": ">=22"
   },
-  "description": "COMMAND ORBAT Bridge HTTPS relay"
+  "description": "COMMAND ORBAT Bridge HTTPS relay",
+  "license": "GPL-3.0-only"
 }

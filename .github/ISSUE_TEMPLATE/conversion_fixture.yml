@@ -1,0 +1,67 @@
+{
+  "name": "Conversion / source fixture report",
+  "description": "Report an import or translation pathway using an authorised minimal sample.",
+  "title": "[Conversion]: ",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Thanks for helping improve COMMAND. Do not post credentials, pairing codes, private relay addresses or personal data. Report vulnerabilities through the private security link, not this form."
+      }
+    },
+    {
+      "type": "input",
+      "id": "version",
+      "attributes": {
+        "label": "Tool version or commit"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "input",
+      "id": "source",
+      "attributes": {
+        "label": "Source format and entry files",
+        "description": "For example SQF, description.ext, config.cpp, loose include headers, or archive inventory. Do not upload game binaries."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "input",
+      "id": "rights",
+      "attributes": {
+        "label": "Permission and provenance",
+        "description": "State ownership or permission to share the sample. Link an upstream public source and exact revision when possible."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "finding",
+      "attributes": {
+        "label": "Expected vs actual finding",
+        "description": "Name the missing include, macro, function mapping or diagnostic. Do not claim output is executable just because it parses."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "fixture",
+      "attributes": {
+        "label": "Minimal fixture or reproduction",
+        "description": "Small redacted text or file manifest. Do not upload an entire mod/asset pack without redistribution rights."
+      },
+      "validations": {
+        "required": true
+      }
+    }
+  ]
+}

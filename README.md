@@ -64,3 +64,10 @@ COMMAND is an independent community project. This branding update preserves save
 [Download the COMMAND 2.9.1-dev.gm.2 pilot and vanilla files](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/releases/tag/v2.9.1-dev.gm.2-command). The data bundle includes 19,438 indexed vanilla prefab identities and a 2,721-entry operational catalog with matching resource index. Native spawn availability remains subject to host review and validation.
 
 For matching current pilot source, use tag v2.9.1-dev.gm.2-command or the [development/tracking-pilot branch](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/tree/development/tracking-pilot). The default branch retains the earlier release-candidate runtime baseline. [Vanilla import instructions](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/blob/development/tracking-pilot/docs/VANILLA-ASSETS.md).
+
+
+## Community and licensing
+
+[Contributing](CONTRIBUTING.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [Security policy](SECURITY.md) · [Report a bug or suggest a feature](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/issues/new/choose)
+
+Original COMMAND source code is licensed under [GNU GPL-3.0-only](LICENSE). Third-party components, game/terrain assets, trademarks and separately licensed material retain their respective terms. See [licensing scope](docs/LICENSING.md) and [third-party notices](planner/THIRD-PARTY-NOTICES.md).
