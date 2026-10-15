@@ -1,0 +1,39 @@
+{
+  "schema": "command-native-reference-locations",
+  "version": 1,
+  "purpose": "Targeted reference/inspiration only; no copied source, dependency, broad crawl or native verification.",
+  "nativeVerified": false,
+  "files": [
+    {
+      "relativePath": "EnfusionScriptAPI/html/index.html",
+      "localPath": "A:\\SteamLibrary\\steamapps\\common\\Arma Reforger Tools\\Workbench\\docs\\EnfusionScriptAPI\\html\\index.html",
+      "bytes": 6244,
+      "sha256": "645db0a59407fb7af9bbee8840bb7faf776c36d2bf94a607503be73c4433cf3f"
+    },
+    {
+      "relativePath": "ArmaReforgerScriptAPIPublic/html/index.html",
+      "localPath": "A:\\SteamLibrary\\steamapps\\common\\Arma Reforger Tools\\Workbench\\docs\\ArmaReforgerScriptAPIPublic\\html\\index.html",
+      "bytes": 5302,
+      "sha256": "8d5ae17b2c5b359f2c51d2bdf4161ae03158f21514ca7edabedf9a9791979734"
+    },
+    {
+      "relativePath": "EnfusionScriptAPI/html/interfaceScriptCallQueue.html",
+      "localPath": "A:\\SteamLibrary\\steamapps\\common\\Arma Reforger Tools\\Workbench\\docs\\EnfusionScriptAPI\\html\\interfaceScriptCallQueue.html",
+      "bytes": 42467,
+      "sha256": "6d9b2b3b8c4eba71f80cf10e987b5ce191c7321ebe50365c15fdba1d6cc88763"
+    },
+    {
+      "relativePath": "EnfusionScriptAPI/html/interfaceEntitySpawnParams.html",
+      "localPath": "A:\\SteamLibrary\\steamapps\\common\\Arma Reforger Tools\\Workbench\\docs\\EnfusionScriptAPI\\html\\interfaceEntitySpawnParams.html",
+      "bytes": 9998,
+      "sha256": "59269302a01c27cc00eaed2709686a96355526ada9d48aa26855bde0c5a4c8fd"
+    }
+  ],
+  "officialSamples": {
+    "url": "https://github.com/BohemiaInteractive/Arma-Reforger-Samples",
+    "reviewed": "Repository overview and licence only",
+    "licenceDeclared": "Arma Public License",
+    "codeCopied": false,
+    "dependencyAdded": false
+  }
+}

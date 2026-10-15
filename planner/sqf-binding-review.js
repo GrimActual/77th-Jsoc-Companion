@@ -4,7 +4,7 @@ const AST=require('./sqf-structural-ast'),S=require('./sqf-migration'),{captureS
 const LIMITS=Object.freeze({scopes:10000,declarations:10000,references:20000,candidateEdges:20000,findings:2000,bytes:8388608});
 const local=name=>typeof name==='string'&&/^_[A-Za-z0-9_]+$/.test(name);
 const canonical=name=>name.toLowerCase();
-async function build(raw){
+async function inspect(raw){
  const files=captureSources(raw),ast=await AST.build(files),texts=new Map(files.map(f=>[f.name.replace(/\\/g,'/'),f.text]));
  const report={schema:'command-sqf-binding-review',version:1,executable:false,evidenceLevel:'syntactic-candidates-only',offsetEncoding:'utf16-code-units',files:ast.files.map(f=>({...f})),scopes:[],declarations:[],references:[],findings:[],requiredReview:['dynamic-scope-and-call-context','types-and-definite-initialization','callback-lifetime-and-locality','native-adapter-semantics'],summary:{scopes:0,declarations:0,references:0,candidateReferences:0,unresolvedReferences:0,findings:0,executionReady:0}};
  const add=(key,row)=>{if(report[key].length>=LIMITS[key])throw Error('Binding '+key+' limit exceeded');report[key].push(row);return row;};
@@ -84,6 +84,7 @@ async function build(raw){
   add('references',{id:'reference-'+report.references.length,scopeId,name:token.value,canonicalName:key,usage:write?'write':'read-or-command-operand',source:{file,line:token.line,column:token.column,start:token.start,end:token.end},status,candidateBindingIds:candidates,bindingResolved:false});
  }}
  report.summary={scopes:report.scopes.length,declarations:report.declarations.length,references:report.references.length,candidateReferences:report.references.filter(r=>r.status==='syntactic-declaration-candidate').length,unresolvedReferences:report.references.filter(r=>r.status!=='syntactic-declaration-candidate').length,findings:report.findings.length,executionReady:0};
- if(Buffer.byteLength(JSON.stringify(report),'utf8')>LIMITS.bytes)throw Error('Binding report byte limit exceeded');return report;
+ if(Buffer.byteLength(JSON.stringify(report),'utf8')>LIMITS.bytes)throw Error('Binding report byte limit exceeded');return {report,structure:ast,files};
 }
-module.exports={LIMITS,build};
+async function build(raw){return (await inspect(raw)).report;}
+module.exports={LIMITS,build,inspect};
