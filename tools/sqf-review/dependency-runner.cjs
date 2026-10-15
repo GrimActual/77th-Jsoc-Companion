@@ -4,7 +4,7 @@ const MAX_INPUT_BYTES=16777216;
 function start(sourceText,{timeoutMs=15000,profile='dependencies'}={}){
  if(typeof sourceText!=='string'||Buffer.byteLength(sourceText,'utf8')>MAX_INPUT_BYTES)throw Error('Source-set JSON exceeds text/byte budget');
  if(!Number.isSafeInteger(timeoutMs)||timeoutMs<1||timeoutMs>30000)throw Error('Invalid worker timeout');
- const profiles={dependencies:{worker:'dependency-worker.cjs',schema:'command-source-dependency-review'},registrations:{worker:'registration-worker.cjs',schema:'command-sqf-function-registration-review'}};
+ const profiles={dependencies:{worker:'dependency-worker.cjs',schema:'command-source-dependency-review'},registrations:{worker:'registration-worker.cjs',schema:'command-sqf-function-registration-review'},includes:{worker:'include-expansion-worker.cjs',schema:'command-literal-include-expansion'}};
  if(typeof profile!=='string'||!Object.hasOwn(profiles,profile))throw Error('Unknown compiler review profile');const selected=profiles[profile];
  let worker,timer,settled=false,rejectPromise;
  const promise=new Promise((resolve,reject)=>{

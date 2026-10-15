@@ -1,0 +1,96 @@
+{
+  "name": "Bug report",
+  "description": "Report a reproducible problem in COMMAND.",
+  "title": "[Bug]: ",
+  "body": [
+    {
+      "type": "markdown",
+      "attributes": {
+        "value": "Thanks for helping improve COMMAND. Do not post credentials, pairing codes, private relay addresses or personal data. Report vulnerabilities through the private security link, not this form."
+      }
+    },
+    {
+      "type": "input",
+      "id": "version",
+      "attributes": {
+        "label": "Exact version or source commit",
+        "description": "Include the release tag and Workshop addon version if relevant."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "dropdown",
+      "id": "component",
+      "attributes": {
+        "label": "Component",
+        "options": [
+          "Desktop planner / map",
+          "Assets / import / export",
+          "Live bridge / relay",
+          "Reforger addon / Game Master",
+          "Developer compiler / conversion tools",
+          "Documentation / setup",
+          "Other"
+        ]
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "input",
+      "id": "environment",
+      "attributes": {
+        "label": "Environment",
+        "description": "Windows version; Node version for developer tools; Host Local / GeForce NOW / dedicated / offline as relevant."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "steps",
+      "attributes": {
+        "label": "Steps to reproduce",
+        "description": "Use the smallest safe example."
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "expected",
+      "attributes": {
+        "label": "Expected result"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "actual",
+      "attributes": {
+        "label": "Actual result"
+      },
+      "validations": {
+        "required": true
+      }
+    },
+    {
+      "type": "textarea",
+      "id": "evidence",
+      "attributes": {
+        "label": "Redacted logs or screenshots",
+        "description": "Remove personal paths, credentials and private server details."
+      },
+      "validations": {
+        "required": false
+      }
+    }
+  ]
+}

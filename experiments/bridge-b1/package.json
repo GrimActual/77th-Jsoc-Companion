@@ -10,5 +10,6 @@
   "engines": {
     "node": ">=18"
   },
-  "description": "COMMAND — independent ORBAT and mission planner for Arma Reforger."
+  "description": "COMMAND — independent ORBAT and mission planner for Arma Reforger.",
+  "license": "GPL-3.0-only"
 }

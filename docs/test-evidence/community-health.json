@@ -1,0 +1,47 @@
+{
+  "healthPercentage": 100,
+  "communityCommit": "d9a1389",
+  "communityPage": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/community",
+  "detectedLicense": "GPL-3.0",
+  "files": {
+    "code_of_conduct": {
+      "key": "other",
+      "name": "Other",
+      "html_url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/blob/main/CODE_OF_CONDUCT.md",
+      "url": "https://api.github.com/repos/GrimActual/COMMAND-ORBAT-Mission-Planner/community/code_of_conduct"
+    },
+    "code_of_conduct_file": {
+      "url": "https://api.github.com/repos/GrimActual/COMMAND-ORBAT-Mission-Planner/contents/CODE_OF_CONDUCT.md",
+      "html_url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/blob/main/CODE_OF_CONDUCT.md"
+    },
+    "contributing": {
+      "url": "https://api.github.com/repos/GrimActual/COMMAND-ORBAT-Mission-Planner/contents/CONTRIBUTING.md",
+      "html_url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/blob/main/CONTRIBUTING.md"
+    },
+    "issue_template": {
+      "url": "https://api.github.com/repos/GrimActual/COMMAND-ORBAT-Mission-Planner/contents/.github/ISSUE_TEMPLATE.md",
+      "html_url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/blob/main/.github/ISSUE_TEMPLATE.md"
+    },
+    "pull_request_template": {
+      "url": "https://api.github.com/repos/GrimActual/COMMAND-ORBAT-Mission-Planner/contents/.github/PULL_REQUEST_TEMPLATE.md",
+      "html_url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/blob/main/.github/PULL_REQUEST_TEMPLATE.md"
+    },
+    "license": {
+      "key": "gpl-3.0",
+      "name": "GNU General Public License v3.0",
+      "spdx_id": "GPL-3.0",
+      "url": "https://api.github.com/licenses/gpl-3.0",
+      "node_id": "MDc6TGljZW5zZTk=",
+      "html_url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/blob/main/LICENSE"
+    },
+    "readme": {
+      "url": "https://api.github.com/repos/GrimActual/COMMAND-ORBAT-Mission-Planner/contents/README.md",
+      "html_url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/blob/main/README.md"
+    }
+  },
+  "securityPolicy": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/blob/main/SECURITY.md",
+  "defaultBranch": "main",
+  "declaredOriginalCodeLicense": "GPL-3.0-only",
+  "verifiedDate": "2026-10-15",
+  "privateVulnerabilityReportingEnabled": true
+}

@@ -1,0 +1,307 @@
+{
+  "schema": "command-literal-include-expansion-evidence",
+  "version": 1,
+  "newFocusedCases": 22,
+  "affectedWorkerRegressionCases": 11,
+  "sourceExecuted": false,
+  "macrosExpanded": false,
+  "conditionsEvaluated": false,
+  "nativeVerified": false,
+  "executionReady": 0,
+  "projects": [
+    {
+      "repository": "77th-JSOC-Missions",
+      "commit": "92474ccc62080b8140002d80550dde20fc944b82",
+      "sourceJSONSHA256": "c9ca9dd1fefe6882ae3ac10e5bbf5de8edbb16348c13888a416c824057cf1ea9",
+      "originalSourceSetUnchanged": true,
+      "reviewContextSHA256": "3b5ab7b95e18dd0822d240050468f238568eaf84d10f97f0b4ff8d849f69eb27",
+      "summary": {
+        "entries": 2,
+        "expanded": 2,
+        "blocked": 0,
+        "emittedCharacters": 5603,
+        "registrationCandidates": 30,
+        "executionReady": 0
+      },
+      "entries": [
+        {
+          "entry": "Missions/# Events/PrivateChristmas_2025.Altis/description.ext",
+          "status": "literal-includes-expanded",
+          "expandedSHA256": "351147c8ff18bc4f20514a49532bc78b9a121019ac1f02af7c7e9d966d2ee161",
+          "segments": 1,
+          "includeOccurrences": 0,
+          "findings": [],
+          "registrationStatus": "candidate-review-only",
+          "registrationCandidates": 30
+        },
+        {
+          "entry": "Missions/Vietnam/1 - Tho San Nguoi My/Mission Files/description.ext",
+          "status": "literal-includes-expanded",
+          "expandedSHA256": "49374e2695778c1f4d9b5cefa21acc0268e059522ef438a6af2208479805739e",
+          "segments": 1,
+          "includeOccurrences": 0,
+          "findings": [],
+          "registrationStatus": "candidate-review-only",
+          "registrationCandidates": 0
+        }
+      ]
+    },
+    {
+      "repository": "Advanced-Equipment",
+      "commit": "be2575c8ebeec547e0e937c17b91d32892e19324",
+      "sourceJSONSHA256": "3b83787fa18ba0fd16de839b6361ff2dd2f81213023f4973327c3eddeb1e3662",
+      "originalSourceSetUnchanged": true,
+      "reviewContextSHA256": "208255e1928970c66a9e464bb0079cc6302b1593a6e0a1d86c2ca9ee2b35cff5",
+      "summary": {
+        "entries": 2,
+        "expanded": 0,
+        "blocked": 2,
+        "emittedCharacters": 0,
+        "registrationCandidates": 0,
+        "executionReady": 0
+      },
+      "entries": [
+        {
+          "entry": "addons/armaos/config.cpp",
+          "status": "blocked",
+          "expandedSHA256": null,
+          "segments": 0,
+          "includeOccurrences": 1,
+          "findings": [
+            {
+              "code": "UNSUPPORTED_DIRECTIVE",
+              "source": {
+                "file": "addons/armaos/script_component.hpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 24
+              },
+              "detail": "Directive define requires macro/conditional/continuation handling."
+            }
+          ],
+          "registrationStatus": null,
+          "registrationCandidates": 0
+        },
+        {
+          "entry": "addons/main/config.cpp",
+          "status": "blocked",
+          "expandedSHA256": null,
+          "segments": 0,
+          "includeOccurrences": 0,
+          "findings": [
+            {
+              "code": "INCLUDE_MISSING_FILE",
+              "source": {
+                "file": "addons/main/config.cpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 31
+              },
+              "detail": "Only exact literal supplied-source includes can be inserted."
+            }
+          ],
+          "registrationStatus": null,
+          "registrationCandidates": 0
+        }
+      ]
+    },
+    {
+      "repository": "Root_Anomalies",
+      "commit": "338b947abc833e85381fe3a641d4197aff0d598c",
+      "sourceJSONSHA256": "e208a91be5aafea5346c1f62b71b8d49e1c1ef4905b3498dc59e94530c82e2b1",
+      "originalSourceSetUnchanged": true,
+      "reviewContextSHA256": "523fcf68bf25c42df143e190b7d486b38c788927c744a1f44c4ad0974ab2bd47",
+      "summary": {
+        "entries": 2,
+        "expanded": 0,
+        "blocked": 2,
+        "emittedCharacters": 0,
+        "registrationCandidates": 0,
+        "executionReady": 0
+      },
+      "entries": [
+        {
+          "entry": "addons/burper/config.cpp",
+          "status": "blocked",
+          "expandedSHA256": null,
+          "segments": 0,
+          "includeOccurrences": 0,
+          "findings": [
+            {
+              "code": "INCLUDE_MISSING_FILE",
+              "source": {
+                "file": "addons/burper/config.cpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 31
+              },
+              "detail": "Only exact literal supplied-source includes can be inserted."
+            }
+          ],
+          "registrationStatus": null,
+          "registrationCandidates": 0
+        },
+        {
+          "entry": "addons/main/config.cpp",
+          "status": "blocked",
+          "expandedSHA256": null,
+          "segments": 0,
+          "includeOccurrences": 1,
+          "findings": [
+            {
+              "code": "UNSUPPORTED_DIRECTIVE",
+              "source": {
+                "file": "addons/main/script_component.hpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 22
+              },
+              "detail": "Directive define requires macro/conditional/continuation handling."
+            }
+          ],
+          "registrationStatus": null,
+          "registrationCandidates": 0
+        }
+      ]
+    },
+    {
+      "repository": "Root_Cyberwarfare",
+      "commit": "ff5179b3b7223d415facad5f97ccf8276481c3ac",
+      "sourceJSONSHA256": "c91a25052c35dd606b2fdb1588aecc82bbb1764e7b3db4b44ee72af62dcced5b",
+      "originalSourceSetUnchanged": true,
+      "reviewContextSHA256": "61fa166331c1e27a5f7a4e716ac0e4945c9c2c35cb07ec4beb6e9e7a4eb38280",
+      "summary": {
+        "entries": 2,
+        "expanded": 1,
+        "blocked": 1,
+        "emittedCharacters": 6428,
+        "registrationCandidates": 156,
+        "executionReady": 0
+      },
+      "entries": [
+        {
+          "entry": "addons/main/CfgFunctions.hpp",
+          "status": "literal-includes-expanded",
+          "expandedSHA256": "6836fbf1dd3b545778f8917e4e1459bf0cc5cca9fa525af7df6663c97f2c1e92",
+          "segments": 1,
+          "includeOccurrences": 0,
+          "findings": [],
+          "registrationStatus": "candidate-review-only",
+          "registrationCandidates": 156
+        },
+        {
+          "entry": "addons/main/config.cpp",
+          "status": "blocked",
+          "expandedSHA256": null,
+          "segments": 0,
+          "includeOccurrences": 2,
+          "findings": [
+            {
+              "code": "UNSUPPORTED_DIRECTIVE",
+              "source": {
+                "file": "addons/main/script_version.hpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 15
+              },
+              "detail": "Directive define requires macro/conditional/continuation handling."
+            }
+          ],
+          "registrationStatus": null,
+          "registrationCandidates": 0
+        }
+      ]
+    },
+    {
+      "repository": "Root_Effects",
+      "commit": "9baebcbb34dc0650938042843c91b4ff850a0a10",
+      "sourceJSONSHA256": "9d81397ebddb1dfedb149d33f4cf4d4e0cc075b738dba93896700eee29730db4",
+      "originalSourceSetUnchanged": true,
+      "reviewContextSHA256": "ab33c0878b4676209a9e70daad5ff0247edc87cc022e0fbe9260e21cdcb405a8",
+      "summary": {
+        "entries": 2,
+        "expanded": 0,
+        "blocked": 2,
+        "emittedCharacters": 0,
+        "registrationCandidates": 0,
+        "executionReady": 0
+      },
+      "entries": [
+        {
+          "entry": "addons/ambientsfx/config.cpp",
+          "status": "blocked",
+          "expandedSHA256": null,
+          "segments": 0,
+          "includeOccurrences": 0,
+          "findings": [
+            {
+              "code": "INCLUDE_MISSING_FILE",
+              "source": {
+                "file": "addons/ambientsfx/config.cpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 31
+              },
+              "detail": "Only exact literal supplied-source includes can be inserted."
+            }
+          ],
+          "registrationStatus": null,
+          "registrationCandidates": 0
+        },
+        {
+          "entry": "addons/main/config.cpp",
+          "status": "blocked",
+          "expandedSHA256": null,
+          "segments": 0,
+          "includeOccurrences": 1,
+          "findings": [
+            {
+              "code": "UNSUPPORTED_DIRECTIVE",
+              "source": {
+                "file": "addons/main/script_component.hpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 22
+              },
+              "detail": "Directive define requires macro/conditional/continuation handling."
+            }
+          ],
+          "registrationStatus": null,
+          "registrationCandidates": 0
+        }
+      ]
+    }
+  ],
+  "benchmark": {
+    "scope": "Same 102-file source set: previous unexpanded registration inventory versus new include insertion, maps and registration composition; fresh-worker overhead measured separately. Two warmups and six measured pairs. Added work/capability, not a speedup or renderer comparison.",
+    "sourceBytes": 10658,
+    "files": 102,
+    "registrationCandidatesAfterExpansion": 100,
+    "unexpandedRegistration": {
+      "samples": 6,
+      "medianMs": 2.6964000000000397,
+      "minMs": 2.0861999999999625,
+      "maxMs": 5.44259999999997
+    },
+    "withExpansionAndOrigins": {
+      "samples": 6,
+      "medianMs": 6.969150000000013,
+      "minMs": 5.385700000000043,
+      "maxMs": 7.989400000000046
+    },
+    "freshWorker": {
+      "samples": 6,
+      "medianMs": 60.214,
+      "minMs": 54.2802999999999,
+      "maxMs": 66.79309999999987
+    },
+    "rendererMeasured": false
+  }
+}

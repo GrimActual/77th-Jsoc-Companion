@@ -69,3 +69,10 @@ The vanilla snapshot contains 19,438 unique prefab identities. Start with the 2,
 ## Latest development pilot
 
 [COMMAND 2.9.1-dev.gm.5](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/releases/tag/v2.9.1-dev.gm.5-command) adds host-reviewed Move and timed Hold for bridge-created infantry AI groups with matching Workshop candidate 0.5.0. It retains the searchable vanilla assets, compact workspace and opt-in mixed tracking pilot. Native waypoint acceptance was tested; actual arrival is still a Host Local gate. See [instructions and limitations](docs/NATIVE-AI-ORDERS-PILOT.md).
+
+
+## Community and licensing
+
+[Contributing](CONTRIBUTING.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [Security policy](SECURITY.md) · [Report a bug or suggest a feature](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/issues/new/choose)
+
+Original COMMAND source code is licensed under [GNU GPL-3.0-only](LICENSE). Third-party components, game/terrain assets, trademarks and separately licensed material retain their respective terms. See [licensing scope](docs/LICENSING.md) and [third-party notices](planner/THIRD-PARTY-NOTICES.md).

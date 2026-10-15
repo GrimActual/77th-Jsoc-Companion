@@ -1,0 +1,20 @@
+{
+  "blank_issues_enabled": true,
+  "contact_links": [
+    {
+      "name": "Report a security vulnerability privately",
+      "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/security/advisories/new",
+      "about": "Do not disclose vulnerabilities or credentials in public issues."
+    },
+    {
+      "name": "Setup and release guides",
+      "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner#readme",
+      "about": "Check the README and matching release instructions first."
+    },
+    {
+      "name": "Development roadmap",
+      "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/blob/main/ROADMAP.md",
+      "about": "Review existing plans before proposing a large feature."
+    }
+  ]
+}
