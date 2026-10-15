@@ -1,6 +1,6 @@
 {
   "radioFiles": 6,
-  "radioStatus": "Type review ready · 35 declarations · 34 read candidates",
+  "radioStatus": "Type review ready \u00b7 35 declarations \u00b7 34 read candidates",
   "syntheticStoredFunctions": 120,
   "syntheticDeclarations": 600,
   "syntacticControlWrites": 240,
@@ -30,5 +30,12 @@
   "unsupportedSyntaxVisible": true,
   "rejectedSelectionRetainsReview": true,
   "sourceCodeNotTranslated": true,
-  "existingFunctionSourcePaneRetained": true
+  "existingFunctionSourcePaneRetained": true,
+  "hostedCI": {
+    "runId": 38784785237,
+    "sourceCommit": "5fde616a861eea618d9c8f338859e9cbf9333b3a",
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38784785237",
+    "linuxNode24": "success",
+    "windowsNode22": "success"
+  }
 }
