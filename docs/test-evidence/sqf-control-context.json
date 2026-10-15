@@ -189,5 +189,23 @@
     "noCrossContextFlowEdges": true,
     "directWorkerEqual": true,
     "embeddedBindingEqual": true
+  },
+  "hostedCI": {
+    "run": 38766648093,
+    "jobs": [
+      {
+        "node": "22",
+        "os": "windows-2022",
+        "conclusion": "success"
+      },
+      {
+        "node": "24",
+        "os": "ubuntu-24.04",
+        "conclusion": "success"
+      }
+    ],
+    "sourceCommit": "33c02ea4dc08c9b95e80ebc842c522f43b67e299",
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38766648093",
+    "conclusion": "success"
   }
 }
