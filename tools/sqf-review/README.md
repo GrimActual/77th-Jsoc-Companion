@@ -159,3 +159,8 @@ EN: `source-constraints.cjs --source-set <files.json> --output <new-report.json>
 FR : `source-constraints.cjs --source-set <fichiers.json> --output <nouveau-rapport.json>` accepte exactement `{files}`, avec les limites structurelles existantes. Décrit les formes syntaxiques, écritures possibles, valeurs par défaut/exemples des paramètres, exigences des commandes/opérateurs et initialisation non résolue. Aucune inférence des types d'exécution, propagation des valeurs, preuve d'initialisation ni exécution du code. Les callbacks séparés restent non invoqués. Worker borné, annulation et nouveau fichier uniquement. Outil développeur ; anciens IR et application inchangés. Partager uniquement avec les droits nécessaires.
 
 DE: `source-constraints.cjs --source-set <dateien.json> --output <neuer-bericht.json>` akzeptiert genau `{files}` unter den bisherigen Quelltextgrenzen. Erfasst Syntaxformen, mögliche Schreibvorgänge, Parameter-Standardwerte/Typbeispiele, Kommando-/Operatoranforderungen und ungeklärte Initialisierung. Keine Laufzeittyp-Inferenz, Wertweitergabe, Initialisierungsgarantie oder Quelltextausführung. Getrennte Callbacks bleiben unaufgerufen. Begrenzter Worker, Abbruch und ausschliesslich neue Ausgabe. Entwicklerwerkzeug; ältere IR und Anwendung unverändert. Berichte nur mit entsprechenden Rechten teilen.
+
+
+## Complete unpacked component review
+
+The additive `project.cjs` command preserves recursive component paths and explicit virtual mounts, then runs Dependencies, Functions, Types and Effects on one capture. The desktop can load the resulting source-package JSON into all four tabs with one action. See [the EN/FR/DE guide](../../docs/COMPONENT-SOURCE-REVIEW.md). Earlier single-folder commands keep their existing limits.

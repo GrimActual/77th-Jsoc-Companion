@@ -23,6 +23,6 @@ function install({ipcMain,dialog,getWindow,indexURL,profile='dependencies',run=s
  const reset=()=>{epoch++;job?.cancel();job=null;busy=false;};
  ipcMain.handle(selectedProfile.channel+'-cancel',(event,...args)=>{trusted(event,args);reset();return {cancelled:true};});
  ipcMain.handle(selectedProfile.channel+'-clear',(event,...args)=>{trusted(event,args);reset();snapshot=null;return {ok:true};});
- return {reset(){reset();snapshot=null;},exportState(){return {busy,snapshot};}};
+ return {reset(){reset();snapshot=null;},exportState(){return {busy,snapshot};},reserve(){if(busy)return null;busy=true;const at=++epoch;return {current:()=>at===epoch,publish(value){if(at!==epoch)throw Error('Source review changed during package inspection');snapshot=value;},release(){if(at===epoch)busy=false;}};}};
 }
 module.exports={read,loadSelection,start,install};

@@ -182,3 +182,8 @@ Delivered combined JSON/offline HTML exports from completed native snapshots wit
 ### 15 October 2026 — first verified pure expression family
 
 Added opt-in literal-only Boolean value helpers with source/output maps and a matching native proof receipt. The actual 1.8.0.13 headless diagnostic server compiled/executed 46 cases; Workbench startup crashed before results and is not a pass. Green applies only to pure expressions; parent statement/function/mission conversion remains zero. Commands, variables, code operands, ambiguous grouping and selected preprocessing stay blocked. Ordinary comments-only handoff remains unchanged. Added a non-launching reproduction tool, export budget/proof gates and 56 EN/FR/DE Sarge topics. See [the mapping guide](BOOLEAN-EXPRESSION-MAPPING.md). Earlier zero-green notes describe the prior checkpoint; broad semantic/lifecycle/native integration goals all remain intact.
+
+
+### 15 October 2026 — consistent component source review
+
+Added explicit unpacked component capture with preserved nested paths and virtual mounts, plus one desktop source-package action for all four inspectors. Sequential bounded workers publish all four native export snapshots together; cancellation/failure preserves prior reviews. Private Weather/Main corpus: 48 source files, 47/48 literal includes resolved, remaining CBA shared header explicitly unresolved. All four reviews now share one source selection; no source execution, macro expansion or new native conversion claim. Settings reuse the same dialog; Sarge now has 57 EN/FR/DE topics. See [component source review](COMPONENT-SOURCE-REVIEW.md). Typed local assignment lowering, function-like macro resolution and all existing roadmap goals remain pending/intact.

@@ -1,0 +1,38 @@
+{
+  "scope": "Private user-authorized unpacked Weather/Main corpus; no third-party source redistribution, source execution or native engine launch.",
+  "files": 48,
+  "sourceBytes": 101457,
+  "reviews": {
+    "reviews": 4,
+    "distinctSourceSets": 1,
+    "mixedSourceSets": false,
+    "executionReady": 0
+  },
+  "dependencies": {
+    "files": 48,
+    "directives": 74,
+    "includes": 48,
+    "exactResolved": 47,
+    "unresolved": 1,
+    "potentialCycleEdges": 0,
+    "executionReady": 0
+  },
+  "remainingDependency": "\\x\\cba\\addons\\main\\script_macros_common.hpp",
+  "timingsMs": {
+    "dependencies": 62.16,
+    "functions": 113.47,
+    "types": 266.18,
+    "effects": 291.71
+  },
+  "timingLimit": "One local observation including worker startup; not a throughput guarantee.",
+  "focusedTests": {
+    "componentTool": 8,
+    "nativeBatch": 6,
+    "dependencyOwner": 8,
+    "localization": 3,
+    "mainLifecycle": 2,
+    "total": 27
+  },
+  "originalPBOUnchanged": true,
+  "originalPBOSHA256": "d787a24300fddfbfb69e3852cf4ffad17e2fbee43569a8c8bb96f790b4b84053"
+}

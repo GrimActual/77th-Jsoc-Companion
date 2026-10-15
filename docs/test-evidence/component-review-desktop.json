@@ -1,0 +1,24 @@
+{
+  "scope": "Packaged Electron, native JSON reads, four real sequential workers, 48 private Weather/Main sources. OS pickers substituted only; no source execution, network or game launch.",
+  "allFourReady": true,
+  "sourceSets": 1,
+  "matchingSelectionContext": true,
+  "failedSelectionPreservesAllReviews": true,
+  "languageChangesPreserveContext": true,
+  "languages": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "narrowWidth": 680,
+  "noDialogHorizontalOverflow": true,
+  "sargeDestination": true,
+  "missionUnchanged": true,
+  "pageErrors": [],
+  "statuses": {
+    "sourceDependenciesTab": "Dependency review ready · 48 source files · 47 matched includes · 1 unresolved includes",
+    "sourceFunctionsTab": "Function review ready · 11 function name candidates · 151 calls · 0 names requiring review",
+    "sourceTypesTab": "Type review ready · 275 declarations · 229 read candidates",
+    "sourceEffectsTab": "Effect review ready · 121 command candidates · 22 invocation candidates"
+  }
+}
