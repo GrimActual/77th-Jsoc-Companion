@@ -1,0 +1,280 @@
+{
+  "schema": "command-conditional-includes-evidence",
+  "version": 1,
+  "newFocusedCases": 20,
+  "affectedRegressionCases": 33,
+  "originalFilesUnchanged": true,
+  "nativeVerified": false,
+  "sourceExecuted": false,
+  "environmentVerified": false,
+  "executionReady": 0,
+  "projects": [
+    {
+      "repository": "77th-JSOC-Missions",
+      "sourceJSONSHA256": "c9ca9dd1fefe6882ae3ac10e5bbf5de8edbb16348c13888a416c824057cf1ea9",
+      "sourcesUnchanged": true,
+      "oldLiteralReportIdentical": true,
+      "reviewContextSHA256": "69164b823d64b27f2a87a653dde836826824d38dabd1c8d6223550a090d11886",
+      "summary": {
+        "entries": 2,
+        "expanded": 2,
+        "blocked": 0,
+        "emittedCharacters": 5603,
+        "registrationCandidates": 30,
+        "executionReady": 0
+      },
+      "entries": [
+        {
+          "entry": "Missions/# Events/PrivateChristmas_2025.Altis/description.ext",
+          "status": "conditional-subset-expanded",
+          "findings": [],
+          "conditions": 0,
+          "registrations": 30
+        },
+        {
+          "entry": "Missions/Vietnam/1 - Tho San Nguoi My/Mission Files/description.ext",
+          "status": "conditional-subset-expanded",
+          "findings": [],
+          "conditions": 0,
+          "registrations": 0
+        }
+      ]
+    },
+    {
+      "repository": "Advanced-Equipment",
+      "sourceJSONSHA256": "3b83787fa18ba0fd16de839b6361ff2dd2f81213023f4973327c3eddeb1e3662",
+      "sourcesUnchanged": true,
+      "oldLiteralReportIdentical": true,
+      "reviewContextSHA256": "aba8678c68534b154c907d4dc7f609deffa0772fdfaac77880972951ea2830de",
+      "summary": {
+        "entries": 2,
+        "expanded": 0,
+        "blocked": 2,
+        "emittedCharacters": 0,
+        "registrationCandidates": 0,
+        "executionReady": 0
+      },
+      "entries": [
+        {
+          "entry": "addons/armaos/config.cpp",
+          "status": "blocked",
+          "findings": [
+            {
+              "code": "UNSUPPORTED_CONDITIONAL_SUBSET",
+              "source": {
+                "file": "addons/armaos/script_component.hpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 24
+              },
+              "detail": "Only empty marker definitions and literal undef names are supported; replacement/function macros require another stage."
+            }
+          ],
+          "conditions": 0,
+          "registrations": 0
+        },
+        {
+          "entry": "addons/main/config.cpp",
+          "status": "blocked",
+          "findings": [
+            {
+              "code": "INCLUDE_MISSING_FILE",
+              "source": {
+                "file": "addons/main/config.cpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 31
+              },
+              "detail": "Only exact literal supplied-source includes can be inserted."
+            }
+          ],
+          "conditions": 0,
+          "registrations": 0
+        }
+      ]
+    },
+    {
+      "repository": "Root_Anomalies",
+      "sourceJSONSHA256": "e208a91be5aafea5346c1f62b71b8d49e1c1ef4905b3498dc59e94530c82e2b1",
+      "sourcesUnchanged": true,
+      "oldLiteralReportIdentical": true,
+      "reviewContextSHA256": "f5b13f4166eee076195b8447da28b31dcace172f3abc50332f906c0971ef4881",
+      "summary": {
+        "entries": 2,
+        "expanded": 0,
+        "blocked": 2,
+        "emittedCharacters": 0,
+        "registrationCandidates": 0,
+        "executionReady": 0
+      },
+      "entries": [
+        {
+          "entry": "addons/burper/config.cpp",
+          "status": "blocked",
+          "findings": [
+            {
+              "code": "INCLUDE_MISSING_FILE",
+              "source": {
+                "file": "addons/burper/config.cpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 31
+              },
+              "detail": "Only exact literal supplied-source includes can be inserted."
+            }
+          ],
+          "conditions": 0,
+          "registrations": 0
+        },
+        {
+          "entry": "addons/main/config.cpp",
+          "status": "blocked",
+          "findings": [
+            {
+              "code": "UNSUPPORTED_CONDITIONAL_SUBSET",
+              "source": {
+                "file": "addons/main/script_component.hpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 22
+              },
+              "detail": "Only empty marker definitions and literal undef names are supported; replacement/function macros require another stage."
+            }
+          ],
+          "conditions": 0,
+          "registrations": 0
+        }
+      ]
+    },
+    {
+      "repository": "Root_Cyberwarfare",
+      "sourceJSONSHA256": "c91a25052c35dd606b2fdb1588aecc82bbb1764e7b3db4b44ee72af62dcced5b",
+      "sourcesUnchanged": true,
+      "oldLiteralReportIdentical": true,
+      "reviewContextSHA256": "c2a39c5775ddcb1fa4cb56483a6608c24af3233fbaf5a10c95186a1d120331d8",
+      "summary": {
+        "entries": 2,
+        "expanded": 1,
+        "blocked": 1,
+        "emittedCharacters": 6428,
+        "registrationCandidates": 156,
+        "executionReady": 0
+      },
+      "entries": [
+        {
+          "entry": "addons/main/CfgFunctions.hpp",
+          "status": "conditional-subset-expanded",
+          "findings": [],
+          "conditions": 0,
+          "registrations": 156
+        },
+        {
+          "entry": "addons/main/config.cpp",
+          "status": "blocked",
+          "findings": [
+            {
+              "code": "UNSUPPORTED_CONDITIONAL_SUBSET",
+              "source": {
+                "file": "addons/main/script_version.hpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 15
+              },
+              "detail": "Only empty marker definitions and literal undef names are supported; replacement/function macros require another stage."
+            }
+          ],
+          "conditions": 0,
+          "registrations": 0
+        }
+      ]
+    },
+    {
+      "repository": "Root_Effects",
+      "sourceJSONSHA256": "9d81397ebddb1dfedb149d33f4cf4d4e0cc075b738dba93896700eee29730db4",
+      "sourcesUnchanged": true,
+      "oldLiteralReportIdentical": true,
+      "reviewContextSHA256": "429edaaf236e4d51fb6f7c124722225c5ca7e9af06b33643c9bc02c405b2c18d",
+      "summary": {
+        "entries": 2,
+        "expanded": 0,
+        "blocked": 2,
+        "emittedCharacters": 0,
+        "registrationCandidates": 0,
+        "executionReady": 0
+      },
+      "entries": [
+        {
+          "entry": "addons/ambientsfx/config.cpp",
+          "status": "blocked",
+          "findings": [
+            {
+              "code": "INCLUDE_MISSING_FILE",
+              "source": {
+                "file": "addons/ambientsfx/config.cpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 31
+              },
+              "detail": "Only exact literal supplied-source includes can be inserted."
+            }
+          ],
+          "conditions": 0,
+          "registrations": 0
+        },
+        {
+          "entry": "addons/main/config.cpp",
+          "status": "blocked",
+          "findings": [
+            {
+              "code": "UNSUPPORTED_CONDITIONAL_SUBSET",
+              "source": {
+                "file": "addons/main/script_component.hpp",
+                "line": 1,
+                "column": 1,
+                "start": 0,
+                "end": 22
+              },
+              "detail": "Only empty marker definitions and literal undef names are supported; replacement/function macros require another stage."
+            }
+          ],
+          "conditions": 0,
+          "registrations": 0
+        }
+      ]
+    }
+  ],
+  "guardedSynthetic": {
+    "files": 102,
+    "previousLiteralBlocked": true,
+    "conditionalRegistrations": 100
+  },
+  "benchmark": {
+    "scope": "Same 102-file literal source set, original include mode versus opt-in conditional mode including marker token checks. Two warmups and six measured pairs. Fresh worker includes startup, result equality assertion and cleanup. Developer-core overhead only; no renderer/FPS claim.",
+    "literal": {
+      "samples": 6,
+      "medianMs": 4.025199999999984,
+      "minMs": 3.74249999999995,
+      "maxMs": 4.5797999999999774
+    },
+    "conditional": {
+      "samples": 6,
+      "medianMs": 4.538999999999987,
+      "minMs": 4.322999999999979,
+      "maxMs": 5.669899999999984
+    },
+    "freshWorker": {
+      "samples": 6,
+      "medianMs": 52.14795000000004,
+      "minMs": 50.82060000000001,
+      "maxMs": 55.99199999999996
+    },
+    "sourceMapRoundtrips": true,
+    "directWorkerEqual": true
+  }
+}
