@@ -1,0 +1,7 @@
+{
+  "focusedUniqueChecks": 35,
+  "nativeFixtureCases": 24,
+  "nativeServerStopped": true,
+  "gameClientLaunched": false,
+  "scope": "Boolean local straight-line subset only. Earlier passing gates were rerun only where shared export behavior changed."
+}

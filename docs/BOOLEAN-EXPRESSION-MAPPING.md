@@ -53,3 +53,8 @@ Development executable: `A:/Everon-ORBAT-Development/work/boolean-mapping/COMMAN
 The acknowledgment is bound to the selected native review identity. A different source review or profile clears it; language changes retain it when the identity still matches. The native handler rejects stale identities before opening an export dialog. A focused packaged-app check confirmed both transitions and explicit UTF-16/decoded-UTF-8 source-map metadata.
 
 Hosted checks passed on Ubuntu 24.04 / Node 24 and Windows 2022 / Node 22 for final scope-gate source `13250c2c780bc0e917d38f3d3745c84cbc5a58ec`: [run 38795208660](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38795208660). CI does not launch native tools or claim a Linux GUI test. The short 400-marker offline sample measured median/p95 16.7/16.8 ms, maximum 33.22 ms, no frame above 100 ms, two tiles and unchanged mission data. Approximate renderer heap was 19.3 MB; these single-run metrics do not prove a causal speedup or sustained FPS. The prior completed export sample is retained as the comparison, not repeated.
+
+
+## Additive Boolean local block export
+
+The separate opt-in local-block export now supports complete flat initialized Boolean locals, reads and assignments, with an explicit final result. Previous mode descriptions remain valid for their own formats. See [the EN/FR/DE local-block guide](BOOLEAN-LOCAL-MAPPING.md). No general SQF-to-Enforce conversion is claimed.

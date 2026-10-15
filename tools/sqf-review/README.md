@@ -164,3 +164,8 @@ DE: `source-constraints.cjs --source-set <dateien.json> --output <neuer-bericht.
 ## Complete unpacked component review
 
 The additive `project.cjs` command preserves recursive component paths and explicit virtual mounts, then runs Dependencies, Functions, Types and Effects on one capture. The desktop can load the resulting source-package JSON into all four tabs with one action. See [the EN/FR/DE guide](../../docs/COMPONENT-SOURCE-REVIEW.md). Earlier single-folder commands keep their existing limits.
+
+
+## Additive Boolean local block export
+
+The separate opt-in local-block export now supports complete flat initialized Boolean locals, reads and assignments, with an explicit final result. Previous mode descriptions remain valid for their own formats. See [the EN/FR/DE local-block guide](../../docs/BOOLEAN-LOCAL-MAPPING.md). No general SQF-to-Enforce conversion is claimed.

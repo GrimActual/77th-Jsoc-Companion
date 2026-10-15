@@ -1,0 +1,20 @@
+{
+  "scope": "Actual packaged Electron UI; native package capture, all four real review workers and actual exclusive export writes. Only OS pickers substituted. Offline; no game client launched.",
+  "nativeProofCases": 24,
+  "localBlockExport": true,
+  "sourceOutputMaps": true,
+  "commentOnlyModeRetained": true,
+  "separateAcknowledgments": true,
+  "languageRetainsMatchingAcknowledgment": true,
+  "sourceAndProfileChangesResetAcknowledgment": true,
+  "unsupportedCommandsRejected": true,
+  "translatedLanguages": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "narrowWidth": 680,
+  "missionUnchanged": true,
+  "sargeDestination": true,
+  "pageErrors": []
+}

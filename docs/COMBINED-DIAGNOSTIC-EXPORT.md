@@ -51,3 +51,8 @@ Development executable: `A:/Everon-ORBAT-Development/work/diagnostic-export/COMM
 Next: select and prove a small typed target mapping before enabling any green emission. Full SQF translation, lifecycle/network semantics, native integration and all prior mission-planner roadmap goals remain pending/intact.
 
 Hosted compiler/worker/export checks passed for source `f207a30f9f3cd0e27240808ffcb3699d33a5931f` on Ubuntu 24.04 / Node 24 and Windows 2022 / Node 22: [run 38791469510](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38791469510). This is not a Linux GUI test. The completed short map sample measured 400 markers, two tiles, median/p95 16.7/16.8 ms, maximum 16.9 ms and no frame above 100 ms; mission data stayed unchanged. Approximate renderer heap was 20.5 MB versus 18.2 MB in the retained prior sample; these coarse single-run readings do not isolate feature memory cost or establish a speedup. The performance harness initially reloaded before startup had completed; waiting for the page load resolved that harness race before measurement.
+
+
+## Additive Boolean local block export
+
+The separate opt-in local-block export now supports complete flat initialized Boolean locals, reads and assignments, with an explicit final result. Previous mode descriptions remain valid for their own formats. See [the EN/FR/DE local-block guide](BOOLEAN-LOCAL-MAPPING.md). No general SQF-to-Enforce conversion is claimed.
