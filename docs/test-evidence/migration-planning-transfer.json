@@ -1,0 +1,86 @@
+{
+  "scope": "Unreleased manual terrain anchoring and planning-only transfer",
+  "focusedUniqueTests": 24,
+  "focusedTestsPassed": true,
+  "ui": {
+    "passed": true,
+    "actualOfflineElectron": true,
+    "realSourceAndMapWorkers": true,
+    "manualAnchor": true,
+    "displayOffsetOnce": true,
+    "explicitSelectionAndFaction": true,
+    "previewMissionUnchanged": true,
+    "atomicUndoRedo": true,
+    "missionEditStale": true,
+    "anchorEditStale": true,
+    "sourceClearStale": true,
+    "localeContext": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "rendererErrors": [],
+    "gameExecution": false
+  },
+  "performance": {
+    "scope": "Short local same-fixture comparison; not universal FPS/RAM guarantees, network/gameplay or terrain validation. File-selection timing includes automation dispatch.",
+    "preparation": {
+      "units": 60,
+      "samples": 20,
+      "warmups": 5,
+      "medianMs": 4.387100000000032,
+      "p95Ms": 5.587499999999977,
+      "maxMs": 5.844200000000001
+    },
+    "results": [
+      {
+        "build": "published-dev8",
+        "fixture": "Same 60-unit mission JSON, offline terrain, reduced motion, default viewport; no panning",
+        "frameMedianMs": 16.69999999999891,
+        "frameP95Ms": 16.80000000000109,
+        "frameMaxMs": 16.899999999999636,
+        "framesOver50ms": 0,
+        "longTasks": [
+          435,
+          59
+        ],
+        "units": 60,
+        "markerCount": 60,
+        "tileCount": 16,
+        "jsHeapEstimateBytes": 15200000,
+        "mainProcessMemoryKB": {
+          "residentSet": 94852,
+          "private": 71176,
+          "shared": 408
+        },
+        "savedMissionBytes": 121815,
+        "importThroughFileSelectionMs": 362.20000000298023
+      },
+      {
+        "build": "terrain-transfer-candidate",
+        "fixture": "Same 60-unit mission JSON, offline terrain, reduced motion, default viewport; no panning",
+        "frameMedianMs": 16.699999999999818,
+        "frameP95Ms": 16.800000000000182,
+        "frameMaxMs": 16.90000000000009,
+        "framesOver50ms": 0,
+        "longTasks": [
+          51
+        ],
+        "units": 60,
+        "markerCount": 60,
+        "tileCount": 16,
+        "jsHeapEstimateBytes": 11200000,
+        "mainProcessMemoryKB": {
+          "residentSet": 94680,
+          "private": 74936,
+          "shared": 408
+        },
+        "savedMissionBytes": 121815,
+        "importThroughFileSelectionMs": 104.40000000596046
+      }
+    ]
+  },
+  "nativeSourceChanged": false,
+  "gameExecution": false,
+  "publishedReleaseChanged": false
+}

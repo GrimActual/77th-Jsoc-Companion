@@ -41,3 +41,8 @@ Performance fixture: one 21,559-byte source file, 200 mapped spawns, 200 linked 
 Add explicit terrain calibration and reviewed neutral-draft transfer into planning; expand supported group/faction/source constructs only with verified semantics; then add optional native export/approval adapters. Full SQF conversion, scene/layer export, chained native AI waypoints and the rest of the original roadmap remain unfinished and retained.
 
 Primary syntax references: [identifier rules](https://community.bistudio.com/wiki/identifier), [createUnit group syntax](https://community.bistudio.com/wiki/createUnit_group?useskin=vector), [createVehicle](https://community.bistudio.com/wiki/createVehicle?useskin=vector), [addWaypoint](https://community.bistudio.com/wiki/addWaypoint). The source unit Z/placement, waypoint radius and case-insensitivity distinctions were checked against these primary references; they are not assumed identical to Enfusion behaviour.
+
+
+## Subsequent source checkpoint
+
+Manual anchor preview and selected mapped-spawn planning transfer are now available in the separate unreleased candidate described in MIGRATION-PLANNING-TRANSFER.md. The dev.gm.8 download and this non-executable draft contract remain unchanged. Verified terrain calibration, movement conversion and native execution remain future milestones.
