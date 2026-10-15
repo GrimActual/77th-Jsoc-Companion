@@ -1,4 +1,4 @@
-/* Explicit closed-set marker conditions only. No replacement macros or source execution. */
+/* Explicit closed-set marker conditions; optional scalar-definition handler. No source execution. */
 'use strict';
 const NAME=/^[A-Za-z_][A-Za-z0-9_]{0,127}$/;
 const LIMITS=Object.freeze({names:256,depth:64,steps:8192});
@@ -14,7 +14,7 @@ function environment(raw){
  for(let i=0;i<names.length;i++){if(!ds[i]||!('value'in ds[i])||!validName(ds[i].value)||seen.has(ds[i].value))throw Error('Invalid or duplicate conditional marker');seen.add(ds[i].value);}
  return {mode:'explicit-closed-set',defined:[...seen].sort()};
 }
-function state(names,block,record){
+function state(names,block,record,definitions=null){
  const stack=[];let active=true;
  const reject=(source,detail)=>block('UNSUPPORTED_CONDITIONAL_SUBSET',source,detail);
  function predicate(payload,source){
@@ -38,8 +38,9 @@ function state(names,block,record){
    }else if(command==='endif'){
     if(payload||!stack.length)reject(source,'Unexpected endif payload or unmatched endif.');active=stack.pop().parent;
    }else if(command==='define'||command==='undef'){
+    if(command==='define'&&definitions){definitions.define(payload,source,active);record({command,source,active,value});return;}
     if(!validName(payload))reject(source,'Only empty marker definitions and literal undef names are supported; replacement/function macros require another stage.');
-    if(active){if(command==='define'){if(!names.has(payload)&&names.size>=LIMITS.names)reject(source,'Conditional marker budget exceeded.');names.add(payload);}else names.delete(payload);}
+    if(active){if(command==='define'){if(!names.has(payload)&&names.size>=LIMITS.names)reject(source,'Conditional marker budget exceeded.');names.add(payload);}else{names.delete(payload);if(definitions)definitions.undef(payload);}}
    }else reject(source,'Directive '+command+' is outside the conditional subset.');
    record({command,source,active,value});
   },
