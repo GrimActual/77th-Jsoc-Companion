@@ -297,5 +297,23 @@
     "sourceMapRoundtrips": true,
     "aliasChainRoundtrips": true,
     "directWorkerEqual": true
+  },
+  "hostedCI": {
+    "conclusion": "success",
+    "sourceCommit": "5ab2bb389907e49628134ef78f21cc138143bce5",
+    "run": 38761965911,
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38761965911",
+    "jobs": [
+      {
+        "os": "windows-2022",
+        "node": "22",
+        "conclusion": "success"
+      },
+      {
+        "os": "ubuntu-24.04",
+        "node": "24",
+        "conclusion": "success"
+      }
+    ]
   }
 }
