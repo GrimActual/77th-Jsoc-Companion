@@ -38,5 +38,16 @@
   "radioJSONClickToSavedMs": 207.7549999999992,
   "scaffoldClickToSavedMs": 436.71340000000055,
   "timingScope": "Single automation observations including dialogs, worker startup, serialization and disk writes; not universal parser timing.",
-  "exportedHTMLRenderedInert": true
+  "exportedHTMLRenderedInert": true,
+  "hostedCI": {
+    "run": 38791469510,
+    "sourceCommit": "f207a30f9f3cd0e27240808ffcb3699d33a5931f",
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38791469510",
+    "conclusion": "success",
+    "platforms": [
+      "ubuntu-24.04 / Node 24",
+      "windows-2022 / Node 22"
+    ],
+    "scope": "Compiler cores, review workers and export tests; packaged GUI was tested locally on Windows."
+  }
 }
