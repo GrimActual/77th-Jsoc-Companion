@@ -33,3 +33,5 @@ The separate packaged Companion candidate passed startup and the sample package 
 Development executable: `A:/Everon-ORBAT-Development/work/dependency-inspector/COMMAND-Dependency-Inspector-Candidate/COMMAND Planner.exe`. The internal dev.gm.8 version label is retained for this checkpoint; this is not a new public release. The previous candidate remains intact.
 
 Hosted compiler and worker checks passed on Windows/Node 22 and Linux/Node 24 for source commit `43fb81c5ffe0ba6cb81927d24dcc51631088c99c`: [run 38773147889](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38773147889).
+
+Current navigation: Assets → Arma 3 migration review → Open source diagnostics → Dependencies. The Settings shortcut opens the same window; its session-only dependency behavior is unchanged. FR : Ouvrir les diagnostics source → Dépendances. DE: Quelltextdiagnose öffnen → Abhängigkeiten.

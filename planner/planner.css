@@ -61,3 +61,19 @@ body.gm-workspace main>aside pre{white-space:pre-wrap;overflow-wrap:anywhere;max
 #gmWorkspaceActions button{text-align:left;white-space:normal;overflow-wrap:anywhere;width:100%}
 #gmWorkspaceBar #gmWorkspaceLive{display:inline-block;border:0;background:none;padding:3px 6px;color:var(--muted)}
 #gmWorkspaceBar #gmWorkspaceRehearsal{display:block;max-width:100%;overflow-wrap:anywhere}
+
+/* Source review stays in one explicit diagnostics window, outside the map editor. */
+#sourceDiagnostics{width:min(1000px,94vw);max-height:90dvh}
+#sourceDiagnosticsBody{max-height:72dvh;overflow:auto;min-width:0}
+.source-diagnostic-tabs{display:flex;gap:6px;margin:8px 0}
+.source-diagnostic-tabs [aria-pressed=true]{border-color:var(--green);background:var(--panel2)}
+#sourceDiagnostics #sqfDependencyReview{margin:8px 0}
+#functionRows{max-height:36dvh;overflow:auto;margin:10px 0}
+.function-review-row{border-bottom:1px solid var(--line);padding:8px 0;overflow-wrap:anywhere}
+.function-review-row button{margin:3px 5px 3px 0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+#sourceDiagnostics pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:24dvh;overflow:auto;padding:10px;border:1px solid var(--line);background:var(--panel2)}
+
+.function-review-layout{display:grid;gap:12px;grid-template-columns:minmax(0,1fr);align-items:start}
+.function-review-layout:has(#functionSource:not([hidden])){grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.function-review-list{min-width:0}
+@media(max-width:720px){.function-review-layout:has(#functionSource:not([hidden])){grid-template-columns:minmax(0,1fr)}}

@@ -1,0 +1,33 @@
+{
+  "realRadioFiles": 7,
+  "realRadioStatus": "Function review ready · 4 function name candidates · 6 calls · 0 names requiring review",
+  "syntheticNames": 200,
+  "syntheticRows": 1000,
+  "rowsPerPage": 40,
+  "clickToReadyMs": 147.0594999999994,
+  "searchFilterPaging": true,
+  "relatedWarningsSearchable": true,
+  "sourcePreviewInert": true,
+  "independentTabsRetainReview": true,
+  "locales": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "widths": [
+    1280,
+    700,
+    520
+  ],
+  "cancelRetainsReview": true,
+  "clearIsSessionOnly": true,
+  "missionUnchanged": true,
+  "sourcePackageUnchanged": true,
+  "rendererErrors": [],
+  "nativeDialogMocked": true,
+  "realNativeWorker": true,
+  "gameLaunched": false,
+  "performanceScope": "One click-to-result automation sample; not map FPS or a sustained guarantee.",
+  "sourcePaneSideBySideOnDesktop": true,
+  "sourcePaneStacksOnNarrowWindows": true
+}

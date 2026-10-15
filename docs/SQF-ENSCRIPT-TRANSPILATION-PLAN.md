@@ -147,3 +147,10 @@ Added a developer-only source-constraint inventory over the existing control/con
 ### 15 October 2026 — desktop dependency inspector
 
 Added an explicit native source picker and on-demand desktop dependency review with unresolved-include filters, search, 40-row pages and captured-source previews. Settings and 51 Sarge topics are synchronized in EN/FR/DE. Cancelling/rejecting retains the previous review; clearing affects only session inspection. Includes are not auto-loaded, guards are not evaluated and source is never executed. This is the first desktop diagnostic increment; function/type/effects explorers, a graph view and combined export remain later work. Existing goals are retained. See [the workflow and validation](DESKTOP-DEPENDENCY-INSPECTOR.md).
+
+
+### 15 October 2026 — desktop Function Explorer and scaffold-export addition
+
+Delivered a searchable Function Explorer with registrations, possible writes, calls, warnings and source previews in a shared diagnostics window with Dependencies. Settings and 52 Sarge topics include EN/FR/DE guidance. Real radio inputs, a 1,000-row synthetic UI case and short same-fixture performance checks passed; see [the workflow](DESKTOP-FUNCTION-EXPLORER.md).
+
+Added the user-requested [tiered scaffold-export milestone](TIERED-SCAFFOLD-EXPORT-PLAN.md): verified green emission, explicit yellow scaffolds, red manual placeholders and a source-linked checklist. Review remains default. Scaffold Mode and Enforce emission are planned, not delivered here; types/signatures are never guessed from names or simple syntax. All existing roadmap goals remain.

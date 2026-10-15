@@ -620,3 +620,10 @@ Packages 14/16: the floating editor and drawers clear wrapped map tools; long co
 ### 15 October 2026 — compact floating GM controls
 
 The full-width bar is now content-sized. Assets, Inspector, Editor and live status remain visible; GM actions contains secondary commands. Existing handlers, approval boundaries and mission state are preserved. Sarge/EN/FR/DE guidance, responsive menu checks and the short performance sample are in [the toolbar guide](docs/GM-COMPACT-TOOLBAR.md). All existing roadmap goals remain.
+
+
+### 15 October 2026 — desktop Function Explorer and scaffold-export addition
+
+Delivered a searchable Function Explorer with registrations, possible writes, calls, warnings and source previews in a shared diagnostics window with Dependencies. Settings and 52 Sarge topics include EN/FR/DE guidance. Real radio inputs, a 1,000-row synthetic UI case and short same-fixture performance checks passed; see [the workflow](docs/DESKTOP-FUNCTION-EXPLORER.md).
+
+Added the user-requested [tiered scaffold-export milestone](docs/TIERED-SCAFFOLD-EXPORT-PLAN.md): verified green emission, explicit yellow scaffolds, red manual placeholders and a source-linked checklist. Review remains default. Scaffold Mode and Enforce emission are planned, not delivered here; types/signatures are never guessed from names or simple syntax. All existing roadmap goals remain.
