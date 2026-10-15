@@ -1,16 +1,16 @@
 {
   "radioFiles": 6,
-  "radioStatus": "Effect review ready · 50 command candidates · 8 invocation candidates",
+  "radioStatus": "Effect review ready \u00b7 50 command candidates \u00b7 8 invocation candidates",
   "syntheticStoredFunctions": 120,
   "syntheticInvocationCandidates": 240,
   "filterCounts": {
-    "contexts": "1 / 10 · 362",
-    "writes": "1 / 12 · 480",
-    "commands": "1 / 12 · 480",
-    "callbacks": "1 / 6 · 240",
-    "cleanup": "1 / 6 · 240",
-    "scheduling": "1 / 15 · 600",
-    "unknown": "1 / 1 · 2"
+    "contexts": "1 / 10 \u00b7 362",
+    "writes": "1 / 12 \u00b7 480",
+    "commands": "1 / 12 \u00b7 480",
+    "callbacks": "1 / 6 \u00b7 240",
+    "cleanup": "1 / 6 \u00b7 240",
+    "scheduling": "1 / 15 \u00b7 600",
+    "unknown": "1 / 1 \u00b7 2"
   },
   "rowsPerPage": 40,
   "clickToReadyMs": 334.53820000000087,
@@ -35,5 +35,16 @@
   "realNativeWorker": true,
   "gameLaunched": false,
   "performanceScope": "Single click-to-result automation sample; not a universal parser time or UI stall measure.",
-  "settingsAndSargeDestinations": true
+  "settingsAndSargeDestinations": true,
+  "hostedCI": {
+    "run": 38786904422,
+    "sourceCommit": "29acf87429b12e5588ddd77f851ad200d2014d0e",
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38786904422",
+    "conclusion": "success",
+    "platforms": [
+      "ubuntu-24.04 / Node 24",
+      "windows-2022 / Node 22"
+    ],
+    "scope": "Compiler core and native worker checks; packaged Electron GUI was tested locally on Windows."
+  }
 }
