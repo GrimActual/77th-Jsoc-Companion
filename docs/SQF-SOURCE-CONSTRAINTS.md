@@ -23,3 +23,5 @@ Validation on 15 October 2026: 17 focused cases and six shared runner regression
 The same 16-file/160-stored-function fixture used for earlier IR measurements produced medians of 131.97 ms for IR alone, 166.52 ms for IR plus this review, and 350.63 ms through a fresh worker including startup/return/termination. Two warmups and six measured sets per path. These measure additional developer analysis cost, not map FPS, native runtime performance or a universal speed guarantee. Evidence: `docs/test-evidence/sqf-source-constraints.json`.
 
 The next semantic work remains a source-version-aware type domain, verified binding resolution, control-flow joins and definite initialization, followed by typed lowering and independently verified native adapters. This inventory preserves the evidence needed for that work without marking it complete.
+
+Hosted full compiler checks passed on Linux/Node 24 and Windows/Node 22 for source commit `02c171196700ea3b70ade3256b6c1cd39dd768e1`: [run 38770660354](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38770660354). No native/game execution was part of that workflow.

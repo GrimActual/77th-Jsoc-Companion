@@ -140,5 +140,23 @@
     "directWorkerEqual": true,
     "sourcesUnchanged": true,
     "oldIRIdentical": true
+  },
+  "hostedCI": {
+    "runId": 38770660354,
+    "sourceCommit": "02c171196700ea3b70ade3256b6c1cd39dd768e1",
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38770660354",
+    "conclusion": "success",
+    "jobs": [
+      {
+        "os": "ubuntu-24.04",
+        "node": "24",
+        "conclusion": "success"
+      },
+      {
+        "os": "windows-2022",
+        "node": "22",
+        "conclusion": "success"
+      }
+    ]
   }
 }
