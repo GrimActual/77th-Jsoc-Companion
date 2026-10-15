@@ -28,5 +28,9 @@
   "realExportWorker": true,
   "gameClientLaunched": false,
   "clickToSavedMs": 161.76140000000123,
-  "timingScope": "One automated export observation including worker and disk output; not a universal timing guarantee."
+  "timingScope": "One automated export observation including worker and disk output; not a universal timing guarantee.",
+  "scopeAcknowledgmentBoundToNativeReview": true,
+  "sourceChangeAndProfileChangeClearAcknowledgment": true,
+  "languageChangeRetainsMatchingAcknowledgment": true,
+  "finalSourceMapScopesExplicit": true
 }
