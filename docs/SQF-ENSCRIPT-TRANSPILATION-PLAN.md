@@ -58,3 +58,22 @@ Delivered a separate read-only structural AST worker/Assets inspector for nested
 ## Arma 3 PBO / WRP inventory and identity resolver (planned, separate pipeline)
 
 Added docs/ARMA3-ARCHIVE-WORLD-INVENTORY-PLAN.md: read-only PBO manifest/prefix/compression inventory, streaming/canonical content fingerprints, config/CfgWorlds-to-WRP resolution, version-aware WRP metadata and optional object-reference decoding. Distinguish listed, header-inspected, decoded and unsupported evidence. WRP object lists require an actual decoder; config.bin is not SQF text. The current text/AST inspector does not support these binaries. Full terrain recreation into Enfusion remains a separate potential conversion workflow, not an inventory claim. Existing goals remain retained.
+
+
+## Bohemia language reference and translation review gates
+
+User-supplied reference: [From SQF to Enforce Script](https://community.bistudio.com/wiki/Arma_Reforger:From_SQF_to_Enforce_Script). Direct retrieval returned HTTP 403 during this checkpoint; this entry records the reference without claiming its contents were reviewed.
+
+Related official guidance verified through indexed Bohemia documentation:
+
+- [Enforce value types](https://community.bohemia.net/wiki/Arma_Reforger:Scripting:_Values): target identifiers are case-sensitive, values have declared types, and arrays have a single element type. Preserve SQF name identity through an explicit symbol mapping; do not derive target types from a single observed literal or silently coerce mixed arrays.
+- [Enforce operators](https://community.bohemia.net/wiki/Arma_Reforger:Scripting:_Operators): target operator precedence follows C. Parse source expressions using verified SQF precedence and lower the resulting tree explicitly; copying expression text into Enforce is not a translation rule.
+- [Enforce reference counting](https://community.bohemia.net/wiki/Arma_Reforger:Scripting:_Automatic_Reference_Counting): managed object lifetime depends on strong references, with cyclic ownership requiring care. IR and adapter reviews must specify object ownership and cleanup, particularly for delayed callbacks and subscriptions.
+- [SQF variables](https://community.bohemia.net/wiki/Variables): source scope and binding analysis must precede target declarations. A structural block boundary alone does not prove a variable binding or an equivalent target scope.
+
+These are implementation acceptance requirements, not newly delivered parser/type/lifetime capabilities. Keep expression recognition, binding confidence, target type resolution and executable adapter approval separately reported. Do not use DayZ-specific restrictions as Reforger evidence. Existing compiler and archive/world inventory goals remain unchanged.
+
+
+## Bounded expression syntax core checkpoint (15 October 2026)
+
+Added a developer-only, non-executable expression parser for literals, unresolved local symbols, arrays, grouping and basic arithmetic, with a separate numeric lexer and full-source span/hash binding. Unsupported syntax rejects without a partial tree. Desktop UI/export and native execution remain unchanged. Source scope/binding analysis, broader command/operator grammar, typed IR, validator/schema and subsequent UI integration remain pending; no earlier goals are removed. See docs/SQF-EXPRESSION-AST.md for scope and evidence.
