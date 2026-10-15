@@ -1,0 +1,131 @@
+{
+  "checkpoint": "structural-sqf-ast-inspector",
+  "scope": "Read-only structural AST; expressions and execution semantics unresolved; no Enforce emitter, typed IR lowering, source evaluation or native game commands",
+  "focusedChecks": {
+    "parserAndValidation": 12,
+    "astNativeExport": 2,
+    "localization": 3,
+    "metadataSaveLifecycle": 8,
+    "publicStaticRoutes": 1,
+    "total": 27,
+    "binaryFormatBoundary": 1
+  },
+  "independentSchema": {
+    "passed": true,
+    "cases": 9,
+    "actualDesktopExport": true,
+    "scope": "Independent shape/bounds checks; JS validator also enforces graph ownership, kinds, containment, gates and summary consistency."
+  },
+  "actualDesktop": {
+    "passed": true,
+    "actualOfflineElectron": true,
+    "realSourceAndASTWorkers": true,
+    "sourceSpans": true,
+    "nestedBranchesAndThreeLoopKinds": true,
+    "paging40": true,
+    "inertUnicodeAndScriptText": true,
+    "nativeAtomicJSONSave": true,
+    "settingsShortcut": true,
+    "localesPreserveReview": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "localeStatusUpdates": true,
+    "sourceEditStale": true,
+    "cancelledWorkerCannotRepopulate": true,
+    "clearDoesNotEditMission": true,
+    "missionUnchanged": true,
+    "rendererErrors": [],
+    "gameExecution": false
+  },
+  "performance": {
+    "scope": "Short local same-fixture comparison; not universal FPS/RAM guarantees, network/gameplay or terrain validation. File-selection timing includes automation dispatch.",
+    "preparation": {
+      "fixture": "200 nested range-loop/branch blocks; expressions unresolved",
+      "sourceBytes": 17889,
+      "nodes": 1401,
+      "reportBytes": 529301,
+      "samples": 20,
+      "warmups": 5,
+      "medianMs": 23.883800000003248,
+      "p95Ms": 27.55050000000483,
+      "maxMs": 32.724600000001374
+    },
+    "results": [
+      {
+        "build": "previous-terrain-candidate",
+        "workerElapsedMs": null,
+        "missionUnchangedBySourceInspection": true,
+        "fixture": "Same 60-unit / 60-route / 240-movement-point mission JSON, offline terrain, reduced motion, default viewport; no panning",
+        "frameMedianMs": 16.69999999999709,
+        "frameP95Ms": 16.799999999999272,
+        "frameMaxMs": 16.900000000001455,
+        "framesOver50ms": 0,
+        "longTasks": [
+          438,
+          53,
+          163,
+          64
+        ],
+        "units": 60,
+        "routes": 60,
+        "routePaths": 60,
+        "markerCount": 60,
+        "tileCount": 16,
+        "jsHeapEstimateBytes": 17100000,
+        "mainProcessMemoryKB": {
+          "residentSet": 94244,
+          "private": 74052,
+          "shared": 408
+        },
+        "savedMissionBytes": 318825,
+        "importThroughFileSelectionMs": 1132.9000000059605
+      },
+      {
+        "build": "structural-ast-candidate",
+        "workerElapsedMs": 97.95780000000013,
+        "missionUnchangedBySourceInspection": true,
+        "fixture": "Same 60-unit / 60-route / 240-movement-point mission JSON, offline terrain, reduced motion, default viewport; no panning",
+        "frameMedianMs": 16.699999999999818,
+        "frameP95Ms": 16.800000000000182,
+        "frameMaxMs": 16.90000000000009,
+        "framesOver50ms": 0,
+        "longTasks": [
+          355
+        ],
+        "units": 60,
+        "routes": 60,
+        "routePaths": 60,
+        "markerCount": 60,
+        "tileCount": 16,
+        "jsHeapEstimateBytes": 17100000,
+        "mainProcessMemoryKB": {
+          "residentSet": 94128,
+          "private": 73804,
+          "shared": 408
+        },
+        "savedMissionBytes": 318825,
+        "importThroughFileSelectionMs": 396.5
+      }
+    ]
+  },
+  "sourceSha256": "2865a34a2acb4404c1a64658ab225bbe5ae5529c96dc2d3c25dccc7e3b0c7529",
+  "limits": {
+    "files": 64,
+    "fileBytes": 262144,
+    "totalSourceBytes": 2097152,
+    "tokensPerFile": 50000,
+    "delimiterDepth": 64,
+    "nodes": 10000,
+    "findings": 1000,
+    "reportBytes": 8388608,
+    "pageRows": 40
+  },
+  "notes": [
+    "The initial UI harness looked for the Settings shortcut before opening the Game Master section. The harness was corrected; the application shortcut then passed.",
+    "Previous/current frame samples were collected after the same mission and source file input. Only the new build can run the extra AST inspection. Startup/import long tasks are not evidence of a causal speedup.",
+    "Only the independent new structural inspector reads the AST. Existing straight-line intent drafts and deployment guards retain their own behavior.",
+    "Binary PBO/WRP/config.bin inspection remains a separate planned pipeline; no archive or terrain conversion capability is added."
+  ]
+}
