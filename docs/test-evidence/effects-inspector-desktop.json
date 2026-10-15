@@ -1,0 +1,39 @@
+{
+  "radioFiles": 6,
+  "radioStatus": "Effect review ready · 50 command candidates · 8 invocation candidates",
+  "syntheticStoredFunctions": 120,
+  "syntheticInvocationCandidates": 240,
+  "filterCounts": {
+    "contexts": "1 / 10 · 362",
+    "writes": "1 / 12 · 480",
+    "commands": "1 / 12 · 480",
+    "callbacks": "1 / 6 · 240",
+    "cleanup": "1 / 6 · 240",
+    "scheduling": "1 / 15 · 600",
+    "unknown": "1 / 1 · 2"
+  },
+  "rowsPerPage": 40,
+  "clickToReadyMs": 334.53820000000087,
+  "filtersPagingSourcePreview": true,
+  "contextsRemainUninvoked": true,
+  "sourceTextInert": true,
+  "exactCRLFSourceLine": true,
+  "sideBySideSource": true,
+  "narrowLayoutNoOverflow": true,
+  "tabAndLocaleContextRetained": true,
+  "locales": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "cancelAndRejectRetainReview": true,
+  "clearSessionOnly": true,
+  "missionUnchanged": true,
+  "sourceUnchanged": true,
+  "rendererErrors": [],
+  "nativeDialogMocked": true,
+  "realNativeWorker": true,
+  "gameLaunched": false,
+  "performanceScope": "Single click-to-result automation sample; not a universal parser time or UI stall measure.",
+  "settingsAndSargeDestinations": true
+}

@@ -258,3 +258,8 @@ Added the user-requested [tiered scaffold-export milestone](../docs/TIERED-SCAFF
 ### 15 October 2026 — desktop type and initialization review
 
 Added the third diagnostics tab: source-shape and parameter evidence, unresolved reads, possible writes in branch/loop regions, source requirements and unsupported syntax. Reuses the bounded native picker/worker and source-constraint pass; it does not infer runtime/target types or prove initialization. Settings and 53 EN/FR/DE Sarge topics are synchronized. Actual radio inputs, a larger UI fixture, source safety/context retention and short same-map performance checks passed; see [the guide](../docs/DESKTOP-TYPE-INITIALIZATION-REVIEW.md). Existing compiler, scaffold-export and mission-planner goals remain unchanged; verified emission is still pending.
+
+
+### 15 October 2026 — desktop Effects Inspector
+
+Added the fourth source-diagnostics tab: possible writes, command/invocation candidates, separate stored contexts, scheduling candidates, cleanup/lifetime review and unreviewed regions with source previews. Reuses the bounded worker and existing effect producer; no invocation, native behavior or emission is resolved. Settings and 54 EN/FR/DE Sarge topics are synchronized. Real radio sources, a larger callback fixture and affected desktop checks passed; see [the guide](../docs/DESKTOP-EFFECTS-INSPECTOR.md). Prior goals remain intact. Combined diagnostic export, verified target mappings and tiered scaffold generation remain pending.

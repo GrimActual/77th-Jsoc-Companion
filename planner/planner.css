@@ -68,7 +68,7 @@ body.gm-workspace main>aside pre{white-space:pre-wrap;overflow-wrap:anywhere;max
 .source-diagnostic-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
 .source-diagnostic-tabs [aria-pressed=true]{border-color:var(--green);background:var(--panel2)}
 #sourceDiagnostics #sqfDependencyReview{margin:8px 0}
-#functionRows,#typeRows{max-height:36dvh;overflow:auto;margin:10px 0}
+#functionRows,#typeRows,#effectRows{max-height:36dvh;overflow:auto;margin:10px 0}
 .function-review-row{border-bottom:1px solid var(--line);padding:8px 0;overflow-wrap:anywhere}
 .function-review-row button{margin:3px 5px 3px 0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
 #sourceDiagnostics pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:24dvh;overflow:auto;padding:10px;border:1px solid var(--line);background:var(--panel2)}

@@ -14,4 +14,5 @@ contextBridge.exposeInMainWorld('plannerDependencies',{select:()=>ipcRenderer.in
 
 contextBridge.exposeInMainWorld('plannerFunctions',{select:()=>ipcRenderer.invoke('sqf-function-select'),cancel:()=>ipcRenderer.invoke('sqf-function-cancel')});
 
+contextBridge.exposeInMainWorld('plannerEffects',{select:()=>ipcRenderer.invoke('sqf-effect-select'),cancel:()=>ipcRenderer.invoke('sqf-effect-cancel')});
 contextBridge.exposeInMainWorld('plannerTypes',{select:()=>ipcRenderer.invoke('sqf-type-select'),cancel:()=>ipcRenderer.invoke('sqf-type-cancel')});
