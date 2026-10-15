@@ -43,3 +43,8 @@ Full checked placement preparation with three landmarks, 60 units, 60 routes and
 ## Next additive milestones
 
 Independent check landmarks/coverage overlays and optional reusable alignment profiles; reviewed group/faction/occupant adapters; native authority/lifecycle handoff and approved execution adapters. Height verification, complete SQF/SQM conversion, executable scene/layer export and all earlier roadmap items remain retained.
+
+
+## Subsequent terrain context checkpoint
+
+Optional declared identity and ground-height file review are now available in the separate candidate described in MIGRATION-TERRAIN-CONTEXT.md. Runtime world GUID/addon identity and terrain height remain unverified; native enforcement and real Everon coverage are retained future milestones.

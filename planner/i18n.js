@@ -6,7 +6,7 @@
  function t(source,requestedLanguage=language()){return dictionaries[requestedLanguage]?.[source]??source;}
  const records=new WeakMap();
  // These containers mix user content with UI. Their fixed labels are localized at source.
- const excluded='script,style,svg,textarea,input,[contenteditable],#map,#roster,#drawingList,#symbolPreview,#assetMeta,#asset,#parent,#unitPhase,#drawingPhase,#phases,#unitTitle,#drawingTitle,#propertyReviewRows,#metadataResources,#metadataGaps,#metadataSummary,#deploymentRows,#deploymentGMResult,#deploymentRemoveId,#aiTarget,#aiPreview,#aiResults,#aiDestination,#sqfRows,#sqfStatus,#classMapSources,#classMapTargets,#classMapPreview,#classMapCoverage,#classMapStatus,#intentDraftRows,#intentDraftStatus,#migrationChoices,#migrationRouteChoices,#alignmentResiduals,#alignmentStatus,#migrationPlacementRows,#migrationTransferStatus';
+ const excluded='script,style,svg,textarea,input,[contenteditable],#map,#roster,#drawingList,#symbolPreview,#assetMeta,#asset,#parent,#unitPhase,#drawingPhase,#phases,#unitTitle,#drawingTitle,#propertyReviewRows,#metadataResources,#metadataGaps,#metadataSummary,#deploymentRows,#deploymentGMResult,#deploymentRemoveId,#aiTarget,#aiPreview,#aiResults,#aiDestination,#sqfRows,#sqfStatus,#classMapSources,#classMapTargets,#classMapPreview,#classMapCoverage,#classMapStatus,#intentDraftRows,#intentDraftStatus,#migrationChoices,#migrationRouteChoices,#alignmentResiduals,#alignmentStatus,#terrainResolution,#terrainObservationStatus,#migrationPlacementRows,#migrationTransferStatus';
  function translated(source){
   if(t(source)!==source)return t(source);
   const patterns=[

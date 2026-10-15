@@ -1,0 +1,176 @@
+{
+  "scope": "Optional planning-only terrain identity/elevation review with separate read-only native sampler",
+  "focusedTests": 41,
+  "focusedTestsPassed": true,
+  "schema": {
+    "passed": true,
+    "cases": 8,
+    "actualNativeReportShape": true,
+    "scope": "Shape checks only; exact world identity/path, duplicate/near samples and coverage require authoritative JS validator."
+  },
+  "ui": {
+    "passed": true,
+    "actualOfflineElectron": true,
+    "linkedRoutes": true,
+    "terrainQueryNativeSave": true,
+    "missingSamplesBlock": true,
+    "incompleteSamplesBlock": true,
+    "wrongWorldRetainsPrior": true,
+    "reportedHeightsNotRuntimeVerified": true,
+    "landmarkMismatchBlocks": true,
+    "landmarkReviewRequired": true,
+    "manualModeRetained": true,
+    "landmarkEditStale": true,
+    "residualProvenance": true,
+    "routePaging20": true,
+    "routeAcknowledgementRequired": true,
+    "unitDeselectionClearsAssociatedMoves": true,
+    "sourceClearRemovesRoutes": true,
+    "realSourceAndMapWorkers": true,
+    "manualAnchor": true,
+    "displayOffsetOnce": true,
+    "explicitSelectionAndFaction": true,
+    "previewMissionUnchanged": true,
+    "atomicUndoRedo": true,
+    "missionEditStale": true,
+    "anchorEditStale": true,
+    "sourceClearStale": true,
+    "localeContext": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "rendererErrors": [],
+    "gameExecution": false
+  },
+  "native": {
+    "success": true,
+    "scope": "Isolated empty-world read-only API/serialization test; not Everon elevation/terrain compatibility verification",
+    "gameClientLaunched": false,
+    "networkTunnel": false,
+    "reportValidatedByDesktop": true,
+    "engineVersion": "1.8.0.13",
+    "observedWorldFile": "worlds/bridgeruntime.ent",
+    "samples": [
+      {
+        "worldX": 4010,
+        "worldZ": 5020,
+        "surfaceY": -256
+      },
+      {
+        "worldX": 4020,
+        "worldZ": 5040,
+        "surfaceY": -256
+      }
+    ],
+    "nativeScriptErrors": false,
+    "serverStopped": true
+  },
+  "nativeWrongWorld": {
+    "success": true,
+    "scope": "Isolated empty-world read-only API/serialization test; not Everon elevation/terrain compatibility verification",
+    "gameClientLaunched": false,
+    "networkTunnel": false,
+    "wrongWorldPathRejected": true,
+    "noObservationExported": true,
+    "nativeScriptErrors": false,
+    "serverStopped": true
+  },
+  "nativeSamplerSource": [
+    {
+      "file": "addon.gproj",
+      "sha256": "30b81dd0f78e8a77fbf710ac3845d0dec9bcfe091563e01dc32f37eb152aaa5a"
+    },
+    {
+      "file": "Scripts/Game/COMMAND_TerrainSampler.c",
+      "sha256": "b65bcbc0fa2eb415933f3b60d3755476c20f0127ca8675d0fe83a6819c34555e"
+    }
+  ],
+  "workbenchValidation": {
+    "success": false,
+    "scope": "Startup crash before compiler stdout; no retry/no report submission",
+    "configurations": [
+      {
+        "configuration": "PC",
+        "exitCode": -1073741819,
+        "success": false
+      },
+      {
+        "configuration": "WORKBENCH",
+        "exitCode": -1073741819,
+        "success": false
+      }
+    ]
+  },
+  "performance": {
+    "scope": "Short local same-fixture comparison; not universal FPS/RAM guarantees, network/gameplay or terrain validation. File-selection timing includes automation dispatch.",
+    "preparation": {
+      "groundSamples": 300,
+      "landmarks": 3,
+      "units": 60,
+      "routes": 60,
+      "movementPoints": 240,
+      "samples": 20,
+      "warmups": 5,
+      "medianMs": 19.37810000000013,
+      "p95Ms": 21.214100000000144,
+      "maxMs": 21.976700000000164
+    },
+    "results": [
+      {
+        "build": "previous-landmark-candidate",
+        "fixture": "Same 60-unit / 60-route / 240-movement-point mission JSON, offline terrain, reduced motion, default viewport; no panning",
+        "frameMedianMs": 16.69999999999709,
+        "frameP95Ms": 16.799999999999272,
+        "frameMaxMs": 82.63999999999942,
+        "framesOver50ms": 1,
+        "longTasks": [
+          701,
+          70
+        ],
+        "units": 60,
+        "routes": 60,
+        "routePaths": 60,
+        "markerCount": 60,
+        "tileCount": 16,
+        "jsHeapEstimateBytes": 17100000,
+        "mainProcessMemoryKB": {
+          "residentSet": 95564,
+          "private": 72020,
+          "shared": 412
+        },
+        "savedMissionBytes": 318825,
+        "importThroughFileSelectionMs": 1905.0999999940395
+      },
+      {
+        "build": "terrain-context-candidate",
+        "fixture": "Same 60-unit / 60-route / 240-movement-point mission JSON, offline terrain, reduced motion, default viewport; no panning",
+        "frameMedianMs": 16.69999999999709,
+        "frameP95Ms": 16.799999999999272,
+        "frameMaxMs": 100.09999999999854,
+        "framesOver50ms": 1,
+        "longTasks": [
+          739,
+          122
+        ],
+        "units": 60,
+        "routes": 60,
+        "routePaths": 60,
+        "markerCount": 60,
+        "tileCount": 16,
+        "jsHeapEstimateBytes": 18200000,
+        "mainProcessMemoryKB": {
+          "residentSet": 94468,
+          "private": 74680,
+          "shared": 412
+        },
+        "savedMissionBytes": 318825,
+        "importThroughFileSelectionMs": 1723.0999999940395
+      }
+    ]
+  },
+  "productionWorkshopSourceChanged": false,
+  "runtimeIdentityVerified": false,
+  "realEveronTerrainTested": false,
+  "publishedReleaseChanged": false
+}
