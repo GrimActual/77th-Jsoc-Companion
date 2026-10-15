@@ -1,0 +1,2885 @@
+{
+  "schema": "command-external-corpus-evidence",
+  "version": 1,
+  "testedSourceCheckpoint": "41a7e87",
+  "capturedDate": "2026-10-15",
+  "sourceExecuted": false,
+  "sourceModified": false,
+  "thirdPartySourceBundled": false,
+  "nativeVerified": false,
+  "executionReady": 0,
+  "catalogueScope": "One public account catalogue page, per_page=100; 20 returned repositories; tree metadata only for nonpriority projects. Not a licence or whole-source audit.",
+  "selection": "Six plain UTF-8 SQF files per priority repository, 200..32768 bytes, path <=220 characters, ordinary Git blob mode; SHA-256 path ordering with distinct parent directories first. No preprocessing or dependency fetching.",
+  "catalogue": [
+    {
+      "name": "77th-JSOC-Missions",
+      "url": "https://github.com/A3-Root/77th-JSOC-Missions",
+      "fork": false,
+      "licenseMetadata": "MIT",
+      "treeSHA": "92474ccc62080b8140002d80550dde20fc944b82",
+      "treeTruncated": false,
+      "blobs": 318,
+      "extensions": {
+        "(none)": 4,
+        ".bat": 1,
+        ".docx": 4,
+        ".exe": 1,
+        ".ext": 2,
+        ".hpp": 1,
+        ".jpg": 37,
+        ".md": 1,
+        ".ogg": 5,
+        ".paa": 7,
+        ".png": 4,
+        ".pptx": 1,
+        ".ps1": 1,
+        ".sqf": 202,
+        ".sqm": 5,
+        ".svg": 1,
+        ".txt": 41
+      }
+    },
+    {
+      "name": "A3-Root-Modules",
+      "url": "https://github.com/A3-Root/A3-Root-Modules",
+      "fork": false,
+      "licenseMetadata": null,
+      "treeSHA": "6778d676b539288542db0646b1a03258f066ec3b",
+      "treeTruncated": false,
+      "blobs": 498,
+      "extensions": {
+        ".cpp": 20,
+        ".hpp": 24,
+        ".jpg": 4,
+        ".md": 3,
+        ".ogg": 285,
+        ".paa": 1,
+        ".sqf": 157,
+        ".txt": 4
+      }
+    },
+    {
+      "name": "a3go",
+      "url": "https://github.com/A3-Root/a3go",
+      "fork": true,
+      "licenseMetadata": "NOASSERTION",
+      "treeSHA": "bd73b4c6e9b30014da5c1f2eec3e28371922fad8",
+      "treeTruncated": false,
+      "blobs": 18223,
+      "extensions": {
+        "(none)": 2723,
+        ".0": 2,
+        ".1": 6,
+        ".10": 10,
+        ".10-config": 2,
+        ".bat": 25,
+        ".build": 1,
+        ".c": 12,
+        ".cfg": 6,
+        ".cpp": 4,
+        ".cs": 48,
+        ".csc": 48,
+        ".csh": 6,
+        ".css": 6,
+        ".ctypes": 6,
+        ".def": 24,
+        ".enc": 480,
+        ".eps": 12,
+        ".fish": 6,
+        ".fs": 48,
+        ".fsc": 36,
+        ".gif": 214,
+        ".go": 14,
+        ".h": 972,
+        ".hpp": 7,
+        ".hsb": 1,
+        ".html": 6,
+        ".ico": 6,
+        ".in": 2,
+        ".json": 6,
+        ".lib": 144,
+        ".local": 2,
+        ".log": 1,
+        ".mask": 6,
+        ".md": 18,
+        ".mod": 2,
+        ".msg": 870,
+        ".nmake": 4,
+        ".o": 2,
+        ".paa": 2,
+        ".pbo": 3,
+        ".pc": 8,
+        ".pem": 6,
+        ".pickle": 4,
+        ".png": 37,
+        ".ppm": 6,
+        ".ps1": 6,
+        ".pth": 6,
+        ".py": 10244,
+        ".pyd": 112,
+        ".pyi": 6,
+        ".pyw": 6,
+        ".rhai": 1,
+        ".rst": 12,
+        ".sample": 6,
+        ".sh": 12,
+        ".sqf": 60,
+        ".sum": 1,
+        ".tcl": 1410,
+        ".terms": 12,
+        ".tm": 30,
+        ".tmpl": 12,
+        ".toml": 2,
+        ".txt": 4,
+        ".typed": 6,
+        ".vc": 8,
+        ".whl": 12,
+        ".xbm": 272,
+        ".xml": 6,
+        ".xpm": 122,
+        ".yml": 1
+      }
+    },
+    {
+      "name": "AdriansArmaDeWrp",
+      "url": "https://github.com/A3-Root/AdriansArmaDeWrp",
+      "fork": true,
+      "licenseMetadata": null,
+      "treeSHA": "cb6452e61f47e9bf0f80349cbb084ff29e5ee32c",
+      "treeTruncated": false,
+      "blobs": 32,
+      "extensions": {
+        "(none)": 1,
+        ".cs": 2,
+        ".csproj": 1,
+        ".css": 1,
+        ".db-shm": 1,
+        ".html": 1,
+        ".js": 1,
+        ".json": 2,
+        ".md": 2,
+        ".php": 1,
+        ".ps1": 9,
+        ".py": 10
+      }
+    },
+    {
+      "name": "Advanced-Equipment",
+      "url": "https://github.com/A3-Root/Advanced-Equipment",
+      "fork": true,
+      "licenseMetadata": "NOASSERTION",
+      "treeSHA": "be2575c8ebeec547e0e937c17b91d32892e19324",
+      "treeTruncated": false,
+      "blobs": 893,
+      "extensions": {
+        "(none)": 14,
+        ".b64": 6,
+        ".cpp": 9,
+        ".css": 4,
+        ".h": 1,
+        ".hpp": 64,
+        ".html": 5,
+        ".inc": 3,
+        ".js": 12,
+        ".json": 4,
+        ".md": 197,
+        ".ogg": 18,
+        ".paa": 42,
+        ".png": 7,
+        ".ps1": 1,
+        ".py": 3,
+        ".sqf": 485,
+        ".svg": 3,
+        ".toml": 1,
+        ".txt": 1,
+        ".xml": 8,
+        ".yml": 4,
+        ".zip": 1
+      }
+    },
+    {
+      "name": "Arma3Sync",
+      "url": "https://github.com/A3-Root/Arma3Sync",
+      "fork": true,
+      "licenseMetadata": "GPL-3.0",
+      "treeSHA": "9524f0e91c9e154e8ec79f6b8a32afa4d3f060cb",
+      "treeTruncated": false,
+      "blobs": 409,
+      "extensions": {
+        "(none)": 2,
+        ".ico": 4,
+        ".jar": 11,
+        ".java": 294,
+        ".jpg": 1,
+        ".md": 2,
+        ".mf": 1,
+        ".png": 93,
+        ".prefs": 1
+      }
+    },
+    {
+      "name": "Azer0ot_RONIM",
+      "url": "https://github.com/A3-Root/Azer0ot_RONIM",
+      "fork": false,
+      "licenseMetadata": "NOASSERTION",
+      "treeSHA": "d59a04dee149f7900e12a392a145266e91f4d691",
+      "treeTruncated": false,
+      "blobs": 159,
+      "extensions": {
+        "(none)": 11,
+        ".cpp": 11,
+        ".hpp": 22,
+        ".md": 5,
+        ".paa": 25,
+        ".png": 25,
+        ".py": 5,
+        ".sqf": 50,
+        ".toml": 1,
+        ".xml": 1,
+        ".yml": 1,
+        ".zip": 2
+      }
+    },
+    {
+      "name": "bis-file-formats",
+      "url": "https://github.com/A3-Root/bis-file-formats",
+      "fork": true,
+      "licenseMetadata": "MIT",
+      "treeSHA": "59cc7644c5c0940357d624232d4d0e2c3f283eaf",
+      "treeTruncated": false,
+      "blobs": 92,
+      "extensions": {
+        "(none)": 3,
+        ".cs": 70,
+        ".csproj": 13,
+        ".md": 2,
+        ".sln": 3,
+        ".yml": 1
+      }
+    },
+    {
+      "name": "FlatDevil",
+      "url": "https://github.com/A3-Root/FlatDevil",
+      "fork": false,
+      "licenseMetadata": "NOASSERTION",
+      "treeSHA": "9a8179c8a5b34d1523fe9efb04b0a3c879f622c2",
+      "treeTruncated": false,
+      "blobs": 59,
+      "extensions": {
+        "(none)": 7,
+        ".bat": 1,
+        ".cpp": 13,
+        ".def": 1,
+        ".h": 8,
+        ".md": 2,
+        ".paa": 1,
+        ".png": 1,
+        ".py": 8,
+        ".rhai": 2,
+        ".sh": 1,
+        ".sqf": 3,
+        ".toml": 3,
+        ".txt": 4,
+        ".yml": 1,
+        ".zip": 3
+      }
+    },
+    {
+      "name": "grad_meh",
+      "url": "https://github.com/A3-Root/grad_meh",
+      "fork": true,
+      "licenseMetadata": "MIT",
+      "treeSHA": "4c67d0912388e400fef23acdf2c014c06d376ae6",
+      "treeTruncated": false,
+      "blobs": 85,
+      "extensions": {
+        "(none)": 6,
+        ".cmake": 1,
+        ".cpp": 10,
+        ".csv": 3,
+        ".h": 8,
+        ".hpp": 17,
+        ".json": 2,
+        ".lock": 1,
+        ".md": 5,
+        ".natvis": 1,
+        ".paa": 7,
+        ".png": 1,
+        ".py": 1,
+        ".sqf": 14,
+        ".svg": 2,
+        ".toml": 1,
+        ".txt": 3,
+        ".yml": 2
+      }
+    },
+    {
+      "name": "HEMTT",
+      "url": "https://github.com/A3-Root/HEMTT",
+      "fork": true,
+      "licenseMetadata": "GPL-2.0",
+      "treeSHA": "c61e0c02585af86cc92d12f47357a87a25ad4cec",
+      "treeTruncated": false,
+      "blobs": 1421,
+      "extensions": {
+        "(none)": 22,
+        ".ansi": 40,
+        ".arma3profile": 3,
+        ".bikey": 2,
+        ".bin": 23,
+        ".biprivatekey": 1,
+        ".bisign": 3,
+        ".cfg": 2,
+        ".cpp": 9,
+        ".css": 3,
+        ".dll": 6,
+        ".dylib": 2,
+        ".h": 45,
+        ".hpp": 218,
+        ".html": 3,
+        ".js": 7,
+        ".json": 16,
+        ".lib": 4,
+        ".lock": 1,
+        ".md": 72,
+        ".mp3": 1,
+        ".orig": 1,
+        ".p3d": 2,
+        ".paa": 5,
+        ".pbo": 4,
+        ".pbo_8bd4922f": 1,
+        ".pbo_cba6f72c": 1,
+        ".pest": 1,
+        ".png": 20,
+        ".psd": 1,
+        ".py": 1,
+        ".rhai": 9,
+        ".rs": 497,
+        ".rvmat": 1,
+        ".sh": 1,
+        ".snap": 206,
+        ".so": 7,
+        ".sqf": 97,
+        ".sqm": 2,
+        ".toml": 31,
+        ".ts": 13,
+        ".txt": 10,
+        ".wss": 4,
+        ".xml": 13,
+        ".yaml": 7,
+        ".yml": 3
+      }
+    },
+    {
+      "name": "ocap-renderterrain",
+      "url": "https://github.com/A3-Root/ocap-renderterrain",
+      "fork": true,
+      "licenseMetadata": "NOASSERTION",
+      "treeSHA": "ecb2f72f635054584b9c0f80ea98d8b92de9efef",
+      "treeTruncated": false,
+      "blobs": 75,
+      "extensions": {
+        "(none)": 6,
+        ".bat": 2,
+        ".c": 1,
+        ".cmd": 3,
+        ".cpp": 3,
+        ".cpt": 1,
+        ".dll": 1,
+        ".exe": 1,
+        ".go": 1,
+        ".h": 2,
+        ".hpp": 14,
+        ".json": 3,
+        ".md": 2,
+        ".mod": 1,
+        ".paa": 3,
+        ".py": 7,
+        ".pyc": 1,
+        ".rhai": 1,
+        ".sqf": 17,
+        ".toml": 2,
+        ".txt": 2,
+        ".xml": 1
+      }
+    },
+    {
+      "name": "Pythia",
+      "url": "https://github.com/A3-Root/Pythia",
+      "fork": true,
+      "licenseMetadata": "MIT",
+      "treeSHA": "7a599b645940cad8b743660feaba16af21ce0221",
+      "treeTruncated": false,
+      "blobs": 227,
+      "extensions": {
+        "(none)": 23,
+        ".bat": 3,
+        ".cc": 12,
+        ".cmake": 2,
+        ".cpp": 24,
+        ".gif": 1,
+        ".h": 66,
+        ".jpg": 1,
+        ".json": 1,
+        ".md": 10,
+        ".paa": 1,
+        ".pbo": 12,
+        ".png": 3,
+        ".psd": 1,
+        ".py": 42,
+        ".pyd": 2,
+        ".pyx": 3,
+        ".rst": 1,
+        ".sh": 3,
+        ".sqf": 3,
+        ".txt": 10,
+        ".vdf": 1,
+        ".x64": 1,
+        ".yml": 1
+      }
+    },
+    {
+      "name": "RAMET",
+      "url": "https://github.com/A3-Root/RAMET",
+      "fork": false,
+      "licenseMetadata": "NOASSERTION",
+      "treeSHA": "12a229f4d08de4a64e4b7f7a23e973c253c9c6e1",
+      "treeTruncated": false,
+      "blobs": 550,
+      "extensions": {
+        "(none)": 26,
+        ".arma3profile": 1,
+        ".bat": 9,
+        ".c": 1,
+        ".cc": 4,
+        ".cfg": 1,
+        ".cmake": 4,
+        ".cmd": 3,
+        ".conf": 1,
+        ".cpp": 72,
+        ".cpt": 1,
+        ".cs": 17,
+        ".csproj": 2,
+        ".csv": 3,
+        ".dll": 3,
+        ".dotsettings": 1,
+        ".exe": 2,
+        ".go": 1,
+        ".h": 54,
+        ".hpp": 117,
+        ".json": 7,
+        ".lock": 1,
+        ".md": 13,
+        ".mod": 1,
+        ".natvis": 2,
+        ".paa": 19,
+        ".pdb": 1,
+        ".png": 8,
+        ".ps1": 6,
+        ".py": 44,
+        ".rhai": 1,
+        ".rs": 7,
+        ".rst": 1,
+        ".sh": 6,
+        ".sln": 1,
+        ".sqf": 79,
+        ".sqm": 1,
+        ".svg": 2,
+        ".toml": 4,
+        ".txt": 19,
+        ".xml": 1,
+        ".yml": 3
+      }
+    },
+    {
+      "name": "Reforger-TrainingGround",
+      "url": "https://github.com/A3-Root/Reforger-TrainingGround",
+      "fork": false,
+      "licenseMetadata": null,
+      "treeSHA": "72725db82ba1ef401057285eeecf822034f3a052",
+      "treeTruncated": false,
+      "blobs": 54200,
+      "extensions": {
+        ".asc": 1,
+        ".bterr": 9026,
+        ".conf": 2,
+        ".cpg": 3,
+        ".dbf": 6,
+        ".dds": 18050,
+        ".desc": 3,
+        ".edds": 18050,
+        ".ent": 1,
+        ".gpkg": 1,
+        ".gproj": 1,
+        ".json": 1,
+        ".layer": 5,
+        ".meta": 4,
+        ".prj": 3,
+        ".qgz": 2,
+        ".rdb": 1,
+        ".shp": 6,
+        ".shx": 6,
+        ".terr": 1,
+        ".ttile": 9025,
+        ".txt": 2
+      }
+    },
+    {
+      "name": "Root_AdaptiveDetectionSystem",
+      "url": "https://github.com/A3-Root/Root_AdaptiveDetectionSystem",
+      "fork": false,
+      "licenseMetadata": "NOASSERTION",
+      "treeSHA": "c8a40e053023b871d2a780c9f2401f8964cea5de",
+      "treeTruncated": false,
+      "blobs": 210,
+      "extensions": {
+        "(none)": 5,
+        ".cpp": 5,
+        ".hpp": 12,
+        ".md": 7,
+        ".paa": 1,
+        ".png": 1,
+        ".py": 4,
+        ".sqf": 168,
+        ".toml": 1,
+        ".txt": 1,
+        ".xml": 2,
+        ".yml": 1,
+        ".zip": 2
+      }
+    },
+    {
+      "name": "Root_AIProneFix",
+      "url": "https://github.com/A3-Root/Root_AIProneFix",
+      "fork": false,
+      "licenseMetadata": "NOASSERTION",
+      "treeSHA": "26e8240fd810d50bb9f239f3a7cb06ee7c81b0f7",
+      "treeTruncated": false,
+      "blobs": 40,
+      "extensions": {
+        "(none)": 4,
+        ".cpp": 2,
+        ".hpp": 6,
+        ".md": 2,
+        ".paa": 1,
+        ".png": 3,
+        ".sqf": 19,
+        ".toml": 1,
+        ".zip": 2
+      }
+    },
+    {
+      "name": "Root_Anomalies",
+      "url": "https://github.com/A3-Root/Root_Anomalies",
+      "fork": false,
+      "licenseMetadata": "NOASSERTION",
+      "treeSHA": "338b947abc833e85381fe3a641d4197aff0d598c",
+      "treeTruncated": false,
+      "blobs": 552,
+      "extensions": {
+        "(none)": 17,
+        ".cpp": 16,
+        ".hpp": 51,
+        ".jpg": 2,
+        ".md": 3,
+        ".ogg": 204,
+        ".paa": 3,
+        ".png": 1,
+        ".py": 2,
+        ".sqf": 250,
+        ".toml": 1,
+        ".yml": 1,
+        ".zip": 1
+      }
+    },
+    {
+      "name": "Root_Cyberwarfare",
+      "url": "https://github.com/A3-Root/Root_Cyberwarfare",
+      "fork": false,
+      "licenseMetadata": "NOASSERTION",
+      "treeSHA": "ff5179b3b7223d415facad5f97ccf8276481c3ac",
+      "treeTruncated": false,
+      "blobs": 251,
+      "extensions": {
+        "(none)": 5,
+        ".b64": 1,
+        ".cpp": 2,
+        ".hpp": 12,
+        ".html": 1,
+        ".jpg": 17,
+        ".js": 1,
+        ".json": 4,
+        ".md": 23,
+        ".ogg": 2,
+        ".ogv": 1,
+        ".paa": 2,
+        ".png": 3,
+        ".py": 2,
+        ".sqf": 170,
+        ".toml": 1,
+        ".xml": 1,
+        ".yml": 1,
+        ".zip": 2
+      }
+    },
+    {
+      "name": "Root_Effects",
+      "url": "https://github.com/A3-Root/Root_Effects",
+      "fork": false,
+      "licenseMetadata": "NOASSERTION",
+      "treeSHA": "9baebcbb34dc0650938042843c91b4ff850a0a10",
+      "treeTruncated": false,
+      "blobs": 436,
+      "extensions": {
+        "(none)": 19,
+        ".cpp": 18,
+        ".hpp": 56,
+        ".md": 13,
+        ".ogg": 60,
+        ".paa": 4,
+        ".png": 1,
+        ".py": 2,
+        ".sqf": 245,
+        ".toml": 1,
+        ".xml": 15,
+        ".yml": 1,
+        ".zip": 1
+      }
+    }
+  ],
+  "aggregates": [
+    {
+      "repository": "77th-JSOC-Missions",
+      "url": "https://github.com/A3-Root/77th-JSOC-Missions",
+      "commit": "92474ccc62080b8140002d80550dde20fc944b82",
+      "samples": 6,
+      "reviewed": 6,
+      "bytes": 61222,
+      "extendedRecognizedParts": 170,
+      "extendedUnsupportedParts": 187,
+      "sourceKnownShapeMismatches": 0
+    },
+    {
+      "repository": "Advanced-Equipment",
+      "url": "https://github.com/A3-Root/Advanced-Equipment",
+      "commit": "be2575c8ebeec547e0e937c17b91d32892e19324",
+      "samples": 6,
+      "reviewed": 6,
+      "bytes": 15923,
+      "extendedRecognizedParts": 16,
+      "extendedUnsupportedParts": 13,
+      "sourceKnownShapeMismatches": 0
+    },
+    {
+      "repository": "Root_Anomalies",
+      "url": "https://github.com/A3-Root/Root_Anomalies",
+      "commit": "338b947abc833e85381fe3a641d4197aff0d598c",
+      "samples": 6,
+      "reviewed": 6,
+      "bytes": 8091,
+      "extendedRecognizedParts": 11,
+      "extendedUnsupportedParts": 23,
+      "sourceKnownShapeMismatches": 0
+    },
+    {
+      "repository": "Root_Cyberwarfare",
+      "url": "https://github.com/A3-Root/Root_Cyberwarfare",
+      "commit": "ff5179b3b7223d415facad5f97ccf8276481c3ac",
+      "samples": 6,
+      "reviewed": 6,
+      "bytes": 19170,
+      "extendedRecognizedParts": 39,
+      "extendedUnsupportedParts": 45,
+      "sourceKnownShapeMismatches": 0
+    },
+    {
+      "repository": "Root_Effects",
+      "url": "https://github.com/A3-Root/Root_Effects",
+      "commit": "9baebcbb34dc0650938042843c91b4ff850a0a10",
+      "samples": 6,
+      "reviewed": 6,
+      "bytes": 8902,
+      "extendedRecognizedParts": 12,
+      "extendedUnsupportedParts": 14,
+      "sourceKnownShapeMismatches": 0
+    }
+  ],
+  "unsupportedExpressionDiagnostics": {
+    "Command or namespace symbol requires a verified signature": 175,
+    "Unconsumed syntax or unsupported command": 74,
+    "Expected closing parenthesis": 32,
+    "Unsupported expression token": 1
+  },
+  "structuralFindings": {
+    "UNSUPPORTED_CONTROL_SYNTAX": 9,
+    "PREPROCESSING_UNRESOLVED": 21
+  },
+  "samples": [
+    {
+      "repository": "77th-JSOC-Missions",
+      "commit": "92474ccc62080b8140002d80550dde20fc944b82",
+      "path": "Missions/# Events/PrivateChristmas_2025.Altis/functions/aaa/fn_personalAAAField.sqf",
+      "bytes": 10091,
+      "sha256": "a1968e4a929a38f90445ab4718425d9245beae26ec924debd605f1aca76cd1f1",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "f74e098622a1d315b5ab699a7fb8504089f82032cefb1e5f08e8ecf6c00e05bf",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 117,
+          "blocks": 15,
+          "conditionals": 7,
+          "loops": 2,
+          "codeAssignments": 0,
+          "opaqueStatements": 61,
+          "unsupported": 1,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 12,
+          "unsupported": 27,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 16,
+          "declarations": 50,
+          "references": 116,
+          "candidateReferences": 112,
+          "unresolvedReferences": 4,
+          "findings": 5,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 34,
+          "unclassified": 83,
+          "families": 6,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 39,
+          "nodes": 28,
+          "sourceShapeKnownRoots": 11,
+          "unknownShapeRoots": 1,
+          "unsupportedExpressions": 27,
+          "bindingCandidateLinks": 1,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 19,
+          "unsupported": 20,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 39,
+          "nodes": 57,
+          "commands": 4,
+          "compatibleShapeChecks": 2,
+          "unresolvedShapeChecks": 8,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "77th-JSOC-Missions",
+      "commit": "92474ccc62080b8140002d80550dde20fc944b82",
+      "path": "Scripts/Damage air assets in area.sqf",
+      "bytes": 1072,
+      "sha256": "583dffe24f256caa257e3a03b43edd5fa9ccd160a2423cb7464480bd418d6625",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "fedffb35dd6cd94226b493684bb73ee51321850369e81c2abd520b87af2fa5ec",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 25,
+          "blocks": 2,
+          "conditionals": 0,
+          "loops": 2,
+          "codeAssignments": 0,
+          "opaqueStatements": 14,
+          "unsupported": 0,
+          "findings": 0,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 3,
+          "unsupported": 5,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 3,
+          "declarations": 4,
+          "references": 34,
+          "candidateReferences": 3,
+          "unresolvedReferences": 31,
+          "findings": 0,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 3,
+          "unclassified": 22,
+          "families": 1,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 8,
+          "nodes": 3,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 3,
+          "unsupportedExpressions": 5,
+          "bindingCandidateLinks": 1,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 4,
+          "unsupported": 4,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 8,
+          "nodes": 6,
+          "commands": 1,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 1,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "77th-JSOC-Missions",
+      "commit": "92474ccc62080b8140002d80550dde20fc944b82",
+      "path": "Missions/# Events/PrivateChristmas_2025.Altis/functions/cage/fn_cageFightChaos.sqf",
+      "bytes": 23222,
+      "sha256": "3e1d0e7b42614a6f091d90b445d5bdbe146f568749bfca3d224e7d06f33564b8",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "45f025134f523d19c7cba5a85d1ebfcdf299764c8ae22342f562998284edddd3",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 582,
+          "blocks": 129,
+          "conditionals": 52,
+          "loops": 36,
+          "codeAssignments": 17,
+          "opaqueStatements": 218,
+          "unsupported": 0,
+          "findings": 0,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 65,
+          "unsupported": 143,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 130,
+          "declarations": 176,
+          "references": 373,
+          "candidateReferences": 336,
+          "unresolvedReferences": 37,
+          "findings": 33,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 178,
+          "unclassified": 337,
+          "families": 7,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 208,
+          "nodes": 87,
+          "sourceShapeKnownRoots": 37,
+          "unknownShapeRoots": 28,
+          "unsupportedExpressions": 143,
+          "bindingCandidateLinks": 29,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 94,
+          "unsupported": 114,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 208,
+          "nodes": 243,
+          "commands": 32,
+          "compatibleShapeChecks": 8,
+          "unresolvedShapeChecks": 52,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "77th-JSOC-Missions",
+      "commit": "92474ccc62080b8140002d80550dde20fc944b82",
+      "path": "Missions/Vietnam/1 - Tho San Nguoi My/Mission Scripts.sqf",
+      "bytes": 7220,
+      "sha256": "d0d97b2963cd2af5699c6bcc1eaf718a38a2eb1544267d8b14a2b969c9d97e89",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "1389ca752ad349a3f5644bc3fd4bdccaf2416796194699c1e5c1db82cb567fc4",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 106,
+          "blocks": 25,
+          "conditionals": 10,
+          "loops": 4,
+          "codeAssignments": 1,
+          "opaqueStatements": 31,
+          "unsupported": 2,
+          "findings": 2,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 16,
+          "unsupported": 31,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 26,
+          "declarations": 14,
+          "references": 94,
+          "candidateReferences": 39,
+          "unresolvedReferences": 55,
+          "findings": 8,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 33,
+          "unclassified": 72,
+          "families": 7,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 47,
+          "nodes": 36,
+          "sourceShapeKnownRoots": 11,
+          "unknownShapeRoots": 5,
+          "unsupportedExpressions": 31,
+          "bindingCandidateLinks": 5,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 25,
+          "unsupported": 22,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 47,
+          "nodes": 61,
+          "commands": 6,
+          "compatibleShapeChecks": 5,
+          "unresolvedShapeChecks": 6,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "77th-JSOC-Missions",
+      "commit": "92474ccc62080b8140002d80550dde20fc944b82",
+      "path": "Missions/# Events/PrivateChristmas_2025.Altis/functions/music/fn_addMusicZone.sqf",
+      "bytes": 1476,
+      "sha256": "a2a046ecb3a9de7c650254e933d5bd43301cfbbb65665afb2844dbc0c867e538",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "4715989023cb2980b5e65dca1f7fcbdcf077702b11bfcf0c951b08f1c9598cd1",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 26,
+          "blocks": 4,
+          "conditionals": 1,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 15,
+          "unsupported": 1,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 3,
+          "unsupported": 2,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 5,
+          "declarations": 10,
+          "references": 3,
+          "candidateReferences": 3,
+          "unresolvedReferences": 0,
+          "findings": 3,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 13,
+          "unclassified": 14,
+          "families": 5,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 5,
+          "nodes": 3,
+          "sourceShapeKnownRoots": 3,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 2,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 4,
+          "unsupported": 1,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 5,
+          "nodes": 6,
+          "commands": 1,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 1,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "77th-JSOC-Missions",
+      "commit": "92474ccc62080b8140002d80550dde20fc944b82",
+      "path": "Missions/7 - Aperture Investment/Mission Scripts.sqf",
+      "bytes": 18141,
+      "sha256": "c1bc104d4719620101f9650ebc0f2d557888ab819be463737df8cba8f4370cec",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "21435dcacb313bcb2b1c6213d09183a16b4477485ab6b881948e45960ee3dc6b",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 129,
+          "blocks": 34,
+          "conditionals": 14,
+          "loops": 6,
+          "codeAssignments": 3,
+          "opaqueStatements": 40,
+          "unsupported": 2,
+          "findings": 2,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 15,
+          "unsupported": 35,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 35,
+          "declarations": 18,
+          "references": 98,
+          "candidateReferences": 43,
+          "unresolvedReferences": 55,
+          "findings": 11,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 47,
+          "unclassified": 87,
+          "families": 9,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 50,
+          "nodes": 32,
+          "sourceShapeKnownRoots": 10,
+          "unknownShapeRoots": 5,
+          "unsupportedExpressions": 35,
+          "bindingCandidateLinks": 5,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 24,
+          "unsupported": 26,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 50,
+          "nodes": 63,
+          "commands": 6,
+          "compatibleShapeChecks": 3,
+          "unresolvedShapeChecks": 10,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Advanced-Equipment",
+      "commit": "be2575c8ebeec547e0e937c17b91d32892e19324",
+      "path": "addons/filesystem/functions/fnc_resolvePntr.sqf",
+      "bytes": 921,
+      "sha256": "11994373beafbe0ced4c79de39d44a7faaa380a421b05e7d2eeadf5eaf24ca6f",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "def21d462056fcd6a1b2638ebdbea124c8cafd83da4a49e9eda9597b8ccf5701",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 10,
+          "blocks": 1,
+          "conditionals": 0,
+          "loops": 1,
+          "codeAssignments": 0,
+          "opaqueStatements": 2,
+          "unsupported": 1,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 2,
+          "unsupported": 3,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 2,
+          "declarations": 6,
+          "references": 11,
+          "candidateReferences": 11,
+          "unresolvedReferences": 0,
+          "findings": 0,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 4,
+          "unclassified": 4,
+          "families": 2,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 5,
+          "nodes": 2,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 2,
+          "unsupportedExpressions": 3,
+          "bindingCandidateLinks": 2,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 4,
+          "unsupported": 1,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 5,
+          "nodes": 8,
+          "commands": 2,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 2,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Advanced-Equipment",
+      "commit": "be2575c8ebeec547e0e937c17b91d32892e19324",
+      "path": "addons/power/functions/fnc_turnOffGeneratorAction.sqf",
+      "bytes": 2942,
+      "sha256": "fed1c76f79a8ea3da305c57ea50060a1833fe77ebaa6051741586f6e4ca60cdf",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "7b278a3c36bb1c6571e0f068fc735bc018a516417a73e7ae443ed17533513f9a",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 33,
+          "blocks": 7,
+          "conditionals": 2,
+          "loops": 1,
+          "codeAssignments": 1,
+          "opaqueStatements": 17,
+          "unsupported": 0,
+          "findings": 0,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 3,
+          "unsupported": 4,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 8,
+          "declarations": 18,
+          "references": 24,
+          "candidateReferences": 17,
+          "unresolvedReferences": 7,
+          "findings": 7,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 18,
+          "unclassified": 9,
+          "families": 5,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 7,
+          "nodes": 3,
+          "sourceShapeKnownRoots": 3,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 4,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 5,
+          "unsupported": 2,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 7,
+          "nodes": 12,
+          "commands": 1,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 2,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Advanced-Equipment",
+      "commit": "be2575c8ebeec547e0e937c17b91d32892e19324",
+      "path": "addons/main/functions/fnc_zeus_filesystemBrowser_pickPath.sqf",
+      "bytes": 1421,
+      "sha256": "53a3f854291634d98a8daba66ae2492738e23d58c0a6da7e9e857bcb2179e1cc",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "2156cee67c2ad57ea33e4a4340805b9721b21a6f619379d1a36b8be71ccc353e",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 21,
+          "blocks": 4,
+          "conditionals": 4,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 6,
+          "unsupported": 0,
+          "findings": 0,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 1,
+          "unsupported": 9,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 5,
+          "declarations": 6,
+          "references": 15,
+          "candidateReferences": 10,
+          "unresolvedReferences": 5,
+          "findings": 2,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 10,
+          "unclassified": 10,
+          "families": 4,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 10,
+          "nodes": 2,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 1,
+          "unsupportedExpressions": 9,
+          "bindingCandidateLinks": 1,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 6,
+          "unsupported": 4,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 10,
+          "nodes": 21,
+          "commands": 5,
+          "compatibleShapeChecks": 1,
+          "unresolvedShapeChecks": 6,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Advanced-Equipment",
+      "commit": "be2575c8ebeec547e0e937c17b91d32892e19324",
+      "path": "addons/armaos/functions/fnc_terminal_getAllowedKeysAR.sqf",
+      "bytes": 7683,
+      "sha256": "6ff05753a4fc8abcf1f6d308d3751f80c1c6c1627ebb317a068e842388ad9f69",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "ca70c72e59d237c927a223e9b6a23ab66469add3d3c62281b8b519cfabe277a3",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 3,
+          "blocks": 0,
+          "conditionals": 0,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 2,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 0,
+          "unsupported": 0,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 1,
+          "declarations": 0,
+          "references": 2,
+          "candidateReferences": 0,
+          "unresolvedReferences": 2,
+          "findings": 2,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 0,
+          "unclassified": 230,
+          "families": 0,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 0,
+          "nodes": 0,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 0,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 0,
+          "unsupported": 0,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 0,
+          "nodes": 0,
+          "commands": 0,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 0,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Advanced-Equipment",
+      "commit": "be2575c8ebeec547e0e937c17b91d32892e19324",
+      "path": "addons/desktop/functions/fnc_app_list.sqf",
+      "bytes": 966,
+      "sha256": "d4c5260bdf1626b9b388c3b44d2c819da41f8dac5bc2540d9e036837cff8ff3b",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "9c0d4c5db513b175d892ee2c28dafdce4657955e26ae3a29cf7830115e4c3d80",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 10,
+          "blocks": 2,
+          "conditionals": 0,
+          "loops": 2,
+          "codeAssignments": 0,
+          "opaqueStatements": 4,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 0,
+          "unsupported": 3,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 3,
+          "declarations": 5,
+          "references": 13,
+          "candidateReferences": 9,
+          "unresolvedReferences": 4,
+          "findings": 2,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 5,
+          "unclassified": 12,
+          "families": 3,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 3,
+          "nodes": 0,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 3,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 0,
+          "unsupported": 3,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 3,
+          "nodes": 0,
+          "commands": 0,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 0,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Advanced-Equipment",
+      "commit": "be2575c8ebeec547e0e937c17b91d32892e19324",
+      "path": "addons/armaos/XEH_postInit.sqf",
+      "bytes": 1990,
+      "sha256": "628d84105a1dd0210e015fb3b4bba315e9b78d9a82174a56217af8ce56cafab9",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "e726d77a9ded380134f59a151006060ba443d2439f5d5d5baa361b7533ea2935",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 20,
+          "blocks": 7,
+          "conditionals": 3,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 8,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 0,
+          "unsupported": 4,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 8,
+          "declarations": 3,
+          "references": 3,
+          "candidateReferences": 3,
+          "unresolvedReferences": 0,
+          "findings": 5,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 16,
+          "unclassified": 12,
+          "families": 4,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 4,
+          "nodes": 0,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 4,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 1,
+          "unsupported": 3,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 4,
+          "nodes": 3,
+          "commands": 1,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 1,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Anomalies",
+      "commit": "338b947abc833e85381fe3a641d4197aff0d598c",
+      "path": "addons/main/functions/core/fn_deathBlast.sqf",
+      "bytes": 1790,
+      "sha256": "d953da83c3209a9e7d6c7d4126a64130ae856b9a889cb78d99c776431a14c097",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "858ec9029839e357197ee8ba09f36adcce9ed24d34fb28f1fda4dc7026ec728f",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 33,
+          "blocks": 9,
+          "conditionals": 5,
+          "loops": 2,
+          "codeAssignments": 0,
+          "opaqueStatements": 14,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 1,
+          "unsupported": 9,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 10,
+          "declarations": 13,
+          "references": 24,
+          "candidateReferences": 14,
+          "unresolvedReferences": 10,
+          "findings": 3,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 17,
+          "unclassified": 16,
+          "families": 6,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 10,
+          "nodes": 1,
+          "sourceShapeKnownRoots": 1,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 9,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 6,
+          "unsupported": 4,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 10,
+          "nodes": 29,
+          "commands": 5,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 9,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 2,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Anomalies",
+      "commit": "338b947abc833e85381fe3a641d4197aff0d598c",
+      "path": "addons/worm/functions/fn_WormEffect.sqf",
+      "bytes": 2402,
+      "sha256": "b4dc5e903b8ee58254eb11623e71727a2f6b15577759a72510bdda8fb31998c7",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "4002489d2d695c127f8632adfe6dc0c7909cfcfd29f78ef25ae8cde906edc696",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 60,
+          "blocks": 14,
+          "conditionals": 1,
+          "loops": 5,
+          "codeAssignments": 0,
+          "opaqueStatements": 32,
+          "unsupported": 1,
+          "findings": 2,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 2,
+          "unsupported": 7,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 15,
+          "declarations": 11,
+          "references": 36,
+          "candidateReferences": 25,
+          "unresolvedReferences": 11,
+          "findings": 4,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 14,
+          "unclassified": 37,
+          "families": 4,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 9,
+          "nodes": 2,
+          "sourceShapeKnownRoots": 1,
+          "unknownShapeRoots": 1,
+          "unsupportedExpressions": 7,
+          "bindingCandidateLinks": 1,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 2,
+          "unsupported": 7,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 9,
+          "nodes": 2,
+          "commands": 0,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 0,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Anomalies",
+      "commit": "338b947abc833e85381fe3a641d4197aff0d598c",
+      "path": "addons/twins/functions/fn_TwinsDamage.sqf",
+      "bytes": 1257,
+      "sha256": "aba9a1381674178d018f3493ef0c941d4bb2550ac07f9150fb8df3440e09a72f",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "17f044bb57ad77d94ad48dff09480efca6da0ab78ac8a903871d06cd4c0ec19e",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 25,
+          "blocks": 7,
+          "conditionals": 2,
+          "loops": 2,
+          "codeAssignments": 0,
+          "opaqueStatements": 10,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 1,
+          "unsupported": 5,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 8,
+          "declarations": 7,
+          "references": 18,
+          "candidateReferences": 9,
+          "unresolvedReferences": 9,
+          "findings": 3,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 10,
+          "unclassified": 25,
+          "families": 5,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 6,
+          "nodes": 1,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 1,
+          "unsupportedExpressions": 5,
+          "bindingCandidateLinks": 1,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 2,
+          "unsupported": 4,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 6,
+          "nodes": 5,
+          "commands": 0,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 1,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Anomalies",
+      "commit": "338b947abc833e85381fe3a641d4197aff0d598c",
+      "path": "addons/farmer/functions/fn_FarmerAvoid.sqf",
+      "bytes": 551,
+      "sha256": "3e83eb3ec7580f73f873c3dd49e13829437ad5ed9cb88387559d11b5166d5d65",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "3ef60155de3467f9fc420e78918cbd2695d92ae948746b1a73f64733d8db436d",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 7,
+          "blocks": 1,
+          "conditionals": 1,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 3,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 0,
+          "unsupported": 2,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 2,
+          "declarations": 1,
+          "references": 7,
+          "candidateReferences": 0,
+          "unresolvedReferences": 7,
+          "findings": 3,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 1,
+          "unclassified": 9,
+          "families": 1,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 2,
+          "nodes": 0,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 2,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 0,
+          "unsupported": 2,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 2,
+          "nodes": 0,
+          "commands": 0,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 0,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Anomalies",
+      "commit": "338b947abc833e85381fe3a641d4197aff0d598c",
+      "path": "wip/scp173/functions/fn_blink.sqf",
+      "bytes": 1046,
+      "sha256": "3363e2d481e1d57d215cd0be0e136f8735acc4227d78238752db78f386df00c5",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "e40d7e4f1233b58e9db959e28dcae1a8eba7a25fd7b8851e933ded27e9e8803f",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 11,
+          "blocks": 2,
+          "conditionals": 1,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 5,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 0,
+          "unsupported": 3,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 3,
+          "declarations": 3,
+          "references": 6,
+          "candidateReferences": 0,
+          "unresolvedReferences": 6,
+          "findings": 2,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 10,
+          "unclassified": 13,
+          "families": 3,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 3,
+          "nodes": 0,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 3,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 0,
+          "unsupported": 3,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 3,
+          "nodes": 0,
+          "commands": 0,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 0,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Anomalies",
+      "commit": "338b947abc833e85381fe3a641d4197aff0d598c",
+      "path": "addons/main/functions/api/fn_configure.sqf",
+      "bytes": 1045,
+      "sha256": "0b1121c44a83060542e93807383228b0775b12cd2facf63db7f0f2c5dee9cb79",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "d220b05b4b1c854af7c04003f0362012e6bcf8e0227b8f6aaefe97b7a19c250a",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 12,
+          "blocks": 2,
+          "conditionals": 2,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 5,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 0,
+          "unsupported": 4,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 3,
+          "declarations": 2,
+          "references": 10,
+          "candidateReferences": 0,
+          "unresolvedReferences": 10,
+          "findings": 3,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 8,
+          "unclassified": 15,
+          "families": 4,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 4,
+          "nodes": 0,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 4,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 1,
+          "unsupported": 3,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 4,
+          "nodes": 3,
+          "commands": 1,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 1,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Cyberwarfare",
+      "commit": "ff5179b3b7223d415facad5f97ccf8276481c3ac",
+      "path": "addons/main/functions/utility/fn_getPowerComputer.sqf",
+      "bytes": 717,
+      "sha256": "f73c8059d752d046d2602b7771095de7d7df595eb6dc113551f211a9b5800f49",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "c46cbc21b895c92b0b1ac92b27d688c40710e65101550880b8501ab13dd85842",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 3,
+          "blocks": 0,
+          "conditionals": 0,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 2,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 0,
+          "unsupported": 0,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 1,
+          "declarations": 0,
+          "references": 2,
+          "candidateReferences": 0,
+          "unresolvedReferences": 2,
+          "findings": 3,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 5,
+          "unclassified": 3,
+          "families": 2,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 0,
+          "nodes": 0,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 0,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 0,
+          "unsupported": 0,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 0,
+          "nodes": 0,
+          "commands": 0,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 0,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Cyberwarfare",
+      "commit": "ff5179b3b7223d415facad5f97ccf8276481c3ac",
+      "path": "addons/main/functions/gui/fn_gui_appLights.sqf",
+      "bytes": 4025,
+      "sha256": "4bc25e0ec19e78a9d495b95c2f49e7a51e1da6e2af9a282d204d19d761bcaf39",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "60808091b63bff15ca81269cd20927651bb665f9d2805ae732fc7c6c4ac8168f",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 71,
+          "blocks": 10,
+          "conditionals": 1,
+          "loops": 2,
+          "codeAssignments": 2,
+          "opaqueStatements": 42,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 2,
+          "unsupported": 14,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 11,
+          "declarations": 23,
+          "references": 87,
+          "candidateReferences": 3,
+          "unresolvedReferences": 84,
+          "findings": 16,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 34,
+          "unclassified": 66,
+          "families": 5,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 16,
+          "nodes": 4,
+          "sourceShapeKnownRoots": 1,
+          "unknownShapeRoots": 1,
+          "unsupportedExpressions": 14,
+          "bindingCandidateLinks": 1,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 5,
+          "unsupported": 11,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 16,
+          "nodes": 16,
+          "commands": 2,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 5,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 2,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Cyberwarfare",
+      "commit": "ff5179b3b7223d415facad5f97ccf8276481c3ac",
+      "path": "addons/main/functions/3den/fn_3denAddLights.sqf",
+      "bytes": 4008,
+      "sha256": "50588b8419b1487c4467f3187363513b5b39b4b6652ddd6a9ff8055ccd820bbc",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "8c0615ffbb3ff99ecd2dc56a926a13063ee5674de709700089e952806b5454d6",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 61,
+          "blocks": 15,
+          "conditionals": 8,
+          "loops": 1,
+          "codeAssignments": 0,
+          "opaqueStatements": 12,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 11,
+          "unsupported": 22,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 16,
+          "declarations": 19,
+          "references": 55,
+          "candidateReferences": 7,
+          "unresolvedReferences": 48,
+          "findings": 8,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 14,
+          "unclassified": 29,
+          "families": 4,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 33,
+          "nodes": 13,
+          "sourceShapeKnownRoots": 6,
+          "unknownShapeRoots": 5,
+          "unsupportedExpressions": 22,
+          "bindingCandidateLinks": 1,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 19,
+          "unsupported": 14,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 33,
+          "nodes": 49,
+          "commands": 5,
+          "compatibleShapeChecks": 1,
+          "unresolvedShapeChecks": 12,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 6,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Cyberwarfare",
+      "commit": "ff5179b3b7223d415facad5f97ccf8276481c3ac",
+      "path": "addons/main/functions/core/fn_createDiaryEntry.sqf",
+      "bytes": 2640,
+      "sha256": "06dea981c5b835134aa5a452d8027b5e7984bab89baae9ed1fcc6bd6d35cf594",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "586d2b3ecb33ab97e7925daa9f211a03d1586541302922f891b78cd2726ac601",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 6,
+          "blocks": 1,
+          "conditionals": 0,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 4,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 0,
+          "unsupported": 0,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 2,
+          "declarations": 0,
+          "references": 0,
+          "candidateReferences": 0,
+          "unresolvedReferences": 0,
+          "findings": 2,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 2,
+          "unclassified": 2,
+          "families": 2,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 0,
+          "nodes": 0,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 0,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 0,
+          "unsupported": 0,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 0,
+          "nodes": 0,
+          "commands": 0,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 0,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Cyberwarfare",
+      "commit": "ff5179b3b7223d415facad5f97ccf8276481c3ac",
+      "path": "addons/main/functions/zeus/fn_cipherZeus.sqf",
+      "bytes": 5281,
+      "sha256": "1fc292013820a310751d7f022eadbb65cc6b44d08df2081430b486dbe3e5df62",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "1fa078aec915119aef01e54963697e484af0f312a237d4f4379ee5388f795e26",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 60,
+          "blocks": 16,
+          "conditionals": 7,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 23,
+          "unsupported": 1,
+          "findings": 2,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 1,
+          "unsupported": 17,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 17,
+          "declarations": 17,
+          "references": 52,
+          "candidateReferences": 12,
+          "unresolvedReferences": 40,
+          "findings": 15,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 23,
+          "unclassified": 64,
+          "families": 5,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 18,
+          "nodes": 1,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 1,
+          "unsupportedExpressions": 17,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 6,
+          "unsupported": 12,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 18,
+          "nodes": 24,
+          "commands": 4,
+          "compatibleShapeChecks": 2,
+          "unresolvedShapeChecks": 6,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 2,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Cyberwarfare",
+      "commit": "ff5179b3b7223d415facad5f97ccf8276481c3ac",
+      "path": "addons/main/functions/vehicle/fn_applyVehicleBrakes.sqf",
+      "bytes": 2499,
+      "sha256": "1d10f2b6ffec73e168be0e5e1af469505075e827a77fa62ce8bd841a1114acd6",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "7aa4dbc70167907d0f787a2a6f52b4aa01d882beffd0c27792c6b07378ca118e",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 40,
+          "blocks": 7,
+          "conditionals": 6,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 15,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 1,
+          "unsupported": 16,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 8,
+          "declarations": 11,
+          "references": 55,
+          "candidateReferences": 0,
+          "unresolvedReferences": 55,
+          "findings": 6,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 23,
+          "unclassified": 22,
+          "families": 4,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 17,
+          "nodes": 3,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 1,
+          "unsupportedExpressions": 16,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 9,
+          "unsupported": 8,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 17,
+          "nodes": 43,
+          "commands": 5,
+          "compatibleShapeChecks": 1,
+          "unresolvedShapeChecks": 12,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 4,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Effects",
+      "commit": "9baebcbb34dc0650938042843c91b4ff850a0a10",
+      "path": "addons/strikes/functions/fn_napalmIgnite.sqf",
+      "bytes": 1975,
+      "sha256": "540f84cd2bfa9fe75e4d6ea04b5202226d17af97492423882d09def9771e32f0",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "11b8d7fb1f55e3ae7aed69e8cc3c911f5c30f20907366a20fb7f486e7b75ee7b",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 29,
+          "blocks": 9,
+          "conditionals": 5,
+          "loops": 1,
+          "codeAssignments": 0,
+          "opaqueStatements": 11,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 2,
+          "unsupported": 6,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 10,
+          "declarations": 7,
+          "references": 26,
+          "candidateReferences": 4,
+          "unresolvedReferences": 22,
+          "findings": 8,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 16,
+          "unclassified": 23,
+          "families": 4,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 8,
+          "nodes": 3,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 2,
+          "unsupportedExpressions": 6,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 4,
+          "unsupported": 4,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 8,
+          "nodes": 9,
+          "commands": 2,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 2,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Effects",
+      "commit": "9baebcbb34dc0650938042843c91b4ff850a0a10",
+      "path": "addons/volcano/functions/fn_moduleAvalanche.sqf",
+      "bytes": 2305,
+      "sha256": "7927e4d9aec8202801a564e823444066cc0d001f334a40acb5f18b1dfccf91e4",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "544cfc795c9397b60803bb20ce076dab782a129119aa3215ced7fdb0932aa494",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 22,
+          "blocks": 5,
+          "conditionals": 3,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 11,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 2,
+          "unsupported": 3,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 6,
+          "declarations": 3,
+          "references": 17,
+          "candidateReferences": 0,
+          "unresolvedReferences": 17,
+          "findings": 7,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 12,
+          "unclassified": 69,
+          "families": 3,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 5,
+          "nodes": 4,
+          "sourceShapeKnownRoots": 1,
+          "unknownShapeRoots": 1,
+          "unsupportedExpressions": 3,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 3,
+          "unsupported": 2,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 5,
+          "nodes": 7,
+          "commands": 1,
+          "compatibleShapeChecks": 3,
+          "unresolvedShapeChecks": 0,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Effects",
+      "commit": "9baebcbb34dc0650938042843c91b4ff850a0a10",
+      "path": "addons/main/functions/fn_startEffect.sqf",
+      "bytes": 2010,
+      "sha256": "bb66ea1c19a07287aff259b3fcd8eae38ce02f8beb34622b0132ed554a96d9e0",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "8be78f1e7a394514eaf931e4ff0dbdc2c2e547541f77e7013998a93950ff3db0",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 22,
+          "blocks": 3,
+          "conditionals": 3,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 13,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 0,
+          "unsupported": 5,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 4,
+          "declarations": 2,
+          "references": 25,
+          "candidateReferences": 0,
+          "unresolvedReferences": 25,
+          "findings": 3,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 7,
+          "unclassified": 27,
+          "families": 4,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 5,
+          "nodes": 0,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 5,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 0,
+          "unsupported": 5,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 5,
+          "nodes": 0,
+          "commands": 0,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 0,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Effects",
+      "commit": "9baebcbb34dc0650938042843c91b4ff850a0a10",
+      "path": "addons/dronefeed/functions/fn_getDroneList.sqf",
+      "bytes": 675,
+      "sha256": "96ce949c95fe69d19238a2e1e32e248df74d88751981d610619d6610fab00442",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "2a0fd8212f4f6809ff71c9379b24cd8773151042cae9d31ed80640b6dbaf9528",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 10,
+          "blocks": 2,
+          "conditionals": 1,
+          "loops": 1,
+          "codeAssignments": 0,
+          "opaqueStatements": 3,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 1,
+          "unsupported": 3,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 3,
+          "declarations": 4,
+          "references": 10,
+          "candidateReferences": 7,
+          "unresolvedReferences": 3,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 1,
+          "unclassified": 12,
+          "families": 1,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 4,
+          "nodes": 1,
+          "sourceShapeKnownRoots": 1,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 3,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 1,
+          "unsupported": 3,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 4,
+          "nodes": 1,
+          "commands": 0,
+          "compatibleShapeChecks": 0,
+          "unresolvedShapeChecks": 0,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Effects",
+      "commit": "9baebcbb34dc0650938042843c91b4ff850a0a10",
+      "path": "addons/fireworks/XEH_postInit.sqf",
+      "bytes": 294,
+      "sha256": "18207c2ce05f12cdee624047d10daf8b16c30581b94d076de8096c13c7adf0a8",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "283326039714df002fe30c33afd523e8472bd98a880fdfd65dd54754e544745d",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 11,
+          "blocks": 4,
+          "conditionals": 1,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 5,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 0,
+          "unsupported": 1,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 5,
+          "declarations": 0,
+          "references": 2,
+          "candidateReferences": 0,
+          "unresolvedReferences": 2,
+          "findings": 4,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 6,
+          "unclassified": 11,
+          "families": 2,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 1,
+          "nodes": 0,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 1,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 1,
+          "unsupported": 0,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 1,
+          "nodes": 2,
+          "commands": 1,
+          "compatibleShapeChecks": 1,
+          "unresolvedShapeChecks": 0,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    },
+    {
+      "repository": "Root_Effects",
+      "commit": "9baebcbb34dc0650938042843c91b4ff850a0a10",
+      "path": "addons/weather/XEH_postInit.sqf",
+      "bytes": 1643,
+      "sha256": "a107db549afa747425112b2a8e57f7e4bb2134102941152ea8ab75adc55594df",
+      "status": "reviewed",
+      "integrityVerified": true,
+      "originalBytesUnchanged": true,
+      "bundleSHA256": "214206c9a1c10db6eaf1ea64ab560e05b599199433c4f00519d3efdb2eb69973",
+      "summaries": {
+        "structure": {
+          "files": 1,
+          "nodes": 44,
+          "blocks": 15,
+          "conditionals": 3,
+          "loops": 0,
+          "codeAssignments": 0,
+          "opaqueStatements": 25,
+          "unsupported": 0,
+          "findings": 1,
+          "executionReady": 0
+        },
+        "expressions": {
+          "recognized": 0,
+          "unsupported": 3,
+          "executionReady": 0
+        },
+        "bindings": {
+          "scopes": 16,
+          "declarations": 5,
+          "references": 18,
+          "candidateReferences": 9,
+          "unresolvedReferences": 9,
+          "findings": 13,
+          "executionReady": 0
+        },
+        "adapters": {
+          "occurrences": 26,
+          "unclassified": 59,
+          "families": 3,
+          "verifiedAdapters": 0,
+          "executionReady": 0
+        },
+        "valueIR": {
+          "entries": 3,
+          "nodes": 0,
+          "sourceShapeKnownRoots": 0,
+          "unknownShapeRoots": 0,
+          "unsupportedExpressions": 3,
+          "bindingCandidateLinks": 0,
+          "executionReady": 0
+        },
+        "commandExpressions": {
+          "recognized": 3,
+          "unsupported": 0,
+          "executionReady": 0
+        },
+        "sourceSemantics": {
+          "entries": 3,
+          "nodes": 8,
+          "commands": 3,
+          "compatibleShapeChecks": 1,
+          "unresolvedShapeChecks": 2,
+          "invalidShapeChecks": 0,
+          "invalidDependencyNodes": 0,
+          "callbackObligations": 0,
+          "executionReady": 0
+        }
+      }
+    }
+  ],
+  "timing": {
+    "scope": "One sequential cold/warm mixed pass including analysis, report writes and integrity reads; not an app FPS, conversion throughput or comparative benchmark. Network capture excluded.",
+    "totalMilliseconds": 1918.8535999999995,
+    "sampleMilliseconds": [
+      239.00609999999998,
+      42.719299999999976,
+      291.2587,
+      78.42549999999994,
+      45.59100000000001,
+      94.79959999999994,
+      54.609800000000064,
+      59.610299999999825,
+      49.14650000000006,
+      61.37090000000012,
+      42.36259999999993,
+      38.74170000000004,
+      46.815599999999904,
+      49.35459999999989,
+      42.31600000000003,
+      37.3442,
+      39.15819999999985,
+      39.023800000000165,
+      34.20720000000006,
+      61.513999999999896,
+      60.626399999999876,
+      37.07989999999995,
+      61.24420000000009,
+      57.72449999999981,
+      48.94920000000002,
+      45.71769999999992,
+      40.05670000000009,
+      38.427900000000136,
+      32.039999999999964,
+      49.61149999999998
+    ]
+  }
+}
