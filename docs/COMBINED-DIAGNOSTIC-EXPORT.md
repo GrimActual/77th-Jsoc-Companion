@@ -66,3 +66,8 @@ The block-family selector now offers a separate bounded if/else mapper over exis
 ## Coverage preview and exact integer value family
 
 A read-only preview now explains supported/mixed/manual files before exporting. Exact integer expression helpers extend value-only emission; existing Boolean families remain unchanged. See [the EN/FR/DE guide](MIGRATION-COVERAGE-AND-INTEGERS.md).
+
+
+## Typed pure function module family
+
+Coverage and helper export now include a separate pure Boolean function-module compiler with explicit params/defaults and closed cross-file calls. External registration and caller/lifecycle integration stay manual. See [the EN/FR/DE guide](TYPED-BOOLEAN-FUNCTIONS.md). Previous families remain unchanged.

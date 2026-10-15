@@ -49,3 +49,8 @@ Eine Familie wählen und Ausdrucks- oder Blockabdeckung prüfen. Die ausdrückli
 Für Ganzzahlen **Ausdruckswertfamilie → Exakte Ganzzahlwerte** wählen, Abdeckung prüfen und im Gerüstmodus Kontext bestätigen und verifizierte Ganzzahlhelfer exportieren. Unterstützt sind dezimale Ganzzahlliterale, Negation und explizit gruppierte `+`, `-`, `*`. Jedes Literal und Zwischenergebnis bleibt innerhalb ±16.777.215. Dezimalwerte, Exponenten/Hexadezimalwerte, Division, Modulo, Variablen, Vergleiche, Kommandos und Grenzüberschreitungen bleiben manuell. Quellen/Hinweise, Quell-/Ausgabekarten und Checkliste bleiben erhalten; übergeordnete Anweisungen und Missionen werden nicht konvertiert. Frühere Modi bleiben verfügbar.
 
 Der native Diagnoseserver 1.8.0.13 kompilierte und prüfte 42 Fälle und wurde beendet. Eine Mehrdeutigkeit numerischer Klammern wurde vor dem endgültigen erfolgreichen Test behoben. Kein Quell-SQF oder Spielclient wurde ausgeführt. Der obige Befehl erstellt lediglich eine Fixture in einem neuen Ordner.
+
+
+## Typed pure function module family
+
+Coverage and helper export now include a separate pure Boolean function-module compiler with explicit params/defaults and closed cross-file calls. External registration and caller/lifecycle integration stay manual. See [the EN/FR/DE guide](TYPED-BOOLEAN-FUNCTIONS.md). Previous families remain unchanged.

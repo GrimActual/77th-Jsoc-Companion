@@ -1,0 +1,9 @@
+{
+  "focusedUniqueChecks": 38,
+  "nativeFixtureFunctions": 6,
+  "nativeInvocationCases": 42,
+  "scope": "Typed Boolean parameter/default contracts, local/branch/guard lowering, unique closed call graphs, cycle rejection, source maps, native export and affected previous-mode regressions. No source SQF execution or external game integration claim.",
+  "gameClientLaunched": false,
+  "nativeServerStopped": true,
+  "reservedSourceCommandNamesRejected": true
+}

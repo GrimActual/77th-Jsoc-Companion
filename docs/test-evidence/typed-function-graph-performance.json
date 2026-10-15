@@ -1,0 +1,9 @@
+{
+  "scope": "One local compiler observation over 32 typed functions in a closed forward-call chain; no source/native execution and no sustained throughput claim.",
+  "functions": 32,
+  "calls": 31,
+  "files": 32,
+  "sourceBytes": 4383,
+  "compileMs": 27.15,
+  "generatedCodeBytes": 7022
+}
