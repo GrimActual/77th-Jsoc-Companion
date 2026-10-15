@@ -57,3 +57,8 @@ On a 16-file synthetic fixture with 160 stored functions, the report contains 3,
 Next: strict imported-IR validation, supported statement effects, source-type constraints, definite initialization/context rules, and explicit scope-exit/loop lowering before any target code generation. Native adapters still need resource/lifetime/locality contracts and isolated compile/runtime proof. Official sample and installed API documentation locations are recorded separately in `docs/NATIVE-REFERENCE-SOURCES.md`, for reference/inspiration only.
 
 The author-operated desktop workflow, Sarge/Settings integration and EN/FR/DE app guides remain planned when these developer capabilities ship in the app. EN/FR/DE developer usage is included now. Every existing roadmap goal remains intact.
+
+
+## Follow-on developer verification/effects stage
+
+Source-bound replay validation and potential statement-effect review are now available as separate developer cores/commands. They do not add app import/execution authority or promote runtime/native readiness. See docs/SQF-IR-VALIDATION-AND-EFFECTS.md.
