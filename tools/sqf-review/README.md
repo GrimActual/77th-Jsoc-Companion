@@ -11,7 +11,7 @@ node tools/sqf-review/review.cjs --input "A:/LegacySource" --output "A:/Reviews/
 node tools/sqf-review/verify.cjs --review "A:/Reviews/LegacyReview"
 ```
 
-Open REVIEW.md for the summary. The six analysis JSON files contain source locations/previews and unresolved findings. manifest.json records review artifact hashes. source-receipt.json records original file byte hashes and ignored directory entries. Keep source-linked reports private unless you intend to share them.
+Open REVIEW.md for the summary. The seven analysis JSON files contain source locations/previews and unresolved findings. manifest.json records review artifact hashes. source-receipt.json records original file byte hashes and ignored directory entries. Keep source-linked reports private unless you intend to share them.
 
 The review prints a bundleSHA256 fingerprint. Retain it separately if you need to detect replacement of the complete bundle, then verify with `--expected-sha256` followed by that exact lowercase value. Without an independently trusted expected value, verification establishes self-consistency only. It does not authenticate authorship, validate semantics or allow execution. The source receipt is outside the listed review-artifact hash scope.
 
@@ -38,7 +38,16 @@ Bewahren Sie bundleSHA256 getrennt auf und uebergeben Sie den exakten Wert mit -
 See docs/SQF-BINDING-VALUE-IR.md and docs/test-evidence/sqf-binding-value-ir.json. The default full source test script includes these new gates; focused commands are:
 
 ```powershell
-node --test planner/sqf-binding-review.test.js planner/sqf-command-expressions.test.js planner/sqf-value-ir.test.js planner/sqf-review-package.test.js tools/sqf-review/review.test.cjs tools/sqf-review/verify.test.cjs
+node --test planner/sqf-source-semantics.test.js planner/sqf-source-semantics-validation.test.js planner/sqf-binding-review.test.js planner/sqf-command-expressions.test.js planner/sqf-value-ir.test.js planner/sqf-review-package.test.js tools/sqf-review/review.test.cjs tools/sqf-review/verify.test.cjs
 ```
 
 Do not repeat passing gates without a relevant change, failure or unresolved concern. Native behavior is untested in this checkpoint. The current installed app and its guides/settings remain unchanged; the developer workflow is documented here in EN/FR/DE.
+
+
+## Source shape and potential-effect review (English / Francais / Deutsch)
+
+English: source-semantics.json distinguishes compatible known shapes, unresolved operands and known mismatches. It records possible effects and callback scheduling/cleanup requirements. This is not whole-mod behavior verification; no code or condition string is evaluated and no target type is authorized. Strict JSON validation is structural, not proof of native equivalence. Old review formats remain readable.
+
+Francais : source-semantics.json distingue les formes connues compatibles, les operandes non resolus et les incompatibilites connues. Il conserve les effets possibles et les obligations de planification/nettoyage des rappels. Aucun code ni texte de condition n'est execute. La validation structurelle ne prouve pas l'equivalence native; les anciens formats restent lisibles.
+
+Deutsch: source-semantics.json unterscheidet kompatible bekannte Formen, ungeklaerte Operanden und bekannte Unvereinbarkeiten. Moegliche Effekte sowie Callback-Zeitpunkt und Aufraeumpflichten bleiben sichtbar. Code und Bedingungstexte werden nicht ausgefuehrt. Strukturelle Pruefung beweist keine native Verhaltensgleichheit; aeltere Berichtsformate bleiben lesbar.

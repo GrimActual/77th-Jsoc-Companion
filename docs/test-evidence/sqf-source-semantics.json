@@ -1,0 +1,223 @@
+{
+  "date": "2026-10-15",
+  "tests": {
+    "focusedPassed": 52,
+    "failed": 0,
+    "sourceRules": 21,
+    "strictValidator": 12,
+    "bundleCLIAndCompatibility": 19,
+    "independentSchemaPassed": 11,
+    "policy": "Affected/new checks only; old app/native gates unchanged and not replayed."
+  },
+  "radio": {
+    "summary": {
+      "entries": 31,
+      "nodes": 189,
+      "commands": 31,
+      "compatibleShapeChecks": 22,
+      "unresolvedShapeChecks": 24,
+      "invalidShapeChecks": 0,
+      "invalidDependencyNodes": 0,
+      "callbackObligations": 14,
+      "executionReady": 0
+    },
+    "sourceContextFindings": 11,
+    "potentialEffects": [
+      "construct-array-value",
+      "deferred-event-callback",
+      "deferred-scheduled-action-code",
+      "execute-code-unscheduled",
+      "mutate-ui",
+      "per-frame-unscheduled-condition-string",
+      "read-binding",
+      "read-client-context",
+      "read-collections",
+      "read-indexed-value",
+      "read-playable-unit-set",
+      "read-player-context",
+      "read-switchable-unit-set",
+      "read-ui",
+      "read-variable-space",
+      "read-vehicle-context",
+      "register-action",
+      "subscribe-event"
+    ],
+    "originalScriptConfigHashesUnchanged": 7,
+    "audioReadOrCopied": false,
+    "nativeExecution": false,
+    "legacySixReportsByteIdentical": true,
+    "bundleSHA256": "5d876fcba15cb7704342a43797700cca0fcd1dcd67639f1f3a8a4a49171fb0dc",
+    "integrity": {
+      "integrityVerified": true,
+      "integrityScope": "listed-review-artifacts-only",
+      "bundleSHA256": "5d876fcba15cb7704342a43797700cca0fcd1dcd67639f1f3a8a4a49171fb0dc",
+      "expectedFingerprintMatched": true,
+      "sourceSemanticsVerified": false,
+      "nativeBehaviorVerified": false,
+      "executionAuthorized": false
+    },
+    "preservedV3StillVerifies": true
+  },
+  "performance": {
+    "scope": "Exact e9f27cf v3 review bundle versus v4 including source operand/effect analysis and strict validation. Same fixtures, sequential headless samples; extra work/output, not app FPS or causal speedup/leak evidence.",
+    "radio": {
+      "before": {
+        "warmups": 5,
+        "samples": 20,
+        "medianMs": 25.767399999999952,
+        "p95Ms": 28.504100000000108,
+        "maximumMs": 29.374500000000126,
+        "serializedResultBytes": 345972,
+        "heapUsedAfterBytes": 29445184
+      },
+      "after": {
+        "warmups": 5,
+        "samples": 20,
+        "medianMs": 39.379399999999976,
+        "p95Ms": 45.32600000000002,
+        "maximumMs": 45.68619999999987,
+        "serializedResultBytes": 529532,
+        "heapUsedAfterBytes": 45537736
+      }
+    },
+    "synthetic200Blocks": {
+      "sourceBytes": 18289,
+      "sourceSHA256": "db68682c95dfabf4616a28adababb90ec0261ef17d4b363169ba6944dec7f619",
+      "before": {
+        "warmups": 5,
+        "samples": 20,
+        "medianMs": 257.78570000000036,
+        "p95Ms": 268.7592999999997,
+        "maximumMs": 298.4752999999996,
+        "serializedResultBytes": 6672322,
+        "heapUsedAfterBytes": 129934920
+      },
+      "after": {
+        "warmups": 5,
+        "samples": 20,
+        "medianMs": 473.02059999999983,
+        "p95Ms": 504.20740000000023,
+        "maximumMs": 507.77259999999933,
+        "serializedResultBytes": 10265602,
+        "heapUsedAfterBytes": 89045720
+      }
+    },
+    "finalGuardRemeasurement": "Only changed current code remeasured after the depth guard; unchanged exact baseline retained."
+  },
+  "sourceHashes": [
+    {
+      "name": "planner/sqf-source-semantics.js",
+      "sha256": "eb96e82ecc650c4b35c8c53e75620dff86d394860e0b8be5a44799177caef749"
+    },
+    {
+      "name": "planner/sqf-source-semantics-validation.js",
+      "sha256": "0aa4b2fceba2264bdee2dcf395c0c56f34fad4ae92b74617136e76a262b88273"
+    },
+    {
+      "name": "planner/sqf-review-package.js",
+      "sha256": "a8bd5e465188c65c09303c01bd3da007008038a6c8681c5bcff4e88c5ad13c9e"
+    },
+    {
+      "name": "planner/schemas/sqf-source-semantics-v1.schema.json",
+      "sha256": "8982222e0cba692a8170b50b9a2b566166988fbaf589b7cad5120c4075eb5f9a"
+    },
+    {
+      "name": "tools/sqf-review/verify.cjs",
+      "sha256": "d79ff034c125be347d5edc15cb248f60bd51d84a86d443b547dbc342e9fb98f2"
+    }
+  ],
+  "sourceSampleHashes": [
+    {
+      "name": "BIS_AddonInfo.hpp",
+      "sha256": "4cacde3ff6009e98019d6cef9a89e4893dfc6c84eaeb2f9795bf8aae748844ed"
+    },
+    {
+      "name": "config.cpp",
+      "sha256": "8d0c3c11805b029eba2913b191086464a03897eabbc50b5788a729ad2eda2951"
+    },
+    {
+      "name": "dialogs.hpp",
+      "sha256": "7e666e274c5ed56cca8b124171668ef8c226a9fe7918ccb980b4047faa46b750"
+    },
+    {
+      "name": "fn_initRadio.sqf",
+      "sha256": "f31187bfabd56c2e5108919a188487baff5ba3462134d0405eecae647ff18f3c"
+    },
+    {
+      "name": "fn_playTrack.sqf",
+      "sha256": "9835a675ebcd357f537e4bd11b3e0bf55e6cf5b27c7cd801f8782a4a8d158343"
+    },
+    {
+      "name": "fn_postInit.sqf",
+      "sha256": "35db9bd6a4bfbe9fa02ce798f095711a9a17776e0818fc3083f7473a69e4c44e"
+    },
+    {
+      "name": "fn_setRadioState.sqf",
+      "sha256": "2daa43ecb3df1188cb145a69d8055aaf5d9a9fe712a911412fbd700268079614"
+    }
+  ],
+  "schemaCases": [
+    {
+      "case": "actual-radio",
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "case": "known-invalid-source",
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "case": "unsupported-source",
+      "accepted": true,
+      "expected": true
+    },
+    {
+      "case": "execution-claim",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "target-type-claim",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "removed-gates",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "wrong-offsets",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "node-execution",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "node-target-type",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "extra-node-field",
+      "accepted": false,
+      "expected": false
+    },
+    {
+      "case": "bad-file-hash",
+      "accepted": false,
+      "expected": false
+    }
+  ],
+  "limitations": [
+    "Selected expression parts only; no whole-statement/control-flow effect coverage",
+    "Static source shapes are not flow-sensitive runtime types or proven call validity",
+    "No source evaluation, condition-string compilation, native adapter or .c generation",
+    "Strict validation/hash integrity does not authenticate source truth or authorize execution",
+    "Desktop app/bridge unchanged; developer workflow only"
+  ]
+}

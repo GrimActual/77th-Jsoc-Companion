@@ -53,3 +53,8 @@ Same-fixture headless sample (five warmups, 20 measurements): exact prior db6f9a
 Implement source operand/type/effect checks for the bounded command registry, retaining uncertainty at callbacks and dynamic calls. Resolve target representations and explicit lifecycle/locality before full typed statement/control-flow IR. Add strict validators/schemas and stale-context/locale tests before desktop review/export integration. Then compile and behavior-test one bounded native adapter with actual layout/audio/resource evidence. PBO/WRP inventory remains separate. No earlier roadmap goals are removed.
 
 Primary references: [private](https://community.bohemia.net/wiki/private), [params](https://community.bohemia.net/wiki/params), [variables](https://community.bohemia.net/wiki/Variables), [operator precedence](https://community.bohemia.net/wiki/Operators), plus the per-command official source references in the fixed registry. Documentation evidence does not establish installed-engine adapter equivalence.
+
+
+## Subsequent source-shape/effect review
+
+See docs/SQF-SOURCE-SEMANTICS.md for a bounded operand-shape/potential-effect pass, strict report validator/schema and additive folder-review output. This does not complete flow-sensitive types, whole-statement effects or native equivalence, and does not change the installed desktop UI.

@@ -52,3 +52,8 @@ Implement source declarations/params and scope/binding evidence with explicit un
 ## Subsequent developer checkpoint
 
 See docs/SQF-BINDING-VALUE-IR.md for separate declaration/reference evidence, opt-in expression report v2, partial source-value IR and review-folder tools. The existing app inspector and arithmetic profile keep their documented behavior. These additions do not complete runtime binding/type resolution, general SQF grammar, native adapters or Enforce generation. No prior roadmap goals are removed.
+
+
+## Subsequent source-shape/effect review
+
+See docs/SQF-SOURCE-SEMANTICS.md for a bounded operand-shape/potential-effect pass, strict report validator/schema and additive folder-review output. This does not complete flow-sensitive types, whole-statement effects or native equivalence, and does not change the installed desktop UI.
