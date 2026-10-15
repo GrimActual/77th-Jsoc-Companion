@@ -31,3 +31,5 @@ Input limits reuse the existing dependency core: 256 files, 256 KiB per loose fi
 The separate packaged Companion candidate passed startup and the sample package workflow using an isolated profile, actual file reads and the real native worker. Only the operating-system file chooser was substituted by automation. Source preview and unchanged local storage were verified; no game was launched. Evidence: `docs/test-evidence/dependency-inspector-desktop.json`.
 
 Development executable: `A:/Everon-ORBAT-Development/work/dependency-inspector/COMMAND-Dependency-Inspector-Candidate/COMMAND Planner.exe`. The internal dev.gm.8 version label is retained for this checkpoint; this is not a new public release. The previous candidate remains intact.
+
+Hosted compiler and worker checks passed on Windows/Node 22 and Linux/Node 24 for source commit `43fb81c5ffe0ba6cb81927d24dcc51631088c99c`: [run 38773147889](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38773147889).

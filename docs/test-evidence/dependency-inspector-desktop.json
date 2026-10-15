@@ -10,5 +10,12 @@
   "sourcePreviewVerified": true,
   "localStorageUnchanged": true,
   "gameLaunched": false,
-  "exe": "A:/Everon-ORBAT-Development/work/dependency-inspector/COMMAND-Dependency-Inspector-Candidate/COMMAND Planner.exe"
+  "exe": "A:/Everon-ORBAT-Development/work/dependency-inspector/COMMAND-Dependency-Inspector-Candidate/COMMAND Planner.exe",
+  "hostedCI": {
+    "runId": 38773147889,
+    "sourceCommit": "43fb81c5ffe0ba6cb81927d24dcc51631088c99c",
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38773147889",
+    "linuxNode24": "success",
+    "windowsNode22": "success"
+  }
 }
