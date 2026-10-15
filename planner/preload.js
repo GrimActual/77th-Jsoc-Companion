@@ -17,6 +17,6 @@ contextBridge.exposeInMainWorld('plannerFunctions',{clear:()=>ipcRenderer.invoke
 contextBridge.exposeInMainWorld('plannerEffects',{clear:()=>ipcRenderer.invoke('sqf-effect-clear'),select:()=>ipcRenderer.invoke('sqf-effect-select'),cancel:()=>ipcRenderer.invoke('sqf-effect-cancel')});
 contextBridge.exposeInMainWorld('plannerTypes',{clear:()=>ipcRenderer.invoke('sqf-type-clear'),select:()=>ipcRenderer.invoke('sqf-type-select'),cancel:()=>ipcRenderer.invoke('sqf-type-cancel')});
 
-contextBridge.exposeInMainWorld('plannerDiagnostics',{status:()=>ipcRenderer.invoke('sqf-diagnostic-status'),export:options=>ipcRenderer.invoke('sqf-diagnostic-export',options)});
+contextBridge.exposeInMainWorld('plannerDiagnostics',{preview:options=>ipcRenderer.invoke('sqf-diagnostic-preview',options),status:()=>ipcRenderer.invoke('sqf-diagnostic-status'),export:options=>ipcRenderer.invoke('sqf-diagnostic-export',options)});
 
 contextBridge.exposeInMainWorld('plannerProjectReview',{select:()=>ipcRenderer.invoke('sqf-project-select'),cancel:()=>ipcRenderer.invoke('sqf-project-cancel')});

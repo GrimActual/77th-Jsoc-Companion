@@ -1,0 +1,8 @@
+{
+  "focusedUniqueChecks": 29,
+  "nativeFixtureCases": 42,
+  "nativeServerStopped": true,
+  "sourceSQFExecuted": false,
+  "gameClientLaunched": false,
+  "scope": "Coverage preview, exact integer mapping, shared exporter and affected prior-family export regressions. Final native proof passed after correcting numeric grouping; failed attempts are not passes."
+}

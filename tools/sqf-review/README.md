@@ -174,3 +174,8 @@ The separate opt-in local-block export now supports complete flat initialized Bo
 ## Additive Boolean branch family
 
 The block-family selector now offers a separate bounded if/else mapper over existing initialized Boolean locals. Earlier straight-line rules remain unchanged for their own family. See [the EN/FR/DE branch guide](../../docs/BOOLEAN-BRANCH-MAPPING.md).
+
+
+## Coverage preview and exact integer value family
+
+A read-only preview now explains supported/mixed/manual files before exporting. Exact integer expression helpers extend value-only emission; existing Boolean families remain unchanged. See [the EN/FR/DE guide](../../docs/MIGRATION-COVERAGE-AND-INTEGERS.md).

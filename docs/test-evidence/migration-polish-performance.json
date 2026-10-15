@@ -1,0 +1,20 @@
+{
+  "scope": "Matched 400-unit offline mission, 1440x900 viewport, editor open, approximately 3.5-second pan sample for migration coverage and integer packaged app; same fixture as prior gm-layout-performance.json. Short single-run observations, not a speedup or sustained FPS guarantee.",
+  "results": [
+    {
+      "label": "migration-polish",
+      "frames": 211,
+      "elapsedMs": 3508.900000008941,
+      "fps": 60.13280515245871,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.800000000000182,
+      "maxFrameMs": 16.900000000000546,
+      "framesOver100Ms": 0,
+      "markers": 400,
+      "tiles": 2,
+      "heapBytes": 20500000,
+      "missionUnchanged": true
+    }
+  ],
+  "gameLaunched": false
+}
