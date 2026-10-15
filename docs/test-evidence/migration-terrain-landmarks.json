@@ -1,0 +1,110 @@
+{
+  "scope": "Unreleased bounded horizontal landmark fit and planning-only transfer",
+  "focusedTests": 24,
+  "focusedTestsPassed": true,
+  "ui": {
+    "passed": true,
+    "actualOfflineElectron": true,
+    "linkedRoutes": true,
+    "landmarkMismatchBlocks": true,
+    "landmarkReviewRequired": true,
+    "manualModeRetained": true,
+    "landmarkEditStale": true,
+    "residualProvenance": true,
+    "routePaging20": true,
+    "routeAcknowledgementRequired": true,
+    "unitDeselectionClearsAssociatedMoves": true,
+    "sourceClearRemovesRoutes": true,
+    "realSourceAndMapWorkers": true,
+    "manualAnchor": true,
+    "displayOffsetOnce": true,
+    "explicitSelectionAndFaction": true,
+    "previewMissionUnchanged": true,
+    "atomicUndoRedo": true,
+    "missionEditStale": true,
+    "anchorEditStale": true,
+    "sourceClearStale": true,
+    "localeContext": [
+      "en",
+      "fr",
+      "de"
+    ],
+    "rendererErrors": [],
+    "gameExecution": false
+  },
+  "context": {
+    "passed": true,
+    "initial": true,
+    "terrainReset": true,
+    "sourceReset": true,
+    "blocked": true,
+    "pairsRetained": true
+  },
+  "performance": {
+    "scope": "Short local same-fixture comparison; not universal FPS/RAM guarantees, network/gameplay or terrain validation. File-selection timing includes automation dispatch.",
+    "preparation": {
+      "landmarks": 3,
+      "units": 60,
+      "routes": 60,
+      "movementPoints": 240,
+      "samples": 20,
+      "warmups": 5,
+      "medianMs": 15.795200000000023,
+      "p95Ms": 16.72139999999996,
+      "maxMs": 19.60360000000003
+    },
+    "results": [
+      {
+        "build": "previous-linked-routes",
+        "fixture": "Same 60-unit / 60-route / 240-movement-point mission JSON, offline terrain, reduced motion, default viewport; no panning",
+        "frameMedianMs": 16.69999999999891,
+        "frameP95Ms": 16.80000000000109,
+        "frameMaxMs": 34.23199999999997,
+        "framesOver50ms": 0,
+        "longTasks": [
+          447
+        ],
+        "units": 60,
+        "routes": 60,
+        "routePaths": 60,
+        "markerCount": 60,
+        "tileCount": 16,
+        "jsHeapEstimateBytes": 16100000,
+        "mainProcessMemoryKB": {
+          "residentSet": 95460,
+          "private": 73748,
+          "shared": 408
+        },
+        "savedMissionBytes": 266195,
+        "importThroughFileSelectionMs": 1210.3999999910593
+      },
+      {
+        "build": "landmark-candidate",
+        "fixture": "Same 60-unit / 60-route / 240-movement-point mission JSON, offline terrain, reduced motion, default viewport; no panning",
+        "frameMedianMs": 16.699999999999818,
+        "frameP95Ms": 16.800000000000182,
+        "frameMaxMs": 33.299999999999955,
+        "framesOver50ms": 0,
+        "longTasks": [
+          87
+        ],
+        "units": 60,
+        "routes": 60,
+        "routePaths": 60,
+        "markerCount": 60,
+        "tileCount": 16,
+        "jsHeapEstimateBytes": 13400000,
+        "mainProcessMemoryKB": {
+          "residentSet": 94252,
+          "private": 72340,
+          "shared": 412
+        },
+        "savedMissionBytes": 266195,
+        "importThroughFileSelectionMs": 227.29999999701977
+      }
+    ]
+  },
+  "nativeSourceChanged": false,
+  "gameExecution": false,
+  "publishedReleaseChanged": false
+}

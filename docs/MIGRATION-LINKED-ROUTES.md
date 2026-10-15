@@ -40,3 +40,8 @@ Preparing/validating the full 60-unit / 60-route / 240-point batch: five warmups
 ## Next additive milestones
 
 Multi-landmark terrain calibration/residual review; reviewed group/faction/occupant adapters; source-context and lifecycle translation; validated native deployment handoff and host approval. Full SQF/SQM conversion, executable scene export, chained native AI orders and the rest of the roadmap remain retained.
+
+
+## Subsequent multi-landmark checkpoint
+
+Optional checked horizontal fitting and residual review are now available in the separate unreleased candidate described in MIGRATION-TERRAIN-LANDMARKS.md. The original manual mode remains. Terrain identity, height and native execution remain unverified.

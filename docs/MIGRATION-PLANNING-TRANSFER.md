@@ -44,3 +44,8 @@ Multi-landmark terrain fit/residual review; reviewed source-group/faction adapte
 ## Subsequent linked-route checkpoint
 
 Optional reviewed linked doMove points can now be imported as proposed planning routes in the separate unreleased candidate described in MIGRATION-LINKED-ROUTES.md. Original execution timing, groups, terrain height and native execution remain unresolved. Public dev.gm.8 downloads remain unchanged.
+
+
+## Subsequent multi-landmark checkpoint
+
+Optional checked horizontal fitting and residual review are now available in the separate unreleased candidate described in MIGRATION-TERRAIN-LANDMARKS.md. The original manual mode remains. Terrain identity, height and native execution remain unverified.

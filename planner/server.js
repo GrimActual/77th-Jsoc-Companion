@@ -80,6 +80,8 @@ const server = http.createServer(async (req, res) => {
   if(req.method!=='GET'){res.setHeader('Allow','GET, OPTIONS');return send(res,405,{error:'Method not allowed'});}
   let url;try{url=new URL(req.url,'http://localhost')}catch{return send(res,400,{error:'Invalid URL'})}
   const staticFiles=new Map([
+    ['/terrain-alignment.js',['terrain-alignment.js','text/javascript; charset=utf-8']],
+    ['/terrain-alignment-ui.js',['terrain-alignment-ui.js','text/javascript; charset=utf-8']],
     ['/migration-transfer.js',['migration-transfer.js','text/javascript; charset=utf-8']],
     ['/migration-transfer-ui.js',['migration-transfer-ui.js','text/javascript; charset=utf-8']],
     ['/sqf-intent-draft.js',['sqf-intent-draft.js','text/javascript; charset=utf-8']],
