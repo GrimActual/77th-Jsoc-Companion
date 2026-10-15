@@ -32,5 +32,16 @@
   "scopeAcknowledgmentBoundToNativeReview": true,
   "sourceChangeAndProfileChangeClearAcknowledgment": true,
   "languageChangeRetainsMatchingAcknowledgment": true,
-  "finalSourceMapScopesExplicit": true
+  "finalSourceMapScopesExplicit": true,
+  "hostedCI": {
+    "run": 38795208660,
+    "sourceCommit": "13250c2c780bc0e917d38f3d3745c84cbc5a58ec",
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38795208660",
+    "conclusion": "success",
+    "platforms": [
+      "ubuntu-24.04 / Node 24",
+      "windows-2022 / Node 22"
+    ],
+    "scope": "Compiler, export, receipt and worker tests. Native Game-script proof ran locally in the actual diagnostic server; packaged GUI was tested locally on Windows."
+  }
 }
