@@ -151,5 +151,23 @@
     "sourceBytesUnchanged": true,
     "oldIRUnchanged": true,
     "directWorkerEqual": true
+  },
+  "hostedCI": {
+    "jobs": [
+      {
+        "os": "windows-2022",
+        "node": "22",
+        "conclusion": "success"
+      },
+      {
+        "os": "ubuntu-24.04",
+        "node": "24",
+        "conclusion": "success"
+      }
+    ],
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38768932581",
+    "run": 38768932581,
+    "conclusion": "success",
+    "sourceCommit": "921418e69b716cbaf4d588e43fd0c026426b4fd3"
   }
 }

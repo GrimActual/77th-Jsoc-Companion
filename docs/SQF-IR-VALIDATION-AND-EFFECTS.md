@@ -69,7 +69,7 @@ Five private cached source sets (30 selected SQF files) match their previous IR 
 
 The same 16-file/160-function fixture used by the prior IR evidence produces a 5,319,434-byte compact IR. Two warmups and six measured sets gave median 124.83 ms IR-only, 150.18 ms with potential effects, 371.27 ms for source-replay validation including an equality assertion, 326.66 ms through a fresh effect worker and 503.15 ms through a fresh verification worker. Fresh-worker timings include startup/return/termination. Direct/worker output matched and source bytes/old IR remained unchanged.
 
-These samples measure added source-review/integrity work, not an app speedup, renderer/FPS guarantee or native stability result. The fixture has 3,376 IR nodes and 1,120 write candidates but no supported command candidates; real-corpus command/callback coverage and focused callback tests are recorded separately. Evidence: `docs/test-evidence/sqf-statement-effects-validation.json`. Hosted CI results are recorded separately.
+These samples measure added source-review/integrity work, not an app speedup, renderer/FPS guarantee or native stability result. The fixture has 3,376 IR nodes and 1,120 write candidates but no supported command candidates; real-corpus command/callback coverage and focused callback tests are recorded separately. Evidence: `docs/test-evidence/sqf-statement-effects-validation.json`. Both hosted Windows Node 22 and Linux Node 24 compiler suites passed for source 921418e69b716cbaf4d588e43fd0c026426b4fd3: [CI run 38768932581](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38768932581). Hosted results are recorded separately from local focused cases.
 
 ## Next stages
 
