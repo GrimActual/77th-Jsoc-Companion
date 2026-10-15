@@ -47,3 +47,8 @@ Same six text inputs, five warmups and 20 samples: structural baseline median 2.
 ## Next gate
 
 Implement source declarations/params and scope/binding evidence with explicit uncertainty at dynamic callback/call boundaries. Resolve signatures and types before typed IR. Then select one bounded lifecycle adapter, validate required target resources, compile it in an isolated diagnostic project and exercise ownership/cancellation/cleanup. A runnable radio conversion requires all relevant families and configured layout/audio resources; generating a syntactically valid .c file alone cannot establish equivalence. Existing migration/native deployment safeguards and all earlier roadmap goals remain intact.
+
+
+## Subsequent developer checkpoint
+
+See docs/SQF-BINDING-VALUE-IR.md for separate declaration/reference evidence, opt-in expression report v2, partial source-value IR and review-folder tools. The existing app inspector and arithmetic profile keep their documented behavior. These additions do not complete runtime binding/type resolution, general SQF grammar, native adapters or Enforce generation. No prior roadmap goals are removed.

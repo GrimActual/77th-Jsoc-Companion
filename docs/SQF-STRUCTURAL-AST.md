@@ -31,3 +31,8 @@ Same 60-unit / 60-route / 240-movement-point mission and 17,889-byte SQF input i
 Main-process private snapshots were 74,052 / 73,804 KiB and approximate JS heaps 17.1 / 17.1 MB. Startup/import long tasks were 438/53/163/64 ms versus 355 ms; their causes are not established and these are not causal speedup claims. Only the new candidate has the AST feature: its automated click-to-worker-result sample was 97.96 ms. Headless AST preparation, including hashing and structural validation, for 200 nested range-loop/branch blocks produced 1,401 nodes / 529,301 report bytes: five warmups, 20 samples, median 23.88 ms / p95 27.55 ms / maximum 32.72 ms. These explicit inspection costs are not per-frame work. Indexed graph lookup avoids repeated scans during validation; workers, bounded previews and paged rendering keep this separate from map updates.
 
 Primary syntax references: [Control Structures](https://community.bohemia.net/wiki/Control_Structures), [if](https://community.bohemia.net/wiki/if), [while](https://community.bohemia.net/wiki/while), [exitWith](https://community.bohemia.net/wiki/exitWith). No source code is evaluated by this feature.
+
+
+## Subsequent developer checkpoint
+
+See docs/SQF-BINDING-VALUE-IR.md for separate declaration/reference evidence, opt-in expression report v2, partial source-value IR and review-folder tools. The existing app inspector and arithmetic profile keep their documented behavior. These additions do not complete runtime binding/type resolution, general SQF grammar, native adapters or Enforce generation. No prior roadmap goals are removed.

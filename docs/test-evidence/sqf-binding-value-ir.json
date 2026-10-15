@@ -1,0 +1,176 @@
+{
+  "date": "2026-10-15",
+  "tests": {
+    "newUniquePassingChecks": 55,
+    "changedLegacyExpressionChecks": 15,
+    "totalFocusedChecks": 70,
+    "failed": 0,
+    "breakdown": {
+      "bindings": 17,
+      "valueIR": 9,
+      "packageAndCLI": 17,
+      "extendedGrammar": 12,
+      "legacyExpressions": 15
+    },
+    "policy": "Only newly added/changed gates rerun; no repeat of unchanged app/native tests."
+  },
+  "radio": {
+    "sourcesUnchanged": true,
+    "scriptConfigHashComparisons": 7,
+    "sqfFiles": 4,
+    "inventoryHeaders": 2,
+    "bindings": {
+      "scopes": 33,
+      "declarations": 30,
+      "references": 50,
+      "candidateReferences": 50,
+      "unresolvedReferences": 0,
+      "findings": 11,
+      "executionReady": 0
+    },
+    "valueIR": {
+      "entries": 31,
+      "nodes": 56,
+      "sourceShapeKnownRoots": 1,
+      "unknownShapeRoots": 3,
+      "unsupportedExpressions": 27,
+      "bindingCandidateLinks": 3,
+      "executionReady": 0
+    },
+    "extendedExpressions": {
+      "recognized": 31,
+      "unsupported": 0,
+      "executionReady": 0
+    },
+    "commands": 31,
+    "opaqueCodeValues": 7,
+    "wholeModConversionPercentageClaim": false,
+    "audioReadOrCopied": false,
+    "nativeExecution": false,
+    "bundleSHA256": "8cd3fe43e24c916c314baf2b096226060989df1809902c7544f7473b94538b3a",
+    "integrity": {
+      "integrityVerified": true,
+      "integrityScope": "listed-review-artifacts-only",
+      "bundleSHA256": "8cd3fe43e24c916c314baf2b096226060989df1809902c7544f7473b94538b3a",
+      "expectedFingerprintMatched": true,
+      "sourceSemanticsVerified": false,
+      "nativeBehaviorVerified": false,
+      "executionAuthorized": false
+    },
+    "preservedV2StillVerifies": true,
+    "finalCodeMatchesPublishedPrivateBundle": true
+  },
+  "legacyMathOutputsIdenticalToDb6f9a1": {
+    "radio": true,
+    "synthetic": true
+  },
+  "performance": {
+    "scope": "Exact prior db6f9a1 source modules (three separate review APIs) versus current six-analysis v3 bundle with hashes/serialization. Same fixtures; more work is performed now. Sequential headless timings/heap snapshots are not map FPS, causal speedup or sustained leak/stability evidence.",
+    "radio": {
+      "baseline": {
+        "warmups": 5,
+        "samples": 20,
+        "medianMs": 8.858399999999847,
+        "p95Ms": 9.888099999999895,
+        "maximumMs": 11.400300000000016,
+        "serializedResultBytes": 87609,
+        "heapUsedAfterBytes": 24451088
+      },
+      "current": {
+        "warmups": 5,
+        "samples": 20,
+        "medianMs": 30.127200000000016,
+        "p95Ms": 41.1869999999999,
+        "maximumMs": 41.37709999999993,
+        "serializedResultBytes": 345972,
+        "heapUsedAfterBytes": 20193592
+      }
+    },
+    "synthetic200Blocks": {
+      "sourceBytes": 18289,
+      "sourceSHA256": "db68682c95dfabf4616a28adababb90ec0261ef17d4b363169ba6944dec7f619",
+      "baseline": {
+        "warmups": 5,
+        "samples": 20,
+        "medianMs": 86.41419999999925,
+        "p95Ms": 98.22330000000011,
+        "maximumMs": 100.33299999999963,
+        "serializedResultBytes": 1114188,
+        "heapUsedAfterBytes": 117512080
+      },
+      "current": {
+        "warmups": 5,
+        "samples": 20,
+        "medianMs": 304.2300000000005,
+        "p95Ms": 327.65380000000005,
+        "maximumMs": 329.50729999999976,
+        "serializedResultBytes": 6672322,
+        "heapUsedAfterBytes": 130396248
+      }
+    },
+    "finalGuardMeasurement": "Only current analysis remeasured after adding nested declaration-context guards; unchanged prior-checkpoint baseline retained."
+  },
+  "sourceHashes": [
+    {
+      "name": "planner/sqf-binding-review.js",
+      "sha256": "4657846dbbebcb6ca65661f97650aebbcc9ade1d21155e0b35f130030c4df35f"
+    },
+    {
+      "name": "planner/sqf-value-ir.js",
+      "sha256": "295d00c042af4b8d347eb958777f34fab7f425032bf890c53482fe3b3dc88c80"
+    },
+    {
+      "name": "planner/sqf-review-package.js",
+      "sha256": "8b545c18b7076513da1ffd5d8928dde1fb71b03f7ceefdfcc576fea4181e4607"
+    },
+    {
+      "name": "planner/sqf-expression-ast.js",
+      "sha256": "1fe3f6eba218da852454d35bcd073acb715b76af293289a548c43c15d25eeebf"
+    },
+    {
+      "name": "tools/sqf-review/review.cjs",
+      "sha256": "bc4246b08784d00318444b140e415ab94b178a94c59732d00f4ed2d286e2cef7"
+    },
+    {
+      "name": "tools/sqf-review/verify.cjs",
+      "sha256": "0ae2f9081a26a7d2df2562aed2f65e4091a6bc9760f947aa579bd33239b5b2e4"
+    }
+  ],
+  "sourceSampleHashes": [
+    {
+      "name": "BIS_AddonInfo.hpp",
+      "sha256": "4cacde3ff6009e98019d6cef9a89e4893dfc6c84eaeb2f9795bf8aae748844ed"
+    },
+    {
+      "name": "config.cpp",
+      "sha256": "8d0c3c11805b029eba2913b191086464a03897eabbc50b5788a729ad2eda2951"
+    },
+    {
+      "name": "dialogs.hpp",
+      "sha256": "7e666e274c5ed56cca8b124171668ef8c226a9fe7918ccb980b4047faa46b750"
+    },
+    {
+      "name": "fn_initRadio.sqf",
+      "sha256": "f31187bfabd56c2e5108919a188487baff5ba3462134d0405eecae647ff18f3c"
+    },
+    {
+      "name": "fn_playTrack.sqf",
+      "sha256": "9835a675ebcd357f537e4bd11b3e0bf55e6cf5b27c7cd801f8782a4a8d158343"
+    },
+    {
+      "name": "fn_postInit.sqf",
+      "sha256": "35db9bd6a4bfbe9fa02ce798f095711a9a17776e0818fc3083f7473a69e4c44e"
+    },
+    {
+      "name": "fn_setRadioState.sqf",
+      "sha256": "2daa43ecb3df1188cb145a69d8055aaf5d9a9fe712a911412fbd700268079614"
+    }
+  ],
+  "limitations": [
+    "Developer-only core/CLI; no app executable or UI changes",
+    "No runtime binding proof, general command grammar or semantic/type equivalence",
+    "Value IR covers limited expression shapes, not target types or statement/control-flow lowering",
+    "No .c generation, native compilation, audio processing or deployment",
+    "Integrity verification is not authorship authentication or execution permission"
+  ]
+}
