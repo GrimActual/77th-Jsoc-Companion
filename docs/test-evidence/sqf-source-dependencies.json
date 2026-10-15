@@ -775,6 +775,29 @@
     "failed": 0,
     "nodeVersion": "v24.19.0",
     "invocation": "Node arguments taken directly from planner/package.json test:sqf-core; bundled runtime has no npm",
-    "hostedCIStatus": "pending push"
+    "hostedCIStatus": "both matrix jobs passed"
+  },
+  "hostedCI": {
+    "conclusion": "success",
+    "jobs": [
+      {
+        "status": "completed",
+        "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38748374896/job/116467921458",
+        "id": 116467921458,
+        "conclusion": "success",
+        "name": "Core and worker checks (ubuntu-24.04, Node 24)"
+      },
+      {
+        "status": "completed",
+        "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38748374896/job/116467921724",
+        "id": 116467921724,
+        "conclusion": "success",
+        "name": "Core and worker checks (windows-2022, Node 22)"
+      }
+    ],
+    "sourceCommit": "b00115f742f74db9be7698567f6cf2b9ccad356e",
+    "runId": 38748374896,
+    "url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38748374896",
+    "status": "completed"
   }
 }
