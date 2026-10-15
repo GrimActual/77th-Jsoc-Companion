@@ -11,7 +11,7 @@ This is a separate opt-in development tool, not the Workshop bridge update. It r
 5. Start your intended development world. One second after world initialization (including diagnostic worlds with no game mode), the server-only sampler reads the request, compares the loaded world path and writes $profile:COMMAND-terrain-observation.json. Wrong paths or invalid coordinates produce no new report. No client launch or public tunnel is required by the tool.
 6. Load that report into Companion, review its origin/world/height policy and Preview again. Missing selected positions block sampled planning import. Remove/disable the query and stop the isolated server afterward.
 
-The native check observes the loaded world path. Addon ID and GUID are still declarations from the query; the sampler does not independently authenticate them or prove that the world contains the Everon terrain shown in the planner. Imported JSON is not signed or authenticated live state. It does not prove terrain availability, current session identity, collision/building-floor placement, navmesh validity, freshness or safe spawning. Native world-GUID/authority enforcement remains a future bridge capability.
+The current native check requires an exact engine-registered GUID and addon-relative path from ResourceDatabase.SearchResources, tied to the loaded world's addon namespace. Unavailable, ambiguous or mismatched identity rejects before sampling; loose absolute world paths now reject because their addon ownership cannot be established by a suffix. This local diagnostic check does not prove that an imported report belongs to a current live session or that a child scenario uses the planner's Everon terrain. Imported JSON is not signed or authenticated live state. It does not prove terrain availability, current session identity, collision/building-floor placement, navmesh validity, freshness or safe spawning. Native world-GUID/authority enforcement remains a future bridge capability.
 
 ## Native evidence
 
@@ -52,3 +52,28 @@ Evidence: `docs/test-evidence/native-everon-terrain.json`. Remaining work: exact
 
 
 Final packed-path boundary check: a shortened addon-relative suffix was rejected without a report. The stricter source then sampled all three points successfully at 461.71 MiB sampled peak, validated report positions and confirmed server cleanup. The earlier 668.1 MiB runner result is retained above as observed variation, not a memory guarantee. No desktop renderer changes were made, so previously completed desktop performance gates were not repeated.
+
+
+## Exact native world identity and SHA-256 receipts (current checkpoint)
+
+The source now performs one filtered runtime `ResourceDatabase.SearchResources` lookup for the loaded world's addon, directory, filename and `.ent` extension, without recursion. It requires exactly one callback whose full relative path and exact addon-qualified path match the loaded world, then compares the callback's resource GUID against the expected GUID. The search terms come from the engine's registered path so equivalent request casing works. It does not load a scene as a prefab, enumerate entities, scan the entire map or repeat the lookup each tick.
+
+Actual engine 1.8.0.13 checks: EmptyEden GUID/addon/path accepted; deliberately wrong GUID with the same actual loaded world rejected without output; equivalent GUID/path casing accepted; loose absolute fixture path rejected without output. The final runner confirmed native identity, validated all three samples and stopped its server, with 462.69 MiB sampled working-memory peak under its 1000 MiB limit. One identity lookup measured 6 ms; this single cold/warm-context observation is not a universal timing or frame-rate guarantee. Earlier full-scene and GUID-unverified observations above remain historical evidence; this section describes the current diagnostic behavior.
+
+`result.json` now records `querySha256`, `nativeSourceSha256` and `observationSha256`. Query hashing validates the v1 contract, emits fixed field order, normalizes identity casing and retains sample order, then hashes a versioned domain prefix plus UTF-8 JSON using SHA-256. Native source hashing uses a separate versioned domain, sorted relative script/project filenames and each file's exact-byte SHA-256. The observation digest covers the exact saved report bytes. Identical source trees installed in different directories get the same source digest; source/file renames or changed content change it. Symbolic links in the source tree reject. These digests do not hash every base-game asset or prove immutable world content under a reused GUID.
+
+To check that the captured files still match a completed receipt:
+
+```powershell
+node .\tools\terrain-sampler\diagnostic-receipt.cjs "D:\Tests\terrain-results\terrain-EXAMPLE"
+```
+
+`contentMatches:true` means the query, copied native source and report match their recorded hashes. It is not a signature, authenticated origin, live-session proof or deployment permission. A person able to edit all files can regenerate all hashes. Actual final receipt verification passed, and Companion still reports `runtimeVerified:false` / `heightValidated:false` when importing the observation; the saved report schema remains v1. The current Workshop bridge and deployment safeguard are unchanged.
+
+Four launch/file/memory guard checks, two native-log parsing checks and four deterministic-hash/change-detection checks passed. The first receipt run encountered a CRLF log-parser issue despite successful native matching; it was fixed and the final run passed. No completed desktop renderer/performance suite was repeated, since this checkpoint changes only the separate developer diagnostic tool.
+
+FR : Le diagnostic vérifie maintenant le GUID et le chemin exacts via la base de ressources du moteur. Les empreintes SHA-256 détectent les modifications des fichiers ; elles n’authentifient pas une session. Les mondes absolus sans preuve d’appartenance sont refusés et le blocage du déploiement reste actif.
+
+DE: Das Diagnosewerkzeug prüft GUID und exakten Pfad jetzt über die Ressourcen-Datenbank der Engine. SHA-256-Prüfsummen erkennen Dateiänderungen, bestätigen aber keine Sitzung. Absolute Weltpfade ohne Eigentumsnachweis werden abgelehnt; die Bereitstellungssperre bleibt aktiv.
+
+Primary APIs: [ResourceDatabase.SearchResources](https://community.bistudio.com/wikidata/external-data/arma-reforger/EnfusionScriptAPIPublic/interfaceResourceDatabase.html), [SearchResourcesFilter](https://community.bistudio.com/wikidata/external-data/arma-reforger/EnfusionScriptAPIPublic/interfaceSearchResourcesFilter.html), [GameProject](https://community.bistudio.com/wikidata/external-data/arma-reforger/EnfusionScriptAPIPublic/interfaceGameProject.html). Evidence: `docs/test-evidence/native-world-identity.json`.

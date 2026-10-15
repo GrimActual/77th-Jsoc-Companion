@@ -11,6 +11,53 @@ class COMMAND_TerrainGroundSample
     float worldZ;
     float surfaceY;
 };
+// One narrowly filtered resource lookup per explicit diagnostic query; never per tick.
+class COMMAND_TerrainWorldResolver
+{
+    protected static string s_LoadedPath;
+    protected static string s_RelativePath;
+    protected static ResourceName s_Resource;
+    protected static int s_Matches;
+    static void Observe(ResourceName name, string exactPath)
+    {
+        string relative=name.GetPath(); relative.Replace("\\","/"); relative.ToLower();
+        string actual=exactPath; actual.Replace("\\","/"); actual.ToLower();
+        if (relative!=s_RelativePath || actual!=s_LoadedPath) return;
+        s_Matches++;
+        s_Resource=name;
+    }
+    static bool Verify(string loadedPath, COMMAND_TerrainWorldIdentity expected)
+    {
+        // A loose absolute path cannot establish addon ownership from a suffix.
+        if (loadedPath.Length()<2 || loadedPath.Substring(0,1)!="$") return false;
+        int colon=loadedPath.IndexOf(":");
+        string addonName=GameProject.GetAddonID(expected.addonId);
+        if (colon<2 || addonName.IsEmpty() || loadedPath.Substring(1,colon-1)!=addonName) return false;
+        s_LoadedPath=loadedPath; s_LoadedPath.Replace("\\","/"); s_LoadedPath.ToLower();
+        s_RelativePath=expected.path; s_RelativePath.ToLower();
+        s_Resource=""; s_Matches=0;
+        string registeredPath=loadedPath.Substring(colon+1,loadedPath.Length()-colon-1);
+        int slash=registeredPath.LastIndexOf("/");
+        string directory=""; string filename=registeredPath;
+        if (slash>=0)
+        {
+            directory=registeredPath.Substring(0,slash);
+            filename=registeredPath.Substring(slash+1,registeredPath.Length()-slash-1);
+        }
+        SearchResourcesFilter filter=new SearchResourcesFilter();
+        filter.rootPath="$"+addonName+":"+directory;
+        filter.fileExtensions={"ent"};
+        filter.searchStr={filename};
+        filter.recursive=false;
+        if (!ResourceDatabase.SearchResources(filter,Observe) || s_Matches!=1 || s_Resource.Length()<19) return false;
+        if (s_Resource.Substring(0,1)!="{" || s_Resource.Substring(17,1)!="}") return false;
+        string observedGuid=s_Resource.Substring(1,16); observedGuid.ToUpper();
+        string expectedGuid=expected.guid; expectedGuid.ToUpper();
+        if (observedGuid!=expectedGuid) return false;
+        PrintFormat("[COMMAND TERRAIN] Engine world identity matched: %1",s_Resource);
+        return true;
+    }
+};
 class COMMAND_TerrainSampler
 {
     static bool HexId(string value)
@@ -57,8 +104,15 @@ class COMMAND_TerrainSampler
             pathMatches=pathMatches || rawWorld.Substring(rawWorld.Length()-suffix.Length(),suffix.Length())==suffix;
         if (!pathMatches) { Print("[COMMAND TERRAIN] Loaded world path mismatch"); return; }
 
+        int identityStarted=System.GetTickCount();
+        if (!COMMAND_TerrainWorldResolver.Verify(GetGame().GetWorldFile(),identity))
+        {
+            Print("[COMMAND TERRAIN] World GUID identity rejected or unavailable");
+            return;
+        }
+        PrintFormat("[COMMAND TERRAIN] Identity lookup elapsedMs=%1",System.GetTickCount()-identityStarted);
         string observed=rawWorld.Substring(rawWorld.Length()-identity.path.Length(),identity.path.Length());
-        Print("[COMMAND TERRAIN] Loaded world path matched; GUID remains unverified");
+        Print("[COMMAND TERRAIN] Loaded world identity matched; imported files remain unattested");
         foreach (COMMAND_TerrainGroundSample sample : samples)
         {
             if (!sample || !(sample.worldX>=0 && sample.worldX<=13450) || !(sample.worldZ>=0 && sample.worldZ<=13450)) { Print("[COMMAND TERRAIN] Coordinate rejected"); return; }

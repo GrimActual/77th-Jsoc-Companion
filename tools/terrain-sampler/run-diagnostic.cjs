@@ -5,7 +5,15 @@ const path = require('node:path');
 const cp = require('node:child_process');
 const {promisify} = require('node:util');
 const execFile = promisify(cp.execFile);
+const Receipt = require('./diagnostic-receipt.cjs');
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+function confirmWorldIdentity(log, world) {
+  const expected=`{${world.guid}}${world.path}`.toLowerCase();
+  const names=log.split('\n').map(line=>line.trimEnd().match(/\[COMMAND TERRAIN\] Engine world identity matched: (.+)$/)?.[1]).filter(Boolean);
+  if (names.length!==1 || names[0].toLowerCase()!==expected) throw Error('Native world GUID was not confirmed for this query.');
+  return names[0];
+}
 
 async function run(options) {
   const Terrain = require('../../planner/terrain-context');
@@ -27,7 +35,7 @@ async function run(options) {
   fs.copyFileSync(path.join(__dirname, 'addon.gproj'), path.join(candidate, 'addon.gproj'));
   fs.cpSync(path.join(__dirname, 'Scripts'), path.join(candidate, 'Scripts'), {recursive:true});
   fs.writeFileSync(path.join(profile, 'profile', 'COMMAND-terrain-query.json'), JSON.stringify(query));
-  const result = {success:false, gameClientLaunched:false, tunnel:false, memoryLimitMiB, timeoutSeconds:90, peakWorkingSetMiB:0};
+  const result = {success:false, gameClientLaunched:false, tunnel:false, memoryLimitMiB, timeoutSeconds:90, peakWorkingSetMiB:0, querySha256:Receipt.querySha256(query), nativeSourceSha256:Receipt.sourceSha256(candidate), worldGuidVerified:false, liveSessionAttested:false};
   let child, log = '', nextMemoryCheck = 0;
   try {
     child = cp.spawn(options.serverExe, ['-gproj', path.join(candidate, 'addon.gproj'), '-addonsDir', options.addonsDir,
@@ -61,6 +69,7 @@ async function run(options) {
     }
     if (spawnError) throw spawnError;
     if (!finished) throw Error('World did not complete the sampler within the time bound.');
+    const engineWorldResource=confirmWorldIdentity(log,query.world);
     const report = Terrain.observation(JSON.parse(fs.readFileSync(path.join(profile, 'profile', 'COMMAND-terrain-observation.json'), 'utf8')));
     if (JSON.stringify(Terrain.world(report.world)) !== JSON.stringify(Terrain.world(query.world))) throw Error('Report identity differs from query.');
     if (report.samples.length !== query.samples.length || report.samples.some((sample, i) =>
@@ -68,7 +77,10 @@ async function run(options) {
     fs.writeFileSync(path.join(attempt, 'COMMAND-terrain-observation.json'), JSON.stringify(report, null, 2));
     result.success = true;
     result.reportValidatedByDesktop = true;
-    result.worldGuidVerified = false;
+    result.worldGuidVerified = true;
+    result.engineWorldResource = engineWorldResource;
+    result.worldIdentityMethod = "ResourceDatabase.SearchResources with exact loaded addon/path";
+    result.observationSha256 = Receipt.fileSha256(path.join(attempt, "COMMAND-terrain-observation.json"));
     result.liveSessionAttested = false;
     result.sampleCount = report.samples.length;
     result.engineVersion = report.engineVersion;
@@ -92,4 +104,4 @@ if (require.main === module) {
     .then(result => {console.log(JSON.stringify(result, null, 2)); if (!result.success || !result.serverStopped) process.exitCode = 1;})
     .catch(error => {console.error(error.message); process.exitCode = 1;});
 }
-module.exports = {run};
+module.exports = {run,confirmWorldIdentity};

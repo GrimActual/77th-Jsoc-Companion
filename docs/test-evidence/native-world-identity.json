@@ -1,0 +1,61 @@
+{
+  "checkpoint": "native-world-identity-and-hash-receipts",
+  "engineVersion": "1.8.0.13",
+  "scope": "Local isolated diagnostic: exact engine-registered packed-world GUID/addon/path and native ground samples; not an authenticated remote session",
+  "runner": {
+    "success": true,
+    "worldGuidVerified": true,
+    "liveSessionAttested": false,
+    "engineWorldResource": "{55A3176BBDD01AAE}worlds/Eden/EmptyEden.ent",
+    "worldIdentityMethod": "ResourceDatabase.SearchResources with exact loaded addon/path",
+    "sampleCount": 3,
+    "memoryLimitMiB": 1000,
+    "peakWorkingSetMiB": 462.69,
+    "serverStopped": true,
+    "querySha256": "b5dbedfd165eb2a92dedf8169d487e4091aea44eb333b4e1012993068e50ebbc",
+    "nativeSourceSha256": "7abe4aadb543a870ad5a77ae979c1261b7bd3f342d4c9c8e0c991ca5011e1586",
+    "observationSha256": "e8e54aaa0acd0ea93bff0e97ec63adf065de84d58bcb08b3260447e3d0143de4"
+  },
+  "lookupElapsedMs": 6,
+  "cases": {
+    "wrongGuidSameLoadedWorld": {
+      "rejected": true,
+      "observationWritten": false,
+      "serverStopped": true
+    },
+    "equivalentGuidAndPathCase": {
+      "accepted": true,
+      "serverStopped": true
+    },
+    "looseAbsoluteWorldWithoutOwnershipProof": {
+      "rejected": true,
+      "observationWritten": false,
+      "serverStopped": true
+    }
+  },
+  "receiptRoundTrip": {
+    "contentMatches": true,
+    "liveSessionAttested": false,
+    "desktopRuntimeVerified": false,
+    "desktopHeightValidated": false,
+    "planningCoverageComplete": true,
+    "sampleCount": 3
+  },
+  "focusedTests": {
+    "launchFileMemoryGuards": 4,
+    "logIdentityParser": 2,
+    "hashReceiptIntegrity": 4,
+    "total": 10
+  },
+  "sourceFileSha256": "4ba85a55353fa57f34ee35a11ab7126a522614bd374b942c1a6cd54bb1de5af9",
+  "limits": [
+    "No parent-terrain lineage inference or automatic acceptance of child scenarios.",
+    "No full-scene test rerun, no game client, no tunnel, no real players, no production Workshop changes.",
+    "Imported report/receipt files are editable and unsigned; hashes detect changes against a receipt, not who created it.",
+    "The desktop deployment guard remains unchanged until session-bound capability and approval-time native enforcement exist.",
+    "Runtime SCR_Global canonical/root helpers returned empty for packed data; ResourceDatabase.SearchResources supplied the usable GUID/path mapping.",
+    "A Windows CRLF parser bug initially missed successful native identity evidence; corrected and covered by LF/CRLF and conflicting/duplicate evidence tests."
+  ],
+  "gameClientLaunched": false,
+  "tunnel": false
+}
