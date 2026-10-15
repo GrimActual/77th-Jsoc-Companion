@@ -1,0 +1,22 @@
+{
+  "browser": "Headless local Chrome, real renderer module with native picker mocked; native picker/worker tested separately",
+  "sourceFixture": {
+    "files": 2,
+    "includes": 2000,
+    "totalRows": 4000,
+    "rowsRenderedPerPage": 40
+  },
+  "checks": [
+    "search/filter/paging",
+    "captured source preview",
+    "inert script-like Unicode source",
+    "FR/DE switching preserves selection",
+    "cancel and rejection retain review",
+    "late result after cancellation ignored",
+    "clear removes only session view"
+  ],
+  "firstRenderWallMs": 39.58289999999988,
+  "performanceScope": "One browser automation sample including click and wait; not map FPS or a speedup comparison",
+  "nativePickerMocked": true,
+  "gameLaunched": false
+}

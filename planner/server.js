@@ -96,6 +96,7 @@ const server = http.createServer(async (req, res) => {
 
     ['/sqf-structural-ast.js',['sqf-structural-ast.js','text/javascript; charset=utf-8']],
     ['/sqf-structural-ast-ui.js',['sqf-structural-ast-ui.js','text/javascript; charset=utf-8']],
+    ['/sqf-dependency-ui.js',['sqf-dependency-ui.js','text/javascript; charset=utf-8']],
     ['/sqf-structural-ast-worker.js',['sqf-structural-ast-worker.js','text/javascript; charset=utf-8']],
     ['/sqf-migration.js',['sqf-migration.js','text/javascript; charset=utf-8']],
     ['/sqf-migration-worker.js',['sqf-migration-worker.js','text/javascript; charset=utf-8']],

@@ -1,0 +1,14 @@
+{
+  "actualPackagedElectron": true,
+  "isolatedProfile": true,
+  "nativeDialogMocked": true,
+  "realSelectedFileRead": true,
+  "realNativeWorker": true,
+  "sampleIncludes": 2,
+  "exactMatched": 1,
+  "unresolved": 1,
+  "sourcePreviewVerified": true,
+  "localStorageUnchanged": true,
+  "gameLaunched": false,
+  "exe": "A:/Everon-ORBAT-Development/work/dependency-inspector/COMMAND-Dependency-Inspector-Candidate/COMMAND Planner.exe"
+}
