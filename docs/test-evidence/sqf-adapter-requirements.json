@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-15",
+  "tests": {
+    "passed": 24,
+    "failed": 0,
+    "scope": "9 adapter checks and 15 expression checks affected by the shared snapshot helper refactor"
+  },
+  "sample": {
+    "sqfFiles": 4,
+    "headerInventoryFiles": 2,
+    "sourceHashComparisons": 7,
+    "originalsUnchanged": true,
+    "occurrences": 80,
+    "unclassifiedTokens": 4,
+    "families": [
+      {
+        "id": "ui-layout",
+        "occurrences": 5,
+        "targetCandidates": 1
+      },
+      {
+        "id": "context-actions",
+        "occurrences": 4,
+        "targetCandidates": 1
+      },
+      {
+        "id": "audio-playback",
+        "occurrences": 7,
+        "targetCandidates": 1
+      },
+      {
+        "id": "audio-mix",
+        "occurrences": 6,
+        "targetCandidates": 0
+      },
+      {
+        "id": "lifecycle-events",
+        "occurrences": 5,
+        "targetCandidates": 0
+      },
+      {
+        "id": "scheduled-waits",
+        "occurrences": 1,
+        "targetCandidates": 1
+      },
+      {
+        "id": "typed-state",
+        "occurrences": 9,
+        "targetCandidates": 0
+      },
+      {
+        "id": "parameters-and-calls",
+        "occurrences": 11,
+        "targetCandidates": 0
+      },
+      {
+        "id": "client-player-context",
+        "occurrences": 14,
+        "targetCandidates": 0
+      },
+      {
+        "id": "value-tests",
+        "occurrences": 12,
+        "targetCandidates": 0
+      },
+      {
+        "id": "collection-operations",
+        "occurrences": 5,
+        "targetCandidates": 0
+      },
+      {
+        "id": "serialization-context",
+        "occurrences": 1,
+        "targetCandidates": 0
+      }
+    ],
+    "verifiedAdapters": 0,
+    "executionReady": 0
+  },
+  "performance": {
+    "scope": "Same six decoded text inputs, structural baseline versus structural plus adapter requirements; sequential headless samples, not map FPS or causal speedup evidence.",
+    "baseline": {
+      "warmups": 5,
+      "samples": 20,
+      "medianMs": 2.950700000000012,
+      "p95Ms": 3.797300000000007,
+      "maximumMs": 3.798000000000002,
+      "outputBytes": 45547
+    },
+    "requirements": {
+      "warmups": 5,
+      "samples": 20,
+      "medianMs": 3.16579999999999,
+      "p95Ms": 3.8551999999999964,
+      "maximumMs": 5.2882000000000176,
+      "outputBytes": 25930
+    }
+  },
+  "moduleSHA256": "f9d9621a493bba0e725d2c7dbfc4219cbcab48612e150130d7edb764e8e5e3ff",
+  "sourcePackageHashes": [
+    {
+      "name": "BIS_AddonInfo.hpp",
+      "sha256": "4cacde3ff6009e98019d6cef9a89e4893dfc6c84eaeb2f9795bf8aae748844ed"
+    },
+    {
+      "name": "config.cpp",
+      "sha256": "8d0c3c11805b029eba2913b191086464a03897eabbc50b5788a729ad2eda2951"
+    },
+    {
+      "name": "dialogs.hpp",
+      "sha256": "7e666e274c5ed56cca8b124171668ef8c226a9fe7918ccb980b4047faa46b750"
+    },
+    {
+      "name": "fn_initRadio.sqf",
+      "sha256": "f31187bfabd56c2e5108919a188487baff5ba3462134d0405eecae647ff18f3c"
+    },
+    {
+      "name": "fn_playTrack.sqf",
+      "sha256": "9835a675ebcd357f537e4bd11b3e0bf55e6cf5b27c7cd801f8782a4a8d158343"
+    },
+    {
+      "name": "fn_postInit.sqf",
+      "sha256": "35db9bd6a4bfbe9fa02ce798f095711a9a17776e0818fc3083f7473a69e4c44e"
+    },
+    {
+      "name": "fn_setRadioState.sqf",
+      "sha256": "2daa43ecb3df1188cb145a69d8055aaf5d9a9fe712a911412fbd700268079614"
+    }
+  ],
+  "limits": {
+    "occurrences": 4096,
+    "unclassified": 4096,
+    "bytes": 8388608
+  },
+  "limitations": [
+    "Lexical matches are not resolved command calls",
+    "No source binding/type/effect or execution-order resolution",
+    "Documented target APIs not verified against installed engine/native fixtures",
+    "Private source previews and audio are not published",
+    "Desktop UI/Sarge/Settings and current executable unchanged"
+  ]
+}

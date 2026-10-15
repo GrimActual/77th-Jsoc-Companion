@@ -48,7 +48,7 @@ function parse(text){
   return {status:'recognized',executable:false,semanticStatus:'unresolved',root,nodes,issue:null};
  }catch(error){return {status:'unsupported',executable:false,semanticStatus:'unresolved',root:null,nodes:[],issue:{message:error.message,offset:error.offset??at}};}
 }
-async function build(raw){
+function captureSources(raw){
  // Capture validated data properties before the first asynchronous hash yields.
  if(!Array.isArray(raw)||Object.getPrototypeOf(raw)!==Array.prototype||!raw.length||raw.length>64)throw Error('Invalid expression source array');
  const keys=Reflect.ownKeys(raw).filter(k=>k!=='length');
@@ -59,6 +59,10 @@ async function build(raw){
   if(Reflect.ownKeys(file).length!==2||!d.name||!d.text||!('value' in d.name)||!('value' in d.text)||!d.name.enumerable||!d.text.enumerable||typeof d.name.value!=='string'||typeof d.text.value!=='string')throw Error('Invalid expression source data');
   return {name:d.name.value,text:d.text.value};
  });
+ return files;
+}
+async function build(raw){
+ const files=captureSources(raw);
  // The structural builder validates plain input, filenames, aggregate sizes and source hashes first.
  const structural=await AST.build(files),sources=new Map(files.map(f=>[f.name.replace(/\\/g,'/'),f.text]));
  const report={schema:'command-sqf-expression-review',version:1,executable:false,syntaxOnly:true,offsetEncoding:'utf16-code-units',requiredReview:[...REVIEW],files:structural.files.map(f=>({...f})),expressions:[],summary:{recognized:0,unsupported:0,executionReady:0}};
@@ -74,5 +78,5 @@ async function build(raw){
  if(new TextEncoder().encode(JSON.stringify(report)).length>LIMITS.reportBytes)throw Error('Expression review byte limit exceeded');
  return report;
 }
-return {LIMITS,REVIEW,parse,build};
+return {LIMITS,REVIEW,parse,build,captureSources};
 });
