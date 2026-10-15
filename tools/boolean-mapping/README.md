@@ -13,3 +13,8 @@ With an installed, matching diagnostic server/base-game addon directory, explici
 Expected script log: `[COMMAND BOOL] CASES=46 FAILURES=0 VERSION=1.8.0.13`. A missing line, nonzero failures, script error, timeout or startup crash is not a pass. The recorded run used a 75-second deadline and 1,200 MiB sampled memory bound; the preparation helper itself does not monitor/launch processes or mint proof receipts. Review native logs and code before changing verification evidence. Sources need no pairing credentials or relay and spawn no entities. The initial Workbench startup crash is retained as a failure, not repeated in this workflow.
 
 See docs/BOOLEAN-EXPRESSION-MAPPING.md for semantic scope, source references, proof identity, desktop export and remaining integration requirements. No SQF source is executed; target tests compare documented literal-only Boolean results. No full program, callback, scheduler or multiplayer behavior is claimed.
+
+
+## Selected generated function projects
+
+See [FUNCTION-MODULES.md](../../docs/FUNCTION-MODULES.md). prepare-selected.cjs prepares a new isolated project from captured source, retaining exact source maps and honest native-status flags. It never launches an engine. The programmatic API accepts bounded typed invocation checks; CLI preparation without checks can prove compilation only when later run natively.

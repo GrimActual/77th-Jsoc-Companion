@@ -1,0 +1,20 @@
+{
+  "attempt": "A:/Everon-ORBAT-Development/work/function-modules/selected-server-sJQFuu",
+  "success": true,
+  "fixtureCases": 82,
+  "selectedModuleSHA256": "ca7f25f97c474151e5aab8dadfced8f1afc1898c38d79e3328d996307f689083",
+  "gameClientLaunched": false,
+  "entitiesSpawned": 0,
+  "publicTunnel": false,
+  "memoryLimitMiB": 1200,
+  "peakWorkingSetMiB": 668.32,
+  "deadlineSeconds": 75,
+  "engineVersion": "1.8.0.13",
+  "processStopped": true,
+  "scope": "Synthetic captured selected-source package through the actual selected-project preparer; no third-party mod is claimed converted.",
+  "selectedSourceNativelyCompiled": true,
+  "selectedInvocationChecksExecuted": true,
+  "functions": 16,
+  "preparedSourceFiles": 17,
+  "sourceSQFExecuted": false
+}

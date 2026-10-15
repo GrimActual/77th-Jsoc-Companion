@@ -1,0 +1,23 @@
+{
+  "scope": "Actual packaged Electron, seventeen selected files, including literal registration context and standalone body, four real review workers, native coverage worker and exclusive writes. Only OS pickers substituted; offline, no game client.",
+  "typedFunctionExport": true,
+  "functions": 16,
+  "resolvedClosedModuleCalls": 9,
+  "rootGuardReturns": true,
+  "parameterDefaultAndSourceOutputMaps": true,
+  "sourceRegistrationStillManual": true,
+  "selectedUserSourcesNotClaimedNativelyCompiled": true,
+  "commentsOnlyModeRetained": true,
+  "recursiveDependenciesBlockExport": true,
+  "sourceFamilyChangesClearAcknowledgment": true,
+  "languages": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "matchingLanguageChangesRetainContext": true,
+  "narrowWidth": 680,
+  "missionUnchanged": true,
+  "sargeDestination": true,
+  "pageErrors": []
+}

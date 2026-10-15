@@ -298,3 +298,27 @@ Added explicit read-only coverage previews for every expression/block family, wi
 ### 15 October 2026 — typed pure function module compiler
 
 Added explicit Boolean params/defaults, named code-valued function bodies, local state, branches, function-root guard exits and cross-file calls inside a selected closed module. Candidate/write uniqueness, typed argument checks, dependency propagation and cycle rejection prevent speculative bindings. Native 1.8.0.13 diagnostic server compiled six methods and executed 42 invocation/default cases. Source registration, dynamic scope, external callers, lifecycle and engine hooks stay manual. Coverage/export now includes typed functions and source/parameter/method/call-edge maps; base comments-only handoff remains intact. Settings and 62 EN/FR/DE Sarge topics are synchronized. All prior goals remain. See [typed Boolean functions](../docs/TYPED-BOOLEAN-FUNCTIONS.md).
+
+
+## Additive checkpoint — typed scalar function modules, revision 2
+
+Delivered bounded subsets of the next compiler priorities: selected literal CfgFunctions file bodies with original source maps; structured/nested closed calls; explicit bool/exact-int/ASCII-string parameter/local/return contracts; initialized branch-private scope; literal-count loops with conservative closed-call cost bounds. Existing pure Boolean paths remain supported. Generated compatibility filenames/keys are retained.
+
+The selected-project preparer emits a new isolated Game project without launching an engine. The native 1.8.0.13 server checked 82 invocations across 16 methods through this preparation path and matched the exact generated module hash. Source SQF was not run; this is not an Arma 3 runtime equivalence test or proof of complete mod conversion. See docs/FUNCTION-MODULES.md and docs/test-evidence/function-modules-native.json.
+
+The ten requested priorities remain tracked explicitly:
+
+| Priority | Current state |
+| --- | --- |
+| 1 Registered function files | Literal unique selected registrations supported; inheritance/preprocessed merges and automatic init remain manual. |
+| 2 Preprocessing | Existing includes/conditions/scalar/alias subsets retained; full function-like macros/shared-context integration remains pending. |
+| 3 Structured calls | Closed scalar calls may be grouped/nested and composed in Boolean expressions; dynamic calls remain manual. |
+| 4 Typed values | Boolean, bounded exact integers and short printable ASCII strings supported for copy/pass/return; arithmetic/dynamic arrays remain pending. |
+| 5 Scope/initialization | Initialized branch locals and type consistency checked; shadowing and uninitialized declarations remain manual. |
+| 6 Loops | Bounded literal range subset supported; counter reads, dynamic bounds, general loops and nested exits remain manual. |
+| 7 Scheduling/lifecycle | Pending verified semantic adapters; no automatic spawn/sleep/waitUntil translation. |
+| 8 Engine adapters | Existing GM adapters remain separate; migration-to-engine entity/group/vehicle wiring still pending. |
+| 9 Workbench handoff | Selected generated project preparation and synthetic native validation delivered; project integration stays manual. |
+| 10 Real mod/release validation | Private source review continues; complete real-mod migration and consolidated release are not complete. |
+
+This is progress on the ten tasks, not a claim that all ten are finished. The wider planner, GM/server, resource, binary inventory and release roadmap remains intact. Sarge, Settings destinations and EN/FR/DE guides accompany this checkpoint.

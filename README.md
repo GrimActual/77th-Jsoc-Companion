@@ -76,3 +76,8 @@ The vanilla snapshot contains 19,438 unique prefab identities. Start with the 2,
 [Contributing](CONTRIBUTING.md) · [Code of Conduct](CODE_OF_CONDUCT.md) · [Security policy](SECURITY.md) · [Report a bug or suggest a feature](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/issues/new/choose)
 
 Original COMMAND source code is licensed under [GNU GPL-3.0-only](LICENSE). Third-party components, game/terrain assets, trademarks and separately licensed material retain their respective terms. See [licensing scope](docs/LICENSING.md) and [third-party notices](planner/THIRD-PARTY-NOTICES.md).
+
+
+### Typed function migration development checkpoint
+
+The development branch includes explicit scalar function contracts, selected literal CfgFunctions bodies, structured closed calls, branch-local scope and bounded literal loops. See [current supported contracts and native handoff](docs/FUNCTION-MODULES.md). Preprocessing, scheduling and migration-to-engine wiring remain separate unfinished stages; this checkpoint does not claim complete mod conversion.

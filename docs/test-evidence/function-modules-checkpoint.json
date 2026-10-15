@@ -1,0 +1,22 @@
+{
+  "status": "bounded-function-module-checkpoint",
+  "allTenPrioritiesComplete": false,
+  "focusedChecks": 58,
+  "nativeInvocationCases": 82,
+  "nativeGeneratedMethods": 16,
+  "nativeSelectedProjectValidated": true,
+  "packagedDesktopVerified": true,
+  "remaining": [
+    "full-function-like-preprocessing-and-shared-context",
+    "verified-scheduling-and-lifecycle",
+    "migration-to-engine-entity-group-vehicle-adapters",
+    "complete-real-mod-validation-and-consolidated-release"
+  ],
+  "guidanceLanguages": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "gameClientLaunched": false,
+  "privateCorpusSourcesConverted": false
+}

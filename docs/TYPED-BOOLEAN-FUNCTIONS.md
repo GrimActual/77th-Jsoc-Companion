@@ -1,5 +1,7 @@
 # COMMAND — typed pure Boolean function modules
 
+Historical revision 1 guide. Current revision 2 adds scalar types, selected literal registrations, composed calls, branch locals and bounded loops: see [FUNCTION-MODULES.md](FUNCTION-MODULES.md).
+
 ## English
 
 This stage converts a selected **closed, pure Boolean function module** into callable Enforce methods. It adds real parameter/default handling, local state, branches, root guard returns and cross-file calls within that selected module. It does not register the original SQF global names in Reforger or wire game components, external callers, scheduling, replication or lifecycle hooks.
