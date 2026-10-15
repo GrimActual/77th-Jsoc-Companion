@@ -66,3 +66,18 @@ Review unresolved/case/unsafe-path results and potential cycles. Exact include p
 **Francais :** Creez un fichier JSON UTF-8 avec seulement `files` (noms relatifs et textes) et `mounts` (prefixes virtuels et racines relatives, tableau vide autorise). Utilisez la commande ci-dessus avec un nouveau fichier de sortie. Aucun dossier ou fichier manquant n'est charge automatiquement. Le worker Node analyse les directives sans executer les sources ni developper les macros. Examinez les chemins manquants, ambigus ou dangereux et les cycles potentiels. Un chemin trouve ne prouve ni une branche active, ni une fonction resolue, ni une conversion executable. Outil de developpement, pas une nouvelle fonction de l'application.
 
 **Deutsch:** Erstellen Sie eine UTF-8-JSON-Datei nur mit `files` (relative Namen und Texte) sowie `mounts` (virtuelle Praefixe und relative Wurzeln; leeres Array erlaubt). Verwenden Sie den obigen Befehl mit einer neuen Ausgabedatei. Keine automatische Ordnersuche oder Beschaffung fehlender Dateien. Ein begrenzter Node-Worker untersucht Direktiven ohne Quellcodeausfuehrung oder Makroexpansion. Pruefen Sie fehlende, mehrdeutige oder unsichere Pfade und moegliche Zyklen. Gefundene Pfade beweisen keine aktiven Zweige, aufgeloesten Funktionen oder ausfuehrbare Konvertierung. Dies ist ein Entwicklerwerkzeug, keine neue App-Funktion.
+
+
+## Function registration candidates / Fonctions / Funktionskandidaten (developer-only)
+
+English: Add `configRoots` to an explicit source-set JSON, for exactly `{files,mounts,configRoots}`. Example root: `{"file":"mission/description.ext","root":"mission"}`. Each file is an existing selected source; roots are package-relative (empty string means the selected package root). Relative function file properties are anchored there; header folders are not guessed as mission roots. Virtual paths still require mounts. The tool inventories literal CfgFunctions declarations and lexical call/spawn name candidates, without preprocessing, function execution or runtime binding. Choose a new report filename.
+
+```powershell
+node tools/sqf-review/registrations.cjs --source-set "A:/Reviews/function-source-set.json" --output "A:/Reviews/new-registrations.json"
+```
+
+A unique name or exact source path is only a candidate. Review missing/ambiguous paths, macro/inheritance blockers and supplied-file coverage. The Node worker supports bounded analysis, deadline and cancellation. This new report is not an app import or deployable mission. See docs/SQF-FUNCTION-REGISTRATIONS.md.
+
+Francais : Ajoutez `configRoots` au JSON de sources, avec exactement `files`, `mounts` et `configRoots`. Exemple : `{"file":"mission/description.ext","root":"mission"}`. Utilisez la commande ci-dessus et un nouveau fichier de sortie. Les racines sont relatives au paquet; aucun dossier de mission n'est devine. Les declarations litterales CfgFunctions et noms call/spawn restent des candidats, sans developpement des macros, resolution d'execution ou conversion native. Examinez les chemins manquants, ambigus et les limites de couverture. Outil de developpement separe de l'application.
+
+Deutsch: Fuegen Sie `configRoots` zur Quelldatei-JSON hinzu, mit genau `files`, `mounts` und `configRoots`. Beispiel: `{"file":"mission/description.ext","root":"mission"}`. Nutzen Sie den obigen Befehl mit einer neuen Ausgabedatei. Wurzeln sind paketrelativ; Missionsordner werden nicht geraten. Literale CfgFunctions-Deklarationen und call/spawn-Namen bleiben Kandidaten, ohne Makroexpansion, Laufzeitbindung oder native Konvertierung. Pruefen Sie fehlende und mehrdeutige Pfade sowie Abdeckungsgrenzen. Dies ist ein Entwicklerwerkzeug ausserhalb der App.

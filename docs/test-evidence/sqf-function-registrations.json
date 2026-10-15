@@ -1,0 +1,615 @@
+{
+  "schema": "command-function-registration-evidence",
+  "version": 1,
+  "sourceExecuted": false,
+  "nativeVerified": false,
+  "symbolBindingsResolved": false,
+  "executionReady": 0,
+  "focusedNewCases": 26,
+  "affectedRegressionCases": 22,
+  "projects": [
+    {
+      "repository": "77th-JSOC-Missions",
+      "commit": "92474ccc62080b8140002d80550dde20fc944b82",
+      "sourceJSONSHA256": "5e0b536f6a48b7ded0aade85f91d50605301167645b7e507a560c27428aa34ad",
+      "sourceJSONUnchanged": true,
+      "previousDependencyReportUnchanged": true,
+      "reviewContextSHA256": "c869be68ada3559150865af6a58f973af38062945df7e1b4198ea6aba345387e",
+      "summary": {
+        "files": 8,
+        "registrations": 30,
+        "namedRegistrations": 30,
+        "exactSourcePaths": 3,
+        "calls": 39,
+        "uniqueNameCandidates": 0,
+        "ambiguousNameCandidates": 0,
+        "executionReady": 0
+      },
+      "coverage": [
+        {
+          "file": "Missions/# Events/PrivateChristmas_2025.Altis/description.ext",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 1,
+          "opaqueStatements": 12
+        },
+        {
+          "file": "Missions/# Events/PrivateChristmas_2025.Altis/functions/aaa/fn_personalAAAField.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "Missions/# Events/PrivateChristmas_2025.Altis/functions/cage/fn_cageFightChaos.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "Missions/# Events/PrivateChristmas_2025.Altis/functions/music/fn_addMusicZone.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "Missions/7 - Aperture Investment/Mission Scripts.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "Missions/Vietnam/1 - Tho San Nguoi My/Mission Files/description.ext",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 0
+        },
+        {
+          "file": "Missions/Vietnam/1 - Tho San Nguoi My/Mission Scripts.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "Scripts/Damage air assets in area.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        }
+      ],
+      "configCaptures": [
+        {
+          "path": "Missions/# Events/PrivateChristmas_2025.Altis/description.ext",
+          "gitBlobSHA": "57e05a0205827e901ed16f284c004780752b3228",
+          "sha256": "351147c8ff18bc4f20514a49532bc78b9a121019ac1f02af7c7e9d966d2ee161",
+          "bytes": 4312
+        },
+        {
+          "path": "Missions/Vietnam/1 - Tho San Nguoi My/Mission Files/description.ext",
+          "gitBlobSHA": "c4a1a3a838cf5283fa618965ea06a64fa1906e7a",
+          "sha256": "49374e2695778c1f4d9b5cefa21acc0268e059522ef438a6af2208479805739e",
+          "bytes": 1291
+        }
+      ],
+      "captureFailures": [],
+      "uniqueNameMatches": [],
+      "pathStatuses": {
+        "missing-file": 27,
+        "resolved-exact": 3
+      }
+    },
+    {
+      "repository": "Advanced-Equipment",
+      "commit": "be2575c8ebeec547e0e937c17b91d32892e19324",
+      "sourceJSONSHA256": "79c28b99807f85d34f062b0bd2672178d445005c0c774905fe0f6550e6661eb8",
+      "sourceJSONUnchanged": true,
+      "previousDependencyReportUnchanged": true,
+      "reviewContextSHA256": "6cf03d53521398338b5d7d92fd7f9a9f7f2c00f653e97f262f1bbac557e6839e",
+      "summary": {
+        "files": 13,
+        "registrations": 0,
+        "namedRegistrations": 0,
+        "exactSourcePaths": 0,
+        "calls": 13,
+        "uniqueNameCandidates": 0,
+        "ambiguousNameCandidates": 0,
+        "executionReady": 0
+      },
+      "coverage": [
+        {
+          "file": "addons/armaos/XEH_postInit.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/armaos/config.cpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 16
+        },
+        {
+          "file": "addons/armaos/functions/fnc_terminal_getAllowedKeysAR.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/armaos/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 9
+        },
+        {
+          "file": "addons/desktop/functions/fnc_app_list.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/desktop/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 9
+        },
+        {
+          "file": "addons/filesystem/functions/fnc_resolvePntr.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/main/config.cpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 12
+        },
+        {
+          "file": "addons/main/functions/fnc_zeus_filesystemBrowser_pickPath.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/main/script_macros.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 12
+        },
+        {
+          "file": "addons/main/script_mod.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 7
+        },
+        {
+          "file": "addons/main/script_version.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        },
+        {
+          "file": "addons/power/functions/fnc_turnOffGeneratorAction.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        }
+      ],
+      "configCaptures": [
+        {
+          "path": "addons/main/config.cpp",
+          "gitBlobSHA": "27b17e9eb000cebdd14751bce2b34fe60dbdefff",
+          "sha256": "2255b5a5330ed2fc3ca467f79bc0a0b99d986f5d5b3a700a20ae66d975681eba",
+          "bytes": 689
+        },
+        {
+          "path": "addons/armaos/config.cpp",
+          "gitBlobSHA": "e8dba3a6d3ab311f652a132a2268f4c95d5a7f74",
+          "sha256": "bdf0b6a0eabd22c183efedfa4d56fd1d07b36a4327a5c9d993b59d39318bcded",
+          "bytes": 1378
+        }
+      ],
+      "captureFailures": [],
+      "uniqueNameMatches": [],
+      "pathStatuses": {}
+    },
+    {
+      "repository": "Root_Anomalies",
+      "commit": "338b947abc833e85381fe3a641d4197aff0d598c",
+      "sourceJSONSHA256": "4454832761d2da8430c48095681e08ecb378cf1ff8df5170cbc168156d554f9f",
+      "sourceJSONUnchanged": true,
+      "previousDependencyReportUnchanged": true,
+      "reviewContextSHA256": "6dd237d3ddab89c107e0b6f55de080eaa9befea6cf4643f875f9b2d9d8f0ee48",
+      "summary": {
+        "files": 15,
+        "registrations": 0,
+        "namedRegistrations": 0,
+        "exactSourcePaths": 0,
+        "calls": 7,
+        "uniqueNameCandidates": 0,
+        "ambiguousNameCandidates": 0,
+        "executionReady": 0
+      },
+      "coverage": [
+        {
+          "file": "addons/burper/config.cpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 6
+        },
+        {
+          "file": "addons/farmer/functions/fn_FarmerAvoid.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/farmer/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        },
+        {
+          "file": "addons/main/config.cpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 10
+        },
+        {
+          "file": "addons/main/functions/api/fn_configure.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/main/functions/core/fn_deathBlast.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/main/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 10
+        },
+        {
+          "file": "addons/main/script_macros.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 88
+        },
+        {
+          "file": "addons/main/script_mod.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 9
+        },
+        {
+          "file": "addons/main/script_version.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        },
+        {
+          "file": "addons/twins/functions/fn_TwinsDamage.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/twins/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        },
+        {
+          "file": "addons/worm/functions/fn_WormEffect.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/worm/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        },
+        {
+          "file": "wip/scp173/functions/fn_blink.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        }
+      ],
+      "configCaptures": [
+        {
+          "path": "addons/main/config.cpp",
+          "gitBlobSHA": "3199eb951240709eb66f83bf4475693ef36b0908",
+          "sha256": "1e4dd3fad9bbd15a2734d50a0f26ca511ad84a7ed8a26efed49d65a79e6027c4",
+          "bytes": 919
+        },
+        {
+          "path": "addons/burper/config.cpp",
+          "gitBlobSHA": "506586458abdf0aade7cefddbdefc92e481bb845",
+          "sha256": "9758bab464c3bb9cfca7471790cd23d111cdd0d18141eeb5abf23dbc2050764b",
+          "bytes": 770
+        }
+      ],
+      "captureFailures": [],
+      "uniqueNameMatches": [],
+      "pathStatuses": {}
+    },
+    {
+      "repository": "Root_Cyberwarfare",
+      "commit": "ff5179b3b7223d415facad5f97ccf8276481c3ac",
+      "sourceJSONSHA256": "5ebe9eccdcf2eb1f54f02ffc683cd1b643076e40c1bb4672567c99887c6ccbba",
+      "sourceJSONUnchanged": true,
+      "previousDependencyReportUnchanged": true,
+      "reviewContextSHA256": "dbeb6860cc1382b023e7e8f60c1603309fc29abee35711175b589e9f40a471dc",
+      "summary": {
+        "files": 12,
+        "registrations": 156,
+        "namedRegistrations": 156,
+        "exactSourcePaths": 5,
+        "calls": 23,
+        "uniqueNameCandidates": 2,
+        "ambiguousNameCandidates": 0,
+        "executionReady": 0
+      },
+      "coverage": [
+        {
+          "file": "addons/main/CfgFunctions.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 1,
+          "opaqueStatements": 12
+        },
+        {
+          "file": "addons/main/config.cpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 11
+        },
+        {
+          "file": "addons/main/functions/3den/fn_3denAddLights.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/main/functions/core/fn_createDiaryEntry.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/main/functions/gui/fn_gui_appLights.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/main/functions/utility/fn_getPowerComputer.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/main/functions/vehicle/fn_applyVehicleBrakes.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/main/functions/zeus/fn_cipherZeus.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/main/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 10
+        },
+        {
+          "file": "addons/main/script_macros.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 372
+        },
+        {
+          "file": "addons/main/script_mod.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 9
+        },
+        {
+          "file": "addons/main/script_version.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        }
+      ],
+      "configCaptures": [
+        {
+          "path": "addons/main/config.cpp",
+          "gitBlobSHA": "bc38734323b10bcd2310238f3fb3cecbf7fd081f",
+          "sha256": "f947a3251cfcd079d1f2a90c75344fd86726273d59b6fe27a62c4a1e68d45b71",
+          "bytes": 2083
+        },
+        {
+          "path": "addons/main/CfgFunctions.hpp",
+          "gitBlobSHA": "ee4e99675e2c4eded4dac1823a91dbbeb5f0990e",
+          "sha256": "6836fbf1dd3b545778f8917e4e1459bf0cc5cca9fa525af7df6663c97f2c1e92",
+          "bytes": 6428
+        }
+      ],
+      "captureFailures": [],
+      "uniqueNameMatches": [
+        {
+          "source": {
+            "file": "addons/main/functions/gui/fn_gui_appLights.sqf",
+            "start": 2850,
+            "end": 2882,
+            "line": 66,
+            "column": 32
+          },
+          "targetNameCandidate": "Root_fnc_gui_requestDevices",
+          "candidateRegistrationIds": [
+            "registration-44"
+          ]
+        },
+        {
+          "source": {
+            "file": "addons/main/functions/gui/fn_gui_appLights.sqf",
+            "start": 3864,
+            "end": 3896,
+            "line": 91,
+            "column": 65
+          },
+          "targetNameCandidate": "Root_fnc_gui_requestDevices",
+          "candidateRegistrationIds": [
+            "registration-44"
+          ]
+        }
+      ],
+      "pathStatuses": {
+        "missing-file": 151,
+        "resolved-exact": 5
+      }
+    },
+    {
+      "repository": "Root_Effects",
+      "commit": "9baebcbb34dc0650938042843c91b4ff850a0a10",
+      "sourceJSONSHA256": "2be6add3cab8fe0323c5841bdd3b84ace80ad2ea656ea37e0910d621b00f6dba",
+      "sourceJSONUnchanged": true,
+      "previousDependencyReportUnchanged": true,
+      "reviewContextSHA256": "076920955c4a4b287e6eab24ecbc7afa907274bd74d492606586ee2603e87eaa",
+      "summary": {
+        "files": 17,
+        "registrations": 0,
+        "namedRegistrations": 0,
+        "exactSourcePaths": 0,
+        "calls": 37,
+        "uniqueNameCandidates": 0,
+        "ambiguousNameCandidates": 0,
+        "executionReady": 0
+      },
+      "coverage": [
+        {
+          "file": "addons/ambientsfx/config.cpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 7
+        },
+        {
+          "file": "addons/dronefeed/functions/fn_getDroneList.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/dronefeed/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 12
+        },
+        {
+          "file": "addons/fireworks/XEH_postInit.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/fireworks/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        },
+        {
+          "file": "addons/main/config.cpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 5
+        },
+        {
+          "file": "addons/main/functions/fn_startEffect.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/main/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        },
+        {
+          "file": "addons/main/script_macros.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        },
+        {
+          "file": "addons/main/script_mod.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 7
+        },
+        {
+          "file": "addons/main/script_version.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        },
+        {
+          "file": "addons/strikes/functions/fn_napalmIgnite.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/strikes/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 6
+        },
+        {
+          "file": "addons/volcano/functions/fn_moduleAvalanche.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/volcano/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        },
+        {
+          "file": "addons/weather/XEH_postInit.sqf",
+          "status": "sqf-call-lexical-inventory",
+          "cfgFunctionsRoots": 0
+        },
+        {
+          "file": "addons/weather/script_component.hpp",
+          "status": "unexpanded-config-syntax",
+          "cfgFunctionsRoots": 0,
+          "opaqueStatements": 4
+        }
+      ],
+      "configCaptures": [
+        {
+          "path": "addons/main/config.cpp",
+          "gitBlobSHA": "c308b1b74784efda221a9650b275fb74a9633b7f",
+          "sha256": "fb5e58de13bfa83a170d07880db070880dd4d9c1fbcb701beb368baea607bbef",
+          "bytes": 2186
+        },
+        {
+          "path": "addons/ambientsfx/config.cpp",
+          "gitBlobSHA": "de1381ef8db65bfcbaec74d245d4f5dab1a415a9",
+          "sha256": "7138fb86433513266f17233e390b6e3cbb8ac889c779550a4912b19c7a5f944e",
+          "bytes": 1273
+        }
+      ],
+      "captureFailures": [],
+      "uniqueNameMatches": [],
+      "pathStatuses": {}
+    }
+  ],
+  "benchmark": {
+    "scope": "Same synthetic 150-file input: prior dependency-only workload versus additional registration/call analysis, and registration in a fresh worker. Two warmups, six measured pairs; direct and worker registration reports equal. Added analysis, not a speedup or app FPS claim.",
+    "sourceBytes": 153440,
+    "files": 150,
+    "dependencyOnly": {
+      "samples": 6,
+      "medianMs": 7.500799999999998,
+      "minMs": 7.071199999999976,
+      "maxMs": 7.86869999999999
+    },
+    "withRegistrations": {
+      "samples": 6,
+      "medianMs": 9.463099999999997,
+      "minMs": 9.227600000000052,
+      "maxMs": 10.586400000000026
+    },
+    "registrationWorker": {
+      "samples": 6,
+      "medianMs": 57.37780000000001,
+      "minMs": 57.194699999999955,
+      "maxMs": 60.6789
+    },
+    "rendererMeasured": false
+  },
+  "finalCapturedReportsUnchanged": true
+}
