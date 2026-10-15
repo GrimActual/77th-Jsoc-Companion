@@ -13,3 +13,8 @@ Each export needs a migration checklist/manifest covering emitted, scaffolded an
 Implementation sequence: define tier decisions and checklist format; deliver a bounded comments-first scaffold export with explicit file creation and negative tests; then enable one green semantic family only after typed/native adapter gates and isolated compilation/behavior tests pass. Workbench remains the integration/compilation/runtime validation stage. No workload-reduction percentage or whole-mod equivalence is claimed.
 
 This adds to the existing compiler stages and mission-planner roadmap; it removes no goals.
+
+
+### 15 October 2026 — combined diagnostics and comments-only scaffold handoff
+
+Delivered combined JSON/offline HTML exports from completed native snapshots with separate source/context identities, missing-review visibility and opt-in complete source text. Added explicit comments-only Scaffold mode: yellow/red source-linked manifest/checklist, safe output names, preserved original notices and no overwrites. Green remains zero; signatures/types/native semantics are not guessed. Settings and 55 EN/FR/DE Sarge topics are synchronized. Actual packaged exports, notice/source safety, snapshot clearing and affected checks passed; see [the guide](COMBINED-DIAGNOSTIC-EXPORT.md). This advances the planned comments-first scaffold stage; earlier planning statements describe the previous checkpoint. All existing goals remain. Verified semantic mappings, green emission and native integration are still pending.

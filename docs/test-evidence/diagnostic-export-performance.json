@@ -1,0 +1,20 @@
+{
+  "scope": "Matched 400-unit offline mission, 1440x900 viewport, editor open, approximately 3.5-second pan sample for diagnostic export packaged app; same fixture as prior gm-layout-performance.json. Short single-run observations, not a speedup or sustained FPS guarantee.",
+  "results": [
+    {
+      "label": "diagnostic-export",
+      "frames": 211,
+      "elapsedMs": 3508.0000000089403,
+      "fps": 60.148232611021164,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.800000000000182,
+      "maxFrameMs": 16.90000000000009,
+      "framesOver100Ms": 0,
+      "markers": 400,
+      "tiles": 2,
+      "heapBytes": 20500000,
+      "missionUnchanged": true
+    }
+  ],
+  "gameLaunched": false
+}

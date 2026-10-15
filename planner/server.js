@@ -100,6 +100,7 @@ const server = http.createServer(async (req, res) => {
     ['/sqf-function-ui.js',['sqf-function-ui.js','text/javascript; charset=utf-8']],
     ['/sqf-type-ui.js',['sqf-type-ui.js','text/javascript; charset=utf-8']],
     ['/sqf-effect-ui.js',['sqf-effect-ui.js','text/javascript; charset=utf-8']],
+    ['/sqf-diagnostic-export-ui.js',['sqf-diagnostic-export-ui.js','text/javascript; charset=utf-8']],
     ['/sqf-effect-rows.js',['sqf-effect-rows.js','text/javascript; charset=utf-8']],
     ['/sqf-diagnostics-ui.js',['sqf-diagnostics-ui.js','text/javascript; charset=utf-8']],
     ['/sqf-structural-ast-worker.js',['sqf-structural-ast-worker.js','text/javascript; charset=utf-8']],

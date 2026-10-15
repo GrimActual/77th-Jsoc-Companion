@@ -1,0 +1,42 @@
+{
+  "radioFiles": 6,
+  "combinedProfiles": 4,
+  "sharedSourceSetDeduplicated": true,
+  "mixedSourceSetsKeptSeparate": true,
+  "unreviewedProfilesListed": true,
+  "fullSourceOptInDefaultOff": true,
+  "capturedSourcesRetainedAfterDiskEdit": true,
+  "commentOnlyScaffold": true,
+  "scaffoldSummary": {
+    "green": 0,
+    "yellow": 362,
+    "red": 2,
+    "executionReady": 0
+  },
+  "scaffoldEntries": 364,
+  "sourceNoticesPreserved": true,
+  "manifestSourceAndOutputLocations": true,
+  "reviewModeDefault": true,
+  "explicitScaffoldMode": true,
+  "cancelKeepsPriorReviews": true,
+  "overwriteRefused": true,
+  "clearRemovesNativeSnapshot": true,
+  "locales": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "modeAndSelectionRetained": true,
+  "narrowLayoutNoOverflow": true,
+  "settingsAndSargeDestinations": true,
+  "missionUnchanged": true,
+  "selectedSourceUnchangedByExport": true,
+  "rendererErrors": [],
+  "realNativeWorkers": true,
+  "nativeDialogsSubstituted": true,
+  "gameLaunched": false,
+  "radioJSONClickToSavedMs": 207.7549999999992,
+  "scaffoldClickToSavedMs": 436.71340000000055,
+  "timingScope": "Single automation observations including dialogs, worker startup, serialization and disk writes; not universal parser timing.",
+  "exportedHTMLRenderedInert": true
+}

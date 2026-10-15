@@ -10,9 +10,11 @@ contextBridge.exposeInMainWorld('plannerLocalBridge',{command:(action,options)=>
 
 contextBridge.exposeInMainWorld('plannerMetadata',{exportSQFAST:report=>ipcRenderer.invoke('sqf-ast-export',report),exportTerrainQuery:query=>ipcRenderer.invoke('terrain-query-export',query),exportIntentDraft:draft=>ipcRenderer.invoke('sqf-intent-draft-export',draft),exportClassMap:map=>ipcRenderer.invoke('sqf-class-map-export',map),exportMigration:report=>ipcRenderer.invoke('sqf-migration-export',report),select:()=>ipcRenderer.invoke('workbench-metadata-select'),selectProject:()=>ipcRenderer.invoke('workbench-project-select'),selectIndex:()=>ipcRenderer.invoke('workbench-index-select'),exportIndex:index=>ipcRenderer.invoke('workbench-metadata-export',index),exportDeployment:doc=>ipcRenderer.invoke('deployment-intent-export',doc),exportCatalog:catalog=>ipcRenderer.invoke('workbench-catalog-export',catalog)});
 
-contextBridge.exposeInMainWorld('plannerDependencies',{select:()=>ipcRenderer.invoke('sqf-dependency-select'),cancel:()=>ipcRenderer.invoke('sqf-dependency-cancel')});
+contextBridge.exposeInMainWorld('plannerDependencies',{clear:()=>ipcRenderer.invoke('sqf-dependency-clear'),select:()=>ipcRenderer.invoke('sqf-dependency-select'),cancel:()=>ipcRenderer.invoke('sqf-dependency-cancel')});
 
-contextBridge.exposeInMainWorld('plannerFunctions',{select:()=>ipcRenderer.invoke('sqf-function-select'),cancel:()=>ipcRenderer.invoke('sqf-function-cancel')});
+contextBridge.exposeInMainWorld('plannerFunctions',{clear:()=>ipcRenderer.invoke('sqf-function-clear'),select:()=>ipcRenderer.invoke('sqf-function-select'),cancel:()=>ipcRenderer.invoke('sqf-function-cancel')});
 
-contextBridge.exposeInMainWorld('plannerEffects',{select:()=>ipcRenderer.invoke('sqf-effect-select'),cancel:()=>ipcRenderer.invoke('sqf-effect-cancel')});
-contextBridge.exposeInMainWorld('plannerTypes',{select:()=>ipcRenderer.invoke('sqf-type-select'),cancel:()=>ipcRenderer.invoke('sqf-type-cancel')});
+contextBridge.exposeInMainWorld('plannerEffects',{clear:()=>ipcRenderer.invoke('sqf-effect-clear'),select:()=>ipcRenderer.invoke('sqf-effect-select'),cancel:()=>ipcRenderer.invoke('sqf-effect-cancel')});
+contextBridge.exposeInMainWorld('plannerTypes',{clear:()=>ipcRenderer.invoke('sqf-type-clear'),select:()=>ipcRenderer.invoke('sqf-type-select'),cancel:()=>ipcRenderer.invoke('sqf-type-cancel')});
+
+contextBridge.exposeInMainWorld('plannerDiagnostics',{status:()=>ipcRenderer.invoke('sqf-diagnostic-status'),export:options=>ipcRenderer.invoke('sqf-diagnostic-export',options)});

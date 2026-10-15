@@ -1,0 +1,3 @@
+'use strict';
+const {parentPort,workerData}=require('node:worker_threads'),E=require('./sqf-diagnostic-export');
+try{const bundle=E.build(workerData.snapshots,{includeSources:workerData.options.includeSources});if(workerData.options.format==='scaffold'){const snapshot=workerData.snapshots.find(s=>s.profile===workerData.options.profile);parentPort.postMessage({ok:true,files:E.scaffold(snapshot,bundle).files});}else parentPort.postMessage({ok:true,text:workerData.options.format==='html'?E.html(bundle):JSON.stringify(bundle,null,2)+'\n'});}catch(e){parentPort.postMessage({ok:false,error:e.message});}

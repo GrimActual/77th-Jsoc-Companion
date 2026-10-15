@@ -77,3 +77,4 @@ body.gm-workspace main>aside pre{white-space:pre-wrap;overflow-wrap:anywhere;max
 .function-review-layout:has(.source-review-preview:not([hidden])){grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
 .function-review-list{min-width:0}
 @media(max-width:720px){.function-review-layout:has(.source-review-preview:not([hidden])){grid-template-columns:minmax(0,1fr)}}
+#sqfDiagnosticExport :is(p,button,label){overflow-wrap:anywhere}#sqfDiagnosticExport button{max-width:100%;white-space:normal;margin:4px 4px 4px 0}
