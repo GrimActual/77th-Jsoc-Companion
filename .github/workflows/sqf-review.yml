@@ -6,12 +6,16 @@ on:
       - 'planner/sqf-*.js'
       - 'planner/package.json'
       - 'tools/sqf-review/**'
+      - 'tools/boolean-mapping/**'
+      - 'planner/native-evidence/**'
       - '.github/workflows/sqf-review.yml'
   pull_request:
     paths:
       - 'planner/sqf-*.js'
       - 'planner/package.json'
       - 'tools/sqf-review/**'
+      - 'tools/boolean-mapping/**'
+      - 'planner/native-evidence/**'
       - '.github/workflows/sqf-review.yml'
   workflow_dispatch:
 

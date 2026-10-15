@@ -56,4 +56,5 @@ function scaffold(snapshot,bundle){
  const checklist=['# COMMAND migration checklist','','Comment-only placeholders. Green emission: 0. Nothing was compiled or executed.','',manifest.rights,'','Preserve the OriginalSources folder and its notices with source-derived work.','',...entries.map(e=>'- [ ] '+e.tier.toUpperCase()+' '+comment(e.source.file)+':'+e.source.line+' — '+(e.nodeId||'inventory')+' → '+e.output.path+':'+e.output.startLine+' — '+e.reasons.join('; ')),'','## Source findings','',...flow.findings.map(f=>'- '+comment(f.source.file)+':'+f.source.line+' — '+f.code+' — '+comment(f.detail||'')),'','## Native integration','','Review each placeholder, implement verified mappings, wire components and validate in Enfusion Workbench. This folder is not a runnable addon.'];
  add('MIGRATION-CHECKLIST.md',checklist.join('\n')+'\n');return {files,manifest};
 }
-module.exports={SCHEMAS,LIMITS,build,html,scaffold};
+function outputFiles(files){let total=0;for(const file of files){total+=Buffer.byteLength(file.text,'utf8');if(total>LIMITS.outputBytes)throw Error('Combined scaffold output byte limit exceeded');}return files;}
+module.exports={SCHEMAS,LIMITS,build,html,scaffold,outputFiles};

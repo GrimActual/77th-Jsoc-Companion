@@ -1,0 +1,32 @@
+{
+  "nativeEngineVersion": "1.8.0.13",
+  "nativeFixtureCases": 46,
+  "greenExpressionFragments": 3,
+  "greenStatements": 0,
+  "wholeMissionConversion": false,
+  "unresolvedSlotsRetained": 1,
+  "defaultOptInOff": true,
+  "reviewModeDefaultLocked": true,
+  "explicitAcknowledgmentRequired": true,
+  "typedBoolHelpers": true,
+  "sourceAndOutputLocations": true,
+  "sourceNoticesAndTextPreserved": true,
+  "ordinaryScaffoldRemainsCommentsOnly": true,
+  "preprocessingRejectsGreen": true,
+  "locales": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "reviewContextRetained": true,
+  "narrowLayoutNoOverflow": true,
+  "sargeDestination": true,
+  "missionUnchanged": true,
+  "sourceUnchanged": true,
+  "rendererErrors": [],
+  "nativeDialogsSubstituted": true,
+  "realExportWorker": true,
+  "gameClientLaunched": false,
+  "clickToSavedMs": 161.76140000000123,
+  "timingScope": "One automated export observation including worker and disk output; not a universal timing guarantee."
+}

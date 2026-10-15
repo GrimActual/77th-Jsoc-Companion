@@ -1,0 +1,20 @@
+{
+  "scope": "Matched 400-unit offline mission, 1440x900 viewport, editor open, approximately 3.5-second pan sample for Boolean helper packaged app; same fixture as prior gm-layout-performance.json. Short single-run observations, not a speedup or sustained FPS guarantee.",
+  "results": [
+    {
+      "label": "boolean-mapping",
+      "frames": 210,
+      "elapsedMs": 3508.3,
+      "fps": 59.8580509078471,
+      "medianFrameMs": 16.699999999999818,
+      "p95FrameMs": 16.799999999999727,
+      "maxFrameMs": 33.22199999999998,
+      "framesOver100Ms": 0,
+      "markers": 400,
+      "tiles": 2,
+      "heapBytes": 19300000,
+      "missionUnchanged": true
+    }
+  ],
+  "gameLaunched": false
+}

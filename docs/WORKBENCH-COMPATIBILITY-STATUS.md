@@ -28,3 +28,6 @@ The strongest current paths are resource identity, reviewed entity deployment, b
 - [Native references](NATIVE-REFERENCE-SOURCES.md): installed docs and official samples are references, not proof of completed adapters or imported dependencies.
 
 This checkpoint adds status information. It removes or replaces no roadmap goal. Next conversion gate is a narrowly defined target mapping with typed/source-context requirements and native evidence before any green emission.
+
+
+Subsequent checkpoint: the [pure Boolean expression mapping](BOOLEAN-EXPRESSION-MAPPING.md) now emits optional typed bool value helpers with headless native evidence. Whole statements/functions/missions remain unconverted. The Workbench startup failure is retained; no additional Workbench-module compatibility follows from this primitive Game-script proof.
