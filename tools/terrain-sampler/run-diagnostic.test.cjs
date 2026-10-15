@@ -1,0 +1,9 @@
+'use strict';
+const test=require('node:test'),a=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const {run}=require('./run-diagnostic.cjs');
+const enabled=process.platform==='win32';
+async function fixture(fn){const root=fs.mkdtempSync(path.join(os.tmpdir(),'command-terrain-guard-'));try{const options={serverExe:path.join(root,'ArmaReforgerServerDiag.exe'),addonsDir:path.join(root,'addons'),queryFile:path.join(root,'query.json'),workDir:path.join(root,'uncreated-output')};fs.writeFileSync(options.serverExe,'never execute this fixture');fs.mkdirSync(options.addonsDir);fs.writeFileSync(options.queryFile,'{}');await fn(options);a.equal(fs.existsSync(options.workDir),false);}finally{fs.rmSync(root,{recursive:true,force:true});}}
+test('diagnostic rejects game clients before creating a profile',{skip:!enabled},()=>fixture(async options=>{options.serverExe=path.join(path.dirname(options.serverExe),'ArmaReforgerSteam.exe');await a.rejects(()=>run(options),/game clients/);}));
+test('diagnostic rejects unsafe memory limits before starting anything',{skip:!enabled},()=>fixture(async options=>{for(const memoryLimitMiB of [0,499,2001,NaN,1000.1])await a.rejects(()=>run({...options,memoryLimitMiB}),/Memory limit/);}));
+test('diagnostic validates query contracts before creating a profile',{skip:!enabled},()=>fixture(async options=>{await a.rejects(()=>run(options));fs.writeFileSync(options.queryFile,JSON.stringify({enabled:true,version:1,world:{addonId:'58D0FB3206B6F859',guid:'55A3176BBDD01AAE',path:'worlds/Eden/EmptyEden.ent'},samples:[{worldX:6500,worldZ:6500,surfaceY:999}]}));await a.rejects(()=>run(options),/cannot assert/);}));
+test('diagnostic bounds files before parsing or native execution',{skip:!enabled},()=>fixture(async options=>{fs.writeFileSync(options.queryFile,' '.repeat(256*1024+1));await a.rejects(()=>run(options),/256 KiB/);}));

@@ -1,0 +1,78 @@
+{
+  "checkpoint": "native-everon-terrain",
+  "engineVersion": "1.8.0.13",
+  "world": {
+    "addonId": "58D0FB3206B6F859",
+    "guid": "55A3176BBDD01AAE",
+    "path": "worlds/Eden/EmptyEden.ent"
+  },
+  "observedWorldFile": "worlds/eden/emptyeden.ent",
+  "samples": [
+    {
+      "worldX": 4241.47021484375,
+      "worldZ": 9469.759765625,
+      "surfaceY": -6.5279083251953125
+    },
+    {
+      "worldX": 4830.77001953125,
+      "worldZ": 12279.2001953125,
+      "surfaceY": 13.012908935546875
+    },
+    {
+      "worldX": 6500.0,
+      "worldZ": 6500.0,
+      "surfaceY": 161.875
+    }
+  ],
+  "scope": "Actual native GetSurfaceY in installed EmptyEden; not full object scene, live attestation, building floors, navmesh or water placement validation",
+  "runner": {
+    "success": true,
+    "serverStopped": true,
+    "memoryLimitMiB": 1000,
+    "timeoutSeconds": 90,
+    "peakWorkingSetMiB": 461.71,
+    "reportValidatedByDesktop": true,
+    "worldGuidVerified": false,
+    "liveSessionAttested": false,
+    "sampleCount": 3
+  },
+  "negativeChecks": {
+    "wrong-addon": {
+      "rejected": true,
+      "observationWritten": false,
+      "serverStopped": true
+    },
+    "wrong-path": {
+      "rejected": true,
+      "observationWritten": false,
+      "serverStopped": true
+    },
+    "shortened-packed-path": {
+      "rejected": true,
+      "observationWritten": false,
+      "serverStopped": true
+    }
+  },
+  "runnerGuardTests": {
+    "passed": 4,
+    "cases": [
+      "game client blocked",
+      "memory limits bounded",
+      "query validated before profile/launch",
+      "oversized query blocked"
+    ]
+  },
+  "limits": {
+    "fullEveronScene": "Stopped during terrain loading after sampled working set reached 2102.7 MiB, exceeding 2000 MiB limit; no report",
+    "prefabOnlyFixture": "Terrain prefab alone returned -256 sentinel values and was not accepted as real Everon evidence",
+    "runtimeGuid": "GetPath strips supplied GUID; scene Resource.Load and LoadContainer did not expose a usable canonical scene resource. Exact GUID authority remains unresolved.",
+    "namespace": "Packed $AddonID: world paths now cross-check GameProject.GetAddonID(expectedAddonGuid), then compare the relative path. Loose absolute paths still use path matching; no equivalent ownership attestation is claimed. Packed paths require exact full addon-relative equality; shortened suffixes reject.",
+    "workbench": "No new Workbench retry; previous startup access violation remains unresolved.",
+    "runnerRepair": "Initial successful sampling result misreported signal termination as not stopped. Exit-code/signal handling corrected; final run verified cleanup.",
+    "publicRelease": "Source checkpoint only; production Workshop and desktop package unchanged."
+  },
+  "gameClientLaunched": false,
+  "tunnel": false,
+  "nativeSourceSha256": "68754ab1c453ef4bfd1600ea5da711459d0135a859b6aee20cab18bf9e5c8e91",
+  "resourceDatabaseSha256": "dbd89e9ca8f6e95e70bd7c9caf65b2088d4c204a9661060a47ec502df1da096d"
+}

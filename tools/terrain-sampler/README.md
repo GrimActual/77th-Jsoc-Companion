@@ -8,7 +8,7 @@ This is a separate opt-in development tool, not the Workshop bridge update. It r
 2. Export terrain sampler query saves COMMAND-terrain-query.json through the native Save dialog. It includes the current selected unit/route positions, deduplicated exact coordinates and zero placeholders, not source altitudes or asserted ground heights.
 3. Make an isolated development scenario/project that depends on this diagnostic addon and the intended world's addons, or add its Scripts/Game file to your isolated test project. Do not copy the empty-world test fixture into your real mission. Do not publish this tool over the Workshop bridge.
 4. Put the exported query in that server profile's data directory as $profile:COMMAND-terrain-query.json. The explicit enabled:true flag is required. Use a fresh profile/output file to avoid confusing a prior report; a rejected query does not overwrite an older report.
-5. Start your intended development world. One second after game-mode start, the server-only sampler reads the request, compares the loaded world path and writes $profile:COMMAND-terrain-observation.json. Wrong paths or invalid coordinates produce no new report. No client launch or public tunnel is required by the tool.
+5. Start your intended development world. One second after world initialization (including diagnostic worlds with no game mode), the server-only sampler reads the request, compares the loaded world path and writes $profile:COMMAND-terrain-observation.json. Wrong paths or invalid coordinates produce no new report. No client launch or public tunnel is required by the tool.
 6. Load that report into Companion, review its origin/world/height policy and Preview again. Missing selected positions block sampled planning import. Remove/disable the query and stop the isolated server afterward.
 
 The native check observes the loaded world path. Addon ID and GUID are still declarations from the query; the sampler does not independently authenticate them or prove that the world contains the Everon terrain shown in the planner. Imported JSON is not signed or authenticated live state. It does not prove terrain availability, current session identity, collision/building-floor placement, navmesh validity, freshness or safe spawning. Native world-GUID/authority enforcement remains a future bridge capability.
@@ -22,3 +22,33 @@ Workbench PC/WORKBENCH validation attempts crashed at startup with access violat
 The initial runtime lookup tried Resource.Load on an absolute world filename, then on the declared scene resource. Those scene loads did not yield usable prefab resources. The final tool compares the engine-observed world path directly and explicitly keeps addon/GUID as declarations. It does not claim native resource GUID resolution that the test did not establish.
 
 Primary API references: [Game.GetWorldFile](https://community.bistudio.com/wikidata/external-data/arma-reforger/EnfusionScriptAPIPublic/interfaceGame.html), [BaseWorld.GetSurfaceY](https://community.bistudio.com/wikidata/external-data/arma-reforger/EnfusionScriptAPIPublic/interfaceBaseWorld.html). Query/observation examples use synthetic identities; replace them with your own metadata.
+
+
+## Real Everon terrain checkpoint — 15 October 2026
+
+The installed 1.8.0.13 resource database identified the lightweight `{55A3176BBDD01AAE}worlds/Eden/EmptyEden.ent` world in addon `58D0FB3206B6F859`. Actual diagnostic-server sampling returned -6.527908 at X4241.47/Z9469.76, 13.012909 at X4830.77/Z12279.20, and 161.875 at X6500/Z6500. Coordinates in the report reflect native float precision. This validates actual terrain API sampling/serialization/desktop consumption at those points, not island-wide accuracy, scenario compatibility, water safety or building floors. `examples/TERRAIN-OBSERVATION-EVERON-1.8.0.13.json` preserves the actual report; its world GUID remains a declaration, not a signed engine attestation.
+
+Packed worlds use `$AddonID:relative/path`. The sampler now checks that namespace against `GameProject.GetAddonID(expectedAddonGuid)` before comparing the relative path. Wrong-addon and wrong-path queries produced no report. Loose absolute paths still only establish path matching. `ResourceName.GetPath()` returned the same path for correct and deliberately wrong GUIDs; it cannot verify a GUID. Scene container loading did not provide a usable canonical scene resource either. Therefore all imported reports remain unattested and the existing deployment block stays in place.
+
+The full Eden scene exceeded the 2,000 MiB sampled working-memory limit and was stopped without output. The lightweight world sampled successfully at about 462 MiB; the final reusable runner peaked at 668.1 MiB with a 1,000 MiB limit. Different fixture content makes these scope measurements, not an app performance comparison. No full-scene stability claim follows. A terrain prefab without its world data returned -256 and was not used as real elevation evidence.
+
+### Bounded Windows diagnostic runner
+
+`run-diagnostic.cjs` accepts five positional arguments: absolute diagnostic-server executable, absolute addons directory, absolute query JSON, absolute work directory, and optional memory limit in MiB (default 1000, allowed 500–2000). Use your Node installation to run it. Example with paths adjusted for your machine:
+
+```powershell
+node .\tools\terrain-sampler\run-diagnostic.cjs "D:\ReforgerServer\ArmaReforgerServerDiag.exe" "D:\ReforgerServer\addons" "D:\Tests\COMMAND-terrain-query.json" "D:\Tests\terrain-results" 1000
+```
+
+Use `EVERON-QUERY-EXAMPLE.json` only with a matching installed game version/resources. The runner validates the query before creating a profile; accepts only the diagnostic-server filename; copies this diagnostic addon into a fresh attempt directory; samples working memory roughly every two seconds; stops above the sampled threshold or a 90-second sampling deadline; validates returned sample identities/positions; and terminates only its own server process. Monitoring is sampled, so the threshold is not a hard OS memory reservation. Startup/shutdown and a memory-monitor call can add a few seconds beyond the deadline. Native source/logs and result.json remain in the attempt directory; successful runs also copy the observation beside result.json. Exit code zero requires sampling and server cleanup to succeed. It never starts Workbench, the game client or a tunnel.
+
+No production addon update or desktop setting is required. These are developer diagnostics and imported planning observations only. They do not unlock native deployment. Current Sarge/Settings guidance and EN/FR/DE runtime-unverified labels remain accurate and unchanged.
+
+FR : Le diagnostic séparé a mesuré le terrain réel d’EmptyEden. Les fichiers importés ne prouvent ni le GUID actif ni la session ; le déploiement reste bloqué pour ce contexte. Aucun changement du mod Workshop n’est requis.
+
+DE: Das separate Diagnosewerkzeug hat das echte EmptyEden-Gelände vermessen. Importierte Dateien bestätigen weder die aktive Welt-GUID noch die Sitzung; die Bereitstellung mit diesem Kontext bleibt gesperrt. Kein Workshop-Mod-Update erforderlich.
+
+Evidence: `docs/test-evidence/native-everon-terrain.json`. Remaining work: exact native world GUID and parent-terrain lineage, session-bound capability negotiation, approval-time enforcement and explicit water/building policy. Previous roadmap items remain intact.
+
+
+Final packed-path boundary check: a shortened addon-relative suffix was rejected without a report. The stricter source then sampled all three points successfully at 461.71 MiB sampled peak, validated report positions and confirmed server cleanup. The earlier 668.1 MiB runner result is retained above as observed variation, not a memory guarantee. No desktop renderer changes were made, so previously completed desktop performance gates were not repeated.

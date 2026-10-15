@@ -32,9 +32,33 @@ class COMMAND_TerrainSampler
         if (!input.ReadValue("enabled",enabled) || !enabled || !input.ReadValue("version",version) || version!=1 || !input.ReadValue("world",identity) || !identity || !input.ReadValue("samples",samples) || samples.Count()<1 || samples.Count()>300) { Print("[COMMAND TERRAIN] Invalid query"); return; }
         if (!HexId(identity.addonId) || !HexId(identity.guid) || identity.path.Length()<5 || identity.path.Length()>512 || identity.path.Contains("..") || identity.path.Contains(":") || identity.path.Contains("\\")) { Print("[COMMAND TERRAIN] Invalid identity"); return; }
         PrintFormat("[COMMAND TERRAIN] Raw world=%1 subscene=%2",GetGame().GetWorldFile(),GetGame().GetWorld().GetSubSceneName(0));
-        string rawWorld=GetGame().GetWorldFile(); rawWorld.Replace("\\","/"); rawWorld.ToLower(); string suffix="/"+identity.path; suffix.ToLower(); string relative=identity.path; relative.ToLower(); if (rawWorld!=relative && (rawWorld.Length()<suffix.Length() || rawWorld.Substring(rawWorld.Length()-suffix.Length(),suffix.Length())!=suffix)) { Print("[COMMAND TERRAIN] Loaded world path mismatch"); return; }
+        string rawWorld=GetGame().GetWorldFile();
+        rawWorld.Replace("\\","/");
+        // Packed worlds are reported as $AddonID:relative/path, not an absolute file.
+        // Check the loaded namespace against the expected loaded addon before stripping it.
+        bool packedWorld=rawWorld.Length()>0 && rawWorld.Substring(0,1)=="$";
+        if (packedWorld)
+        {
+            int colon=rawWorld.IndexOf(":");
+            string addonName=GameProject.GetAddonID(identity.addonId);
+            if (colon<2 || addonName.IsEmpty() || rawWorld.Substring(1,colon-1)!=addonName)
+            {
+                Print("[COMMAND TERRAIN] Loaded addon namespace mismatch");
+                return;
+            }
+            rawWorld=rawWorld.Substring(colon+1,rawWorld.Length()-colon-1);
+        }
+        rawWorld.ToLower();
+        string relative=identity.path; relative.ToLower();
+        string suffix="/"+relative;
+        bool pathMatches=rawWorld==relative;
+        // Packed paths are already addon-relative: never accept a shortened suffix.
+        if (!packedWorld && rawWorld.Length()>=suffix.Length())
+            pathMatches=pathMatches || rawWorld.Substring(rawWorld.Length()-suffix.Length(),suffix.Length())==suffix;
+        if (!pathMatches) { Print("[COMMAND TERRAIN] Loaded world path mismatch"); return; }
+
         string observed=rawWorld.Substring(rawWorld.Length()-identity.path.Length(),identity.path.Length());
-        Print("[COMMAND TERRAIN] Loaded world path matched; addon and GUID remain declarations");
+        Print("[COMMAND TERRAIN] Loaded world path matched; GUID remains unverified");
         foreach (COMMAND_TerrainGroundSample sample : samples)
         {
             if (!sample || !(sample.worldX>=0 && sample.worldX<=13450) || !(sample.worldZ>=0 && sample.worldZ<=13450)) { Print("[COMMAND TERRAIN] Coordinate rejected"); return; }
@@ -53,14 +77,12 @@ class COMMAND_TerrainSampler
         PrintFormat("[COMMAND TERRAIN] Export saved=%1 samples=%2",saved,samples.Count());
     }
 };
-modded class SCR_BaseGameMode
+// Runs after world initialization even when the diagnostic terrain has no game mode.
+modded class ArmaReforgerScripted
 {
-    override void OnGameStart()
+    override void OnAfterInit(BaseWorld world)
     {
-        super.OnGameStart();
+        super.OnAfterInit(world);
         GetGame().GetCallqueue().CallLater(COMMAND_TerrainSampler.Run,1000,false);
     }
 };
-
-
-
