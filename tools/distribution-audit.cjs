@@ -9,6 +9,7 @@ function inspect(relative,bytes,{runtime=false}={}){
   let value;try{value=JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/,''));}catch{issues.push('invalid-evidence-json');return issues;}
   function walk(v){if(!v||typeof v!=='object')return;for(const [k,x] of Object.entries(v)){if(/^(privateCorpora|privateSources|privateProjects)$/i.test(k)&&x&&(Array.isArray(x)?x.length:Object.keys(x).length))issues.push('private-test-details');if(/^(sourceText|rawSource|sourceBody|sourceCode|snippet)$/i.test(k)&&typeof x==='string'&&x.length)issues.push('embedded-source-body');if(k==='files'&&Array.isArray(x)&&x.some(f=>f&&typeof f.text==='string'))issues.push('embedded-source-package');if(typeof x==='object')walk(x);}}
   walk(value);
+  if(typeof value.schema==='string'&&value.schema.startsWith('command-')&&/(sqf|source|diagnostic)/.test(value.schema)&&(value.files||value.reads||value.controlContextReview||value.symbols||value.symbolIdentities))issues.push('captured-review-report');
   if(/corpus/i.test(base)&&value.sourceIncluded!==false&&!(Array.isArray(value)&&value.every(row=>/^(scenario-v[12]|journal-v2|tracked-batch-v3)\.schema\.json$/.test(row.schema))))issues.push('external-corpus-record');
  }
  return [...new Set(issues)];

@@ -715,3 +715,24 @@ The additive next 100 steps are recorded in docs/NEXT-100-STEPS.md. Private thir
 ## Next-100 implementation checkpoint — 16 October 2026
 
 Added explicit folder preview, shared-header capture, virtual-mount repair, navigable include connections, saved non-source review controls, unchanged-report reuse, bounded decimal conditional review, source-linked comparison, read-only generated project preview, compatibility status and a public distribution exclusion gate. Asset search adds category aliases, naval/support hints and filtered category counts. Sarge and EN/FR/DE guidance follow the new controls. These are development additions, not completion of all 100 steps or stable-release approval. See docs/NEXT100-DELIVERY.md and docs/NEXT100-PROGRESS.md (paths relative to repository root). All existing roadmap goals remain.
+
+
+## Advisory initialization and symbol checkpoint — 16 October 2026
+
+Added bounded background path review for supported literal writes, branch intersections and zero-iteration loops; unknown effects and caller contexts remain manual. Added revision-bound symbol provenance, nested forEach body candidates, source-linked paged UI and explicit local export. Reports retain runtime/type/lowering authority as false and do not mutate the original Types snapshot or mission state. General CFG/type inference and native switch/loop generation remain pending. Sarge and EN/FR/DE guidance cover the optional Types panel. See docs/NEXT100-INITIALIZATION.md. All existing roadmap items remain.
+
+### Asset browser organization — 16 October 2026
+
+Complete-vehicle filters now exclude vehicle components, wrecks and base templates. These technical entries have separate categories and remain hidden by default; selecting a technical category enables their visibility. Props and structures take precedence over imported vehicle icon hints. Existing resource identities and assigned-unit snapshots are unchanged. Sarge and French/German guidance describe the filters. Classification remains a catalog hint, not proof of native spawnability.
+
+Validation: six browser tests and three localization tests passed. An isolated offline Electron fixture passed vehicle/part separation, technical-category visibility, locale switching and unchanged mission data with no page errors. On the same 2,721-entry vanilla catalog, the default vehicle list narrowed from 570 to 198 candidates. The short local classification/filter measurements are recorded in docs/test-evidence/asset-browser-organization.json; they are not sustained-performance or native-spawning certification.
+
+
+### Named tracking and default faction organization
+
+Adds catalog-only faction organization and negotiated live label/faction/kind telemetry. Player names come from the server player manager. Unknown/legacy feeds remain unidentified. See docs/NAMED-TRACKING-AND-FACTIONS.md; native and real-session acceptance are recorded separately.
+
+
+### Reviewed infantry route checkpoint
+
+Companion followon.4 and native bridge 0.8.0 candidate add 1–16 ordered map waypoints, full host review, separate capability negotiation and ownership-safe replacement/cancellation. Native installation/lifecycle gates passed; normal-terrain travel remains an acceptance test. AI labels now read AI while player names are retained. See docs/INFANTRY-ROUTES-PILOT.md. Existing goals remain unchanged.

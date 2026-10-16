@@ -1,22 +1,30 @@
 /* Typed native orders. Capabilities distinguish existing movement from the tactical extension. */
 (function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.CompanionAIOrderContract=api;})(globalThis,function(){
 'use strict';
-const CAPABILITY='ai-orders-v1',TACTICAL_CAPABILITY='ai-tactical-v1',MAX_HOLD_SECONDS=300;
-const kinds=Object.freeze(['ai-move','ai-hold','ai-defend','ai-halt']);
+const CAPABILITY='ai-orders-v1',TACTICAL_CAPABILITY='ai-tactical-v1',MAX_HOLD_SECONDS=300,ROUTE_CAPABILITY='ai-routes-v1',MAX_ROUTE_POINTS=16;
+const kinds=Object.freeze(['ai-move','ai-hold','ai-defend','ai-halt','ai-route']);
 const pointKind=kind=>kind==='ai-move'||kind==='ai-defend';
-const capability=kind=>kind==='ai-defend'||kind==='ai-halt'?TACTICAL_CAPABILITY:CAPABILITY;
+const capability=kind=>kind==='ai-route'?ROUTE_CAPABILITY:kind==='ai-defend'||kind==='ai-halt'?TACTICAL_CAPABILITY:CAPABILITY;
 function validate(raw){
  if(!raw||typeof raw!=='object'||Array.isArray(raw)||![Object.prototype,null].includes(Object.getPrototypeOf(raw)))throw Error('Invalid AI order');
  for(const k of Reflect.ownKeys(raw)){const d=Object.getOwnPropertyDescriptor(raw,k);if(typeof k!=='string'||!d||!('value' in d)||!d.enumerable)throw Error('Unsupported AI order fields');}
  if(!kinds.includes(raw.kind)||raw.version!==2)throw Error('Unsupported AI order');
- const keys=['version','requestId','kind','targetRequestId','unitId',...(pointKind(raw.kind)?['worldX','worldZ']:[]),...(['ai-hold','ai-defend'].includes(raw.kind)?['holdSeconds']:[])];
+ const keys=['version','requestId','kind','targetRequestId','unitId',...(pointKind(raw.kind)?['worldX','worldZ']:[]),...(['ai-hold','ai-defend'].includes(raw.kind)?['holdSeconds']:[]),...(raw.kind==='ai-route'?['waypoints']:[])];
  if(Object.keys(raw).length!==keys.length||keys.some(k=>!Object.hasOwn(raw,k)))throw Error('Unsupported AI order fields');
  const key=(v,max=64)=>typeof v==='string'&&new RegExp('^[A-Za-z0-9_-]{1,'+max+'}$').test(v);
  if(!key(raw.requestId,40)||!key(raw.targetRequestId,40)||raw.requestId===raw.targetRequestId||!key(raw.unitId))throw Error('Invalid AI order target');
  if(pointKind(raw.kind)&&![raw.worldX,raw.worldZ].every(v=>Number.isFinite(v)&&v>=0&&v<=13500))throw Error('AI order requires supported Everon world coordinates');
  if(['ai-hold','ai-defend'].includes(raw.kind)&&(!Number.isSafeInteger(raw.holdSeconds)||raw.holdSeconds<5||raw.holdSeconds>MAX_HOLD_SECONDS))throw Error('Hold duration must be 5–300 seconds');
+ if(raw.kind==='ai-route'){
+  if(!Array.isArray(raw.waypoints)||raw.waypoints.length<1||raw.waypoints.length>MAX_ROUTE_POINTS)throw Error('Choose 1–16 route waypoints');
+  for(let i=0;i<raw.waypoints.length;i++){const descriptor=Object.getOwnPropertyDescriptor(raw.waypoints,String(i));if(!descriptor||!('value' in descriptor))throw Error('Unsupported route point');const p=descriptor.value;
+   if(!p||typeof p!=='object'||Array.isArray(p)||![Object.prototype,null].includes(Object.getPrototypeOf(p))||Reflect.ownKeys(p).length!==2)throw Error('Unsupported route point');
+   for(const k of ['worldX','worldZ']){const d=Object.getOwnPropertyDescriptor(p,k);if(!d||!('value' in d)||!d.enumerable||!Number.isFinite(d.value)||d.value<0||d.value>13500)throw Error('Route requires supported Everon coordinates');}
+   if(i&&p.worldX===raw.waypoints[i-1].worldX&&p.worldZ===raw.waypoints[i-1].worldZ)throw Error('Consecutive route points must differ');
+  }
+ }
  return JSON.parse(JSON.stringify(raw));
 }
-function capabilities(values){if(!Array.isArray(values)||values.length>2||new Set(values).size!==values.length||values.some(v=>![CAPABILITY,TACTICAL_CAPABILITY].includes(v)))throw Error('Unsupported GM capabilities');return [...values];}
-return {validate,capabilities,CAPABILITY,TACTICAL_CAPABILITY,MAX_HOLD_SECONDS,kinds,pointKind,capability};
+function capabilities(values){if(!Array.isArray(values)||values.length>3||new Set(values).size!==values.length||values.some(v=>![CAPABILITY,TACTICAL_CAPABILITY,ROUTE_CAPABILITY].includes(v)))throw Error('Unsupported GM capabilities');return [...values];}
+return {validate,capabilities,CAPABILITY,TACTICAL_CAPABILITY,MAX_HOLD_SECONDS,ROUTE_CAPABILITY,MAX_ROUTE_POINTS,kinds,pointKind,capability};
 });

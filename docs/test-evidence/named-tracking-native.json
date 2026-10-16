@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "scope": "Actual isolated native server and loopback relay with one synthetic GenericEntity; no real player or multiplayer name acceptance",
+  "observed": [
+    {
+      "id": "fixture_object",
+      "x": 0,
+      "z": 0
+    },
+    {
+      "id": "fixture_object",
+      "x": 0,
+      "z": 0,
+      "label": "Synthetic_Name",
+      "faction": "NO_FACTION",
+      "kind": "object"
+    },
+    {
+      "id": "fixture_object",
+      "x": 0,
+      "z": 0,
+      "label": "Synthetic_Renamed",
+      "faction": "NO_FACTION",
+      "kind": "object"
+    }
+  ],
+  "gameClientLaunched": false,
+  "publicTunnel": false,
+  "processStopped": true
+}

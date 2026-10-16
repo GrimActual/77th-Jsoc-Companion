@@ -1,0 +1,10 @@
+{
+  "scope": "One neutral 64-file advisory worker pass after Types capture; includes worker transfer/startup. No native engine or source execution.",
+  "files": 64,
+  "reads": 128,
+  "symbols": 64,
+  "possibleUninitialized": 0,
+  "workerElapsedMs": 102.16,
+  "runtimeVerified": false,
+  "loweringAuthorized": false
+}

@@ -1,8 +1,8 @@
 # Next-100 progress — 16 October 2026
 
-This ledger records actual scope. It does not claim all 100 steps are complete. Complete-existing identifies functionality already present, so it was not rebuilt or counted as a new feature. Outside acceptance remains pending.
+This records delivered scope, not completion of all 100 steps. Complete-existing identifies functionality already present. General runtime/type claims and unimplemented engine features remain pending.
 
-awaiting-external: 10 | complete-existing: 8 | complete-new: 38 | partial: 4 | pending-development: 40
+awaiting-external: 10 | complete-existing: 9 | complete-new: 43 | partial: 5 | pending-development: 33
 
 | Step | Status | Task / evidence |
 | --- | --- | --- |
@@ -32,20 +32,20 @@ awaiting-external: 10 | complete-existing: 8 | complete-new: 38 | partial: 4 | p
 | 24 | complete-new | Add bounded numeric conditional expressions. Bounded decimal literals/defined markers only; named numeric macros and engine parity remain unresolved. |
 | 25 | complete-new | Add explicit diagnostics for unsupported built-in macros.  |
 | 26 | pending-development | Review variadic macro feasibility against actual needs.  |
-| 27 | pending-development | Improve nested control-flow AST coverage.  |
-| 28 | pending-development | Add precise forEach scope representation.  |
+| 27 | complete-new | Improve nested control-flow AST coverage. Added original nested range/while/if/forEach/exitWith AST coverage, preserving manual lowering gates. |
+| 28 | complete-new | Add precise forEach scope representation. Added explicit nested forEach body/parent scope and array-only implicit binding candidates. Dynamic iterable values stay unresolved. |
 | 29 | pending-development | Represent switch cases and fallthrough rules explicitly.  |
 | 30 | complete-existing | Keep unsupported dynamic code visibly manual.  |
-| 31 | pending-development | Add immutable cross-file symbol identities.  |
-| 32 | pending-development | Track lexical shadowing across nested scopes.  |
-| 33 | pending-development | Improve definite-assignment analysis at branch merges.  |
+| 31 | complete-new | Add immutable cross-file symbol identities. Revision-bound SHA-256 identities survive unrelated-file insertion and order changes; they are provenance, not runtime bindings or native GUIDs. |
+| 32 | complete-existing | Track lexical shadowing across nested scopes. Existing lexical shadow candidates retained and verified in new nested initialization/symbol tests. |
+| 33 | complete-new | Improve definite-assignment analysis at branch merges. Added optional advisory literal-write path analysis with branch intersection, zero-iteration loops and conservative unknown-effect barriers. General runtime initialization remains unproved. |
 | 34 | pending-development | Represent supported array element types explicitly.  |
 | 35 | partial | Add typed function return-path diagnostics. Existing supported typed functions reject invalid return paths; general source diagnostics remain pending. |
 | 36 | pending-development | Extend call graph diagnostics for unresolved targets.  |
 | 37 | pending-development | Model mutation effects across supported pure calls.  |
 | 38 | pending-development | Introduce explicit authority and lifetime annotations in IR.  |
 | 39 | partial | Version IR contracts and upgrade rules. Existing IR is versioned and strictly validated; upgrade policy is pending. |
-| 40 | pending-development | Export a readable source-to-IR trace.  |
+| 40 | partial | Export a readable source-to-IR trace. Source-linked read-to-symbol provenance trace is delivered; complete AST/operator/effect-to-target tracing remains pending. |
 | 41 | complete-new | Add generated-project preview before writing files.  |
 | 42 | partial | Provide a generated component ownership template. Manual ownership pattern provided; no native component hooks are guessed or claimed compiled. |
 | 43 | complete-new | Add explicit lifecycle integration instructions per job. Each generated job now has explicit lifecycle and result-handling instructions. |
@@ -67,7 +67,7 @@ awaiting-external: 10 | complete-existing: 8 | complete-new: 38 | partial: 4 | p
 | 59 | pending-development | Add elevation-source provenance to deployment review.  |
 | 60 | complete-existing | Keep PBO inventories separate from binary terrain conversion. Existing text/binary intake separation retained. |
 | 61 | awaiting-external | Complete user testing of current move and defend orders.  |
-| 62 | pending-development | Add reviewed chained waypoint orders.  |
+| 62 | complete-new | Reviewed 1–16-point infantry routes: contract/UI/native installation, replacement/cancel/foreign-order guards passed. Normal-terrain travel acceptance remains separate. |
 | 63 | pending-development | Add native follow-owner behavior.  |
 | 64 | pending-development | Add formation selection backed by verified engine adapters.  |
 | 65 | pending-development | Add stance selection backed by verified engine adapters.  |
@@ -107,10 +107,6 @@ awaiting-external: 10 | complete-existing: 8 | complete-new: 38 | partial: 4 | p
 | 99 | awaiting-external | Resolve remaining release blockers and update Sarge plus guides.  |
 | 100 | awaiting-external | Publish the next stable release with matching source and evidence.  |
 
-Hosted source checkpoint: `667fc46f0ba5285061670c9441a8d1f2874d325f`.
+The first source checkpoint passed hosted Linux/Windows and distribution checks. The initialization checkpoint has focused local worker and real desktop coverage; its matching hosted result will be recorded separately.
 
-[Linux/Windows compiler checks](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38889324208) and [distribution gate](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38889324256) passed.
-
-The remaining 40 pending-development items require further implementation. Four other items are partial. Ten require external acceptance or depend on it; they are not the only remaining work.
-
-See NEXT100-DELIVERY.md for supported scope and the next100 neutral evidence files for observations.
+See NEXT100-DELIVERY.md and NEXT100-INITIALIZATION.md for exact boundaries. The 34 pending-development items still need implementation; five other items are partial and ten await outside acceptance.

@@ -31,6 +31,48 @@ class JSOC_ORBAT_TrackedBridge : JSOC_ORBAT_DedicatedBridge
     protected int m_Batches;
     protected int m_Recovery;
 
+
+    // Advertised by the relay only after an accepted legacy-shaped batch.
+    protected bool m_IdentityMetadata;
+    protected ref array<string> m_LastIdentities = {};
+    void JSOC_ORBAT_TrackedBridge() { m_LastIdentities.Resize(60); }
+    override void Halt() { m_IdentityMetadata = false; super.Halt(); }
+    override void ReceiveResult(int code, string body)
+    {
+        if (m_Active && code == 200)
+        {
+            JsonLoadContext json = new JsonLoadContext(); int version;
+            bool supported = json.LoadFromString(body) && json.ReadValue("identityMetadata", version) && version == 1;
+            if (supported != m_IdentityMetadata) { m_IdentityMetadata = supported; m_Full = true; }
+        }
+        Result(code);
+    }
+    protected string IdentityState(int index, IEntity target, vector position)
+    {
+        string label = target.GetName(); string factionKey = "NO_FACTION"; string kind = "object";
+        PlayerManager players = GetGame().GetPlayerManager(); int playerId;
+        if (players) playerId = players.GetPlayerIdFromControlledEntity(target);
+        SCR_EditableCharacterComponent character = SCR_EditableCharacterComponent.Cast(target.FindComponent(SCR_EditableCharacterComponent));
+        SCR_EditableVehicleComponent vehicle = SCR_EditableVehicleComponent.Cast(target.FindComponent(SCR_EditableVehicleComponent));
+        Faction faction;
+        if (character) { kind = "ai"; faction = character.GetFaction(); }
+        if (vehicle) { kind = "vehicle"; faction = vehicle.GetFaction(); }
+        if (!faction)
+        {
+            FactionAffiliationComponent affiliation = FactionAffiliationComponent.Cast(target.FindComponent(FactionAffiliationComponent));
+            if (affiliation) faction = affiliation.GetAffiliatedFaction();
+        }
+        if (faction && SafeKey(faction.GetFactionKey(),64)) factionKey = faction.GetFactionKey();
+        if (playerId > 0) { kind = "player"; label = players.GetPlayerName(playerId); }
+        label.Replace("\n", " "); label.Replace("\r", " "); label.Replace("\t", " ");
+        if (label.IsEmpty()) label = m_Ids[index];
+        if (label.Length() > 64) label = label.Substring(0,64);
+        JsonSaveContext json = new JsonSaveContext();
+        json.WriteValue("id",m_Ids[index]); json.WriteValue("x",position[0]); json.WriteValue("z",position[2]);
+        json.WriteValue("label",label); json.WriteValue("faction",factionKey); json.WriteValue("kind",kind);
+        return json.SaveToString();
+    }
+
     override void Load()
     {
         if (!Replication.IsServer()) return;
@@ -124,12 +166,16 @@ class JSOC_ORBAT_TrackedBridge : JSOC_ORBAT_DedicatedBridge
                 if (p[0] < -13500 || p[0] > 13500 || p[2] < -13500 || p[2] > 13500) { Halt(); return; }
                 if (!active.IsEmpty()) active += ",";
                 active += string.Format("\"%1\"", m_Ids[i]);
+                string identity = "";
+                if (m_IdentityMetadata) identity = IdentityState(i,target,Vector(0,0,0));
                 vector prior = m_LastPositions[i];
                 float dx = p[0] - prior[0]; float dz = p[2] - prior[2];
-                if (full || !m_HavePosition[i] || dx * dx + dz * dz >= 0.25)
+                if (full || !m_HavePosition[i] || identity != m_LastIdentities[i] || dx * dx + dz * dz >= 0.25)
                 {
                     if (!states.IsEmpty()) states += ",";
-                    states += string.Format("{\"id\":\"%1\",\"x\":%2,\"z\":%3}", m_Ids[i], p[0], p[2]);
+                    if (m_IdentityMetadata) states += IdentityState(i,target,p);
+                    else states += string.Format("{\"id\":\"%1\",\"x\":%2,\"z\":%3}", m_Ids[i], p[0], p[2]);
+                    m_LastIdentities[i] = identity;
                     m_LastPositions[i] = p; m_HavePosition[i] = true;
                 }
             }

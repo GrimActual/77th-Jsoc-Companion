@@ -3,10 +3,10 @@
 class COMMAND_ORBAT_TacticalOrders
 {
     static ResourceName DEFEND = "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et";
-    static SCR_DefendWaypoint CreateDefend(SCR_AIGroup group, AIWaypoint previous, float worldX, float worldZ, int seconds)
+    static SCR_DefendWaypoint CreateDefend(SCR_AIGroup group, AIWaypoint previous, float worldX, float worldZ, int seconds, array<AIWaypoint> ownedRoute = null)
     {
         if (!group || seconds < 5 || seconds > 300 || !(worldX >= 0 && worldX <= 13500) || !(worldZ >= 0 && worldZ <= 13500)) return null;
-        if (!JSOC_ORBAT_AIOrders.Check(group,previous).IsEmpty()) return null;
+        if (!JSOC_ORBAT_AIOrders.Check(group,previous,ownedRoute).IsEmpty()) return null;
         Resource resource = Resource.Load(DEFEND);
         if (!resource || !resource.IsValid() || !resource.GetResource() || resource.GetResource().GetResourceName() != DEFEND) return null;
         EntitySpawnParams parameters = new EntitySpawnParams(); parameters.TransformMode = ETransformMode.WORLD;

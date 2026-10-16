@@ -78,3 +78,9 @@ The current contract rejects more than 60 entities; it is not increased by this 
 ## Rebuild an asset index for your own addon
 
 Use tools/vanilla-assets/README.md as the read-only extraction walkthrough. Open its separate extraction project in Workbench with the relevant installed addon directories; do not republish that tool as the bridge. Run the documented ResourceManager plugin with an isolated profile and local Steam already open. Feed the complete diagnostic log into build-catalog.cjs, then review the generated catalog/index through the desktop importer. Never invent GUIDs or treat folder classification as native spawn proof. Mod authors must supply their own resource namespace/dependency context; the bundled vanilla snapshot is not a modded-asset index.
+
+### Asset browser organization — 16 October 2026
+
+Complete-vehicle filters now exclude vehicle components, wrecks and base templates. These technical entries have separate categories and remain hidden by default; selecting a technical category enables their visibility. Props and structures take precedence over imported vehicle icon hints. Existing resource identities and assigned-unit snapshots are unchanged. Sarge and French/German guidance describe the filters. Classification remains a catalog hint, not proof of native spawnability.
+
+Validation: six browser tests and three localization tests passed. An isolated offline Electron fixture passed vehicle/part separation, technical-category visibility, locale switching and unchanged mission data with no page errors. On the same 2,721-entry vanilla catalog, the default vehicle list narrowed from 570 to 198 candidates. The short local classification/filter measurements are recorded in docs/test-evidence/asset-browser-organization.json; they are not sustained-performance or native-spawning certification.

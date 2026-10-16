@@ -65,7 +65,7 @@ function createRelay({clock = Date.now, maxSessions = 100, lifetime = 3600000, s
       if (!s) return reply(401, {error:'Invalid pairing code'});
       if (s.locked) return reply(423, {error:'Session locked'});
       function invalid(message) { if (++s.invalid >= 3) { s.locked=true; s.point=null; if(s.tracked)s.tracked.entities.clear(); } return reply(s.locked?423:400,{error:message}); }
-      if(req.url==='/batch'){if(s.protocol!==3)return invalid('Batch protocol was not authorised');try{const result=Tracked.apply(s.tracked,body,clock());const {status,...data}=result;return reply(status,{ok:status===200,...data});}catch(e){return invalid(e.message);}}
+      if(req.url==='/batch'){if(s.protocol!==3)return invalid('Batch protocol was not authorised');try{const result=Tracked.apply(s.tracked,body,clock());const {status,...data}=result;return reply(status,{ok:status===200,...(status===200?{identityMetadata:1}:{}),...data});}catch(e){return invalid(e.message);}}
       if(s.protocol===3||size>2048)return invalid('Expected an authorised batch endpoint');
       const keys=Object.keys(body).sort().join(',');
       const legacy=keys==='token,x,z';

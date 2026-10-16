@@ -221,3 +221,13 @@ Source is never executed to infer meaning. Generated jobs are not auto-started; 
 ## Next-100 implementation checkpoint — 16 October 2026
 
 Added explicit folder preview, shared-header capture, virtual-mount repair, navigable include connections, saved non-source review controls, unchanged-report reuse, bounded decimal conditional review, source-linked comparison, read-only generated project preview, compatibility status and a public distribution exclusion gate. Asset search adds category aliases, naval/support hints and filtered category counts. Sarge and EN/FR/DE guidance follow the new controls. These are development additions, not completion of all 100 steps or stable-release approval. See docs/NEXT100-DELIVERY.md and docs/NEXT100-PROGRESS.md (paths relative to repository root). All existing roadmap goals remain.
+
+
+## Advisory initialization and symbol checkpoint — 16 October 2026
+
+Added bounded background path review for supported literal writes, branch intersections and zero-iteration loops; unknown effects and caller contexts remain manual. Added revision-bound symbol provenance, nested forEach body candidates, source-linked paged UI and explicit local export. Reports retain runtime/type/lowering authority as false and do not mutate the original Types snapshot or mission state. General CFG/type inference and native switch/loop generation remain pending. Sarge and EN/FR/DE guidance cover the optional Types panel. See docs/NEXT100-INITIALIZATION.md. All existing roadmap items remain.
+
+
+### Reviewed infantry route checkpoint
+
+Companion followon.4 and native bridge 0.8.0 candidate add 1–16 ordered map waypoints, full host review, separate capability negotiation and ownership-safe replacement/cancellation. Native installation/lifecycle gates passed; normal-terrain travel remains an acceptance test. AI labels now read AI while player names are retained. See docs/INFANTRY-ROUTES-PILOT.md. Existing goals remain unchanged.

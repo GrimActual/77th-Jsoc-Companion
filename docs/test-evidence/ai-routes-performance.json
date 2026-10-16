@@ -1,0 +1,20 @@
+{
+  "scope": "One matched offline Electron sample with 60 named synthetic live markers; single destination vs 16-point route; 3 seconds each, not sustained multiplayer performance",
+  "before": {
+    "fps": 60.28,
+    "p95FrameMs": 16.8,
+    "stallsOver100ms": 0
+  },
+  "after": {
+    "fps": 60.36,
+    "p95FrameMs": 16.8,
+    "stallsOver100ms": 0
+  },
+  "overlayCycles": 100,
+  "overlayCycleMs": 92.5,
+  "transientMapDOM": 512,
+  "tooltipFadeWaitMs": 500,
+  "mapDOMBefore": 512,
+  "mapDOMAfter": 512,
+  "missionUnchanged": true
+}

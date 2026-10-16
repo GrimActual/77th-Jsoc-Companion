@@ -23,7 +23,7 @@ class JSOC_ORBAT_AIOrders
         }
         return false;
     }
-    static string Check(SCR_AIGroup group, AIWaypoint ownedWaypoint)
+    static string Check(SCR_AIGroup group, AIWaypoint ownedWaypoint, array<AIWaypoint> ownedRoute = null)
     {
         if (!group) return "Target must be a bridge-created infantry AI group";
         if (!group.GetGroupUtilityComponent()) return "Native group AI utility and waypoint processing are unavailable";
@@ -41,7 +41,7 @@ class JSOC_ORBAT_AIOrders
         }
         if (!group.GetLeaderEntity()) return "AI group leader is not ready";
         array<AIWaypoint> waypoints = {}; group.GetWaypoints(waypoints);
-        foreach (AIWaypoint waypoint : waypoints) if (waypoint && waypoint != ownedWaypoint) return "Existing in-game waypoints must be cleared by the host first";
+        foreach (AIWaypoint waypoint : waypoints) if (waypoint && waypoint != ownedWaypoint && (!ownedRoute || ownedRoute.Find(waypoint) < 0)) return "Existing in-game waypoints must be cleared by the host first";
         return "";
     }
     static AIWaypoint Create(JSOC_ORBAT_GMRequest request, SCR_AIGroup group)

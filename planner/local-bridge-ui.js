@@ -3,7 +3,7 @@
  const api=window.plannerLocalBridge,nav=document.getElementById('settingsNav'),content=document.getElementById('settingsContent');if(!nav)return;
  const button=document.createElement('button');button.id='localBridgeSettings';button.innerHTML='<strong>Live bridge</strong><small>Connect your game to the planner</small>';nav.append(button);
  const section=document.createElement('section');section.id='liveBridgePanel';section.hidden=true;
- section.innerHTML=`<h3>Live bridge</h3><p>Connect your host-controlled character from Reforger, including GeForce NOW. No hosting account or card is needed.</p>
+ section.innerHTML=`<h3>Live bridge</h3><p>Connect selected players and AI from Reforger, including GeForce NOW. No hosting account or card is needed.</p>
  <button id="freeBridgeStart" type="button">Start free connection</button> <button id="localBridgeStop" type="button">Stop connection</button>
  <p id="localBridgeStatus" role="status" aria-live="polite">Off</p>
  <label><span id="bridgeAddressLabel">1. Address — paste into the GAME’s first field</span><input id="bridgeAddress" readonly autocomplete="off" spellcheck="false"></label><button id="bridgeCopyAddress" type="button">Copy address</button>
@@ -11,7 +11,7 @@
  <p id="bridgeCopyStatus" role="status"></p>
  <p id="bridgeInstructions">In Reforger, press Escape → COMMAND – HOST PAIRING. Paste the address and code, click CONNECT, resume, and control a soldier. Keep this planner and your PC running.</p>
  <p id="localBridgePoint"></p><button id="localBridgeFit" type="button">Find live marker</button>
- <details id="serverProfiles"><summary>Server profiles / Dedicated server (experimental)</summary><p>GM pilot: Host Local players and standard GM-editable AI share 60 slots with faction filters. Reviewed spawn/remove requests require explicit opt-in and in-game approval. Requires the new native candidate; see HOST-GM-PILOT.md.</p><p>The player-source pilot is unpublished. Workshop 0.3.0 tracks named entities; real-player lifecycle validation remains pending. See PLAYER-TRACKING-PILOT.md.</p>
+ <details id="serverProfiles"><summary>Server profiles / Dedicated server (experimental)</summary><p>GM pilot: Host Local players and standard GM-editable AI share 60 slots with faction filters. Reviewed spawn/remove requests require explicit opt-in and in-game approval. Requires the new native candidate; see HOST-GM-PILOT.md.</p><p>Bridge 0.7.0 adds named faction markers with a matching Companion build. Dedicated-server player lifecycle and larger mixed sessions still require broader acceptance testing.</p>
  <p>Dedicated mode supports one named entity or an explicit allowlist of up to 60 entities. Allowlist mode requires the tracking pilot addon and protocol 3 relay. Full scenarios remain experimental. Gameplay ports cannot be used as relay addresses.</p>
  <label>Saved profile<select id="bridgeProfileSelect"><option value="">New profile</option></select></label>
  <label>Profile name<input id="bridgeProfileName" maxlength="80" placeholder="COMMAND Operations Server"></label>
@@ -38,7 +38,7 @@
 
  button.onclick=()=>{$('settingsFeedback').textContent='Connection controls apply immediately.';for(const el of content.children)el.hidden=el!==section;for(const b of nav.children)b.setAttribute('aria-current',String(b===button));};
  nav.addEventListener('click',e=>{if(e.target.closest('button')!==button)section.hidden=true;},true);$('settingsGear').addEventListener('click',()=>section.hidden=true);
- const messages={off:'Off — click Start free connection.',starting:'Starting the public tunnel… Stop cancels startup.',pairing:'Preparing the public connection…',waiting:'Connected to relay — waiting for live data. Paste the address and code into Reforger. A new public address may take a moment to resolve in the game.',connected:'Connected — receiving your character’s position.',stale:'No recent position — resume the game and control a character.',reconnecting:'Connection interrupted — retrying. The stale marker is hidden.',error:'Connection stopped.'};
+ const messages={off:'Off — click Start free connection.',starting:'Starting the public tunnel… Stop cancels startup.',pairing:'Preparing the public connection…',waiting:'Connected to relay — waiting for live data. Paste the address and code into Reforger. A new public address may take a moment to resolve in the game.',connected:'Connected — receiving selected live positions.',stale:'No fresh positions — resume the game and check selected units and enabled factions.',reconnecting:'Connection interrupted — retrying. The stale marker is hidden.',error:'Connection stopped.'};
  function render(s){
   const idle=['off','error','expired','authentication-failed','security-lockout','unsupported','interrupted'].includes(s.status);
   $('bridgeLastReceived').textContent=s.lastReceived?'Last valid position: '+new Date(s.lastReceived).toLocaleString():'No position received in this session';

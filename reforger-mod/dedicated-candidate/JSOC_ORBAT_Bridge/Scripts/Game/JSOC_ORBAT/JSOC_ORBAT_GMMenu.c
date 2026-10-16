@@ -20,7 +20,7 @@ class JSOC_ORBAT_GMHandler : ScriptedWidgetEventHandler
         if (name == "GMPoll") { UnitIndex = 0; GM.Poll(); }
         if (name == "GMApprove" && GM.CanApprove()) GM.Approve();
         if (name == "GMReject" && GM.CanApprove()) GM.Reject();
-        if (name == "GMNext" && GM.Pending && GM.Pending.request && GM.Pending.request.entities.Count() > 0) UnitIndex = (UnitIndex+1) % GM.Pending.request.entities.Count();
+        if (name == "GMNext" && GM.Pending && GM.Pending.request && GM.PreviewCount() > 0) UnitIndex = (UnitIndex+1) % GM.PreviewCount();
         Refresh(); return true;
     }
 };

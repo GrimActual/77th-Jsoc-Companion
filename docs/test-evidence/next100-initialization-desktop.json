@@ -1,0 +1,22 @@
+{
+  "scope": "Actual offline development Electron with an isolated app profile, original neutral sources and real Types/advisory workers; OS pickers substituted.",
+  "bothBranchWritesRecognized": true,
+  "missingBranchFlagged": true,
+  "nestedLoopScopes": true,
+  "revisionBoundSymbolIds": true,
+  "sourceJump": true,
+  "localExport": true,
+  "sourceClearInvalidatesExport": true,
+  "sameSourceReselectionInvalidatesAdvisory": true,
+  "languages": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "narrowWidth": 680,
+  "missionUnchanged": true,
+  "sargeDestination": true,
+  "nativeVerified": false,
+  "loweringAuthorized": false,
+  "pageErrors": []
+}

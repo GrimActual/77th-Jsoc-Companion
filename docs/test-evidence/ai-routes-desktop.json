@@ -1,0 +1,18 @@
+{
+  "scope": "Actual offline Electron, isolated profile; IPC command replies and later map picks substituted. First point uses the actual map click. Native execution tested separately.",
+  "actualMapClick": true,
+  "orderedPreview": true,
+  "removeLastInvalidatesReview": true,
+  "clearRoute": true,
+  "maxPoints": 16,
+  "oldCapabilityDisablesRoutes": true,
+  "languages": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "missionUnchanged": true,
+  "aiLabel": "AI",
+  "playerNamePreserved": true,
+  "pageErrors": []
+}

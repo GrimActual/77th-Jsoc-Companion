@@ -1,0 +1,24 @@
+{
+  "scope": "Offline isolated Electron profile, neutral browser fixture; no spawning or network test",
+  "vehicles": 1,
+  "parts": 2,
+  "extrasEnabled": true,
+  "missionUnchanged": true,
+  "pageErrors": [],
+  "catalogMeasurements": {
+    "before": {
+      "entries": 2721,
+      "classificationMs": 31.35,
+      "meanFilterMs": 0.42,
+      "visibleVehicles": 570,
+      "technicalEntries": 0
+    },
+    "after": {
+      "entries": 2721,
+      "classificationMs": 18.33,
+      "meanFilterMs": 0.23,
+      "visibleVehicles": 198,
+      "technicalEntries": 1189
+    }
+  }
+}

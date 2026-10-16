@@ -1,0 +1,36 @@
+{
+  "scope": "Matched offline development Electron, isolated profiles, 60 synthetic markers, 3-second samples; not sustained performance or a real-player test",
+  "before": {
+    "fps": 60.36,
+    "p95FrameMs": 16.8,
+    "stallsOver100ms": 0,
+    "markers": 60,
+    "sideIcons": 0,
+    "nameVisible": false,
+    "injectedScripts": 0,
+    "missionUnchanged": true,
+    "pageErrors": []
+  },
+  "preliminaryNamedLabels": {
+    "fps": 57.93,
+    "p95FrameMs": 16.8,
+    "stallsOver100ms": 1,
+    "markers": 60,
+    "sideIcons": 60,
+    "nameVisible": true,
+    "injectedScripts": 0,
+    "missionUnchanged": true,
+    "pageErrors": []
+  },
+  "after": {
+    "fps": 57.02,
+    "p95FrameMs": 16.8,
+    "stallsOver100ms": 0,
+    "markers": 60,
+    "sideIcons": 60,
+    "nameVisible": true,
+    "injectedScripts": 0,
+    "missionUnchanged": true,
+    "pageErrors": []
+  }
+}

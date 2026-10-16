@@ -1,0 +1,126 @@
+{
+  "success": true,
+  "scope": "Actual isolated native server, host-approval test driver and loopback relay; one synthetic fireteam, no terrain/navmesh travel or real players",
+  "outcomes": [
+    {
+      "id": "spawn",
+      "phase": "executed",
+      "message": "Approved prefab batch spawned"
+    },
+    {
+      "id": "route3",
+      "phase": "executed",
+      "message": "Native route installed in order; travel and arrival are not confirmed"
+    },
+    {
+      "id": "replace2",
+      "phase": "executed",
+      "message": "Native route installed in order; travel and arrival are not confirmed"
+    },
+    {
+      "id": "move",
+      "phase": "executed",
+      "message": "AI move waypoint accepted; arrival is not confirmed"
+    },
+    {
+      "id": "route16",
+      "phase": "executed",
+      "message": "Native route installed in order; travel and arrival are not confirmed"
+    },
+    {
+      "id": "halt",
+      "phase": "executed",
+      "message": "Companion route cancelled; combat reactions remain enabled"
+    },
+    {
+      "id": "route_again",
+      "phase": "executed",
+      "message": "Native route installed in order; travel and arrival are not confirmed"
+    },
+    {
+      "id": "foreign",
+      "phase": "failed",
+      "message": "Existing in-game waypoints must be cleared by the host first"
+    },
+    {
+      "id": "remove",
+      "phase": "executed",
+      "message": "Bridge-created group removed"
+    }
+  ],
+  "waypointTrace": [
+    "[COMMAND ROUTE TEST] spawn executed count=0 coordinates=",
+    "[COMMAND ROUTE TEST] route3 executed count=3 coordinates= 4250:9450 4260:9460 4270:9470",
+    "[COMMAND ROUTE TEST] replace2 executed count=2 coordinates= 4250:9450 4260:9460",
+    "[COMMAND ROUTE TEST] move executed count=1 coordinates= 4300:9500",
+    "[COMMAND ROUTE TEST] route16 executed count=16 coordinates= 4250:9450 4260:9460 4270:9470 4280:9480 4290:9490 4300:9500 4310:9510 4320:9520 4330:9530 4340:9540 4350:9550 4360:9560 4370:9570 4380:9580 4390:9590 4400:9600",
+    "[COMMAND ROUTE TEST] halt executed count=0 coordinates=",
+    "[COMMAND ROUTE TEST] route_again executed count=2 coordinates= 4250:9450 4260:9460",
+    "[COMMAND ROUTE TEST] foreign failed count=3 coordinates= 4250:9450 4260:9460 4300:9500"
+  ],
+  "gameClientLaunched": false,
+  "publicTunnel": false,
+  "processStopped": true,
+  "sourceFiles": [
+    {
+      "file": "addon.gproj",
+      "sha256": "b2fb398bacfb82613cf129c75c49c1268a7d6cb56c8bf274a86629500d564095"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/COMMAND_ORBAT_RouteOrders.c",
+      "sha256": "f9a80271d225fa686230f868b359b6897321539d794fd03820ccb48dcd2c37aa"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/COMMAND_ORBAT_TacticalOrders.c",
+      "sha256": "4e48458c059ae3674f803e61a38babbc48127f94c0c6b7e4a3b2cb436525a9b6"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_AIOrders.c",
+      "sha256": "319c96e0d854b806f864ef251b6ffbcf76819d116cfe273ad81fd39ac503eef4"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_DedicatedBridge.c",
+      "sha256": "3862359e5686d504b626e7f6910932082d9d0a4fa128b6aca80e03ed92230a12"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_GMMenu.c",
+      "sha256": "2c76e5df74d7a72655ab306f5b90d2743c0eac7e7dc7782bb040a7fb87cfed1e"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostBridge.c",
+      "sha256": "6bc544cbb4950eef8d6d493f2577eefc3f346ddc1d7d81dfe7f1e72f2f4586a9"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostGM.c",
+      "sha256": "61cc7f8ad72d339936d1a7f2b63d4b3740dc9d2dd0898a9d0541b45ff78ea0b2"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostMixed.c",
+      "sha256": "8014117ed6747e0db62a44126554bbdb1aecbbadc85e6e5311bfd06b1f2116e9"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_PairingMenu.c",
+      "sha256": "7607bb76f5f593ddcdab6c4f26944eb5fe6c8d466ecc6ffb44b7101168227920"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_RosterMenu.c",
+      "sha256": "de5bcb0b277cb9243cdda439036a482bc89c183f1f2fa0156c455c75398c2762"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_TrackedBridge.c",
+      "sha256": "7de18b0e2319dd2e4c141bcc007e0de9249d1f9affee3c701417196782461974"
+    },
+    {
+      "file": "UI/layouts/JSOC_ORBAT_GM.layout",
+      "sha256": "f3aedc6e6b7bd6741612eba86ec117b5e521a6345ab5142815d9fc21e0d27a0e"
+    },
+    {
+      "file": "UI/layouts/JSOC_ORBAT_Pairing.layout",
+      "sha256": "c2ad4fa824e54a397597ad39fd4b94da6e6cded598d6a499f6646238db7ac81c"
+    },
+    {
+      "file": "UI/layouts/JSOC_ORBAT_Roster.layout",
+      "sha256": "1d6c96f6e022cc89fd8513f2d989756c87e6eb66e3adf6b1fbdf4522d59cbccb"
+    }
+  ]
+}

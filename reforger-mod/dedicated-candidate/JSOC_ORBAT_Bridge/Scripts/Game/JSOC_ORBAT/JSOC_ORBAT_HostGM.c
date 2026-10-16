@@ -8,6 +8,11 @@ class JSOC_ORBAT_GMEntityIntent
     float worldZ;
     float headingDegrees;
 };
+class COMMAND_ORBAT_RoutePoint
+{
+    float worldX;
+    float worldZ;
+};
 class JSOC_ORBAT_GMRequest
 {
     int version;
@@ -19,6 +24,7 @@ class JSOC_ORBAT_GMRequest
     float worldX;
     float worldZ;
     int holdSeconds;
+    ref array<ref COMMAND_ORBAT_RoutePoint> waypoints = {};
     ref array<ref JSOC_ORBAT_GMEntityIntent> entities = {};
 };
 class JSOC_ORBAT_GMRecord
@@ -31,6 +37,7 @@ class JSOC_ORBAT_GMSpawnGroup
     ref array<IEntity> Entities = {};
     ref array<string> Ids = {};
     ref array<string> UnitIds = {};
+    ref map<string, ref COMMAND_ORBAT_OwnedRoute> Routes = new map<string, ref COMMAND_ORBAT_OwnedRoute>();
     ref map<string, AIWaypoint> Orders = new map<string, AIWaypoint>();
 };
 class JSOC_ORBAT_GMCallback : RestCallback
@@ -55,7 +62,7 @@ class JSOC_ORBAT_HostGM
     protected string m_Expected;
     ref JSOC_ORBAT_GMRecord Pending;
     string Status = "No GM request loaded";
-    void Pair(string endpoint, string code) { Stop(); m_LegacyRelay = false; m_OrdersAllowed = false; m_CapabilityMode = 2; m_Context = GetGame().GetRestApi().GetContext(endpoint); if (m_Context) m_Context.SetTimeout(5); m_Code = code; }
+    void Pair(string endpoint, string code) { Stop(); m_LegacyRelay = false; m_OrdersAllowed = false; m_CapabilityMode = 3; m_Context = GetGame().GetRestApi().GetContext(endpoint); if (m_Context) m_Context.SetTimeout(5); m_Code = code; }
     void Stop() { if (m_Callback) { m_Callback.Stopped = true; m_Callback.Owner = null; } m_Callback = null; m_Context = null; m_Code = ""; m_Busy = false; m_OrdersAllowed = false; Pending = null; }
     void Post(string action, string body)
     {
@@ -68,13 +75,21 @@ class JSOC_ORBAT_HostGM
         Status = "Checking paired GM requests";
         if (m_LegacyRelay) Post("poll",string.Format("{\"token\":\"%1\"}",m_Code));
         else if (m_CapabilityMode == 1) Post("poll",string.Format("{\"token\":\"%1\",\"capabilities\":[\"ai-orders-v1\"]}",m_Code));
-        else Post("poll",string.Format("{\"token\":\"%1\",\"capabilities\":[\"ai-orders-v1\",\"ai-tactical-v1\"]}",m_Code));
+        else if (m_CapabilityMode == 2) Post("poll",string.Format("{\"token\":\"%1\",\"capabilities\":[\"ai-orders-v1\",\"ai-tactical-v1\"]}",m_Code));
+        else Post("poll",string.Format("{\"token\":\"%1\",\"capabilities\":[\"ai-orders-v1\",\"ai-tactical-v1\",\"ai-routes-v1\"]}",m_Code));
     }
     bool CanApprove() { return Pending && Pending.request && !m_Busy; }
+    int PreviewCount() { if (!Pending || !Pending.request) { return 0; } if (Pending.request.kind == "ai-route") { return Pending.request.waypoints.Count(); } else { return Pending.request.entities.Count(); } }
     string Preview(int index)
     {
         if (!Pending || !Pending.request) return Status;
         JSOC_ORBAT_GMRequest request = Pending.request;
+        if (request.kind == "ai-route")
+        {
+            if (index < 0 || index >= request.waypoints.Count()) return "Invalid route preview";
+            COMMAND_ORBAT_RoutePoint point = request.waypoints[index];
+            return string.Format("INFANTRY ROUTE: point %1 / %2\nGroup %3 / unit %4\nX %5 / Z %6\nReview every point with NEXT. Approval installs the full route; arrival is not confirmed.",index+1,request.waypoints.Count(),request.targetRequestId,request.unitId,point.worldX,point.worldZ);
+        }
         if (request.kind == "ai-move") return string.Format("MOVE AI infantry group %1 / planned unit %2\nDestination X %3 / Z %4\nReplaces only the previous Companion waypoint. Player-controlled or mounted groups are blocked. Arrival is not confirmed by acceptance.",request.targetRequestId,request.unitId,request.worldX,request.worldZ);
         if (request.kind == "ai-hold") return string.Format("HOLD AI infantry group %1 / planned unit %2\nWait at current leader position for %3 seconds. AI may still react to combat.\nPlayer-controlled or mounted groups are blocked.",request.targetRequestId,request.unitId,request.holdSeconds);
         if (request.kind == "ai-defend") return string.Format("DEFEND infantry AI group %1 / planned unit %2\nX %3 / Z %4 for %5 seconds, using the native defend preset.\nApproval confirms installation, not arrival or successful defence.",request.targetRequestId,request.unitId,request.worldX,request.worldZ,request.holdSeconds);
@@ -112,7 +127,7 @@ class JSOC_ORBAT_HostGM
             ExecuteApproved(record.request); return;
         }
         Pending = record;
-        if (record.request.kind == "ai-move" || record.request.kind == "ai-hold" || record.request.kind == "ai-defend" || record.request.kind == "ai-halt") Status = "Pending infantry AI order. Review target and waypoint before approving.";
+        if (record.request.kind == "ai-move" || record.request.kind == "ai-hold" || record.request.kind == "ai-defend" || record.request.kind == "ai-halt" || record.request.kind == "ai-route") Status = "Pending infantry AI order. Review target and waypoint before approving.";
         else Status = string.Format("Pending %1 request %2 (%3 units). Review before approving.", record.request.kind, record.request.requestId, record.request.entities.Count());
     }
     protected bool SafeKey(string value)
@@ -136,7 +151,7 @@ class JSOC_ORBAT_HostGM
         string cached;
         if (m_Results.Find(request.requestId, cached)) { Post("result", cached); return; }
         if (m_Results.Count() >= 100) { Status = "Scene GM command budget reached"; return; }
-        if (request.kind == "ai-move" || request.kind == "ai-hold" || request.kind == "ai-defend" || request.kind == "ai-halt") { ExecuteAIOrder(request); return; }
+        if (request.kind == "ai-move" || request.kind == "ai-hold" || request.kind == "ai-defend" || request.kind == "ai-halt" || request.kind == "ai-route") { ExecuteAIOrder(request); return; }
         if (request.version != 1) { Report(request.requestId,"failed","Unsupported GM version for this action",""); return; }
         if (request.kind == "remove")
         {
@@ -165,6 +180,8 @@ class JSOC_ORBAT_HostGM
                     }
                 }
             }
+            foreach (string routeUnit, COMMAND_ORBAT_OwnedRoute route : group.Routes) if (route) COMMAND_ORBAT_RouteOrders.DeleteWaypoints(route.Waypoints);
+            group.Routes.Clear();
             foreach (string orderUnit, AIWaypoint orderWaypoint : group.Orders) if (orderWaypoint) SCR_EntityHelper.DeleteEntityAndChildren(orderWaypoint);
             group.Orders.Clear();
             foreach (IEntity createdEntity : group.Entities) if (createdEntity) SCR_EntityHelper.DeleteEntityAndChildren(createdEntity);
@@ -210,31 +227,37 @@ class JSOC_ORBAT_HostGM
         if (index < 0 || index >= ownedBatch.Entities.Count()) { Report(request.requestId,"failed","Owned unit identity is unavailable",""); return; }
         SCR_AIGroup group = SCR_AIGroup.Cast(ownedBatch.Entities[index]); AIWaypoint previous;
         ownedBatch.Orders.Find(request.unitId,previous);
-        string problem = JSOC_ORBAT_AIOrders.Check(group,previous);
+        COMMAND_ORBAT_OwnedRoute ownedRoute; ownedBatch.Routes.Find(request.unitId,ownedRoute);
+        array<AIWaypoint> previousPoints = {};
+        if (ownedRoute) { foreach (AIWaypoint ownedPoint : ownedRoute.Waypoints) if (ownedPoint) previousPoints.Insert(ownedPoint); }
+        else if (previous) previousPoints.Insert(previous);
+        string problem = JSOC_ORBAT_AIOrders.Check(group,previous,previousPoints);
         if (!problem.IsEmpty()) { Report(request.requestId,"failed",problem,""); return; }
-        if ((request.kind == "ai-defend" || request.kind == "ai-halt") && m_CapabilityMode != 2) { Report(request.requestId,"failed","Paired relay did not negotiate tactical AI support",""); return; }
+        if ((request.kind == "ai-defend" || request.kind == "ai-halt") && m_CapabilityMode < 2) { Report(request.requestId,"failed","Paired relay did not negotiate tactical AI support",""); return; }
+        if (request.kind == "ai-route" && (m_CapabilityMode < 3 || !COMMAND_ORBAT_RouteOrders.Valid(request))) { Report(request.requestId,"failed","Route requires negotiated support and 1 to 16 valid points",""); return; }
         if (request.kind == "ai-halt")
         {
-            if (!previous) { Report(request.requestId,"executed","No active Companion waypoint; combat reactions remain enabled",""); return; }
-            if (!COMMAND_ORBAT_TacticalOrders.CancelOwnedMovement(group,previous)) { Report(request.requestId,"failed","Owned waypoint cancellation could not be confirmed",""); return; }
-            ownedBatch.Orders.Remove(request.unitId); Report(request.requestId,"executed","Companion waypoint cancelled; combat reactions remain enabled",""); return;
+            if (!COMMAND_ORBAT_RouteOrders.Cancel(group,previousPoints)) { Report(request.requestId,"failed","Owned route cancellation could not be confirmed",""); return; }
+            ownedBatch.Orders.Remove(request.unitId); ownedBatch.Routes.Remove(request.unitId);
+            Report(request.requestId,"executed","Companion route cancelled; combat reactions remain enabled",""); return;
         }
-        AIWaypoint waypoint;
-        if (request.kind == "ai-defend") waypoint = COMMAND_ORBAT_TacticalOrders.CreateDefend(group,previous,request.worldX,request.worldZ,request.holdSeconds);
-        else waypoint = JSOC_ORBAT_AIOrders.Create(request,group);
-        if (!waypoint) { Report(request.requestId,"failed","Required native waypoint is unavailable; previous order retained",""); return; }
-        // The old waypoint is left intact until validation and new-resource creation succeed.
-        if (previous) group.RemoveWaypoint(previous);
-        group.AddWaypoint(waypoint);
-        array<AIWaypoint> installed = {}; group.GetWaypoints(installed);
-        if (installed.Find(waypoint) < 0)
+        COMMAND_ORBAT_OwnedRoute next = new COMMAND_ORBAT_OwnedRoute();
+        if (request.kind == "ai-route") next = COMMAND_ORBAT_RouteOrders.Create(request,group);
+        else
         {
-            SCR_EntityHelper.DeleteEntityAndChildren(waypoint);
-            if (previous) group.AddWaypoint(previous);
-            Report(request.requestId,"failed","AI order attachment failed; previous order restored",""); return;
+            AIWaypoint waypoint;
+            if (request.kind == "ai-defend") waypoint = COMMAND_ORBAT_TacticalOrders.CreateDefend(group,previous,request.worldX,request.worldZ,request.holdSeconds,previousPoints);
+            else waypoint = JSOC_ORBAT_AIOrders.Create(request,group);
+            if (waypoint) next.Waypoints.Insert(waypoint);
         }
-        ownedBatch.Orders.Set(request.unitId,waypoint);
-        if (previous) SCR_EntityHelper.DeleteEntityAndChildren(previous);
+        if (!next || next.Waypoints.Count() < 1) { Report(request.requestId,"failed","Required native waypoints unavailable; previous order retained",""); return; }
+        if (!COMMAND_ORBAT_RouteOrders.Replace(group,previousPoints,next.Waypoints))
+        {
+            COMMAND_ORBAT_RouteOrders.DeleteWaypoints(next.Waypoints);
+            Report(request.requestId,"failed","Route attachment failed; previous waypoints retained or restored",""); return;
+        }
+        ownedBatch.Routes.Set(request.unitId,next); ownedBatch.Orders.Set(request.unitId,next.Waypoints[0]);
+        if (request.kind == "ai-route") { Report(request.requestId,"executed","Native route installed in order; travel and arrival are not confirmed",""); return; }
         if (request.kind == "ai-move") Report(request.requestId,"executed","AI move waypoint accepted; arrival is not confirmed","");
         else if (request.kind == "ai-defend") Report(request.requestId,"executed","Native defend waypoint accepted; arrival and combat outcome are unconfirmed","");
         else Report(request.requestId,"executed","Timed AI hold waypoint accepted; combat reactions remain possible","");
