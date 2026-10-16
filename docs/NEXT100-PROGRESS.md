@@ -2,7 +2,7 @@
 
 This records delivered scope, not completion of all 100 steps. Complete-existing identifies functionality already present. General runtime/type claims and unimplemented engine features remain pending.
 
-awaiting-external: 10 | complete-existing: 9 | complete-new: 43 | partial: 5 | pending-development: 33
+awaiting-external: 10 | complete-existing: 9 | complete-new: 44 | partial: 6 | pending-development: 31
 
 | Step | Status | Task / evidence |
 | --- | --- | --- |
@@ -68,13 +68,13 @@ awaiting-external: 10 | complete-existing: 9 | complete-new: 43 | partial: 5 | p
 | 60 | complete-existing | Keep PBO inventories separate from binary terrain conversion. Existing text/binary intake separation retained. |
 | 61 | awaiting-external | Complete user testing of current move and defend orders.  |
 | 62 | complete-new | Reviewed 1–16-point infantry routes: contract/UI/native installation, replacement/cancel/foreign-order guards passed. Normal-terrain travel acceptance remains separate. |
-| 63 | pending-development | Add native follow-owner behavior.  |
+| 63 | partial | Native bounded Follow binds an explicitly selected same-faction player; synthetic lifecycle passed. Real-player following and normal-terrain movement remain acceptance checks. |
 | 64 | pending-development | Add formation selection backed by verified engine adapters.  |
 | 65 | pending-development | Add stance selection backed by verified engine adapters.  |
 | 66 | pending-development | Add verified open-fire behavior.  |
 | 67 | pending-development | Investigate strict hold-fire semantics before promising them.  |
 | 68 | pending-development | Add suppression and look-at adapters where supported.  |
-| 69 | pending-development | Add squad recruitment authority review.  |
+| 69 | complete-new | Host-reviewed recruitment and release of existing selected AI squads; native faction/membership/selection guards, deletion prohibition and lifecycle checks passed. Real-session acceptance remains separate. |
 | 70 | complete-existing | Keep host approval and owned-group boundaries visible. Existing native approval, capability and bridge-owned-target gates retained. |
 | 71 | pending-development | Add vehicle seat and capacity inspection.  |
 | 72 | pending-development | Add reviewed squad embark requests.  |

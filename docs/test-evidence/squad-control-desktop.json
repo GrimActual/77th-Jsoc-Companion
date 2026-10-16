@@ -1,0 +1,17 @@
+{
+  "scope": "Actual offline Electron in isolated profile; synthetic live state and mocked IPC command replies, native lifecycle tested separately",
+  "liveMarkerClick": true,
+  "recruitReviewAndSubmit": true,
+  "followReviewAndSubmit": true,
+  "releaseReviewAndSubmit": true,
+  "staleLiveSelectionBlocksSend": true,
+  "playerNameEscaped": true,
+  "languages": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "oldModDisablesNewOrders": true,
+  "missionUnchanged": true,
+  "pageErrors": []
+}

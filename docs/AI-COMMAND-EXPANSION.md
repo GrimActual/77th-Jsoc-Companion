@@ -89,3 +89,8 @@ The desktop gate passed tactical capability negotiation, reviewed Defend coordin
 A longer trace of the no-terrain/no-navmesh fixture reached an engine pathfinding NodeError via Group.bt / MoveToLocation.bt / SCR_AIProcessFailedMovementResult. That failure is retained in the evidence. The shorter passing diagnostic gate measures initial command binding only and does not hide this navigation limitation. A normal terrain/navmesh Host Local travel/combat gate remains required.
 
 The published dev.gm.5 app and Workshop 0.5.0 folder remain intact. No new release is published by this development-source update. Chained waypoints, map selection/recruitment of existing friendly squads, Follow, formations, stances, fire control, vehicles/support, convoy relationships and building entry remain the subsequent stages above.
+
+
+### Existing-squad control checkpoint — 16 October 2026
+
+Followon.5 / bridge 0.9.0 candidate adds explicit live-marker selection, reviewed recruitment and release, and native bounded Follow. Synthetic native lifecycle and desktop checks passed. Real-player Follow and normal-terrain travel remain acceptance work. Formation, stance, combat, transport and building-entry scope is retained. See docs/SQUAD-CONTROL-PILOT.md.

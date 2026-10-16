@@ -162,6 +162,105 @@
           "const": "ai-halt"
         }
       }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "requestId",
+        "kind",
+        "sourceEntityId"
+      ],
+      "properties": {
+        "version": {
+          "const": 2
+        },
+        "requestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,40}$"
+        },
+        "kind": {
+          "const": "ai-recruit"
+        },
+        "sourceEntityId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "requestId",
+        "kind",
+        "targetRequestId",
+        "unitId"
+      ],
+      "properties": {
+        "version": {
+          "const": 2
+        },
+        "requestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,40}$"
+        },
+        "kind": {
+          "const": "ai-release"
+        },
+        "targetRequestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,40}$"
+        },
+        "unitId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        }
+      }
+    },
+    {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "requestId",
+        "kind",
+        "targetRequestId",
+        "unitId",
+        "followEntityId",
+        "holdSeconds"
+      ],
+      "properties": {
+        "version": {
+          "const": 2
+        },
+        "requestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,40}$"
+        },
+        "kind": {
+          "const": "ai-follow"
+        },
+        "targetRequestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,40}$"
+        },
+        "unitId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        },
+        "followEntityId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,64}$"
+        },
+        "holdSeconds": {
+          "type": "integer",
+          "minimum": 5,
+          "maximum": 300
+        }
+      }
     }
   ]
 }

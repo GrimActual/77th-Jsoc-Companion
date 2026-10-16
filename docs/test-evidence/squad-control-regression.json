@@ -1,0 +1,10 @@
+{
+  "tests": 855,
+  "passed": 854,
+  "skipped": 1,
+  "failed": 0,
+  "durationMs": 11917.51,
+  "scope": "Full local planner regression after squad-control desktop and contract implementation",
+  "skipReason": "Independent preprocessor not installed locally; hosted Linux coverage is separate",
+  "gameClientLaunched": false
+}

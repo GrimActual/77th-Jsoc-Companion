@@ -45,7 +45,8 @@ class JSOC_ORBAT_HostMixedBridge : JSOC_ORBAT_TrackedBridge
 {
     protected string m_LastHostPairing;
     protected ref JSOC_ORBAT_HostGM m_GM;
-    JSOC_ORBAT_HostGM GM() { if (!m_GM) m_GM = new JSOC_ORBAT_HostGM(); return m_GM; }
+    JSOC_ORBAT_HostGM GM() { if (!m_GM) m_GM = new JSOC_ORBAT_HostGM(); m_GM.RosterOwner = this; return m_GM; }
+    override void Halt() { if (m_GM) m_GM.Stop(); super.Halt(); }
     override void Stop() { if (m_GM) m_GM.Stop(); super.Stop(); }
     ref array<ref JSOC_ORBAT_HostSlot> Slots = {};
     ref array<string> Factions = {};
@@ -180,6 +181,13 @@ class JSOC_ORBAT_HostMixedBridge : JSOC_ORBAT_TrackedBridge
         m_Targets[index] = target;
         if (!Allows(slot.Entry.SessionPlayerId > 0, FactionKeyFor(target))) return null;
         return target;
+    }
+    IEntity ResolveCommandEntity(string alias, bool human)
+    {
+        int index = m_Ids.Find(alias);
+        if (index < 0 || index >= Slots.Count() || !Slots[index].Entry || !Slots[index].Selected) return null;
+        if ((Slots[index].Entry.SessionPlayerId > 0) != human) return null;
+        return ResolveTarget(index);
     }
     bool ConnectHost(string endpoint, string code)
     {

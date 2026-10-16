@@ -1,0 +1,146 @@
+{
+  "success": true,
+  "scope": "Actual isolated native server, host-approval test driver and loopback relay; two synthetic fireteams with AI simulation paused for lifecycle isolation, one standing in for a selected player identity; no terrain/navmesh travel or real players",
+  "outcomes": [
+    {
+      "id": "lease",
+      "phase": "executed",
+      "message": "Existing squad recruited; ownership does not allow deletion"
+    },
+    {
+      "id": "follow_expire",
+      "phase": "executed",
+      "message": "Native Follow installed for selected player; bounded duration and authority checks active"
+    },
+    {
+      "id": "follow_lost",
+      "phase": "executed",
+      "message": "Native Follow installed for selected player; bounded duration and authority checks active"
+    },
+    {
+      "id": "move",
+      "phase": "executed",
+      "message": "AI move waypoint accepted; arrival is not confirmed"
+    },
+    {
+      "id": "release",
+      "phase": "executed",
+      "message": "Control released; recruited squad retained"
+    },
+    {
+      "id": "lease2",
+      "phase": "executed",
+      "message": "Existing squad recruited; ownership does not allow deletion"
+    },
+    {
+      "id": "revoked",
+      "phase": "failed",
+      "message": "Recruited control expired or faction/selection changed"
+    },
+    {
+      "id": "release2",
+      "phase": "executed",
+      "message": "Control released; recruited squad retained"
+    },
+    {
+      "id": "lease3",
+      "phase": "executed",
+      "message": "Existing squad recruited; ownership does not allow deletion"
+    },
+    {
+      "id": "lease4",
+      "phase": "executed",
+      "message": "Existing squad recruited; ownership does not allow deletion"
+    },
+    {
+      "id": "release4",
+      "phase": "executed",
+      "message": "Control released; recruited squad retained"
+    }
+  ],
+  "waypointTrace": [
+    "[COMMAND SQUAD TEST] lease executed count=0 target=none alive=1",
+    "[COMMAND SQUAD TEST] follow_expire executed count=1 target=fixture alive=1",
+    "[COMMAND SQUAD TEST] expiry count=0 alive=1",
+    "[COMMAND SQUAD TEST] follow_lost executed count=1 target=fixture alive=1",
+    "[COMMAND SQUAD TEST] lost_target count=0 alive=1",
+    "[COMMAND SQUAD TEST] move executed count=1 target=none alive=1",
+    "[COMMAND SQUAD TEST] release executed count=0 target=none alive=1",
+    "[COMMAND SQUAD TEST] lease2 executed count=0 target=none alive=1",
+    "[COMMAND SQUAD TEST] revoked failed count=0 target=none alive=1",
+    "[COMMAND SQUAD TEST] release2 executed count=0 target=none alive=1",
+    "[COMMAND SQUAD TEST] lease3 executed count=0 target=none alive=1",
+    "[COMMAND SQUAD TEST] pairing_stop controls=0 alive=1",
+    "[COMMAND SQUAD TEST] lease4 executed count=0 target=none alive=1",
+    "[COMMAND SQUAD TEST] release4 executed count=0 target=none alive=1"
+  ],
+  "gameClientLaunched": false,
+  "publicTunnel": false,
+  "processStopped": true,
+  "sourceFiles": [
+    {
+      "file": "addon.gproj",
+      "sha256": "b2fb398bacfb82613cf129c75c49c1268a7d6cb56c8bf274a86629500d564095"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/COMMAND_ORBAT_RouteOrders.c",
+      "sha256": "f9a80271d225fa686230f868b359b6897321539d794fd03820ccb48dcd2c37aa"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/COMMAND_ORBAT_SquadControl.c",
+      "sha256": "a4fab1df705a472c39cd673e9d647ceaef2e87895cc327898ea3d81d6371713b"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/COMMAND_ORBAT_TacticalOrders.c",
+      "sha256": "4e48458c059ae3674f803e61a38babbc48127f94c0c6b7e4a3b2cb436525a9b6"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_AIOrders.c",
+      "sha256": "319c96e0d854b806f864ef251b6ffbcf76819d116cfe273ad81fd39ac503eef4"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_DedicatedBridge.c",
+      "sha256": "3862359e5686d504b626e7f6910932082d9d0a4fa128b6aca80e03ed92230a12"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_GMMenu.c",
+      "sha256": "2c76e5df74d7a72655ab306f5b90d2743c0eac7e7dc7782bb040a7fb87cfed1e"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostBridge.c",
+      "sha256": "6bc544cbb4950eef8d6d493f2577eefc3f346ddc1d7d81dfe7f1e72f2f4586a9"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostGM.c",
+      "sha256": "d3077e41e5034789be72a237582707a45628d0a63fe193fb55a4d2ac23a78d37"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_HostMixed.c",
+      "sha256": "9a83f6cf98e0870876c30db94aa59344960e9cdca22ec6aaf77b2bf656733818"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_PairingMenu.c",
+      "sha256": "7607bb76f5f593ddcdab6c4f26944eb5fe6c8d466ecc6ffb44b7101168227920"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_RosterMenu.c",
+      "sha256": "de5bcb0b277cb9243cdda439036a482bc89c183f1f2fa0156c455c75398c2762"
+    },
+    {
+      "file": "Scripts/Game/JSOC_ORBAT/JSOC_ORBAT_TrackedBridge.c",
+      "sha256": "7de18b0e2319dd2e4c141bcc007e0de9249d1f9affee3c701417196782461974"
+    },
+    {
+      "file": "UI/layouts/JSOC_ORBAT_GM.layout",
+      "sha256": "f3aedc6e6b7bd6741612eba86ec117b5e521a6345ab5142815d9fc21e0d27a0e"
+    },
+    {
+      "file": "UI/layouts/JSOC_ORBAT_Pairing.layout",
+      "sha256": "c2ad4fa824e54a397597ad39fd4b94da6e6cded598d6a499f6646238db7ac81c"
+    },
+    {
+      "file": "UI/layouts/JSOC_ORBAT_Roster.layout",
+      "sha256": "1d6c96f6e022cc89fd8513f2d989756c87e6eb66e3adf6b1fbdf4522d59cbccb"
+    }
+  ]
+}

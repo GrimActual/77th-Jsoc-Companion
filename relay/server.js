@@ -56,7 +56,7 @@ function createRelay({clock = Date.now, maxSessions = 100, lifetime = 3600000, s
         let tracked=null;const batch=body&&['entityIds,protocol,scope','entityIds,gmCommands,protocol,scope'].includes(Object.keys(body).sort().join(','))&&body.protocol===3&&body.scope==='allowlisted-entities';if(batch){try{if('gmCommands' in body&&body.gmCommands!==true)throw Error('Explicit GM opt-in required');tracked=Tracked.state(body.entityIds);}catch{return reply(400,{error:'Invalid tracked allowlist'});}}
         if(size>8192||!body||Array.isArray(body)||(!batch&&Object.keys(body).length&&!(Object.keys(body).sort().join(',')==='protocol,scope'&&body.protocol===2&&body.scope==='single-entity')))return reply(400,{error:'Unsupported session request'});
         const s = {id:crypto.randomBytes(16).toString('hex'), protocol:body.protocol||1, invalid:0, locked:false, entityId:'', senderSequence:0, write:crypto.randomBytes(16).toString('hex'), read:crypto.randomBytes(32).toString('hex'), expires:clock()+lifetime, sequence:0, point:null, updated:0};
-        if(tracked)s.tracked=tracked;if(batch&&body.gmCommands===true)s.gm=GM.createQueue(clock);
+        if(tracked)s.tracked=tracked;if(batch&&body.gmCommands===true)s.gm=GM.createQueue(clock,{trackingIds:body.entityIds});
         sessions.set(s.write,s); readers.set(s.read,s);
         return reply(201, {token:s.write, reader:s.read, expires:s.expires, protocol:s.protocol, sessionId:s.id});
       }
