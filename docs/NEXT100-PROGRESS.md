@@ -1,8 +1,8 @@
 # Next-100 progress — 16 October 2026
 
-This ledger records actual scope. It does not claim that all 100 steps are complete. Complete-existing identifies functionality already present, so it is not rebuilt or counted as a new feature. Acceptance requiring outside feedback remains pending.
+This ledger records actual scope. It does not claim all 100 steps are complete. Complete-existing identifies functionality already present, so it was not rebuilt or counted as a new feature. Outside acceptance remains pending.
 
-awaiting-ci: 3 | awaiting-external: 10 | complete-existing: 8 | complete-new: 35 | partial: 4 | pending-development: 40
+awaiting-external: 10 | complete-existing: 8 | complete-new: 38 | partial: 4 | pending-development: 40
 
 | Step | Status | Task / evidence |
 | --- | --- | --- |
@@ -12,7 +12,7 @@ awaiting-ci: 3 | awaiting-external: 10 | complete-existing: 8 | complete-new: 35
 | 4 | complete-new | Document supported engine and addon version combinations.  |
 | 5 | complete-new | Add a compact compatibility status page.  |
 | 6 | complete-new | Keep private test sources out of public reports by default.  |
-| 7 | awaiting-ci | Add a release-content exclusion check to CI. Gate implemented; awaiting the matching hosted run. |
+| 7 | complete-new | Add a release-content exclusion check to CI. Separate hosted distribution gate passed; diagnostic updates do not rerun unchanged compiler gates. |
 | 8 | complete-new | Make update guidance preserve existing user data.  |
 | 9 | complete-new | Refresh the getting-started walkthrough against the current UI.  |
 | 10 | awaiting-external | Publish a stable release only after its acceptance gates pass.  |
@@ -27,7 +27,7 @@ awaiting-ci: 3 | awaiting-external: 10 | complete-existing: 8 | complete-new: 35
 | 19 | partial | Add incremental re-review for changed source files. Unchanged complete reports are reused; changed-file incremental invalidation is not implemented. |
 | 20 | complete-new | Measure large source-package responsiveness. 64 files / 516 KB: 610.93 ms fresh, 3.51 ms reuse; 10,000 asset counts: 6.09 ms. One local sample. |
 | 21 | complete-new | Expand synthetic macro compatibility fixtures.  |
-| 22 | awaiting-ci | Compare supported macro behavior with an independent preprocessor. Eight neutral GNU-compatible comparison fixtures added; local compiler unavailable, hosted Linux check pending. |
+| 22 | complete-new | Compare supported macro behavior with an independent preprocessor. Hosted Linux executed eight original neutral C-preprocessor comparison fixtures. Native Arma parity remains unverified. |
 | 23 | complete-new | Define a reviewed policy for line continuations.  |
 | 24 | complete-new | Add bounded numeric conditional expressions. Bounded decimal literals/defined markers only; named numeric macros and engine parity remain unresolved. |
 | 25 | complete-new | Add explicit diagnostics for unsupported built-in macros.  |
@@ -54,7 +54,7 @@ awaiting-ci: 3 | awaiting-external: 10 | complete-existing: 8 | complete-new: 35
 | 46 | pending-development | Add native checks for selected nested scheduling patterns.  |
 | 47 | complete-existing | Keep scheduling semantic differences in the checklist.  |
 | 48 | complete-new | Improve deterministic generated names across files.  |
-| 49 | awaiting-ci | Add repeatable output checks across supported platforms. Golden project bytes and order-independence tests added; awaiting both hosted platforms. |
+| 49 | complete-new | Add repeatable output checks across supported platforms. Golden generated-project bytes and input-order independence passed on hosted Linux Node 24 and Windows Node 22. |
 | 50 | complete-new | Add an author-run Workbench validation command for generated projects. Author-run helper exported and PowerShell syntax checked; no native tool was launched by this checkpoint. |
 | 51 | complete-existing | Add explicit source-class to prefab mapping review. Existing reviewed class/prefab mapping workflow retained. |
 | 52 | complete-existing | Show missing addon dependencies before export. Existing deployment review displays unresolved addon metadata. |
@@ -107,4 +107,10 @@ awaiting-ci: 3 | awaiting-external: 10 | complete-existing: 8 | complete-new: 35
 | 99 | awaiting-external | Resolve remaining release blockers and update Sarge plus guides.  |
 | 100 | awaiting-external | Publish the next stable release with matching source and evidence.  |
 
-See NEXT100-DELIVERY.md and the neutral evidence files next100-intake-desktop.json, next100-source-performance.json and next100-view-performance.json.
+Hosted source checkpoint: `667fc46f0ba5285061670c9441a8d1f2874d325f`.
+
+[Linux/Windows compiler checks](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38889324208) and [distribution gate](https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38889324256) passed.
+
+The remaining 40 pending-development items require further implementation. Four other items are partial. Ten require external acceptance or depend on it; they are not the only remaining work.
+
+See NEXT100-DELIVERY.md for supported scope and the next100 neutral evidence files for observations.

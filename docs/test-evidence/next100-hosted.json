@@ -1,0 +1,45 @@
+{
+  "commit": "667fc46f0ba5285061670c9441a8d1f2874d325f",
+  "runs": [
+    {
+      "id": 38889324256,
+      "name": "Distribution exclusions",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38889324256",
+      "jobs": [
+        {
+          "name": "audit",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 38889324208,
+      "name": "SQF compiler review checks",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/GrimActual/COMMAND-ORBAT-Mission-Planner/actions/runs/38889324208",
+      "jobs": [
+        {
+          "name": "Core and worker checks (ubuntu-24.04, Node 24)",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Core and worker checks (windows-2022, Node 22)",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "independentPreprocessor": {
+    "workflowRun": 38889324208,
+    "linuxIndependentComparisonExecuted": true,
+    "fixtures": 8,
+    "nativeArmaPreprocessorParityVerified": false,
+    "scope": "Original neutral C-compatible token fixtures only"
+  }
+}

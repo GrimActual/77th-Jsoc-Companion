@@ -11,7 +11,10 @@
     "passed": 6,
     "failed": 0
   },
-  "independentPreprocessor": "pending hosted Linux comparison; skipped locally",
+  "independentPreprocessor": "Eight original neutral fixtures executed in hosted Linux; local Windows had no independent compiler",
   "nativeExecutableLaunched": false,
-  "privateTestSourcesIncluded": false
+  "privateTestSourcesIncluded": false,
+  "hostedSourceCommit": "667fc46f0ba5285061670c9441a8d1f2874d325f",
+  "hostedLinuxAndWindowsPassed": true,
+  "distributionGatePassed": true
 }
