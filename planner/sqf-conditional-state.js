@@ -18,6 +18,7 @@ function state(names,block,record,definitions=null){
  const stack=[];let active=true;
  const reject=(source,detail)=>block('UNSUPPORTED_CONDITIONAL_SUBSET',source,detail);
  function predicate(payload,source){
+  if(definitions?.predicate)return definitions.predicate(payload,source);
   if(payload==='0'||payload==='1')return payload==='1';
   const match=/^(!\s*)?defined\s*(?:\(\s*([A-Za-z_][A-Za-z0-9_]*)\s*\)|\s+([A-Za-z_][A-Za-z0-9_]*))$/.exec(payload);
   if(!match||!validName(match[2]||match[3]))reject(source,'Only 0, 1, defined(NAME), defined NAME and their !defined forms are supported.');

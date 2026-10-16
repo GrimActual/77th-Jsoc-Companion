@@ -18,6 +18,7 @@ const typeReview=require('./sqf-dependency-main').install({ipcMain,dialog,getWin
 const projectReview=require('./sqf-project-main').install({ipcMain,dialog,getWindow:()=>mainWindow,indexURL,reviews:{dependencies:dependencyReview,functions:functionReview,types:typeReview,effects:effectReview}});
 const diagnosticExport=require('./sqf-diagnostic-export-main').install({ipcMain,dialog,getWindow:()=>mainWindow,indexURL,reviews:{dependencies:dependencyReview,functions:functionReview,types:typeReview,effects:effectReview}});
 const migrationAdapters=require('./sqf-adapter-main').install({ipcMain,dialog,getWindow:()=>mainWindow,indexURL,reviews:{dependencies:dependencyReview,functions:functionReview,types:typeReview,effects:effectReview}});
+require('./compatibility-main').install({ipcMain,getWindow:()=>mainWindow,indexURL});
 require('./display-main').install({app,ipcMain,screen,getWindow:()=>mainWindow,indexURL});
 function log(event){try{const file=path.join(app.getPath('userData'),'planner-lifecycle.log');fs.mkdirSync(path.dirname(file),{recursive:true});if(fs.existsSync(file)&&fs.statSync(file).size>250000)fs.renameSync(file,file+'.previous');fs.appendFileSync(file,new Date().toISOString()+' '+event+'\n')}catch{}}
 function external(url){try{const parsed=new URL(url);if(!['https:','http:'].includes(parsed.protocol))return;shell.openExternal(parsed.href).catch(()=>log('external-link-failed'))}catch{}}
@@ -25,7 +26,7 @@ function showWindow(){if(quitting)return;if(!mainWindow||mainWindow.isDestroyed(
 function createWindow(){
  if(quitting)return;
  const startupSize=require('./display-main').size(screen?.getPrimaryDisplay?.()?.workArea);
- const win=new BrowserWindow({...startupSize,title:'COMMAND — ORBAT / Mission Planner 2.9.1-rc.3',icon:path.join(__dirname,'command-icon.ico'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
+ const win=new BrowserWindow({...startupSize,title:'COMMAND — ORBAT / Mission Planner 2.9.1 Roadmap Preview',icon:path.join(__dirname,'command-icon.ico'),show:false,webPreferences:{nodeIntegration:false,contextIsolation:true,preload:path.join(__dirname,'preload.js')}});
  mainWindow=win;win.setMenuBarVisibility(false);
  win.webContents.on('did-start-navigation',(_event,_url,_inPlace,isMainFrame)=>{if(isMainFrame){simulation.reset();localBridge.stop();metadata.reset();dependencyReview.reset();functionReview.reset();typeReview.reset();effectReview.reset();diagnosticExport.reset();migrationAdapters.reset();projectReview.reset();}});
  win.webContents.on('render-process-gone',()=>{simulation.reset();localBridge.stop();metadata.reset();dependencyReview.reset();functionReview.reset();typeReview.reset();effectReview.reset();diagnosticExport.reset();migrationAdapters.reset();projectReview.reset();});

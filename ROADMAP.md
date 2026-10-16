@@ -710,3 +710,8 @@ Source is never executed to infer meaning. Generated jobs are not auto-started; 
 ## RC3 follow-on sequence
 
 The additive next 100 steps are recorded in docs/NEXT-100-STEPS.md. Private third-party corpus identities and findings are withheld from distribution.
+
+
+## Next-100 implementation checkpoint — 16 October 2026
+
+Added explicit folder preview, shared-header capture, virtual-mount repair, navigable include connections, saved non-source review controls, unchanged-report reuse, bounded decimal conditional review, source-linked comparison, read-only generated project preview, compatibility status and a public distribution exclusion gate. Asset search adds category aliases, naval/support hints and filtered category counts. Sarge and EN/FR/DE guidance follow the new controls. These are development additions, not completion of all 100 steps or stable-release approval. See docs/NEXT100-DELIVERY.md and docs/NEXT100-PROGRESS.md (paths relative to repository root). All existing roadmap goals remain.

@@ -35,7 +35,7 @@ function create(markers,block,location,sourceView){
   function expand(stream,nesting=0){
   if(nesting>LIMITS.depth)block('MACRO_DEPTH_LIMIT',source,'Macro argument expansion depth exceeded');
   for(let at=0;at<stream.length;){const token=stream[at];if(token.kind!=='name'){at++;continue;}const name=token.value;
-   if(name.startsWith('__'))reject(token.source,'Reserved builtin macro substitutions remain manual');
+   if(name.startsWith('__'))block('BUILTIN_MACRO_REQUIRES_REVIEW',token.source,'Engine and compiler builtin substitutions remain manual; no builtin is evaluated');
    if(!markers.has(name)){at++;continue;}const def=definitions.get(name);
    if(!def)reject(token.source,'An externally defined marker has no selected replacement definition');
    if(token.disabled.includes(name))block('MACRO_RECURSION',token.source,'Recursive macro expansion requires review');

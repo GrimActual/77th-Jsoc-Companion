@@ -1,0 +1,17 @@
+{
+  "fullRun": {
+    "files": 111,
+    "passed": 823,
+    "failed": 0,
+    "skipped": 1,
+    "elapsedSeconds": 23.559
+  },
+  "laterFocusedChecks": {
+    "scope": "Boundary, deterministic output, integration aids and original authority fixture",
+    "passed": 6,
+    "failed": 0
+  },
+  "independentPreprocessor": "pending hosted Linux comparison; skipped locally",
+  "nativeExecutableLaunched": false,
+  "privateTestSourcesIncluded": false
+}

@@ -1,0 +1,30 @@
+{
+  "scope": "Actual offline development Electron with a new isolated app profile, neutral source fixtures and real inspector workers; OS pickers substituted.",
+  "cleanWindowsAccountTest": false,
+  "compatibilityPanel": true,
+  "gameSessionVerified": false,
+  "folderPreview": true,
+  "relativePathsPreserved": true,
+  "sharedHeaderCapture": true,
+  "explicitMountRepair": true,
+  "navigableIncludes": true,
+  "reviewPreferences": true,
+  "numericConditionalPreview": true,
+  "originalAndExpandedComparison": true,
+  "generatedProjectPreview": true,
+  "previewWritesNothing": true,
+  "changedPolicyClearsPreview": true,
+  "assetCategoryCounts": true,
+  "navalAndSupportFilters": true,
+  "approvalNotPersisted": true,
+  "languages": [
+    "en",
+    "fr",
+    "de"
+  ],
+  "narrowWidth": 680,
+  "missionUnchanged": true,
+  "originalsUnchanged": true,
+  "sargeDestination": true,
+  "pageErrors": []
+}

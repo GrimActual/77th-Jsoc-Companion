@@ -1,0 +1,83 @@
+{
+  "scope": "Matched short offline Electron samples with 60 synthetic live markers, 1 Hz updates and isolated profiles. No relay, game players or server was used. No sustained FPS or physical-monitor guarantee.",
+  "baseline": {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "trackedMarkers": 60,
+    "tiles": 1,
+    "fps": 60.35,
+    "medianMs": 16.7,
+    "p95Ms": 16.8,
+    "maxMs": 16.9,
+    "over100ms": 0,
+    "inspector": null,
+    "dpi": null,
+    "missionUnchanged": true,
+    "pageErrors": []
+  },
+  "development": {
+    "viewport": {
+      "width": 1280,
+      "height": 900
+    },
+    "trackedMarkers": 60,
+    "tiles": 1,
+    "fps": 60.38,
+    "medianMs": 16.7,
+    "p95Ms": 16.8,
+    "maxMs": 16.8,
+    "over100ms": 0,
+    "inspector": {
+      "cycles": 100,
+      "heapMeasurement": "CDP Runtime.getHeapUsage after explicit collection; separate isolated inspector-only run",
+      "initial": {
+        "heap": 5235424,
+        "nodes": 1872
+      },
+      "final": {
+        "heap": 5310100,
+        "nodes": 1872
+      },
+      "heapDeltaBytes": 74676,
+      "scope": "Short sample and one before/after pair; no assertion of sustained leak freedom"
+    },
+    "dpi": [
+      {
+        "requestedDPR": 1,
+        "reportedDPR": 1,
+        "position": {
+          "lat": 8263.161,
+          "lng": 4389.413625
+        }
+      },
+      {
+        "requestedDPR": 1.25,
+        "reportedDPR": 1.25,
+        "position": {
+          "lat": 8263.161,
+          "lng": 4389.413625
+        }
+      },
+      {
+        "requestedDPR": 1.5,
+        "reportedDPR": 1.5,
+        "position": {
+          "lat": 8263.161,
+          "lng": 4389.413625
+        }
+      },
+      {
+        "requestedDPR": 2,
+        "reportedDPR": 2,
+        "position": {
+          "lat": 8263.161,
+          "lng": 4389.413625
+        }
+      }
+    ],
+    "missionUnchanged": true,
+    "pageErrors": []
+  }
+}

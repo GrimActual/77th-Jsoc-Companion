@@ -1,0 +1,14 @@
+{
+  "scope": "One neutral 64-file captured review and one unchanged-input reuse; Node main-thread timing, not a 60-FPS or native game claim.",
+  "files": 64,
+  "sourceBytes": 516416,
+  "workerCount": 4,
+  "freshReviewMs": 610.93,
+  "unchangedReuseMs": 3.51,
+  "timerIntervalMs": 10,
+  "maxObservedTimerGapMs": 23.37,
+  "assetRows": 10000,
+  "categoryCountsMs": 6.09,
+  "privateTestSourcesIncluded": false,
+  "sourceExecuted": false
+}

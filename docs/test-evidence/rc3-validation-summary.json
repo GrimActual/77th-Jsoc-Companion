@@ -14,6 +14,6 @@
   "nativeNewSchedulerCases": 24,
   "packagedDesktop": "rc3-desktop.json",
   "performance": "rc3-performance.json",
-  "privateCorpora": "rc3-preprocessing-validation.json",
-  "gameClientLaunched": false
+  "gameClientLaunched": false,
+  "syntheticPreprocessingEvidence": "rc3-preprocessing-validation.json"
 }
